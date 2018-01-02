@@ -2,7 +2,7 @@ from netfilterqueue import NetfilterQueue
 from scapy.all import *
 import os
 
-def callback(pkt):
+def callback1(pkt):
     try:
         data = IP(pkt.get_payload())
         if data.proto == 6 and data[TCP].sport == 80 and isinstance(data[TCP].payload, Raw): # 6 => TCP
@@ -18,15 +18,29 @@ def callback(pkt):
 
     pkt.accept()
 
+def callback(pkt):
+    try:
+        data = IP(pkt.get_payload())
+        if data.proto == 6 and data.sport != 22 and data.dport != 22:
+            print(data.summary())
+    except Exception as e:
+        print('error', e)
+    pkt.accept()
+
 def main():
-    iptables = 'iptables -I INPUT -j NFQUEUE --queue-num 1'
-    print(f'iptables rule: {iptables}')
-    os.system(iptables)
+    Qnum = 1
+    rules = [
+        f'iptables -I INPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
+        f'iptables -I OUTPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
+    ]
+    for rule in rules:
+        print(f'setting rule: {rule}')
+        os.system(rule)
 
     os.system("sysctl net.ipv4.ip_forward=1")
 
     q = NetfilterQueue()
-    q.bind(1, callback)
+    q.bind(Qnum, callback)
     try:
         q.run()
     except KeyboardInterrupt:
