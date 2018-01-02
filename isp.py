@@ -2,29 +2,40 @@ from netfilterqueue import NetfilterQueue
 from scapy.all import *
 import os
 
-def callback1(pkt):
-    try:
-        data = IP(pkt.get_payload())
-        if data.proto == 6 and data[TCP].sport == 80 and isinstance(data[TCP].payload, Raw): # 6 => TCP
-           # print(bytes(data))
-           data[TCP].payload = bytes(bytes(data[TCP].payload).decode('utf-8').replace('soon', 'sabn'), 'utf-8')
-           del data[TCP].chksum
-           del data[IP].chksum
-           # print(bytes(data))
-           pkt.set_payload(bytes(data))
-    except Exception as e:
-        print('error')
-        print(e)
+PROTO_TCP = 6
+PORT_WWW_HTTP = 80
+TCP_FIN = 0x01
+TCP_SYN = 0x02
 
-    pkt.accept()
+MARK = ' ' * 1420
+
+sessions = {}
 
 def callback(pkt):
     try:
         data = IP(pkt.get_payload())
-        if data.proto == 6 and data.sport != 22 and data.dport != 22:
+        if data.proto == PROTO_TCP and data.sport == PORT_WWW_HTTP: # incoming
             print(data.summary())
+            S = (data.dst, data.dport)
+            if data[TCP].flags & TCP_FIN and S in sessions:
+                del sessions[S]
+            if S in sessions and isinstance(data[TCP].payload, Raw):
+               print(len(bytes(data[TCP].payload)))
+               data[TCP].payload = bytes(bytes(data[TCP].payload).decode('utf-8').replace('soon', 'sabn'), 'utf-8')
+               del data[TCP].chksum
+               del data[IP].chksum
+               # print(bytes(data))
+               pkt.set_payload(bytes(data))
+        elif data.proto == PROTO_TCP and data.dport == PORT_WWW_HTTP: # outgoing
+            print(data.summary())
+            S = (data.src, data.sport)
+            if data[TCP].flags == TCP_SYN:
+                sessions[S] = 0
+            
     except Exception as e:
-        print('error', e)
+        print('error')
+        print(e)
+
     pkt.accept()
 
 def main():
