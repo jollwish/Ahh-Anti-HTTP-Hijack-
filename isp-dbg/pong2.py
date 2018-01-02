@@ -131,11 +131,14 @@ if __name__=='__main__       ':
     tcp_hs.send_fin()
 
 if __name__ == '__main__':
-    ip_ = IP(src='10.0.2.15', dst='172.217.10.46')
-    x = TCP(sport=12345, dport=80, flags='S', seq=1122334)
+    # ip_ = IP(src='10.0.2.15', dst='172.217.10.46')
+    ip_ = IP(src='10.0.2.15', dst='10.0.2.15')
+    sport = 12444
+    dport = 33334
+    x = TCP(sport=sport, dport=dport, flags='S', seq=443322)
     x_ = sr1(ip_ / x)
-    y = TCP(sport=12345, dport=80, flags='A', seq=x_[TCP].ack, ack=x_[TCP].seq + 1)
+    y = TCP(sport=sport, dport=dport, flags='A', seq=x_[TCP].ack, ack=x_[TCP].seq + 1)
     send(ip_ / y)
-    z = TCP(sport=12345, dport=80, flags='A', seq=x_[TCP].ack, ack=x_[TCP].seq + 1)
-    z_ = sr1(ip_ / z / 'GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: curl/7.55.1\r\nAccept: */*\r\n\r\n')
-    print('z_', z_.summary())
+    z = TCP(sport=sport, dport=dport, flags='A', seq=x_[TCP].ack, ack=x_[TCP].seq + 1)
+    send(ip_ / z / '<html><body></soon></html>')
+    # print('z_', z_.summary())
