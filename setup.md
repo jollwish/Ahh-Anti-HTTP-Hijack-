@@ -28,10 +28,10 @@ In Terminal A:
 cd Ahh-Anti-HTTP-Hijack-/
 ```
 
-In Terminal B:
+In Terminal B: (Any web page with a `</body>` tag would be fine.)
 
 ```bash
-curl http://www.cs.princeton.edu/\~yupingl/
+curl http://www.cs.princeton.edu/\~weizhan/
 ```
 
 Record its output.
