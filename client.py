@@ -1,6 +1,7 @@
 import os
 import threading
 import socket
+import select
 
 PROXY_ADDR = "0.0.0.0"
 HTTP_PORT = 1082
@@ -9,19 +10,23 @@ BACKLOG = 50
 BIND_ADDR = "0.0.0.0"
 BIND_PORT = 0
 RECV_SIZE = 65536
-SEND_SIZE = 100
+SEND_SIZE = 50
+TIMEOUT = 10
+
+def ready_recv(sock):
+	sock.setblocking(0)
+	ready = select.select([sock], [], [], TIMEOUT)
+	if ready[0]:
+		return sock.recv(RECV_SIZE)
 
 def pipe_recv(peer, remote):
 	#print('start recv')
 	while 1:
-		try:
-			buffer = remote.recv(RECV_SIZE)
-			print('received %d bytes' % len(buffer))
-			if not buffer:
-				break
-			peer.sendall(buffer)
-		except socket.timeout:
+		buffer = ready_recv(remote)
+		if not buffer:
 			break
+		print('received %d bytes' % len(buffer))
+		peer.sendall(buffer)
 	peer.close()
 	remote.close()
 
@@ -32,14 +37,11 @@ def pipe_send(peer, remote):
 	for i in range(0, len(buffer), SEND_SIZE):
 		remote.sendall(buffer[i : i+SEND_SIZE])
 	while 1:
-		try:
-			buffer = peer.recv(RECV_SIZE)
-			print('received %d bytes' % len(buffer))
-			if not buffer:
-				break
-			remote.sendall(buffer)
-		except socket.timeout:
+		buffer = ready_recv(peer)
+		if not buffer:
 			break
+		print('sending %d bytes' % len(buffer))
+		remote.sendall(buffer)
 	peer.close()
 	remote.close()
 
@@ -73,7 +75,6 @@ def run(peer):
 	remote = socket.socket()#(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_RAW)
 	remote.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 	remote.bind((BIND_ADDR, BIND_PORT))
-	remote.settimeout(2)
 	remote.connect((dst_addr,dst_port))
 	peer.sendall(b'\x05\x00\x00\x01\x00\x00\x00\x00\x00\x00')
 	
