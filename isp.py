@@ -24,7 +24,7 @@ sessions = {}
 conf.L3socket = L3RawSocket
 
 def is_http_request(s):
-    return s[:3] == b'GET' and s.find(b'Accept: ') != -1
+    return s[:3] == b'GET' and s.find(b' HTTP/1.1') != -1
 
 def get_session(ip, port):
     S = (ip, port)
@@ -105,7 +105,7 @@ def callback(pkt):
                add_session(data.dst, data.sport)
             sess = get_session(data.dst, data.sport)
             if sess != None and data[TCP].flags == TCP_ACK | TCP_PSH and is_http_request(bytes(data[TCP].payload)):
-               sess['monitored'] = True
+                sess['monitored'] = True
             if sess != None:
                 logger.info("summary = %s, seq = %s, ack = %s", data.summary(), data.seq - sess['ack_'], data.ack - sess['seq_'])
             if sess != None:
