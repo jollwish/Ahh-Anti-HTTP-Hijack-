@@ -1,7 +1,11 @@
 import os
+import struct
 import threading
 import socket
 import select
+
+from scapy.all import ETH_P_ALL
+from scapy.all import MTU
 
 PROXY_ADDR = "0.0.0.0"
 HTTP_PORT = 1082
@@ -44,7 +48,7 @@ def pipe_send(peer, remote):
 		remote.sendall(buffer)
 	peer.close()
 	remote.close()
-
+	
 def run(peer):
 	
 	#Authentication
@@ -82,14 +86,50 @@ def run(peer):
 	pipe_recv(peer, remote)
 	
 	print('End Connection')
-
+	
 def startProxy():
-	sock = socket.socket()
-	sock.bind((PROXY_ADDR, PROXY_PORT))
-	sock.listen(BACKLOG)
+	proxy = socket.socket()
+	proxy.bind((PROXY_ADDR, PROXY_PORT))
+	proxy.listen(BACKLOG)
+	
+	sniffer = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(ETH_P_ALL))
+	sniffer.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 2**30)
+	sniffer.bind(('eth0', ETH_P_ALL))
+	
 	print('Start listening.')
 	while 1:
-		threading.Thread(target = run, args = (sock.accept()[0],)).start()
+		thread_proxy = threading.Thread(target = run, args = (proxy.accept()[0],))
+		thread_proxy.start()
+		standard_ttl = -1
+		while thread_proxy.is_alive():
+			pkt, sa_ll = sniffer.recvfrom(MTU)
+			if len(pkt) <= 0:
+				break
+			mac_header = struct.unpack("!6s6sH", pkt[0:14])
+			if mac_header[2] != 0x800: 
+				continue
+	
+			ip_header = pkt[14:34]
+			fields = struct.unpack("!BBHHHBBHII", ip_header)
+			
+			packed_ip_src = fields[8]
+			if is_local(packed_ip_src):
+				continue
+			iplen = fields[2]
+			ttl = fields[5]
+			ip_src = ip_header[12:16]
+			ip_dst = ip_header[16:20]
+			
+			if sa_ll[2] != socket.PACKET_OUTGOING and ttl != standard_ttl:
+			#	print("incoming - src=%s, dst=%s, frame len = %d, TTL = %d"
+			#	%(socket.inet_ntoa(ip_src), socket.inet_ntoa(ip_dst), iplen, ttl))
+				if standard_ttl == -1:
+					standard_ttl = ttl
+				else:
+					print("Hijack dected! TTL should be %d instaed of %d" % (standard_ttl, ttl))
+
+def is_local(packed_ip):
+	return packed_ip >> 24 == 10
 
 def main():
 	threading.Thread(target = os.system, args = ("polipo socksParentProxy=127.0.0.1:%d proxyPort=%d" % (PROXY_PORT, HTTP_PORT),)).start()
