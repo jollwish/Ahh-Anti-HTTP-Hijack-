@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://branch.com/ => https://secure.branch.com/: (6, 'Could not resolve host: secure.branch.com')
+
+	CDN buckets:
+
+		- d3sipcemvmkij2.cloudfront.net
+
+			- static.branch.com
+
+
+	Problematic domains:
+
+		- ^		(mismatched, CN: secure.branch.com)
+		- static	(cloudfront)
+		- www		(mismatched, CN: *.herokuapp.com)
+
+-->
+<ruleset name="Branch" default_off='failed ruleset test'>
+
+	<target host="branch.com" />
+	<target host="*.branch.com" />
+
+
+	<securecookie host="^\.branch\.com$" name=".+" />
+
+
+	<rule from="^http://(?:secure\.|www\.)?branch\.com/"
+		to="https://secure.branch.com/" />
+
+	<rule from="^http://static\.branch\.com/"
+		to="https://d3sipcemvmkij2.cloudfront.net/" />
+
+</ruleset>

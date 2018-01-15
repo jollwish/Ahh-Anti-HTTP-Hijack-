@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		heka.barvaux.org
+		mail.barvaux.org
+		mout.barvaux.org
+		photos.barvaux.org
+
+-->
+<ruleset name="Barvaux.org">
+
+	<target host="barvaux.org" />
+	<target host="www.barvaux.org" />
+	<target host="webmail.barvaux.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

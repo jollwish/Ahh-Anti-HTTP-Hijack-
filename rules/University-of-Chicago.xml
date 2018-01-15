@@ -1,0 +1,46 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - bay.uchicago.edu
+
+		SSL peer certificate was not OK:
+			 - beagle.ci.uchicago.edu
+			 - proxy.uchicago.edu
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - hours.lib.uchicago.edu
+
+		Incomplete certificate chain error:
+			 - pads.ci.uchicago.edu
+			 - pokey.ci.uchicago.edu
+			 - press.ci.uchicago.edu
+-->
+<ruleset name="University of Chicago (partial)">
+	<target host="uchicago.edu" />
+	<target host="answers.uchicago.edu" />
+	<target host="astro.uchicago.edu" />
+	<target host="blueprint.uchicago.edu" />
+	<target host="ci.uchicago.edu" />
+	<target host="www.ci.uchicago.edu" />
+	<target host="identity.uchicago.edu" />
+	<target host="identitymanagement.uchicago.edu" />
+	<target host="ipo.uchicago.edu" />
+	<target host="itservices.uchicago.edu" />
+	<target host="leadership.uchicago.edu" />
+	<target host="www.lib.uchicago.edu" />
+	<target host="math.uchicago.edu" />
+	<target host="www.math.uchicago.edu" />
+	<target host="proxy.uchicago.edu" />
+	<target host="login.proxy.uchicago.edu" />
+	<target host="www.proxy.uchicago.edu" />
+	<target host="safety-security.uchicago.edu" />
+	<target host="shibboleth2.uchicago.edu" />
+	<target host="studentactivities.uchicago.edu" />
+	<target host="www.uchicago.edu" />
+
+	<rule from="^http://proxy\.uchicago\.edu/"
+			to="https://www.proxy.uchicago.edu/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

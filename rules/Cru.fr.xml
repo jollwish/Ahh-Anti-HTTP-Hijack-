@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://listes.cru.fr/ => https://listes.cru.fr/: (51, "SSL: no alternative certificate subject name matches target host name 'listes.cru.fr'")
+Fetch error: http://svn.cru.fr/ => https://svn.cru.fr/: (51, "SSL: no alternative certificate subject name matches target host name 'svn.cru.fr'")
+Non-2xx HTTP code: http://git.cru.fr/ (200) => https://git.renater.fr/ (403)
+
+	Nonfunctional hosts in *cru.fr:
+
+		- groupware *
+
+	* Plaintext reply
+
+
+	^cru.fr does not exist
+
+-->
+<ruleset name="cru.fr (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="listes.cru.fr" />
+	<target host="subversion.cru.fr" />
+	<target host="svn.cru.fr" />
+	<target host="www.cru.fr" />
+
+	<!--	Complications:
+				-->
+	<target host="git.cru.fr" />
+	<target host="sourcesup.cru.fr" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<!--	Works over https, but redirects
+		like so over http:
+					-->
+	<rule from="^http://(git|sourcesup)\.cru\.fr/"
+		to="https://$1.renater.fr/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="diygadget.com">
+
+	<target host="diygadget.com" />
+	<target host="www.diygadget.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://curesec.com/ => https://curesec.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic subdomains:
+
+		- blackarch[12] *
+		- blog *
+
+	* Mismatched
+
+-->
+<ruleset name="CureSec.com (partial)" default_off='failed ruleset test'>
+
+	<target host="curesec.com" />
+	<target host="www.curesec.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,26 @@
+<!--
+	CDN buckets:
+
+		- wpc.2367.edgecastcdn.net/??2367/
+
+			- (www.)?
+
+
+	(www.)?: 404
+
+
+	Fully covered subdomains:
+
+		- secure
+		- shop
+
+-->
+<ruleset name="Heritage.org (partial)">
+
+	<target host="secure.heritage.org" />
+	<target host="shop.heritage.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

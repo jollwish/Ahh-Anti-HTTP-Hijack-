@@ -1,0 +1,13 @@
+<ruleset name="Echothrust.com">
+
+	<target host="echothrust.com" />
+	<target host="www.echothrust.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

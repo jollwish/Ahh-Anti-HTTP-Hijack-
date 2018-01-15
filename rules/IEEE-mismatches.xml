@@ -1,0 +1,11 @@
+<!--
+	For rules that are on by default, see IEEE.xml.
+-->
+<ruleset name="IEEE.org (problematic)" default_off="mismatched" platform="mixedcontent">
+
+	<target host="jobs.ieee.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

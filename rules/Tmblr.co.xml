@@ -1,0 +1,16 @@
+<!--
+	For other Tumblr coverage, see Tumblr.xml.
+
+	www doesn't exist
+
+-->
+<ruleset name="Tmblr.co">
+
+	<target host="tmblr.co" />
+
+	<test url="http://tmblr.co/ZE5Fby1dP0xGe" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

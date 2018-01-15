@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.maxim-ic.com/ => https://www.maxim-ic.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://maxim-ic.com/ => https://www.maxim-ic.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For other Maxim Integrated coverage, see Maxim_Integrated.com.xml.
+
+
+	^maxim-ic.com: Mismatched
+
+-->
+<ruleset name="Maxim-IC.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.maxim-ic.com" />
+
+	<!--	Complications:
+				-->
+	<target host="maxim-ic.com" />
+
+
+	<rule from="^http://maxim-ic\.com/"
+		to="https://www.maxim-ic.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

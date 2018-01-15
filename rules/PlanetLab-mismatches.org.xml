@@ -1,0 +1,7 @@
+<ruleset name="PlanetLab (mismatches)" default_off="mismatched">
+
+	<target host="monitor.planet-lab.org"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

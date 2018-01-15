@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://v-identity.com/ => https://www.v-identity.com/: (6, 'Could not resolve host: www.v-identity.com')
+
+	Problematic subdomains:
+
+		- ^	(404)
+
+-->
+<ruleset name="v-identity.com" default_off='failed ruleset test'>
+
+	<target host="v-identity.com" />
+	<target host="*.v-identity.com" />
+
+
+	<rule from="^http://(?:www\.)?v-identity\.com/"
+		to="https://www.v-identity.com/" />
+
+	<rule from="^http://cdn\.v-identity\.com/"
+		to="https://cdn.v-identity.com/" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	Non-functional hosts
+		Status code mismatch:
+			 - 2016.devconf.cz
+			 - openshift.devconf.cz
+-->
+<ruleset name="DevConf.cz">
+	<target host="devconf.cz" />
+	<target host="www.devconf.cz" />
+
+	<securecookie host="^(www\.)?devconf\.cz$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,13 @@
+<!--
+	^: Refused
+
+-->
+<ruleset name="Story Cubes.com">
+
+	<target host="storycubes.com" />
+	<target host="www.storycubes.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

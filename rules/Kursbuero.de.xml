@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- blog *
+
+	* Refused
+
+-->
+<ruleset name="Kursbuero.de (partial)">
+
+	<target host="medienberufe-sde.kursbuero.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

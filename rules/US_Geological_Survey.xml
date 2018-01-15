@@ -1,0 +1,38 @@
+<!--
+
+
+	Nonfunctional subdomains:
+
+		- ^ *
+		- access
+		- chesapeake *
+		- lidarbb.cr		(shows different domain)
+		- eros
+		- gam
+		- gallery **
+		- geology *
+		- mojave *
+		- remotesensing		(mismatched, CN: lidarbb.cr.usgs.gov)
+		- search *
+		- ne.water *
+		- waterwatch **
+		- ris.wr **
+		- sagemap.wr *
+		- sfbay.wr
+		- www **
+
+	* Prints "Lost and Found"
+	** Times out
+
+
+-->
+<ruleset name="U.S. Geological Survey" platform="mixedcontent">
+
+	<target host="answers.usgs.gov" />
+	<target host="nccwsc.usgs.gov" />
+	<target host="water.usgs.gov" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

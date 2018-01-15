@@ -1,0 +1,10 @@
+<ruleset name="University of Kansas (partial)">
+
+	<target host="assets.drupal.ku.edu" />
+	<target host="technology.ku.edu" />
+	<target host="web.ku.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

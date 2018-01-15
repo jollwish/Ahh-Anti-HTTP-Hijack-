@@ -4,6 +4,9 @@ import threading
 import socket
 import select
 import traceback
+import re
+import path
+import xml.etree.ElementTree
 from logger import getLogger
 
 from email import message_from_file
@@ -25,7 +28,44 @@ RECV_SIZE = 65536
 SEND_SIZE = 50
 TIMEOUT = 10
 
-HTTPS_HOST = set(['www.cs.princeton.edu'])
+RULES_DIR = './rules'
+
+class YahewRules(object):
+    def __init__(self):
+        self.ruleset = {}
+
+    def add(self, xml_rule):
+        # logger.info(xml_rule)
+        root = xml.etree.ElementTree.fromstring(xml_rule)
+        rules = []
+        for c in root.getchildren():
+            if c.tag == 'target':
+                host = c.attrib['host']
+                self.ruleset[host] = rules
+            elif c.tag == 'exclusion':
+                rules.append(['EXCL', re.compile(c.attrib['pattern'])])
+            elif c.tag == 'rule':
+                from_, to_ = c.attrib['from'], c.attrib['to']
+                rules.append(['RULE', re.compile(from_), to_.replace('$', '\\')])
+
+    def apply(self, uri, host):
+        if host not in self.ruleset:
+            return None
+        url = f'http://{host}{uri}'
+        for rule in self.ruleset[host]:
+            if rule[0] == 'EXCL':
+                reg = rule[1]
+                if reg.match(url):
+                    return None
+            elif rule[0] == 'RULE':
+                from_, to_ = rule[1:]
+                url_ = from_.sub(to_, url)
+                if url_ != url:
+                    logger.info('URL replaced: from %s to %s', url, url_)
+                    return url_
+        return None
+
+rules = YahewRules()
 
 def ready_recv(sock):
     sock.setblocking(0)
@@ -49,10 +89,16 @@ def make_HTTPS_request(http_req):
     verb, uri = req.split(' ')[:2]
     headers = message_from_file(StringIO(headers))
 
-    host = headers['Host']
-    if host in HTTPS_HOST:
-        r = requests.request(verb, "https://" + headers['Host'] + uri, headers=headers)
-        response = bytes("HTTP/1.1 %d %s\r\n" % (r.status_code, r.reason) + "".join(["%s: %s\r\n" % (k, v) for k, v in r.headers.items()]) + "\r\n" + r.text, 'utf-8')
+    url = rules.apply(uri, headers['Host'])
+    if url != None:
+        r = requests.request(verb, url, headers=headers)
+        # logger.info("verb = %s, url = %s, headers = %s", verb, url, headers)
+        # logger.info("r.headers = %s", r.headers)
+        content = r.content
+        if 'Transfer-Encoding' in r.headers and r.headers['Transfer-Encoding'] == 'chunked':
+            content = bytes(hex(len(r.content))[2:].upper(), 'utf-8') + b'\r\n' + content + b'\r\n'
+            logger.info('Transfer-Encoding: chunked...')
+        response = bytes("HTTP/1.1 %d %s\r\n" % (r.status_code, r.reason) + "".join(["%s: %s\r\n" % (k, v) for k, v in r.headers.items()]) + "\r\n", 'utf-8') + content
         return response
     return None
 
@@ -68,6 +114,7 @@ def pipe_send(peer, remote, buffer):
         logger.info('sending %d bytes' % len(buffer))
         remote.sendall(buffer)
     
+
 def run(peer):
     
     #Authentication
@@ -166,6 +213,15 @@ def is_local(packed_ip):
     return packed_ip >> 24 == 10
 
 def main():
+    logger.warning('RULE initializing...')
+    for fn in os.listdir(RULES_DIR):
+        if fn[-4:] != '.xml':
+            continue
+        fp = os.path.join(RULES_DIR, fn)
+        with open(fp) as fd:
+            rules.add(fd.read())
+    logger.warning('RULE initialized')
+
     threading.Thread(target = os.system, args = ("polipo socksParentProxy=127.0.0.1:%d proxyPort=%d" % (PROXY_PORT, HTTP_PORT),)).start()
     startProxy()
     

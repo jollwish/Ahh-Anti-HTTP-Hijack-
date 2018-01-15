@@ -1,0 +1,13 @@
+<ruleset name="Healthfuze.com">
+
+	<target host="healthfuze.com" />
+	<target host="www.healthfuze.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

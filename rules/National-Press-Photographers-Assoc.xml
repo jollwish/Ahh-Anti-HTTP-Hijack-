@@ -1,0 +1,9 @@
+<ruleset name="National Press Photographers Association">
+
+	<target host="nppa.org" />
+	<target host="www.nppa.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

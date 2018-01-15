@@ -1,0 +1,38 @@
+<!--
+	East Lothian Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- access.eastlothian.gov.uk
+		- elcintranet.eastlothian.gov.uk
+		- goexplore.eastlothian.gov.uk
+		- host141.eastlothian.gov.uk
+		- pipex-gw.eastlothian.gov.uk
+		- svs.eastlothian.gov.uk
+		- swivel.eastlothian.gov.uk
+
+		SSL peer certificate was not OK:
+		- collectiondates.eastlothian.gov.uk
+
+		Incomplete certificate chain error:
+		- helpfromhilda.eastlothian.gov.uk
+		- mailhost.eastlothian.gov.uk
+		- mx1.eastlothian.gov.uk
+		- newt.eastlothian.gov.uk
+-->
+<ruleset name="East Lothian.gov.uk">
+	<target host="eastlothian.gov.uk" />
+	<target host="www.eastlothian.gov.uk" />
+	<target host="elcbb.eastlothian.gov.uk" />
+	<target host="mobile.eastlothian.gov.uk" />
+	<target host="newton.eastlothian.gov.uk" />
+	<target host="pa.eastlothian.gov.uk" />
+	<target host="revselfserv.eastlothian.gov.uk" />
+	<target host="selfservice.eastlothian.gov.uk" />
+	<target host="sip.eastlothian.gov.uk" />
+	<target host="suppliers.eastlothian.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

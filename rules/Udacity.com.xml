@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ar.udacity.com/ => https://ar.udacity.com/: (6, 'Could not resolve host: ar.udacity.com')
+Fetch error: http://email.udacity.com/ => https://email.udacity.com/: (6, 'Could not resolve host: email.udacity.com')
+
+	For problematic rules, see Udacity.com-mismatches.xml
+
+	Nonfunctional subdomains:
+		- labs 	(refused)
+
+-->
+<ruleset name="Udacity.com (partial)" default_off='failed ruleset test'>
+
+	<target host="udacity.com" />
+	<target host="ar.udacity.com" />
+	<target host="classroom.udacity.com" />
+	<target host="discussions.udacity.com" />
+	<target host="email.udacity.com" />
+	<target host="forums.udacity.com" />
+	<target host="profiles.udacity.com" />
+	<target host="review.udacity.com" />
+	<target host="talentsource.udacity.com" />
+	<target host="www.udacity.com" />
+
+
+	<securecookie host="^\.udacity\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

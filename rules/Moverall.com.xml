@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://moverall.com/ => https://www.moverall.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.moverall.com/ => https://www.moverall.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://moverall.com/ => https://www.moverall.com/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="Moverall" default_off='failed ruleset test'>
+
+	<target host="moverall.com" />
+	<target host="*.moverall.com" />
+	<target host="az698912.vo.msecnd.net" />
+
+	<test url="http://moverall.com/" />
+	<test url="http://www.moverall.com/" />
+	<test url="http://cdn.moverall.com/" />
+	<test url="http://az698912.vo.msecnd.net/" />
+
+	<rule from="^http://(www\.)?moverall\.com/" to="https://www.moverall.com/" />
+	<rule from="^http://az698912\.vo\.msecnd\.net/" to="https://az698912.vo.msecnd.net/" />
+	<rule from="^http://cdn\.moverall\.com/" to="https://az698912.vo.msecnd.net/" />
+
+</ruleset>

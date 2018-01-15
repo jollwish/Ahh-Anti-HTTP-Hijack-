@@ -1,0 +1,15 @@
+<!--
+	For other Fight for the Future coverage, see Fight-for-the-Future.xml.
+
+-->
+<ruleset name="You Betrayed us.org">
+
+	<target host="youbetrayedus.org" />
+	<target host="www.youbetrayedus.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

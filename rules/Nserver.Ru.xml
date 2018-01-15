@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ovh.nserver.ru/ => https://ovh.nserver.ru/: (7, 'Failed to connect to ovh.nserver.ru port 443: Connection refused')
+
+	Insecure cookies are set for these domains:
+
+		- .gpt.nserver.ru
+
+-->
+<ruleset name="Nserver.Ru" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="nserver.ru" />
+	<target host="bp.nserver.ru" />
+	<target host="dc.nserver.ru" />
+	<target host="gpt.nserver.ru" />
+	<target host="ovh.nserver.ru" />
+	<target host="www.nserver.ru" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.gpt\.nserver\.ru$" name="^regbase2_id$" /-->
+
+	<securecookie host="^\.gpt\.nserver\.ru$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

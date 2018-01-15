@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://iwa.ap.test.octopuspop.com/ => https://iwa.ap.test.octopuspop.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://kuki.ap.test.octopuspop.com/ => https://kuki.ap.test.octopuspop.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://file.test.octopuspop.com/ => https://file.test.octopuspop.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://iwa.file.test.octopuspop.com/ => https://iwa.file.test.octopuspop.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://kuki.js.test.octopuspop.com/ => https://kuki.js.test.octopuspop.com/: (60, 'SSL certificate problem: certificate has expired')
+
+
+	Non-functional subdomains:
+
+		- file ¹
+		- kuki.admin.test ²
+		- status ²
+
+	¹: Refused
+	²: Invalid certificate
+
+-->
+<ruleset name="octopuspop.com" default_off='failed ruleset test'>
+
+	<target host="octopuspop.com" />
+	<target host="www.octopuspop.com" />
+
+	<target host="admin.octopuspop.com" />
+	<target host="ap.octopuspop.com" />
+	<target host="cdn.file.octopuspop.com" />
+	<target host="js.octopuspop.com" />
+
+	<target host="admin.test.octopuspop.com" />
+	<target host="iwa.admin.test.octopuspop.com" />
+	<target host="ap.test.octopuspop.com" />
+	<target host="iwa.ap.test.octopuspop.com" />
+	<target host="kuki.ap.test.octopuspop.com" />
+	<target host="file.test.octopuspop.com" />
+	<target host="iwa.file.test.octopuspop.com" />
+	<target host="js.test.octopuspop.com" />
+	<target host="iwa.js.test.octopuspop.com" />
+	<target host="kuki.js.test.octopuspop.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

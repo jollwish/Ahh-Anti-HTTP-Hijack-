@@ -1,0 +1,24 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- ld.havering.gov.uk
+		- maps.havering.gov.uk
+		- planning.havering.gov.uk
+-->
+<ruleset name="Havering.gov.uk (partial)">
+	<target host="havering.gov.uk" />
+	<target host="bse.havering.gov.uk" />
+	<target host="intranet.havering.gov.uk" />
+	<target host="democracy.havering.gov.uk" />
+	<target host="myplace.havering.gov.uk" />
+	<target host="nl.havering.gov.uk" />
+	<target host="online.havering.gov.uk" />
+	<target host="provider.havering.gov.uk" />
+	<target host="www.havering.gov.uk" />
+
+	<securecookie host=".+" name=".+" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

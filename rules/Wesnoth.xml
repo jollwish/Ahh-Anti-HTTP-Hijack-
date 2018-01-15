@@ -1,0 +1,53 @@
+
+<!--
+	http://*.wesnoth.org is a valid mirror of http://wesnoth.org but mismatched
+
+	Mirrors of addons.wesnoth.org (mismatched):
+		add-on.wesnoth.org
+		add-ons.wesnoth.org
+		addon.wesnoth.org
+		www.addons.wesnoth.org
+		addonlist.wesnoth.org
+		campaign.wesnoth.org
+		campaigns.wesnoth.org
+
+	Invalid certificate:
+		changelog.wesnoth.org (→ github.com)
+		coc.wesnoth.org
+		dev-addons.wesnoth.org
+		devhelp.wesnoth.org
+		www.forums.wesnoth.org
+		gettext.wesnoth.org
+		git.wesnoth.org (→ github.com)
+		irclog.wesnoth.org
+		irclogs.wesnoth.org
+		manual.wesnoth.org
+		patches.wesnoth.org (→ github.com)
+		stable-addons.wesnoth.org
+		trunk-addonlist.wesnoth.org
+
+	Mixed content (handled in wesnoth.org-falsemixed.xml):
+		collectd.wesnoth.org
+
+-->
+<ruleset name="Battle for Wesnoth">
+
+	<target host="wesnoth.org" />
+	<target host="www.wesnoth.org" />
+	<target host="addons.wesnoth.org" />
+	<target host="bugs.wesnoth.org" />
+	<target host="devdocs.wesnoth.org" />
+	<target host="files.wesnoth.org" />
+	<target host="forum.wesnoth.org" />
+	<target host="forums.wesnoth.org" />
+	<target host="replays.wesnoth.org" />
+	<target host="status.wesnoth.org" />
+	<target host="units.wesnoth.org" />
+	<target host="wiki.wesnoth.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

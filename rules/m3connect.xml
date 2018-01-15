@@ -1,0 +1,6 @@
+<ruleset name="m3connect">
+    <target host="partner.m3connect.de" />
+    <target host="portal.m3-connect.de" />
+
+    <rule from="^http:" to="https:" />
+</ruleset>

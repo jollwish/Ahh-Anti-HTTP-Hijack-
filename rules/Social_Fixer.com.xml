@@ -1,0 +1,9 @@
+<ruleset name="Social Fixer.com">
+
+	<target host="socialfixer.com" />
+	<target host="www.socialfixer.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

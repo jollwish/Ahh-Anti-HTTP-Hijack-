@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://registration.warnerbros.com/ => https://registration.warnerbros.com/: (7, 'Failed to connect to registration.warnerbros.com port 443: Connection timed out')
+
+	Other Warner Bros rulesets:
+
+		- Batman_Arkham_Knight.com.xml
+		- Community.wbgames.com.xml
+		- Shadow_of_Mordor.com.xml
+		- WB_Play.com.xml
+
+
+	Nonfunctional hosts in *warnerbros.com:
+
+		- ^ ¹
+		- www ²
+		- www2 ¹
+
+	¹ Dropped
+	² Redirects to http
+
+-->
+<ruleset name="Warner Bros.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="registration.warnerbros.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,19 @@
+<!--
+	Invalid certificate:
+		book.flowingdata.com
+		datasets.flowingdata.com
+		forums.flowingdata.com
+		media.flowingdata.com
+		projects.flowingdata.com
+		webmail.flowingdata.com
+
+-->
+<ruleset name="FlowingData.com">
+
+	<target host="flowingdata.com" />
+	<target host="www.flowingdata.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

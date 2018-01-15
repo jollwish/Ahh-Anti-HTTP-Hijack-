@@ -1,0 +1,60 @@
+<!--
+	Other STRATO rulesets
+		+ STRATO_MailCenter.xml
+		+ STRATO_Pro.xml
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- strato-faq.de
+		- www.strato-faq.de
+		- strato-ayuda.es
+		- www.strato-ayuda.es
+		- strato-faq.fr
+		- www.strato-faq.fr
+		- strato-hebergement.fr
+		- www.strato-hebergement.fr
+		- strato-faq.nl
+		- www.strato-faq.nl
+		- strato-faq.co.uk
+		- www.strato-faq.co.uk
+-->
+<ruleset name="STRATO (partial)">
+	<!-- *strato.com -->
+	<target host="strato.com" />
+	<target host="www.strato.com" />
+	<target host="com4.strato.com" />
+	<target host="communicator.strato.com" />
+	<target host="dev.strato.com" />
+	<target host="dyndns.strato.com" />
+	<target host="hidrive.strato.com" />
+	<target host="www.hidrive.strato.com" />
+	<target host="sharegallery.strato.com" />
+	<target host="shop.strato.com" />
+	<target host="webmail.strato.com" />
+
+	<!-- *strato.de -->
+	<target host="strato.de" />
+	<target host="www.strato.de" />
+	<target host="blog.strato.de" />
+	<target host="com4.strato.de" />
+	<target host="communicator.strato.de" />
+	<target host="hidrive.strato.de" />
+	<target host="shop.strato.de" />
+
+	<!-- *strato.es -->
+	<target host="strato.es" />
+	<target host="www.strato.es" />
+	<target host="affiliate.strato.es" />
+
+	<!-- *strato.nl -->
+	<target host="strato.nl" />
+	<target host="www.strato.nl" />
+
+	<!-- *strato-hosting.co.uk -->
+	<target host="strato-hosting.co.uk" />
+	<target host="www.strato-hosting.co.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

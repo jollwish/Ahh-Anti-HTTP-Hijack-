@@ -1,0 +1,7 @@
+<ruleset name="SRA OSS">
+
+	<target host="www.sraoss.co.jp" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

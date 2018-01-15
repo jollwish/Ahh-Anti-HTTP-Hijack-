@@ -1,0 +1,42 @@
+<!--
+	Other rutracker rulesets:
+		rutrk.org.xml
+		t-ru.org.xml
+
+	Login required:
+		adcal.rutracker.org
+		rt.rutracker.org
+
+	Invalid certificate:
+		blog.rutracker.org ( → http://rutracker.news/ )
+		feed.rutracker.org
+		subs.rutracker.org
+		www.rutracker.org
+		www.rutracker.cr
+		www.rutracker.net
+
+	Refused:
+		generation.rutracker.org
+		wiki.rutracker.org ( → http://rutracker.wiki/ )
+
+-->
+<ruleset name="rutracker.org">
+
+	<target host="rutracker.org" />
+	<target host="www.rutracker.org" />
+
+	<target host="rutracker.cr" />
+	<target host="www.rutracker.cr" />
+
+	<target host="rutracker.net" />
+	<target host="www.rutracker.net" />
+
+	<target host="rutracker.nl" />
+	<target host="www.rutracker.nl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(www\.)?rutracker\.(org|cr|net|nl)/"
+		to="https://rutracker.$2/" />
+
+</ruleset>

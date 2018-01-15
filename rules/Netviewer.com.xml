@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://my.netviewer.com/ => https://my.netviewer.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	For other Citrix coverage, see Citrix.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- netviewer.com
+		- www.netviewer.com
+
+-->
+<ruleset name="Netviewer.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="netviewer.com" />
+	<target host="my.netviewer.com" />
+	<target host="www.netviewer.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?netviewer\.com$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

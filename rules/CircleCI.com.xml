@@ -1,0 +1,14 @@
+<ruleset name="CircleCI.com">
+
+	<target host="circleci.com" />
+	<target host="www.circleci.com" />
+	<target host="blog.circleci.com" />
+	<target host="discuss.circleci.com" />
+	<target host="status.circleci.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

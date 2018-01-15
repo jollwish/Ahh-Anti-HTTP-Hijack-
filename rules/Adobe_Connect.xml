@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adobeconnect.com/ => https://adobeconnect.com/: (28, 'Connection timed out after 20005 milliseconds')
+
+	For other Adobe coverage, see Adobe.xml.
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- bridges
+
+		- events-emea\d+:
+
+			- events-emea2
+
+		- events-na[1-9]
+		- events-na1[01]
+		- na\d+cps
+
+-->
+<ruleset name="Adobe Connect.com" default_off='failed ruleset test'>
+
+	<target host="adobeconnect.com" />
+	<target host="*.adobeconnect.com" />
+
+		<test url="http://bridges.adobeconnect.com/" />
+		<test url="http://events-emea2.adobeconnect.com/" />
+		<test url="http://events-na1.adobeconnect.com/" />
+		<test url="http://events-na5.adobeconnect.com/" />
+		<test url="http://events-na9.adobeconnect.com/" />
+		<test url="http://events-na10.adobeconnect.com/" />
+		<test url="http://events-na11.adobeconnect.com/" />
+		<test url="http://experts.adobeconnect.com/" />
+		<test url="http://www.adobeconnect.com/" />
+
+
+	<rule from="^http://((?:bridges|events-(?:emea\d+|na\d+)|experts|na\d+cps|www)\.)?adobeconnect\.com/"
+		to="https://$1adobeconnect.com/" />
+
+</ruleset>

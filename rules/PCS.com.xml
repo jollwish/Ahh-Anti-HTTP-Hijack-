@@ -1,0 +1,20 @@
+<!--
+
+	Problematic hosts in pcs.com:
+
+		- download (timeout)
+		- webmail (self-signed)
+
+-->
+<ruleset name="PCS.com">
+
+	<target host="pcs.com" />
+	<target host="www.pcs.com" />
+	<target host="partner-support.pcs.com" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

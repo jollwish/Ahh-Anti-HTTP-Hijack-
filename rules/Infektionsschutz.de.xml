@@ -1,0 +1,8 @@
+<ruleset name="Infektionsschutz.de">
+	<target host="infektionsschutz.de" />
+	<target host="www.infektionsschutz.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,32 @@
+<!--
+	Non-functional hosts
+		4xx client error:
+			 - file1.wechat.com
+
+		5xx server error:
+			 - file2.wechat.com
+
+		Secure connection redirects to plaintext:
+			 - 
+-->
+<ruleset name="WeChat (partial)">
+	<target host="wechat.com" />
+	<target host="www.wechat.com" />
+	<target host="admin.wechat.com" />
+	<target host="compass.admin.wechat.com" />
+	<target host="api.wechat.com" />
+	<target host="login.wechat.com" />
+	<target host="res.wechat.com" />
+	<target host="support.wechat.com" />
+	<target host="video.wechat.com" />
+	<target host="web.wechat.com" />
+	<target host="web1.wechat.com" />
+	<target host="web2.wechat.com" />
+	<target host="webpush.wechat.com" />
+	<target host="webpush1.wechat.com" />
+	<target host="webpush2.wechat.com" />
+
+	<securecookie host="^(www\.|admin\.|login\.)?wechat\.com$" name=".+" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

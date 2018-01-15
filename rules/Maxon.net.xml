@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://nimius.maxon.net/ => https://nimius.maxon.net/: (35, 'error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol')
+
+-->
+<ruleset name="Maxon.net"  default_off='failed ruleset test'>
+	<target host="maxon.net" />
+	<target host="www.maxon.net" />
+	<target host="developers.maxon.net" />
+	<target host="fc.maxon.net" />
+	<target host="fcws.maxon.net" />
+	<target host="help.maxon.net" />
+	<target host="http.maxon.net" />
+	<target host="intro.maxon.net" />
+	<target host="landingpage.maxon.net" />
+	<target host="nimius.maxon.net" />
+	<target host="r18.maxon.net" />
+	<target host="register.maxon.net" />
+	<target host="t3dev.maxon.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

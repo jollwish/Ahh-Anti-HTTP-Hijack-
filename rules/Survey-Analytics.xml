@@ -1,0 +1,7 @@
+<ruleset name="Survey Analytics (partial)">
+
+	<target host="popup.questionpro.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	Mismatched:
+	- www (tldrlegal.com)
+	- community (tldrlegal.com)
+-->
+
+<ruleset name="TLDRLegal.com">
+	<target host="tldrlegal.com" />
+	<target host="www.tldrlegal.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(www\.)?tldrlegal\.com/" to="https://tldrlegal.com/" />
+</ruleset>

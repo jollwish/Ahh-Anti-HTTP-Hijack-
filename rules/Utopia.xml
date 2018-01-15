@@ -1,0 +1,23 @@
+<!--
+
+	Mismatched hosts in *utopia.ai:
+
+		- www
+
+-->
+<ruleset name="Utopia.ai">
+
+	<target host="utopia.ai" />
+	<target host="www.utopia.ai" />
+
+
+	<securecookie host="^\.utopia\.ai$" name=".+" />
+
+
+	<rule from="^http://www\.utopia\.ai/"
+		to="https://utopia.ai/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

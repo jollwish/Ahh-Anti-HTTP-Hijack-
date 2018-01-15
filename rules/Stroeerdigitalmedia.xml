@@ -1,0 +1,5 @@
+<ruleset name="StroeerDigitalMedia">
+<target host="cdn.stroeerdigitalmedia.de" />
+
+<rule from="^http:" to="https:" />
+</ruleset>

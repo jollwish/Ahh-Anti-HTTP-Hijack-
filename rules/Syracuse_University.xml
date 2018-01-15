@@ -1,0 +1,8 @@
+<ruleset name="Syracuse University (partial)">
+
+	<target host="faculty.ischool.syr.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

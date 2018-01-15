@@ -1,0 +1,13 @@
+<!--
+	^: cert only matches www
+
+-->
+<ruleset name="Interhyp.de">
+
+	<target host="interhyp.de" />
+	<target host="www.interhyp.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

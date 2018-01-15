@@ -1,0 +1,45 @@
+<!--
+	Non-functional hosts
+		SSL connect error:
+		- shopsensetest.shopstyle.com
+-->
+<ruleset name="ShopStyle (partial)">
+	<!-- *shopstyle.com.au -->
+	<target host="shopstyle.com.au" />
+	<target host="blog.shopstyle.com.au" />
+	<target host="www.shopstyle.com.au" />
+
+	<!-- *shopstyle.com -->
+	<target host="shopstyle.com" />
+	<target host="ads.shopstyle.com" />
+	<target host="blog.shopstyle.com" />
+	<target host="m.shopstyle.com" />
+	<target host="www.m.shopstyle.com" />
+	<target host="omniture.shopstyle.com" />
+	<target host="secure.shopstyle.com" />
+	<target host="shopsensebeta.shopstyle.com" />
+	<target host="shopsensewidget.shopstyle.com" />
+	<target host="www.shopstyle.com" />
+
+	<!-- *shopstyle.de -->
+	<target host="shopstyle.de" />
+	<target host="blog.shopstyle.de" />
+	<target host="www.shopstyle.de" />
+
+	<!-- *shopstyle.fr -->
+	<target host="shopstyle.fr" />
+	<target host="blog.shopstyle.fr" />
+	<target host="www.shopstyle.fr" />
+
+	<!-- *shopstyle.co.jp -->
+	<target host="shopstyle.co.jp" />
+	<target host="blog.shopstyle.co.jp" />
+	<target host="www.shopstyle.co.jp" />
+
+	<!-- *shopstyle.co.uk -->
+	<target host="shopstyle.co.uk" />
+	<target host="blog.shopstyle.co.uk" />
+	<target host="www.shopstyle.co.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,22 @@
+<!--
+	Other Virgin rulesets:
+
+		- VirginAustralia.xml
+		- VirginMobile.xml
+
+-->
+<ruleset name="Virgin (mismatches)" default_off="mismatched">
+
+
+	<target host="answers.virginmobileusa.com" />
+	<target host="reviews.virginmobileusa.com" />
+
+
+	<!--	- Akamai
+		- virginmobileusa.answers.bazaarvoice.com
+		  has an invalid cert too.
+		- Ditto for virginmobileusa.ugc.bazaarvoice.com
+						-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

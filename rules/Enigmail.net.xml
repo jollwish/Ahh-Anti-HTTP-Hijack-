@@ -1,0 +1,9 @@
+<ruleset name="Enigmail.net">
+
+	<target host="enigmail.net" />
+	<target host="www.enigmail.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

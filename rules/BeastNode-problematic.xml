@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see BeastNode.xml.
+
+-->
+<ruleset name="BeastNode (expired)" default_off="expired">
+
+	<target host="cp.beastnode.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+<ruleset name="Skeptic shop">
+
+	<target host="shop.skeptic.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

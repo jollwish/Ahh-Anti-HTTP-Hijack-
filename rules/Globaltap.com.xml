@@ -1,0 +1,23 @@
+<!--
+	Globaltap Hosting
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- billing
+
+-->
+<ruleset name="Globaltap.com">
+
+	<target host="globaltap.com" />
+	<target host="billing.globaltap.com" />
+	<target host="www.globaltap.com" />
+
+
+	<securecookie host="^billing\.globaltap\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Sagernotebook.com">
+  <target host="sagernotebook.com" />
+  <target host="www.sagernotebook.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

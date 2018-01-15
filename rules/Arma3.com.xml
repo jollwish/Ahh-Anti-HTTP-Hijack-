@@ -1,0 +1,13 @@
+<ruleset name="Arma3.com">
+	<target host="arma3.com" />
+	<target host="www.arma3.com" />
+	<target host="dev.arma3.com" />
+	<target host="feedback.arma3.com" />
+	<target host="helicopters.arma3.com" />
+	<target host="karts.arma3.com" />
+	<target host="units.arma3.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

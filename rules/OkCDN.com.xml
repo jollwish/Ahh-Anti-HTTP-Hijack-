@@ -1,0 +1,27 @@
+<!--
+	For other OkCupid coverage, see OkCupid.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+			 - okccdn.com
+			 - ak0.okccdn.com
+			 - ak1.okccdn.com
+			 - ak2.okccdn.com
+			 - ak3.okccdn.com
+			 - akcdn.okccdn.com
+			 - cdn.okccdn.com
+			 - k0.okccdn.com
+			 - k1.okccdn.com
+			 - k3.okccdn.com
+			 - nameserver1.okccdn.com
+			 - nameserver2.okccdn.com
+
+		4xx client error:
+			 - k2.okccdn.com
+-->
+<ruleset name="OkC CDN.com (partial)">
+	<target host="akincludes.okccdn.com" />
+	<target host="includes.okccdn.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

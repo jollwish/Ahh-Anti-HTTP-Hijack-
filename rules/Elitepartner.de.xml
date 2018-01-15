@@ -1,0 +1,8 @@
+<ruleset name="Elitepartner.de">
+<target host="partnervermittlung.elitepartner.de" />
+<target host="www.partnervermittlung.elitepartner.de" />
+<target host="www.elitepartner.de" />
+<target host="static.ep.elitem.net" />
+
+<rule from="^http:" to="https:" />
+</ruleset>

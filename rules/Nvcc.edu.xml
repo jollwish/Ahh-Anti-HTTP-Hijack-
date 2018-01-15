@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.student.nvcc.edu/ => https://www.student.nvcc.edu/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Mismatch:
+		alert.nvcc.edu
+		libguides.nvcc.edu
+		vetcareers.nvcc.edu
+
+	Mixed content:
+		eli.nvcc.edu
+
+	Refused:
+		novastartalk.nvcc.edu
+-->
+<ruleset name="NVCC" default_off='failed ruleset test'>
+	<target host="nvcc.edu" />
+	<target host="www.nvcc.edu" />
+	<target host="blogs.nvcc.edu" />
+	<target host="dashboard.nvcc.edu" />
+	<target host="housing.nvcc.edu" />
+	<target host="mysupport.nvcc.edu" />
+	<target host="novaonline.nvcc.edu" />
+	<target host="print2fastprint.nvcc.edu" />
+	<target host="staging.nvcc.edu" />
+	<target host="studentblogs.nvcc.edu" />
+	<target host="support.nvcc.edu" />
+	<target host="techplus.nvcc.edu" />
+	<target host="vod02.nvcc.edu" />
+	<target host="www.student.nvcc.edu" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	For rules that are on by default, see NAVTEQ.xml.
+
+-->
+<ruleset name="NAVTEQ (problematic)" default_off="mismatched">
+
+	<target host="corporate.navteq.com" />
+
+
+	<!--	CN: www.navteq.com
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

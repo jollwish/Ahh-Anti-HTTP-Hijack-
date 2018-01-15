@@ -1,0 +1,36 @@
+<!--
+	Other Michigan State University rulesets:
+		+ Animal_Law.info.xml
+ -->
+<ruleset name="Michigan State University (partial)">
+	<target host="msu.edu" />
+	<target host="www.msu.edu" />
+	<target host="admissions.msu.edu" />
+	<target host="cse.msu.edu" />
+	<target host="www.cse.msu.edu" />
+	<target host="events.msu.edu" />
+	<target host="grad.msu.edu" />
+	<target host="login.msu.edu" />
+	<target host="math.msu.edu" />
+	<target host="provost.msu.edu" />
+	<target host="reg.msu.edu" />
+	<target host="shop.msu.edu" />
+	<target host="spartanspiritshop.msu.edu" />
+	<target host="techstore.msu.edu" />
+	<target host="shop.union.msu.edu" />
+	
+	<!-- 
+		several subdomains do not have a certificate or their certificates are
+			self-signed, so we have to exclude them from the ruleset.
+		
+		<exclusion pattern="^http://(?:grad|acadgov|trustees|president|provost|ur|rha)\." />
+		<exclusion pattern="^http://www\.(?:vprgs|vpfo|vps|canr)\." />
+		
+		Need to pull more exclusions from here:
+			https://www.msu.edu/about/thisismsu/board-admin/index.html 
+	-->
+	
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://aur.pacbsd.org/ => https://aur.pacbsd.org/: (6, 'Could not resolve host: aur.pacbsd.org')
+
+-->
+<ruleset name="PacBSD.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="pacbsd.org" />
+	<target host="aur.pacbsd.org" />
+	<target host="bbs.pacbsd.org" />
+	<target host="wiki.pacbsd.org" />
+	<target host="www.pacbsd.org" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

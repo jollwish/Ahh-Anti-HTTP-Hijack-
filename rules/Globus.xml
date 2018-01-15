@@ -1,0 +1,22 @@
+<!--
+	Related rulesets:
+
+		- Globus-Online.xml
+
+
+	Nonfunctional domains:
+
+		- (www.)globus.org
+
+-->
+<ruleset name="Globus (partial)" default_off="self-signed">
+
+	<target host="dev.globus.org" />
+
+
+	<securecookie host="^dev\.globus\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

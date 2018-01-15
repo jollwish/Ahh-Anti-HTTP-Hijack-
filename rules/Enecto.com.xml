@@ -1,0 +1,21 @@
+<!--
+	^: redirects to https://www
+	www: 404; mismatched, CN: hotelroom7.mainloop.net
+
+-->
+<ruleset name="Enecto.com (partial)">
+
+	<target host="ac.enecto.com" />
+	<target host="partner.enecto.com" />
+	<target host="pf3.enecto.com" />
+	<target host="trk.enecto.com" />
+
+
+	<!--	Secured by server:
+					-->
+	<!--securecookie host="^(ac|partner|pf3)\.enecto\.com$" name="^JSESSIONID$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

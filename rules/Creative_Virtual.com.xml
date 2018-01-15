@@ -1,0 +1,12 @@
+<ruleset name="Creative Virtual.com">
+
+	<target host="creativevirtual.com" />
+	<target host="www.creativevirtual.com" />
+	<target host="info.creativevirtual.com" />
+
+	<securecookie host="^www\.creativevirtual\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

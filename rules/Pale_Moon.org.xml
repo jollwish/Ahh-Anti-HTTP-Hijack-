@@ -1,0 +1,18 @@
+<!--
+	HTTP 502:
+		- relmirror
+-->
+
+<ruleset name="Pale Moon.org (partial)">
+	<target host="palemoon.org" />
+	<target host="www.palemoon.org" />
+	<target host="addons.palemoon.org" />
+	<target host="developer.palemoon.org" />
+	<target host="forum.palemoon.org" />
+	<target host="linux.palemoon.org" />
+	<target host="start.palemoon.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

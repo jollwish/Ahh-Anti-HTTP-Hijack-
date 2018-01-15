@@ -1,0 +1,6 @@
+<ruleset name="Dfri.se">
+  <target host="dfri.se" />
+  <target host="www.dfri.se" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

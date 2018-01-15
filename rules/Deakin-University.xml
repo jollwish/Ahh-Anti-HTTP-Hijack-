@@ -1,0 +1,8 @@
+<ruleset name="Deakin University (partial)" platform="mixedcontent">
+
+	<target host="deakin.edu.au" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

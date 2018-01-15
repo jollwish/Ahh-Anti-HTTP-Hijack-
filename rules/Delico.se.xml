@@ -1,0 +1,6 @@
+<ruleset name="Delico.se">
+  <target host="www.delico.se" />
+  <target host="delico.se" />
+  <rule from="^http:" to="https:" />
+</ruleset>
+

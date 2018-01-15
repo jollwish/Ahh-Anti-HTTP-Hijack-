@@ -1,0 +1,11 @@
+<ruleset name="Adentifi.com">
+	<target host="bm.adentifi.com" />
+	<target host="imps.adentifi.com" />
+	<target host="pixel.adentifi.com" />
+	<target host="rtb.adentifi.com" />
+	<target host="wins.adentifi.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

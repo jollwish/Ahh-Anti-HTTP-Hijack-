@@ -1,0 +1,74 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://southwark.gov.uk/ => https://southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://forms.southwark.gov.uk/ => https://forms.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://forums.southwark.gov.uk/ => https://forums.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://m.southwark.gov.uk/ => https://m.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://my.southwark.gov.uk/ => https://my.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://pensions.southwark.gov.uk/ => https://pensions.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://safeguarding.southwark.gov.uk/ => https://safeguarding.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.southwark.gov.uk/ => https://www.southwark.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	London Borough of Southwark Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+
+	Nonfunctional hosts in *southwark.gov.uk:
+
+		- cypdirectory ᶠ
+		- localoffer ᵈ
+		- maps ʳ
+		- moderngov ᶠ
+		- planbuild ᵇ
+		- wasteservices ᵇ
+
+	ᵇ Shows default page
+	ᵈ Dropped
+	ᶠ Handshake fails
+	ʳ Refused
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- southwark.gov.uk
+		- .southwark.gov.uk
+		- forums.southwark.gov.uk
+		- my.southwark.gov.uk
+		- pensions.southwark.gov.uk
+		- www.southwark.gov.uk
+
+-->
+<ruleset name="Southwark.gov.uk (partial)" default_off='failed ruleset test'>
+
+	<target host="southwark.gov.uk" />
+	<target host="consultations.southwark.gov.uk" />
+	<target host="www.consultations.southwark.gov.uk" />
+	<target host="forms.southwark.gov.uk" />
+	<target host="forums.southwark.gov.uk" />
+	<target host="m.southwark.gov.uk" />
+	<target host="my.southwark.gov.uk" />
+	<target host="netloan.southwark.gov.uk" />
+	<target host="pensions.southwark.gov.uk" />
+	<target host="safeguarding.southwark.gov.uk" />
+	<target host="spm.southwark.gov.uk" />
+	<target host="www.southwark.gov.uk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?southwark\.gov\.uk$" name="^\w{16}$" /-->
+	<!--securecookie host="^\.southwark\.gov\.uk$" name="^TestCookie$" /-->
+	<!--securecookie host="^forums\.southwark\.gov\.uk$" name="^(?:ASP\.NET_SessionId|PreviousVisit|panelstate_(?:ActiveDiscussions|InformationPanel|categoryPanel[12]))$" /-->
+	<!--securecookie host="^my\.southwark\.gov\.uk$" name="^Login\.Return$" /-->
+	<!--securecookie host="^pensions\.southwark\.gov\.uk$" name="^(?:javax\.faces\.ClientToken|scheEmp)$" /-->
+
+	<securecookie host="^\." name="^(?:_gat?|TestCookie)$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

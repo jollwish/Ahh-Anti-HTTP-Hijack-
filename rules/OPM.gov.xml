@@ -1,0 +1,18 @@
+<ruleset name="OPM.gov (partial)">
+
+	<target host="opm.gov" />
+	<target host="www.opm.gov" />
+	<target host="apps.opm.gov" />
+	<target host="archive.opm.gov" />
+	<target host="leadership.opm.gov" />
+	<target host="listserv.opm.gov" />
+	<target host="www.servicesonline.opm.gov" />
+	<target host="timesheets.opm.gov" />
+	<target host="www.leadership.opm.gov" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

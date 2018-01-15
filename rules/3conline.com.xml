@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://js.3conline.com/ => https://js.3conline.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Refused:
+		- ^
+		- auto
+		- mail
+		- r
+		- www
+-->
+
+<ruleset name="3conline.com (partial)" default_off='failed ruleset test'>
+  
+	<target host="i1.3conline.com" />
+	<target host="i2.3conline.com" />
+	<target host="i3.3conline.com" />
+	<target host="i4.3conline.com" />
+	<target host="i5.3conline.com" />
+	<target host="i6.3conline.com" />
+	<target host="i7.3conline.com" />
+	<target host="i8.3conline.com" />
+	<target host="i9.3conline.com" />
+	<target host="i10.3conline.com" />
+	<target host="js.3conline.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,7 @@
+<ruleset name="FriBID.se">
+  <target host="fribid.se" />
+  <target host="www.fribid.se" />
+  <!-- all subdomains work over HTTPS, but the cert has www only -->
+
+  <rule from="^http:" to="https:" />
+</ruleset>

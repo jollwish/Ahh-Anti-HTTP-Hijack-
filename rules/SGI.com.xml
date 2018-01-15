@@ -1,0 +1,15 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+-->
+<ruleset name="SGI.com">
+
+	<target host="sgi.com" />
+	<target host="www.sgi.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

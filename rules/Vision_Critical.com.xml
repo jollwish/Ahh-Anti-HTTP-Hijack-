@@ -1,0 +1,78 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://info.mkto.visioncritical.com/css/mktLPSupport.css (200) => https://na-abk.marketo.com/css/mktLPSupport.css (403)
+Non-2xx HTTP code: http://info.mkto.visioncritical.com/rs/visioncritical/images/doltone-house-apac-summit-banner-2.jpg (200) => https://na-abk.marketo.com/rs/visioncritical/images/doltone-house-apac-summit-banner-2.jpg (403)
+Fetch error: http://de.visioncritical.com/ => https://de.visioncritical.com/: (51, "SSL: no alternative certificate subject name matches target host name 'de.visioncritical.com'")
+Fetch error: http://fr.visioncritical.com/ => https://fr.visioncritical.com/: (51, "SSL: no alternative certificate subject name matches target host name 'fr.visioncritical.com'")
+
+	Other Vision Critical rulesets:
+
+		- Vision_Critical_Panels.com.xml
+
+
+	Nonfunctional hosts in *visioncritical.com:
+
+		- info.mkto ᵃ
+		- vcu ʳ
+		- webcam ʳ
+
+	ᵃ Marketo / shows another domain
+	ʳ Refused
+
+
+	Problematic hosts in *visioncritical.com:
+
+		- ilovecustomers ᵐ
+
+	ᵐ Mismatched
+
+-->
+<ruleset name="Vision Critical.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="visioncritical.com" />
+	<target host="de.visioncritical.com" />
+	<target host="fr.visioncritical.com" />
+	<target host="www.visioncritical.com" />
+
+	<!--	Complications:
+				-->
+	<target host="info.mkto.visioncritical.com" />
+
+		<exclusion pattern="^http://info\.mkto\.visioncritical\.com/(?!/*(?:$|\?|css/|images/|rs/))" />
+
+			<!--	+ve:
+					-->
+			<test url="http://info.mkto.visioncritical.com/20120418WebinarNewMRBehaviouralEcon.html" />
+			<test url="http://info.mkto.visioncritical.com/20120528_VCSurveys_Allocation_Video.html" />
+			<test url="http://info.mkto.visioncritical.com/Email-Unsubscribe.html" />
+			<test url="http://info.mkto.visioncritical.com/ForumThemes.html" />
+			<test url="http://info.mkto.visioncritical.com/RAC-VCU.html" />
+			<test url="http://info.mkto.visioncritical.com/Request-a-Call-Back-Footer-Form.html" />
+			<test url="http://info.mkto.visioncritical.com/VID_WeightinginQuickReports_24.08.12.html" />
+			<test url="http://info.mkto.visioncritical.com/forumexports.html" />
+
+
+	<securecookie host="^\." name="^_ga(?:t?$|t_)" />
+	<securecookie host="^[^.i]" name=".+" />
+
+
+	<!--	Redirect drops args and forward slash:
+							-->
+	<rule from="^http://info\.mkto\.visioncritical\.com/+(?:\?.*)?$"
+		to="https://www.visioncritical.com/" />
+
+		<test url="http://info.mkto.visioncritical.com/?" />
+
+	<rule from="^http://info\.mkto\.visioncritical\.com/"
+		to="https://na-abk.marketo.com/" />
+
+		<test url="http://info.mkto.visioncritical.com/css/mktLPSupport.css" />
+		<test url="http://info.mkto.visioncritical.com/rs/visioncritical/images/doltone-house-apac-summit-banner-2.jpg" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

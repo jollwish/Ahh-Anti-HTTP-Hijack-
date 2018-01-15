@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://71.nuggad.net/ => https://71.nuggad.net/: (6, 'Could not resolve host: 71.nuggad.net')
+Fetch error: http://mtm.nuggad.net/ => https://mtm.nuggad.net/: Too many redirects while fetching 'https://mtm.nuggad.net/'
+
+-->
+<ruleset name="nugg.ad" default_off='failed ruleset test'>
+
+	<target host="*.nugg.ad" />
+	<target host="*.nuggad.net" />
+
+	<securecookie host="^\.nuggad\.net$" name="^d$" />
+
+	<rule from="^http:"
+	        to="https:" />
+
+	<test url="http://www.nugg.ad/" />
+	<test url="http://71.nuggad.net/" />
+	<test url="http://71iv.nuggad.net/" />
+	<test url="http://asv.nuggad.net/" />
+	<test url="http://bei.nuggad.net/" />
+	<test url="http://ci.nuggad.net/" />
+	<test url="http://gwp.nuggad.net/" />
+	<test url="http://ip-s.nuggad.net/" />
+	<test url="http://mtm.nuggad.net/" />
+	<test url="http://poldk.nuggad.net/" />
+	<test url="http://si.nuggad.net/" />
+	<test url="http://yahoo-s.nuggad.net/" />
+
+</ruleset>

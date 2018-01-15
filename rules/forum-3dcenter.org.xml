@@ -1,0 +1,8 @@
+<ruleset name="forum-3dcenter.org">
+	<target host="forum-3dcenter.org" />
+	<target host="www.forum-3dcenter.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

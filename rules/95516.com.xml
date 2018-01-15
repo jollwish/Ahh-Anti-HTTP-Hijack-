@@ -1,0 +1,44 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://nmg.95516.com/ => https://nmg.95516.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	See also
+		UnionPay.com.xml
+
+	Mismatch
+		- m.95516.com
+		- mobile.95516.com
+
+	Incomplete certificate chain
+		- sxfs.95516.com
+
+	Refused
+		- air.95516.com
+		- benefits.95516.com
+		- csair.95516.com
+		- hotel.95516.com
+		- travel.95516.com
+
+	Timeout
+		- www.hngd.95516.com
+
+	502
+		- 62.95516.com
+-->
+<ruleset name="95516.com" default_off='failed ruleset test'>
+	<target host="95516.com" />
+	<target host="www.95516.com" />
+	<target host="app.95516.com" />
+	<target host="cashier.95516.com" />
+	<target host="hyx.95516.com" />
+	<target host="nmg.95516.com" />
+	<target host="shenka.95516.com" />
+	<target host="resource.shenka.95516.com" />
+	<target host="static.95516.com" />
+	<target host="user.95516.com" />
+	<target host="wallet.95516.com" />
+	<target host="youhui.95516.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

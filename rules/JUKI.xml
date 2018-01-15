@@ -1,0 +1,12 @@
+<!--
+	^juki.co.jp doesn't exist.
+
+-->
+<ruleset name="JUKI">
+
+	<target host="www.juki.co.jp" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

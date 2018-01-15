@@ -1,0 +1,11 @@
+<ruleset name="Bürger-CERT">
+
+    <target host="buerger-cert.de" />
+    <target host="www.buerger-cert.de" />
+
+    <securecookie host=".+" name=".+" />
+
+    <rule from="^http:"
+        to="https:" />
+
+</ruleset>

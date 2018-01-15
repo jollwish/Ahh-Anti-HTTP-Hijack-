@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ukash.com/ => https://ukash.com/: (7, 'Failed to connect to ukash.com port 443: Connection refused')
+Fetch error: http://direct.ukash.com/ => https://direct.ukash.com/: (7, 'Failed to connect to direct.ukash.com port 443: Connection refused')
+Fetch error: http://mycard.ukash.com/ => https://mycard.ukash.com/: (7, 'Failed to connect to mycard.ukash.com port 443: Connection refused')
+Fetch error: http://www.ukash.com/ => https://www.ukash.com/: (7, 'Failed to connect to www.ukash.com port 443: Connection refused')
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- direct
+		- mycard
+
+	Domain without https:
+
+		- (www.)?ukashbusiness.com
+
+	Insecure cookies are set for these domains:
+
+		- ukash.com
+		- direct.ukash.com
+		- mycard.ukash.com
+		- www.ukash.com
+
+-->
+<ruleset name="Ukash.com" default_off='failed ruleset test'>
+
+	<target host="ukash.com" />
+	<target host="direct.ukash.com" />
+	<target host="mycard.ukash.com" />
+	<target host="www.ukash.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^((direct|mycard|www)\.)?ukash\.com$" name="^ASP\.NET_SessionId$" /-->
+	<!--securecookie host="^(www\.)?ukash\.com$" name="^(\.ASPXAUTH|EkAnalytics|EktGUID|ecm|ecmSecure)$" /-->
+
+	<securecookie host="^(?:direct\.|mycard\.|www\.)?ukash\.com$" name=".+" />
+
+
+	<rule from="^http:"
+        to="https:" />
+
+</ruleset>

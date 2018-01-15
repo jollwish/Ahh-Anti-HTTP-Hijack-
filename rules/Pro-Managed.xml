@@ -1,0 +1,13 @@
+<!--
+	www: cert only matches ^pro-managed.com
+
+-->
+<ruleset name="Pro-Managed">
+
+	<target host="pro-managed.com" />
+	<target host="www.pro-managed.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,27 @@
+<!--
+	Problematic subdomains:
+
+		- (www.)? ¹
+		- lt ²
+
+	¹ Expired 2013, mismatched, self-signed
+	² Expired 2014
+
+
+	Fully covered subdomains:
+
+		- au
+		- int
+		- pl
+
+-->
+<ruleset name="vichan.net (partial)">
+
+	<target host="au.vichan.net" />
+	<target host="int.vichan.net" />
+	<target host="pl.vichan.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

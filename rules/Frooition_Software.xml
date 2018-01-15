@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(rx_record_too_long)
+		- global	(shows secure)
+
+-->
+<ruleset name="Frooition Software (partial)">
+
+	<target host="freedom.frooition.com" />
+	<target host="my.frooition.com" />
+	<target host="secure.frooition.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

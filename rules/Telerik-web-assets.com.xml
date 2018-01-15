@@ -1,0 +1,16 @@
+<!--
+	For other Telerik coverage, see Telerik.com.xml.
+
+
+	^: cert only matches www
+
+-->
+<ruleset name="Telerik-web-assets.com">
+
+	<target host="telerik-web-assets.com" />
+	<target host="www.telerik-web-assets.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

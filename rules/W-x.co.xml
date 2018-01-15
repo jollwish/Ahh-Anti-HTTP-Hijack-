@@ -1,0 +1,8 @@
+<ruleset name="W-x.Co">
+
+	<target host="s.w-x.co" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,10 @@
+<!--
+	Governor-General of the Commonwealth of Australia
+
+-->
+<ruleset name="GG.gov.au">
+	<target host="gg.gov.au" />
+	<target host="www.gg.gov.au" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

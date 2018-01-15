@@ -1,0 +1,25 @@
+<!--
+	This ruleset is for Lithium clients that
+	otherwise have no rules off by default.
+
+
+	For Lithium proper coverage, see Lithium.xml.
+
+
+	CN: secure02.lithium.com
+
+-->
+<ruleset name="Lithium clients" default_off="mismatched">
+
+	<target host="businessforums.verizon.net" />
+		<!--
+			Handled in Verizon.xml.
+						-->
+		<exclusion pattern="^http://businessforums\.verizon\.net/html/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

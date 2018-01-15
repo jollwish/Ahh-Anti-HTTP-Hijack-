@@ -1,0 +1,21 @@
+<!--
+	For other Guardian rulesets, see Guardian.xml.
+
+	Cert mismatch:
+		- api
+		- d
+
+	TimeOut:
+		- t
+-->
+<ruleset name="Gu.com">
+
+	<!--	Complications:
+				-->
+	<target host="gu.com" />
+	<target host="www.gu.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

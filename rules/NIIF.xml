@@ -1,0 +1,13 @@
+<!--
+	Expired:
+		- www.hboneplus.hu
+-->
+
+<ruleset name="NIIF Int&#233;zet (partial)">
+	<target host="niif.hu" />
+	<target host="www.niif.hu" />
+	<target host="www.ca.niif.hu" />
+	<target host="keys.niif.hu" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

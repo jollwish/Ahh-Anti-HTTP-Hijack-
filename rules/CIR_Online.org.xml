@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://beta.cironline.org/ => https://beta.cironline.org/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.cironline.org/ => https://www.cironline.org/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="CIR Online.org (partial)" default_off='failed ruleset test'>
+
+	<target host="cironline.org" />
+	<target host="beta.cironline.org" />
+	<target host="www.cironline.org" />
+		<!--
+			Redirect to http:
+						-->
+		<!--exclusion pattern="^http://cironline\.org/($|\?|favicon\.ico)" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://cironline\.org/+(?!sites/)" />
+	
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	For other Trellian coverage, see Trellian.xml.
+-->
+<ruleset name="ToolbarBrowser">
+
+	<target host="toolbarbrowser.com" />
+	<target host="www.toolbarbrowser.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,49 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.autoblog.com/ => https://www.autoblog.com/: Too many redirects while fetching 'https://www.autoblog.com/'
+Fetch error: http://autoblog.com/ => https://www.autoblog.com/: Too many redirects while fetching 'https://www.autoblog.com/'
+
+	For other AOL coverage, see AOL.xml.
+
+
+	Problematic hosts in *autoblog.com:
+
+		- ^ *
+
+	* Refused
+
+
+	Fully covered hosts in *autoblog.com:
+
+		- (www.)?	(^ → www)
+
+
+	Mixed content:
+
+		- css from www.blogsmithmedia.com
+
+		- Images, from:
+
+			- o.aolcdn.com
+			- www.blogsmithmedia.com
+
+-->
+<ruleset name="Auto Blog.com" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.autoblog.com" />
+
+	<!--	Complications:
+				-->
+	<target host="autoblog.com" />
+
+
+	<rule from="^http://autoblog\.com/"
+		to="https://www.autoblog.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

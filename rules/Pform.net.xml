@@ -1,0 +1,14 @@
+<!--
+	These altnames don't exist:
+
+		- www.pform.net
+
+-->
+<ruleset name="pform.net">
+
+	<target host="pform.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

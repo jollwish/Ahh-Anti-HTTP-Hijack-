@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.mattermark.com/ => https://support.mattermark.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://wordpress.mattermark.com/ => https://wordpress.mattermark.com/: (51, "SSL: no alternative certificate subject name matches target host name 'wordpress.mattermark.com'")
+
+	Insecure cookies are set for these domains and hosts:
+
+		- mattermark.com
+		- .mattermark.com
+		- support.mattermark.com
+
+-->
+<ruleset name="Mattermark.com" default_off='failed ruleset test'>
+
+	<target host="mattermark.com" />
+	<target host="support.mattermark.com" />
+	<target host="wordpress.mattermark.com" />
+	<target host="www.mattermark.com" />
+
+		<!--	Sets cookie without Secure:
+							-->
+		<!--test url="http://mattermark.com/app/" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^mattermark\.com$" name="^session$" /-->
+	<!--securecookie host="^\.mattermark\.com$" name="^mkt_referer$" /-->
+	<!--securecookie host="^support\.mattermark\.com$" name="^(?:_session_id|current_(?:admin|user)_language)$" /-->
+
+	<securecookie host="^\." name="^mkt_referer$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

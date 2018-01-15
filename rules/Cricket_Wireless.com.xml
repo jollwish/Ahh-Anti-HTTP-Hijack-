@@ -1,0 +1,13 @@
+<!--
+	^: Akamai
+
+-->
+<ruleset name="Cricket Wireless.com">
+
+	<target host="cricketwireless.com" />
+	<target host="www.cricketwireless.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

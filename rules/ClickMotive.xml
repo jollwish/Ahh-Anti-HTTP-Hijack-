@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://origin-assets.clickmotive.com/ => https://origin-assets.clickmotive.com/: (7, 'Failed to connect to origin-assets.clickmotive.com port 443: Connection refused')
+
+	(www.)?clickmotive.com: Refused
+
+
+	Problematic hosts in *clickmotive.com:
+
+		- assets *
+
+	* Akamai
+
+-->
+<ruleset name="ClickMotive.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="fusiontools.clickmotive.com" />
+	<target host="origin-assets.clickmotive.com" />
+	<target host="secureassets.clickmotive.com" />
+
+	<!--	Complications:
+				-->
+	<target host="assets.clickmotive.com" />
+
+
+	<rule from="^http://assets\.clickmotive\.com/"
+		to="https://secureassets.clickmotive.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

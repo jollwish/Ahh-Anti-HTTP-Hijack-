@@ -1,0 +1,18 @@
+<!--
+	For rules that are on by default, see BreNet.xml.
+
+-->
+<ruleset name="BreNet (mismatches)" default_off="mismatch, self-signed">
+
+	<!--	Self-signed	-->
+	<target host="vz46.brenet.de" />
+	<!--	Cert: www.brenet.de	-->
+	<target host="webmail.brenet.de" />
+
+
+	<!--	Cookies are handled in the main ruleset.	-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

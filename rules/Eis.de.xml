@@ -1,0 +1,5 @@
+<ruleset name="Eis.de">
+	<target host="images.eis.de" />
+	<target host="www.eis.de" />
+	<rule from="^http:" to="https:" />
+</ruleset>

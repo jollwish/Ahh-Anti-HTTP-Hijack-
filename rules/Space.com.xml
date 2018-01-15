@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://store.space.com/ => https://store.space.com/: (51, "SSL: no alternative certificate subject name matches target host name 'store.space.com'")
+
+	Nonfunctional hosts in *space.com:
+
+		- ^		Dropped
+		- i		504
+		- www		504
+
+
+	Mixed content:
+
+		- Bug on store from hermanstreet.122.2o7.net *
+
+	* Secured by us
+
+-->
+<ruleset name="Space.com store" default_off='failed ruleset test'>
+
+	<target host="store.space.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

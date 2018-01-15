@@ -1,0 +1,12 @@
+<!--
+	California State University
+
+-->
+<ruleset name="Cal State.edu (partial)">
+
+	<target host="sdsu-dspace.calstate.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

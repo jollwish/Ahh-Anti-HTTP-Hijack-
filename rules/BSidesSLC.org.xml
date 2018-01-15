@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bsidesslc.org/ => https://bsidesslc.org/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.bsidesslc.org/ => https://www.bsidesslc.org/: (60, 'SSL certificate problem: certificate has expired')
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="BSidesSLC.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bsidesslc.org" />
+	<target host="www.bsidesslc.org" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

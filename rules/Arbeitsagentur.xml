@@ -1,0 +1,11 @@
+<ruleset name="Arbeitsagentur.de (partial)">
+
+	<target host="arbeitsagentur.de" />
+	<target host="www.arbeitsagentur.de" />
+	<target host="jobboerse.arbeitsagentur.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

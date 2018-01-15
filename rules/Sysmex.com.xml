@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://sysmex.com/ => https://sysmex.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.sysmex.com/ => https://www.sysmex.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .sysmex.com
+		- www.sysmex.com
+
+-->
+<ruleset name="Sysmex.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="sysmex.com" />
+	<target host="www.sysmex.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.sysmex\.com$" name="^__utm\w+$" /-->
+	<!--securecookie host="^www\.sysmex\.com$" name="^BIGipServer\w+$" /-->
+
+	<securecookie host="^\.sysmex\.com$" name="^__utm\w+$" />
+	<securecookie host="^www\.sysmex\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

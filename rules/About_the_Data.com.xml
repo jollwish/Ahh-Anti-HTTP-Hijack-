@@ -1,0 +1,17 @@
+<!--
+	Other Acxiom coverage:
+
+		- acxiom.com.xml
+		- Acxiom-online.com.xml
+
+-->
+<ruleset name="About the Data.com">
+
+	<target host="aboutthedata.com" />
+	<target host="www.aboutthedata.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

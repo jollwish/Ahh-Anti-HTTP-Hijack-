@@ -1,0 +1,17 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://yoursav.com/ => https://yoursav.com/: (51, "SSL: no alternative certificate subject name matches target host name 'yoursav.com'")
+Fetch error: http://www.yoursav.com/ => https://www.yoursav.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.yoursav.com'")
+
+-->
+<ruleset name="YoursAV.com" default_off='failed ruleset test'>
+
+	<target host="yoursav.com" />
+	<target host="www.yoursav.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

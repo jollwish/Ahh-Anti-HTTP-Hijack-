@@ -1,0 +1,12 @@
+<!--
+	(www.) doesn't exist.
+
+-->
+<ruleset name="Toke.dk">
+
+	<target host="kau.toke.dk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

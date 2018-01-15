@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://store.csiac.org/ => https://store.csiac.org/: (51, "SSL: no alternative certificate subject name matches target host name 'store.csiac.org'")
+
+	Fully covered hosts in *csiac.org:
+
+		- (www.)?
+		- sw
+		- store
+
+
+	Insecure cookies are set for these domains:
+
+		- .csiac.org
+
+-->
+<ruleset name="CSIAC.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="csiac.org" />
+	<target host="store.csiac.org" />
+	<target host="sw.csiac.org" />
+	<target host="www.csiac.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.csiac\.org$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^\.csiac\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

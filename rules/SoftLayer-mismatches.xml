@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see SoftLayer.xml.
+
+-->
+<ruleset name="SoftLayer (mismatches)" default_off="mismatched">
+
+	<target host="cdn.softlayer.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

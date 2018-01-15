@@ -1,0 +1,6 @@
+<ruleset name="lilliputti.com" platform="mixedcontent">
+  <target host="lilliputti.com" />
+  <target host="www.lilliputti.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

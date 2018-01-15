@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://yoklapi.com/ => https://api.yokl.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other Yokl coverage, see Yokl.com.xml.
+
+
+	^yoklapi.com: Mismatched
+
+
+	Mixed content:
+
+		- Images from d[1-4]-pub.bizrate.com *
+
+	* Not secured by us <= mismatched
+
+-->
+<ruleset name="YoklAPI.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="yoklapi.com" />
+
+
+	<rule from="^http://yoklapi\.com/"
+		to="https://api.yokl.com/" />
+
+</ruleset>

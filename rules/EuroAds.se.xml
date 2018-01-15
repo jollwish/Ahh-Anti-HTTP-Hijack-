@@ -1,0 +1,8 @@
+<ruleset name="EuroAds.se (partial)">
+
+	<target host="banner.euroads.se" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

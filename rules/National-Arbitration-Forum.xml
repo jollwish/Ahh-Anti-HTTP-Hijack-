@@ -1,0 +1,11 @@
+<ruleset name="National Arbitration Forum (partial)">
+
+	<target host="secure.arb-forum.com" />
+
+
+	<securecookie host="^secure\.arb-forum\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

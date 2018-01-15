@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://authbox.io/ => https://authbox.io/: (51, "SSL: no alternative certificate subject name matches target host name 'authbox.io'")
+Fetch error: http://api.authbox.io/ => https://api.authbox.io/: (51, "SSL: no alternative certificate subject name matches target host name 'api.authbox.io'")
+Fetch error: http://www.authbox.io/ => https://www.authbox.io/: (51, "SSL: no alternative certificate subject name matches target host name 'www.authbox.io'")
+
+	Fully covered hosts in *authbox.io:
+
+		- (www.)?
+		- api
+
+
+	Mixed content:
+
+		- css on (www.)? from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="authbox.io" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="authbox.io" />
+	<target host="api.authbox.io" />
+	<target host="www.authbox.io" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

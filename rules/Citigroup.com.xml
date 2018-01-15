@@ -1,0 +1,26 @@
+<!--
+	Other Citi Group rulesets:
+
+		- Citi.com.xml
+		- Citi_Alumni_Network.xml
+		- Citibank.xml
+		- Citibank-Australia.xml
+		- ThankYou.com.xml
+
+	Nonfunctional hosts in *citigroup.com:
+
+		- jobs *
+
+	* Handshake fails
+-->
+<ruleset name="Citigroup.com (partial)">
+
+	<target host="citigroup.com" />
+	<target host="www.citigroup.com" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

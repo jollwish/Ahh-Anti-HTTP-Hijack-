@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.imation.com/ => https://support.imation.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Problematic subdomains:
+
+		- ir	(works, akamai)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- support
+
+-->
+<ruleset name="Imation.com (partial)" default_off='failed ruleset test'>
+
+	<target host="imation.com" />
+	<target host="support.imation.com" />
+	<target host="www.imation.com" />
+
+
+	<securecookie host="^(?:support\.|www\.)?imation\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

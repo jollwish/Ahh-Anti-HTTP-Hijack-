@@ -1,0 +1,33 @@
+<!--
+	Nonfunctional hosts in *uploaded.net:
+
+		- stor\d{4}
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- uploaded.net
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="uploaded.net (partial)">
+
+	<target host="uploaded.net" />
+		<!-- Exclusion needed to download files. See #9847. -->
+		<exclusion pattern="^http://uploaded.net/io/ticket/" />
+			<test url="http://uploaded.net/io/ticket/slot/kdbnz4bu" />
+			<test url="http://uploaded.net/io/ticket/captcha/kdbnz4bu" />
+	<target host="www.uploaded.net" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^uploaded\.net$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

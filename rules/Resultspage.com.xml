@@ -1,0 +1,36 @@
+<!--
+	For other SLI Systems coverage, see SLI-Systems.com.xml.
+	There are too much hosts to list them all.
+
+	Mismatched:
+		^resultspage.com
+
+	Not exist:
+		www.resultspage.com
+
+	Different http/https content:
+		boden.resultspage.com
+		cbs.resultspage.com
+		footwearetc.resultspage.com
+
+	MCB:
+		filtersfast.resultspage.com
+
+	Redirects to http:
+		lenovo-outlet.resultspage.com
+-->
+<ruleset name="Resultspage.com (partial)">
+	<target host="assets.resultspage.com" />
+		<test url="http://assets.resultspage.com/logos/sli_logo_2014.png" />
+	<target host="bocabearings.resultspage.com" />
+	<target host="discovery.resultspage.com" />
+	<target host="etundra.resultspage.com" />
+	<target host="itvsn.resultspage.com" />
+	<target host="poolandspawarehouse.resultspage.com" />
+	<target host="sli-systems.resultspage.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>
+

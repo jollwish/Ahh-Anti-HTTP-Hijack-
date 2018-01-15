@@ -1,0 +1,13 @@
+<ruleset name="uProxy.org">
+
+	<target host="uproxy.org" />
+	<target host="www.uproxy.org" />
+	<target host="blog.uproxy.org" />
+	<target host="iff.uproxy.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

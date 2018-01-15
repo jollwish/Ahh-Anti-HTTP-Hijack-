@@ -1,0 +1,109 @@
+<!--
+	For other Thomson Reuters coverage, see Thomson-Reuters.xml.
+
+
+	CDN buckets:
+
+		- mediacdn.reuters.com.edgesuite.net
+
+		- static.reuters.com.edgesuite.net
+
+			- s[1-4]
+
+		- g3.us.reuters.com.edgesuite.net
+
+			- www.reuters.com
+
+		- yospace-cds1.reuters.com.edgesuite.net
+
+
+	Nonfunctional domains:
+
+		- reuters.com subdomains:
+
+			- @ *
+			- blogs *
+			- alerts.us **
+			- funds.us **
+			- portfolio.us **
+			- sales **
+			- static ⁴
+			- stockscreener.us **
+			- yospace-cds1 ³
+			- js.www *
+
+
+
+	* Dropped
+	** Refused
+
+	² Redirects to http
+	³ 503, akamai
+	⁴ 504, akamai
+
+
+	Problematic hosts in *reuters.com:
+
+		- live ᵐ
+		- mobile.reuters.com ᵐ
+		- mediacdn
+		- mediaexpress ᵐ
+
+	ᵐ Mismatched
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- customers.reuters.com
+		- pictures.reuters.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Reuters.com (partial)">
+
+	<target host="reuters.com" />
+	<target host="www.reuters.com" />
+	<target host="af.reuters.com" />
+	<target host="agency.reuters.com" />
+	<target host="ar.reuters.com" />
+	<target host="ara.reuters.com" />
+	<target host="br.reuters.com" />
+	<target host="ca.reuters.com" />
+	<target host="cn.reuters.com" />
+	<target host="commerce.reuters.com" />
+	<target host="customers.reuters.com" />
+	<target host="de.reuters.com" />
+	<target host="es.reuters.com" />
+	<target host="fr.reuters.com" />
+	<target host="in.reuters.com" />
+	<target host="it.reuters.com" />
+	<target host="jp.reuters.com" />
+	<target host="lta.reuters.com" />
+	<target host="mx.reuters.com" />
+	<target host="pictures.reuters.com" />
+	<target host="ru.reuters.com" />
+	<target host="uk.reuters.com" />
+	<target host="widerimage.reuters.com" />
+	<target host="s1.reutersmedia.net" />
+	<target host="s2.reutersmedia.net" />
+	<target host="s3.reutersmedia.net" />
+	<target host="s4.reutersmedia.net" />
+
+		<!--	$ 404,s so:
+					-->
+		<test url="http://commerce.reuters.com/agencyaccess/signIn.do" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^customers\.reuters\.com$" name="^ASP\.NET_SessionId$" /-->
+	<!--securecookie host="^pictures\.reuters\.com$" name="^(?:ASP\.NET_SessionId|CorexLanguageRTR)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://reuters\.com/" to="https://www.reuters.com/" />
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

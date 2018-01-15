@@ -1,0 +1,48 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://a.triggit.com/px?u=&rtv=, => https://a.triggit.com/px?u=&rtv=,: (6, 'Could not resolve host: a.triggit.com')
+Fetch error: http://a.triggit.com/ => https://a.triggit.com/: (6, 'Could not resolve host: a.triggit.com')
+Fetch error: http://portal.triggit.com/ => https://portal.triggit.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	^triggit.com: Dropped
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- triggit.com
+		- .triggit.com
+
+
+	Mixed content:
+
+		- Images on ^ from $self
+		- Images on ^ from i.imgur.com
+
+-->
+<ruleset name="Triggit.com (partial)" default_off='failed ruleset test'>
+
+	<target host="a.triggit.com" />
+	<target host="portal.triggit.com" />
+	<!--target host="www.triggit.com" /-->
+
+		<!--	Sets cookies without Secure:
+							-->
+		<test url="http://a.triggit.com/px?u=&amp;rtv=," />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^triggit\.com$" name="^PHPSESSID$" /-->
+	<!--
+		(Set by a):
+				-->
+	<!--securecookie host="^\.triggit\.com$" name="^trg[psu]$" /-->
+
+	<securecookie host="^\." name="^trg[psu]$" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

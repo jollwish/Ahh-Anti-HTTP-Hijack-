@@ -1,0 +1,6 @@
+<ruleset name="KeePass.info">
+	<target host="keepass.info" />
+	<target host="www.keepass.info" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

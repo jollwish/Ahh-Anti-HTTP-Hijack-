@@ -1,0 +1,16 @@
+<!--
+	Nonfunctional subdomains:
+
+		- $	(times out)
+		- www	(Akamai; "An error occurred")
+
+-->
+<ruleset name="MetroLyrics (partial)" default_off="mismatched">
+
+	<target host="netstorage.metrolyrics.com" />
+
+
+	<!--	Akamai	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

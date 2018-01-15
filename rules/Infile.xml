@@ -1,0 +1,13 @@
+<ruleset name="Infile">
+
+	<target host="infile.com" />
+	<target host="www.infile.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

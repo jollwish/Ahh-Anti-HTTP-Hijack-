@@ -1,0 +1,18 @@
+<!--
+
+
+	^transportation.gov doesn't exist.
+
+-->
+<ruleset name="Transportation.gov">
+
+	<target host="www.transportation.gov" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

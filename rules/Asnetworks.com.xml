@@ -1,0 +1,13 @@
+<!--
+	- CN: confixx
+	- Expired 2009-06-27
+
+-->
+<ruleset name="asnetworks.de (partial)" default_off="expired, self-signed">
+
+	<target host="ads.asnetworks.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

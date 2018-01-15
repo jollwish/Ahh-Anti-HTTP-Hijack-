@@ -1,0 +1,51 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.lacie.com/ => https://www.lacie.com/: Too many redirects while fetching 'https://www.lacie.com/'
+Fetch error: http://lacie.com/ => https://www.lacie.com/: Too many redirects while fetching 'https://www.lacie.com/'
+
+	For other Seagate coverage, see Seagate.com.xml.
+
+
+	^lacie.com: Mismatched
+
+
+	These altnames don't exist:
+
+		- origin-www.lacie.com
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .lacie.com
+		- www.lacie.com
+
+-->
+<ruleset name="La Cie.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="is.lacie.com" />
+	<target host="myportal.lacie.com" />
+	<target host="www.lacie.com" />
+
+	<!--	Complications:
+				-->
+	<target host="lacie.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.lacie\.com$" name="^CFTOKEN$" /-->
+	<!--securecookie host="^www\.lacie\.com$" name="^(?:CFID|CFTOKEN|ROUTEID|wwwlacie_prod)$" /-->
+
+	<securecookie host="^(?:www)?\.lacie\.com$" name=".+" />
+
+
+	<rule from="^http://lacie\.com/"
+		to="https://www.lacie.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

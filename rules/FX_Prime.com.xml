@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mirror.fxprime.com/ => https://mirror.fxprime.com/: (28, 'Connection timed out after 20005 milliseconds')
+
+	For other GMO coverage, see GMO_Internet.xml.
+
+
+	^: refused
+
+
+	Fully covered hosts in *fxprime.com:
+
+		- (www.)?	(^ → www)
+		- mirror
+
+-->
+<ruleset name="FX Prime.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="mirror.fxprime.com" />
+	<target host="www.fxprime.com" />
+
+	<!--	Complications:
+				-->
+	<target host="fxprime.com" />
+
+
+	<rule from="^http://fxprime\.com/"
+		to="https://www.fxprime.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://order.humanevents.com/ => https://order.humanevents.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Nonfunctional subdomains:
+
+		- info
+
+
+	Partially covered subdomains:
+
+		- (www.)	(at least some pages redirect to http)
+
+-->
+<ruleset name="Human Events (partial)" default_off='failed ruleset test'>
+
+	<target host="humanevents.com" />
+	<target host="order.humanevents.com" />
+	<target host="www.humanevents.com" />
+		<exclusion pattern="^http://(?:www\.)?humanevents\.com/(?!t/)" />
+
+
+	<securecookie host="^order\.humanevents\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

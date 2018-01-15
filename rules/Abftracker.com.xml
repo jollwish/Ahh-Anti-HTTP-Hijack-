@@ -1,0 +1,8 @@
+<ruleset name="abftracker.com">
+
+	<target host="affiliate.abftracker.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

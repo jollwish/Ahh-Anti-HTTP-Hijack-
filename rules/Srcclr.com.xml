@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://api.srcclr.com/ => https://api.srcclr.com/: (6, 'Could not resolve host: api.srcclr.com')
+Fetch error: http://app.srcclr.com/ => https://app.srcclr.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Other SourceClear rulesets:
+
+		- Srcclr.help.xml
+
+-->
+<ruleset name="srcclr.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="srcclr.com" />
+	<target host="api.srcclr.com" />
+	<target host="app.srcclr.com" />
+	<target host="blog.srcclr.com" />
+	<target host="download.srcclr.com" />
+	<target host="www.srcclr.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

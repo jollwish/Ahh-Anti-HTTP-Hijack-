@@ -1,0 +1,15 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - chat.josefsson.org
+			 - hamster.josefsson.org
+			 - kniv.josefsson.org
+-->
+<ruleset name="Josefsson.org">
+	<target host="josefsson.org" />
+	<target host="www.josefsson.org" />
+	<target host="blog.josefsson.org" />
+	<target host="xn--rksmrgs-5wao1o.josefsson.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

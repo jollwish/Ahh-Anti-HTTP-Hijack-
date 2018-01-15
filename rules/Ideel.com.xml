@@ -1,0 +1,70 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.ideel.com/favicon.ico => https://www.ideel.com/favicon.ico: (7, 'Failed to connect to www.ideel.com port 443: Connection timed out')
+Fetch error: http://www.ideel.com/login => https://www.ideel.com/login: (7, 'Failed to connect to www.ideel.com port 443: Connection timed out')
+Fetch error: http://ideel.com/ => https://ideel.com/: (7, 'Failed to connect to ideel.com port 443: Connection timed out')
+Fetch error: http://0-static.ideel.com/ => https://0-static.ideel.com/: (7, 'Failed to connect to 0-static.ideel.com port 443: Connection timed out')
+Fetch error: http://0images-production.ideeli.com/ => https://0images-production.ideeli.com/: (7, 'Failed to connect to 0images-production.ideeli.com port 443: Connection timed out')
+Fetch error: http://support.ideel.com/ => https://support.ideel.com/: (7, 'Failed to connect to support.ideel.com port 443: Connection timed out')
+
+	Problematic hosts in *ideel.com:
+
+		- blog *
+
+	* Mismatched
+
+
+	Fully covered hosts in *ideel.com:
+
+		- 0-static
+		- 0images-production
+		- support
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.ideel.com
+
+-->
+<ruleset name="Ideel.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ideel.com" />
+	<target host="0-static.ideel.com" />
+	<target host="0images-production.ideeli.com" />
+	<target host="support.ideel.com" />
+	<target host="www.ideel.com" />
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://www\.ideel\.com/($|register/lostpassword$)" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://www\.ideel\.com/+(?!favicon\.ico|login(?:$|\?))" />
+
+			<!--	+ve:
+					-->
+			<test url="http://www.ideel.com/active_rbac/tellafriend" />
+			<test url="http://www.ideel.com/events/latest/all" />
+			<test url="http://www.ideel.com/mobile" />
+			<test url="http://www.ideel.com/pages/international" />
+			<test url="http://www.ideel.com/register/lostpassword" />
+
+			<!--	-ve:
+					-->
+			<test url="http://www.ideel.com/favicon.ico" />
+			<test url="http://www.ideel.com/login" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.ideel\.com$" name="^(live_session_id|now)$" /-->
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,21 @@
+<!--
+
+	Mixed content:
+
+		- Images on www from $self *
+
+		- Bugs on www from i.creativecommons.org *
+
+	* Secured by us
+
+-->
+<ruleset name="Alternatif Bilisim.org">
+
+	<target host="alternatifbilisim.org" />
+	<target host="iuf.alternatifbilisim.org" />
+	<target host="www.alternatifbilisim.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

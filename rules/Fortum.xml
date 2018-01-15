@@ -1,0 +1,13 @@
+<ruleset name="Fortum">
+	<target host="fortum.com" />
+	<target host="www.fortum.com" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.fortum\.com$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host="^(?:.*\.)?fortum\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

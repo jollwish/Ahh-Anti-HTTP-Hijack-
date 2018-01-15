@@ -1,0 +1,8 @@
+<ruleset name="Beta &amp; Cie (mismatches)" default_off="mismatched">
+
+	<!--	EdgeCast CDN	-->
+	<target host="img.tweetimag.es"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

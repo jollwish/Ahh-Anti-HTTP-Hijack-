@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://h-t.co/ => https://h-t.co/: (51, "SSL: no alternative certificate subject name matches target host name 'h-t.co'")
+
+	For other Host-Tracker coverage, see Host-tracker.com.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- h-t.co
+		- i.h-t.co
+
+-->
+<ruleset name="H-T.co" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="h-t.co" />
+	<target host="i.h-t.co" />
+
+		<test url="http://i.h-t.co/website%20monitor.png?id=" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:i\.)?h-t\.co$" name="^\.ASPXA(?:NONYMOUS|UTH)$" /-->
+
+	<securecookie host="^(?:i\.)?h-t\.co$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

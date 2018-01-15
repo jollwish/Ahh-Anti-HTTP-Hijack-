@@ -1,0 +1,18 @@
+<!--
+	Hanford Site
+
+
+-->
+<ruleset name="Hanford.gov" default_off="refused">
+
+	<target host="hanford.gov" />
+	<target host="www.hanford.gov" />
+
+
+	<securecookie host="^(?:www\.)?hanford\.gov$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

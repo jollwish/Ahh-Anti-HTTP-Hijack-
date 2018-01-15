@@ -1,0 +1,33 @@
+<!--
+	Invalid certificate:
+		boutique.paris-web.fr
+		direct.paris-web.fr
+		glossaire.paris-web.fr
+		newsletter.paris-web.fr
+		photos.paris-web.fr
+		videos.paris-web.fr
+		votes.paris-web.fr
+		votes-ligthning.paris-web.fr
+
+	Login required:
+		crowd.paris-web.fr
+		jira.paris-web.fr
+		wiki.paris-web.fr
+
+	Different content http/https:
+		outils.paris-web.fr
+
+-->
+<ruleset name="Paris-Web.fr">
+
+	<target host="paris-web.fr" />
+	<target host="www.paris-web.fr" />
+	<target host="inscriptions.paris-web.fr" />
+	<target host="stage.paris-web.fr" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

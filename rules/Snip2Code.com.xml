@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://api.snip2code.com/ => https://api.snip2code.com/: (51, "SSL: no alternative certificate subject name matches target host name 'api.snip2code.com'")
+Fetch error: http://apidev.snip2code.com/ => https://apidev.snip2code.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://dev.snip2code.com/ => https://dev.snip2code.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	^snip2code.com: Handshake fails
+
+-->
+<ruleset name="Snip2Code.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="api.snip2code.com" />
+	<target host="apidev.snip2code.com" />
+	<target host="dev.snip2code.com" />
+	<target host="www.snip2code.com" />
+
+	<!--	Complications:
+				-->
+	<target host="snip2code.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://snip2code\.com/"
+		to="https://www.snip2code.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

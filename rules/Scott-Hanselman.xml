@@ -1,0 +1,18 @@
+<!--
+
+	Problematic hosts in *hanselman.com:
+
+		- m (mismatched)
+
+-->
+<ruleset name="Scott Hanselman">
+
+	<target host="hanselman.com" />
+	<target host="www.hanselman.com" />
+
+	<securecookie host="^www\.hanselman\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

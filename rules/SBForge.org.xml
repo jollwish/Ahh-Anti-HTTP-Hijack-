@@ -1,0 +1,12 @@
+<!--
+	Invalid certificate:
+		ml.sbforge.org
+
+-->
+<ruleset name="SBForge.org">
+
+	<target host="sbforge.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

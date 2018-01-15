@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://megabusgold.com/ => https://megabusgold.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.megabusgold.com/ => https://www.megabusgold.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Nonfunctional domains:
+		festivals.megabus.com (wrong domain for certificate)
+-->
+<ruleset name="Megabus" default_off='failed ruleset test'>
+	<target host="megabus.com" />
+	<target host="www.megabus.com" />
+	<target host="ca.megabus.com" />
+	<target host="caeu.megabus.com" />
+	<target host="deeu.megabus.com" />
+	<target host="eseu.megabus.com" />
+	<target host="esus.megabus.com" />
+	<target host="frca.megabus.com" />
+	<target host="freu.megabus.com" />
+	<target host="iteu.megabus.com" />
+	<target host="nleu.megabus.com" />
+	<target host="uk.megabus.com" />
+	<target host="us.megabus.com" />
+
+	<target host="megabusgold.com" />
+	<target host="www.megabusgold.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

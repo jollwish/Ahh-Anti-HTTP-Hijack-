@@ -1,0 +1,6 @@
+<ruleset name="KKH.se" platform="mixedcontent">
+	<target host="www.kkh.se" />
+	<target host="kkh.se" />
+	<rule from="^http:" to="https:" />
+</ruleset>
+

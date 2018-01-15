@@ -1,0 +1,26 @@
+<!--
+	No working URL known:
+		social.islamhouse.com
+	Too much mixed content blocking:
+		old.islamhouse.com
+		s1.islamhouse.com
+	Different HTTP/HTTPS content:
+		d2.islamhouse.com
+		d3.islamhouse.com
+		down1.islamhouse.com
+-->
+<ruleset name="IslamHouse.com" >
+	<target host="islamhouse.com" />
+	<target host="www.islamhouse.com" />
+	<target host="api.islamhouse.com" />
+	<target host="balagh.islamhouse.com" />
+	<target host="d1.islamhouse.com" />
+	<target host="quran.islamhouse.com" />
+	<target host="radio.islamhouse.com" />
+	<target host="ramadan.islamhouse.com" />
+	<target host="torrent.islamhouse.com" />
+
+	<securecookie host="^(www|api|balagh|d1|quran|radio|ramadan|torrent)\.islamhouse\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

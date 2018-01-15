@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://forum.ipvanish.com/ => https://forum.ipvanish.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+-->
+<ruleset name="IPVanish.com" default_off='failed ruleset test'>
+	<target host=        "ipvanish.com" />
+	<target host=    "www.ipvanish.com" />
+	<target host="account.ipvanish.com" />
+	<target host=   "blog.ipvanish.com" />
+	<target host=  "forum.ipvanish.com" />
+	<target host= "signup.ipvanish.com" />
+	<target host="support.ipvanish.com" />
+
+  	<securecookie host="^.*\.ipvanish\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

@@ -1,0 +1,16 @@
+<!--
+	!www loops
+
+-->
+<ruleset name="Bareos">
+
+	<target host="bareos.org" />
+	<target host="www.bareos.org" />
+
+
+	<securecookie host="^www\.bareos\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

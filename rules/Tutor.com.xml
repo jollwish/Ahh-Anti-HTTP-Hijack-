@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://tutor.com/ => http://tutor.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic subdomains:
+
+		- ^	(works, cert only matches www)
+
+
+	Some pages redirect to http.
+
+-->
+<ruleset name="Tutor.com (partial)" default_off='failed ruleset test'>
+
+	<target host="tutor.com" />
+	<target host="*.tutor.com" />
+
+
+	<rule from="^http://(?:www\.)?tutor\.com/(contact-forms/|favicon\.ico|get-started(?:$|[?/])|images/|(?:Script|Web)Resource\.axd|scripts/|styles/)"
+		to="https://www.tutor.com/$1" />
+
+	<rule from="^http://media\.tutor\.com/"
+		to="https://media.tutor.com/" />
+
+</ruleset>

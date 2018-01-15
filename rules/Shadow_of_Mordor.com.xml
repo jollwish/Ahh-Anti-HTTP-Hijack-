@@ -1,0 +1,48 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.shadowofmordor.com/ => https://www.shadowofmordor.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://shadowofmordor.com/ => https://www.shadowofmordor.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	^shadowofmordor.com: Expired
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .shadowofmordor.com
+		- www.shadowofmordor.com
+
+
+	Mixed content:
+
+		- Bug from pixel.quantserve.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Shadow of Mordor.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.shadowofmordor.com" />
+
+	<!--	Complications:
+				-->
+	<target host="shadowofmordor.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.shadowofmordor\.com$" name="^__qca" /-->
+	<!--securecookie host="^www\.shadowofmordor\.com$" name="^(?:_icl_current_language|PHPSESSID)$" /-->
+
+	<securecookie host="^(?:www)?\.shadowofmordor\.com$" name=".+" />
+
+
+	<rule from="^http://shadowofmordor\.com/"
+		to="https://www.shadowofmordor.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Other Localsearch rulesets:
+
+		- Local.ch.xml
+		- Search.ch.xml
+
+	Mismatch:
+		- werbung.localsearch.ch
+-->
+<ruleset name="Localsearch.ch">
+	<target host="localsearch.ch" />
+	<target host="www.localsearch.ch" />
+	<target host="areyou.localsearch.ch" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

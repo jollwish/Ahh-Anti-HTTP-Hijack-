@@ -1,0 +1,19 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://myob.com/ => https://myob.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+-->
+<ruleset name="MYOB.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="myob.com" />
+	<target host="underthehood.myob.com" />
+	<target host="www.myob.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

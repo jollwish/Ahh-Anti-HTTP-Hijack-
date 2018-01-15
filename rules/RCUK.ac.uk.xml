@@ -1,0 +1,20 @@
+<!--
+
+	Nonfunctional subdomains:
+		
+		- ^ ²
+		- gtr ¹
+		- www ¹
+
+	¹ Refused
+	² Dropped
+
+-->
+<ruleset name="RCUK.ac.uk (partial)">
+
+	<target host="blogs.rcuk.ac.uk" />
+	<target host="je-s.rcuk.ac.uk" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

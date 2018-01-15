@@ -1,0 +1,57 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://drupal.kldp.net/ => https://drupal.kldp.net/: (51, "SSL: no alternative certificate subject name matches target host name 'drupal.kldp.net'")
+Fetch error: http://mutt.kldp.net/ => https://mutt.kldp.net/: (51, "SSL: no alternative certificate subject name matches target host name 'mutt.kldp.net'")
+Fetch error: http://qmail.kldp.net/ => https://qmail.kldp.net/: (7, 'Failed to connect to qmail.kldp.net port 443: Connection refused')
+
+	For other KLDP coverage, see KLDP.org.xml.
+
+
+	Fully covered domains:
+
+		- kldp.net
+
+		- [\w-]+.kldp.net:
+
+			- drupal
+			- emacs
+			- gurugio
+			- ktug
+			- lisp
+			- man
+			- mutt
+			- qmail
+			- vi
+			- www
+
+
+	Mixed content:
+
+		- Image on qmail from $self *
+
+	* Secured by us
+
+
+-->
+<ruleset name="KLDP.net" default_off='failed ruleset test'>
+
+	<target host="kldp.net" />
+	<target host="*.kldp.net" />
+
+		<test url="http://drupal.kldp.net/" />
+		<test url="http://emacs.kldp.net/" />
+		<test url="http://gurugio.kldp.net/" />
+		<test url="http://ktug.kldp.net/" />
+		<test url="http://lisp.kldp.net/" />
+		<test url="http://man.kldp.net/" />
+		<test url="http://mutt.kldp.net/" />
+		<test url="http://qmail.kldp.net/" />
+		<test url="http://vi.kldp.net/" />
+		<test url="http://www.kldp.net/" />
+
+
+	<rule from="^http://([\w-]+\.)?kldp\.net/"
+		to="https://$1kldp.net/" />
+
+</ruleset>

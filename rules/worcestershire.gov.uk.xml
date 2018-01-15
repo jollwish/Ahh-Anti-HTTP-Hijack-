@@ -1,0 +1,23 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- atlas.worcestershire.gov.uk
+		- public.worcestershire.gov.uk
+
+		SSL connect error:
+		- e-services.worcestershire.gov.uk
+
+		Incomplete certificate chain error:
+		- capublic.worcestershire.gov.uk
+-->
+<ruleset name="worcestershire.gov.uk (partial)">
+	<target host="worcestershire.gov.uk" />
+	<target host="emsi.worcestershire.gov.uk" />
+	<target host="gis.worcestershire.gov.uk" />
+	<target host="www.worcestershire.gov.uk" />
+	<target host="ylyc.worcestershire.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

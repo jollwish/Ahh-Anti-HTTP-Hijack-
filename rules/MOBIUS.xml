@@ -1,0 +1,15 @@
+<!--
+	Other MOBIUS rulesets:
+
+		- MOBIUS_Catalog.xml
+
+-->
+<ruleset name="MOBIUS">
+
+	<target host="mobiusconsortium.org" />
+	<target host="www.mobiusconsortium.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

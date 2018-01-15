@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://merchant.exmo.com/ => https://merchant.exmo.com/: (6, 'Could not resolve host: merchant.exmo.com')
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .exmo.com
+		- www.exmo.com
+
+-->
+<ruleset name="Exmo.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="exmo.com" />
+	<target host="merchant.exmo.com" />
+	<target host="www.exmo.com" />
+
+		<test url="http://exmo.com/?ref=" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.exmo\.com$" name="^(?:incap_ses_\d+_\d+|visid_incap_\d+|ref)$" /-->
+	<!--securecookie host="^www\.exmo\.com$" name="^___utmv[abm]\w+$" /-->
+
+	<securecookie host="^(?:www)?\.exmo\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

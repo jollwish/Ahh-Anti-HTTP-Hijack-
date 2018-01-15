@@ -1,0 +1,47 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://hypersend.labcorp.com/ => https://hypersend.labcorp.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Other LabCorp rulesets:
+
+		- LabCorp_solutions.com.xml
+
+
+	^labcorp.com: Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.labcorp.com
+
+-->
+<ruleset name="LabCorp.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="datalink2.labcorp.com" />
+	<target host="hypersend.labcorp.com" />
+	<target host="www.labcorp.com" />
+	<target host="www3.labcorp.com" />
+	<target host="www4.labcorp.com" />
+
+	<!--	Complications:
+				-->
+	<target host="labcorp.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.labcorp\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:datalink2|hypersend|www[3-4]?)\.labcorp\.com$" name=".+" />
+
+
+	<rule from="^http://labcorp\.com/"
+		to="https://www.labcorp.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

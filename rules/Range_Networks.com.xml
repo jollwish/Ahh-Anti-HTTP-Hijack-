@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.rangenetworks.com/ => https://support.rangenetworks.com/: (7, 'Failed to connect to support.rangenetworks.com port 443: Connection refused')
+
+	^rangenetworks.com: Shows support.rangenetworks.com
+
+
+	Mixed content:
+
+		- Images on support from www.rangenetworks.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Range Networks.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="support.rangenetworks.com" />
+	<target host="www.rangenetworks.com" />
+
+	<!--	Complications:
+				-->
+	<target host="rangenetworks.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(support\.)?rangenetworks\.com$" name="^PHPSESSID$" /-->
+	<!--securecookie host="^www\.rangenetworks\.com$" name="^(exp_cartthrob_session_id|exp_last_activity|exp_last_visit|exp_last_visit)$" /-->
+
+	<securecookie host="^(?:support\.|www\.)?rangenetworks\.com$" name=".+" />
+
+
+	<rule from="^http://rangenetworks\.com/"
+		to="https://www.rangenetworks.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

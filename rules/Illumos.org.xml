@@ -1,0 +1,43 @@
+<!--
+	Nonfunctional hosts in *illumos.org:
+
+		- cr *
+
+	* Refused
+
+
+	Problematic hosts in *illumos.org:
+
+		- lists *
+		- src *
+
+	* Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- illumos.org
+		- www.illumos.org
+		- wiki.illumos.org
+
+-->
+<ruleset name="illumos.org (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="illumos.org" />
+	<target host="www.illumos.org" />
+	<target host="wiki.illumos.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?illumos\.org$" name="^_redmine_session$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,4 @@
+<ruleset name="Muenchen.de">
+<target host="www.muenchen.de" />
+<rule from="^http:" to="https:" />
+</ruleset>

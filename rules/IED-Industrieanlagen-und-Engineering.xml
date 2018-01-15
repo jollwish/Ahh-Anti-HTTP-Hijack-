@@ -1,0 +1,11 @@
+<ruleset name="IED Industrieanlagen und Engineering">
+
+	<target host="iedgmbh.de" />
+	<target host="www.iedgmbh.de" />
+
+	<securecookie host="^iedgmbh\.de$" name=".+" />
+
+	<rule from="^http:"
+		to="https:"/>
+
+</ruleset>

@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mm.sitecompass.com/ => https://mm.sitecompass.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- members *
+
+	* Dropped
+
+-->
+<ruleset name="SiteCompass.com (partial)" default_off='failed ruleset test'>
+
+	<target host="mm.sitecompass.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

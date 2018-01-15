@@ -1,0 +1,70 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://webink.com/ => https://webink.com/: (6, 'Could not resolve host: webink.com')
+Fetch error: http://fnt.webink.com/ => https://fnt.webink.com/: (51, "SSL: no alternative certificate subject name matches target host name 'fnt.webink.com'")
+Fetch error: http://www.webink.com/ => https://www.webink.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.webink.com'")
+
+	For other Celartem coverage, see Celartem.xml.
+
+
+	CDN buckets:
+
+		- dlrhyanfg4sdu.cloudfront.net
+
+
+	Problematic hosts:
+
+		- fontfuse *
+
+	* Mismatched
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- fnt
+
+
+	Observed cookie domains:
+
+		- ^ *
+		- www *
+
+	* Secured by us
+
+
+	Mixed content:
+
+		- Images on www from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="WebINK.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="webink.com" />
+	<target host="fnt.webink.com" />
+	<target host="www.webink.com" />
+
+	<!--	Complications:
+				-->
+	<!--target host="fontfuse.webink.com" /-->
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://app\.webink\.com/$" /-->
+
+
+	<securecookie host="^(?:www\.)?webink\.com$" name=".+" />
+
+
+	<!--rule from="^http://fontfuse\.webink\.com/"
+		to="https://???.cloudront.net/" /-->
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

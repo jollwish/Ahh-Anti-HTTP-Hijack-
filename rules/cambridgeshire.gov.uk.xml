@@ -1,0 +1,61 @@
+<!--
+	For other UK government coverage, see
+		+ GOV.UK.xml
+
+	Non-functional hosts
+		Timeout was reached:
+		- arc3.cambridgeshire.gov.uk
+		- data.cambridgeshire.gov.uk
+		- planning.cambridgeshire.gov.uk
+		- ras001.cambridgeshire.gov.uk
+		- ras002.cambridgeshire.gov.uk
+		- voyager.cambridgeshire.gov.uk
+
+		SSL connect error:
+		- www.slc.cambridgeshire.gov.uk
+
+		SSL peer certificate was not OK:
+		- cctm-net.cambridgeshire.gov.uk
+		- hpac.cambridgeshire.gov.uk
+		- pensions.cambridgeshire.gov.uk
+		- www4.cambridgeshire.gov.uk
+
+		Server returned nothing (no headers, no data):
+		- cctm-ssl.cambridgeshire.gov.uk
+
+		Status code mismatch:
+		- cambridgeshire.gov.uk
+		- cctm-gov.cambridgeshire.gov.uk
+		- parking.cambridgeshire.gov.uk
+
+		4xx client error:
+		- atlas.cambridgeshire.gov.uk
+		- cmis.cambridgeshire.gov.uk
+		- hbsmrgateway.cambridgeshire.gov.uk
+		- mail.cambridgeshire.gov.uk
+		- www2.cambridgeshire.gov.uk
+
+		5xx server error:
+		- forms.cambridgeshire.gov.uk
+-->
+<ruleset name="Cambridgeshire.gov.uk">
+	<target host="www.cambridgeshire.gov.uk" />
+	<target host="arc.cambridgeshire.gov.uk" />
+	<target host="bb.cambridgeshire.gov.uk" />
+	<target host="bluebadge.cambridgeshire.gov.uk" />
+	<target host="buspass.cambridgeshire.gov.uk" />
+	<target host="buswaytickets.cambridgeshire.gov.uk" />
+	<target host="calm.cambridgeshire.gov.uk" />
+	<target host="casey.cambridgeshire.gov.uk" />
+	<target host="ems.cambridgeshire.gov.uk" />
+	<target host="highwaysreporting.cambridgeshire.gov.uk" />
+	<target host="hipweb.cambridgeshire.gov.uk" />
+	<target host="ibistro.cambridgeshire.gov.uk" />
+	<target host="mft.cambridgeshire.gov.uk" />
+	<target host="netloan.cambridgeshire.gov.uk" />
+	<target host="my.cambridgeshire.gov.uk" />
+	<target host="wdt.cambridgeshire.gov.uk" />
+	<target host="www5.cambridgeshire.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

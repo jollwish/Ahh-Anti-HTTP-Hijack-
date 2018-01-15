@@ -1,0 +1,57 @@
+<!--
+	Other Weebly rulesets:
+
+		- Editmysite.com.xml
+
+
+	CDN buckets:
+
+		- cdn1.weebly.com.cdngc.net
+
+			- static-cdn.weebly.com
+
+	Redirect to http:
+		partnerblog.weebly.com
+		partnerwith.weebly.com
+
+	Connection reset:
+		static-cdn.weebly.com
+
+	Customer subdomains redirect to http.
+
+-->
+<ruleset name="Weebly.com (partial)">
+
+	<target host="weebly.com" />
+	<target host="www.weebly.com" />
+	<target host="affiliate.weebly.com" />
+	<target host="affiliates.weebly.com" />
+	<target host="blog.weebly.com" />
+	<target host="help.weebly.com" />
+	<target host="hc.weebly.com" />
+	<target host="mobileapi.weebly.com" />
+	<target host="secure.weebly.com" />
+	<target host="support.weebly.com" />
+
+	<!--
+		Customer subdomains redirect to http:
+
+	<target host="*.weebly.com" />
+		<test url="http://teffect.weebly.com/" />
+		<test url="http://xinfos.weebly.com/" />
+		<test url="http://universalstarters.weebly.com/" />
+		<test url="http://toddtaylor.weebly.com/" />
+	-->
+
+	<!--	Set by editor/apps/showCommentForm-v2.php
+								-->
+	<securecookie host="^\.weebly\.com$" name="^sto-id$" />
+	<!--
+		Set by editor/apps/tracking_frame_static.php
+								-->
+	<securecookie host="^www\.weebly\.com$" name="^wt-\w{6}$" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

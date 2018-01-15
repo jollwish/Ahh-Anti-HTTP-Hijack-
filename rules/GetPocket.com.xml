@@ -1,0 +1,22 @@
+<!--
+	Invalid certificate:
+		assets.getpocket.com
+		e.getpocket.com
+
+-->
+<ruleset name="GetPocket.com">
+
+	<target host="getpocket.com" />
+	<target host="www.getpocket.com" />
+	<target host="api.getpocket.com" />
+	<target host="beta.api.getpocket.com" />
+	<target host="help.getpocket.com" />
+	<target host="text.getpocket.com" />
+	<target host="widgets.getpocket.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adaptec.com/ => https://www.adaptec.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.adaptec.com/ => https://www.adaptec.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	CDN buckets:
+
+		- wac.131d.edgecastcdn.net/??131D/
+
+			- graphics.adaptec.com
+
+
+	Nonfunctional subdomains:
+
+		- graphics	(404, CN: gp1.wac.edgecastcdn.net)
+
+
+	Problematic subdomains:
+
+		- ^	(404; mismatched, CN: www.pmc-sierra.com)
+
+
+	Mixed content:
+
+		- Images on www from graphics *
+
+		- Web bugs on www from pmcsierra.d1.sc.omtrdc.net **
+
+	* Unsecurable, doesn't trip MCB
+	** Secured by us
+
+-->
+<ruleset name="Adaptec.com (partial)" default_off='failed ruleset test'>
+
+	<target host="adaptec.com" />
+	<target host="www.adaptec.com" />
+
+
+	<rule from="^http://(?:www\.)?adaptec\.com/"
+		to="https://www.adaptec.com/" />
+
+</ruleset>

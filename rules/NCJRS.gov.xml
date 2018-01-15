@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ncjrs.gov/ => https://ncjrs.gov/: (51, "SSL: no alternative certificate subject name matches target host name 'ncjrs.gov'")
+
+	National Criminal Justice Reference Service
+
+
+-->
+<ruleset name="NCJS.gov" default_off='failed ruleset test'>
+
+	<target host="ncjrs.gov" />
+	<target host="puborder.ncjrs.gov" />
+	<target host="www.ncjrs.gov" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?ncjrs\.gov$" name="^(ASP\.NET_SessionId|ASPSESSIONID[A-Z]{8}|DSLB)$" /-->
+	<!--securecookie host="^puborder\.ncjrs\.gov$" name="^(ASPSESSIONID[A-Z]{8}|BIGipServerprd_puborder|LBServerID)$" /-->
+
+	<securecookie host="^(?:puborder\.|www\.)?ncjrs\.gov$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

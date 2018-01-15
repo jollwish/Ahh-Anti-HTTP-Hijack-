@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.voffka.com/ => https://www.voffka.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional subdomains:
+
+		- i	(403/404)
+
+
+	Problematic subdomains:
+
+		- mail		(works, expired, mismatched, CN: id.kapranoff.ru)
+
+
+	i serves images only.
+
+
+	Mixed content:
+
+		- Images, from:
+
+			- voffka.com
+			- vwp.su
+
+-->
+<ruleset name="Voffka.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="voffka.com" />
+	<target host="www.voffka.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

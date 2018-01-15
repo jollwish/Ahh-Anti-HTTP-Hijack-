@@ -1,0 +1,24 @@
+<!--
+	Non-functional hosts
+		Incomplete certificate chain error:
+			 - dns.sysmocom.de
+			 - downloads.sysmocom.de
+			 - imap.sysmocom.de
+			 - mail.sysmocom.de
+			 - rt.sysmocom.de
+
+		5xx server error:
+			 - piwik.sysmocom.de
+
+		Secure connection redirects to plaintext:
+			 - shop.sysmocom.de
+-->
+<ruleset name="Sysmocom.de (partial)">
+	<target host="sysmocom.de" />
+	<target host="www.sysmocom.de" />
+	<target host="git.sysmocom.de" />
+
+	<securecookie host="^(www\.)?sysmocom\.de$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="RB Invest WDC.eu (partial)" default_off="refused">
+
+	<target host="rbinvestwdc.eu" />
+
+
+	<securecookie host="^rbinvestwdc\.eu$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://partspider.com/Account/Login => https://partspider.com/Account/Login: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://partspider.com/ => https://partspider.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.partspider.com/ => https://partspider.com/: (28, 'Connection timed out after 20003 milliseconds')
+
+	www.partspider.com: 404
+
+
+	Insecure cookies are set for these hosts:
+
+		- partspider.com
+
+-->
+<ruleset name="Part Spider.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="partspider.com" />
+
+	<!--	Complications:
+				-->
+	<target host="www.partspider.com" />
+
+		<test url="http://partspider.com/Account/Login" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^partspider\.com$" name="^__RequestVerificationToken$" /-->
+
+	<securecookie host="^partspider\.com$" name=".+" />
+
+
+	<rule from="^http://www\.partspider\.com/"
+		to="https://partspider.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

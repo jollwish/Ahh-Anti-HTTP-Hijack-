@@ -1,0 +1,9 @@
+<ruleset name="Crafty Syntax.com" default_off="timeout">
+
+	<target host="craftysyntax.com" />
+	<target host="www.craftysyntax.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

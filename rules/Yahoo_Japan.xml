@@ -1,0 +1,193 @@
+<!--
+	For other Yahoo coverage, see Yahoo.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - bookmarks.yahoo.co.jp
+			 - backnumber.dailynews.yahoo.co.jp
+			 - help.yahoo.co.jp
+			 - kaitori.yahoo.co.jp
+			 - locoplace.yahoo.co.jp
+			 - public.news.yahoo.co.jp
+			 - spmanager.yahoo.co.jp
+
+		Timeout was reached:
+			 - img5.blogs.yahoo.co.jp
+			 - info.mail.yahoo.co.jp
+			 - chiebukuro.search.yahoo.co.jp
+			 - news.search.yahoo.co.jp
+			 - bs.store.yahoo.co.jp
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - b12.yahoo.co.jp
+
+		SSL peer certificate was not OK:
+			 - polls.dailynews.yahoo.co.jp
+			 - business.ec.yahoo.co.jp
+			 - guide.ec.yahoo.co.jp
+			 - edit.partner.yahoo.co.jp
+			 - event.partner.yahoo.co.jp
+			 - search.partner.yahoo.co.jp
+			 - info.search.yahoo.co.jp
+			 - promo.search.yahoo.co.jp
+			 - webtraining.stepup.yahoo.co.jp
+
+		Incomplete certificate chain error:
+			 - lot.sample.yahoo.co.jp
+
+		Status code mismatch:
+			 - zasshi.news.yahoo.co.jp
+
+		4xx client error:
+			 - rd.ane.yahoo.co.jp
+			 - closeduser.auctions.yahoo.co.jp
+			 - special.auctions.yahoo.co.jp
+			 - listing.yahoo.co.jp
+			 - topics.shopping.yahoo.co.jp
+			 - odhistory.shopping.yahoo.co.jp
+
+		Secure connection redirects to plaintext:
+			 - commerceapp.yahoo.co.jp
+-->
+<ruleset name="Yahoo.co.JP (partial)">
+	<target host="yahoo.co.jp" />
+	<target host="www.yahoo.co.jp" />
+
+	<target host="about.yahoo.co.jp" />
+	<target host="advertising.yahoo.co.jp" />
+	<target host="ard.yahoo.co.jp" />
+	<target host="auctions.yahoo.co.jp" />
+
+	<target host="b11.yahoo.co.jp" />
+	<target host="b3.yahoo.co.jp" />
+	<target host="b4.yahoo.co.jp" />
+	<target host="b5.yahoo.co.jp" />
+	<target host="b6.yahoo.co.jp" />
+	<target host="b7.yahoo.co.jp" />
+	<target host="b8.yahoo.co.jp" />
+	<target host="b9.yahoo.co.jp" />
+	<target host="b90.yahoo.co.jp" />
+	<target host="b91.yahoo.co.jp" />
+	<target host="b92.yahoo.co.jp" />
+	<target host="b93.yahoo.co.jp" />
+	<target host="b94.yahoo.co.jp" />
+	<target host="b95.yahoo.co.jp" />
+	<target host="b96.yahoo.co.jp" />
+	<target host="b97.yahoo.co.jp" />
+	<target host="beauty.yahoo.co.jp" />
+	<target host="blogs.yahoo.co.jp" />
+	<target host="bookstore.yahoo.co.jp" />
+	<target host="box.yahoo.co.jp" />
+	<target host="btcs.yahoo.co.jp" />
+		<test url="http://btcs.yahoo.co.jp/b?f=2080327396" />
+	<target host="business.yahoo.co.jp" />
+	<target host="forms.business.yahoo.co.jp" />
+	<target host="ols.business.yahoo.co.jp" />
+	<target host="yadui.business.yahoo.co.jp" />
+
+	<target host="calendar.yahoo.co.jp" />
+	<target host="card.yahoo.co.jp" />
+	<target host="carview.yahoo.co.jp" />
+	<target host="csr.yahoo.co.jp" />
+	<target host="chiebukuro.yahoo.co.jp" />
+	<target host="answer.chiebukuro.yahoo.co.jp" />
+	<target host="detail.chiebukuro.yahoo.co.jp" />
+	<target host="list.chiebukuro.yahoo.co.jp" />
+	<target host="my.chiebukuro.yahoo.co.jp" />
+	<target host="note.chiebukuro.yahoo.co.jp" />
+	<target host="creative-award.yahoo.co.jp" />
+	<target host="crowdsourcing.yahoo.co.jp" />
+
+	<target host="docs.yahoo.co.jp" />
+
+	<target host="biz-form.ec.yahoo.co.jp" />
+	<target host="account.edit.yahoo.co.jp" />
+
+	<target host="finance.yahoo.co.jp" />
+	<target host="fortune.yahoo.co.jp" />
+
+	<target host="games.yahoo.co.jp" />
+	<target host="geocities.yahoo.co.jp" />
+	<target host="gyao.yahoo.co.jp" />
+
+	<target host="headlines.yahoo.co.jp" />
+	<target host="hr.yahoo.co.jp" />
+
+	<target host="id.yahoo.co.jp" />
+	<target host="indival.yahoo.co.jp" />
+	<target host="ir.yahoo.co.jp" />
+
+	<target host="loco.yahoo.co.jp" />
+	<target host="login.yahoo.co.jp" />
+	<target host="lh.login.yahoo.co.jp" />
+	<target host="logql.yahoo.co.jp" />
+		<test url="http://logql.yahoo.co.jp/v1/public/yql" />
+
+	<target host="m.yahoo.co.jp" />
+	<target host="mail.yahoo.co.jp" />
+	<target host="map.yahoo.co.jp" />
+	<target host="movies.yahoo.co.jp" />
+	<target host="form.ms.yahoo.co.jp" />
+	<target host="notice.ms.yahoo.co.jp" />
+
+	<target host="news.yahoo.co.jp" />
+	<target host="bylines.news.yahoo.co.jp" />
+	<target host="promo.news.yahoo.co.jp" />
+
+	<target host="omiai.yahoo.co.jp" />
+	<target host="im.ov.yahoo.co.jp" />
+		<test url="http://im.ov.yahoo.co.jp/js_flat/v2/" />
+
+	<target host="partner.yahoo.co.jp" />
+	<target host="details.payment.yahoo.co.jp" />
+	<target host="pclick.yahoo.co.jp" />
+	<target host="points.yahoo.co.jp" />
+	<target host="biz.points.yahoo.co.jp" />
+	<target host="premium.yahoo.co.jp" />
+	<target host="privacy.yahoo.co.jp" />
+	<target host="promotion.yahoo.co.jp" />
+	<target host="promotionalads.yahoo.co.jp" />
+	<target host="secure.promotionalads.yahoo.co.jp" />
+
+	<target host="rdsig.yahoo.co.jp" />
+	<target host="renai.yahoo.co.jp" />
+	<target host="realestate.yahoo.co.jp" />
+
+	<target host="s.sample.yahoo.co.jp" />
+	<target host="search.yahoo.co.jp" />
+	<target host="custom.search.yahoo.co.jp" />
+	<target host="searchblog.yahoo.co.jp" />
+	<target host="searchranking.yahoo.co.jp" />
+	<target host="security.yahoo.co.jp" />
+	<target host="seiji.yahoo.co.jp" />
+	<target host="senkyo.yahoo.co.jp" />
+	<target host="services.yahoo.co.jp" />
+	<target host="shopping.yahoo.co.jp" />
+	<target host="store.shopping.yahoo.co.jp" />
+	<target host="tpoint.shopping.yahoo.co.jp" />
+	<target host="special.yahoo.co.jp" />
+	<target host="sports.yahoo.co.jp" />
+	<target host="order.store.yahoo.co.jp" />
+
+	<target host="textream.yahoo.co.jp" />
+	<target host="transit.yahoo.co.jp" />
+	<target host="travel.yahoo.co.jp" />
+	<target host="tv.yahoo.co.jp" />
+
+	<target host="weather.yahoo.co.jp" />
+
+	<target host="yads.yahoo.co.jp" />
+	<target host="ybx.yahoo.co.jp" />
+		<test url="http://ybx.yahoo.co.jp/p?s=2078983862" />
+	<target host="yeas.yahoo.co.jp" />
+	<target host="yjtag.yahoo.co.jp" />
+
+	<securecookie host="^yahoo\.co\.jp$" name=".+" />
+	<securecookie host="^www\.yahoo\.co\.jp$" name=".+" />
+	<securecookie host="^login\.yahoo\.co\.jp$" name=".+" />
+	<securecookie host="^m\.yahoo\.co\.jp$" name=".+" />
+	<securecookie host="^mail\.yahoo\.co\.jp$" name=".+" />
+	<securecookie host="^search\.yahoo\.co\.jp$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

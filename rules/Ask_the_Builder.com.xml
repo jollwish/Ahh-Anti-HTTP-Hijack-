@@ -1,0 +1,34 @@
+<!--
+	Nonfunctional hosts in *askthebuilder.com:
+
+		- (www.)? ᵃ
+		- go ᵃ
+
+	ᵃ Shows another domain
+
+
+	Problematic hosts in *askthebuilder.com:
+
+		- sod1 ˢ
+
+	ˢ Self-signed
+
+
+	Insecure cookies are set for these domains:
+
+		- .shop.askthebuilder.com
+
+-->
+<ruleset name="Ask the Builder.com (partial)">
+
+	<target host="shop.askthebuilder.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+	<securecookie host="^\.shop\." name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

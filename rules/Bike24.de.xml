@@ -1,0 +1,6 @@
+<ruleset name="Bike24.de">
+  <target host="bike24.de" />
+  <target host="www.bike24.de" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

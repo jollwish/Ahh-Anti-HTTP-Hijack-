@@ -1,0 +1,18 @@
+<!--
+	Mixed content:
+		wiki.deimos.fr
+
+	Invalid certificate:
+		shenzi.deimos.fr
+
+-->
+<ruleset name="Deimos.fr">
+
+	<target host="deimos.fr" />
+	<target host="www.deimos.fr" />
+	<target host="blog.deimos.fr" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

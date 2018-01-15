@@ -1,0 +1,13 @@
+<ruleset name="Kosimak.com">
+
+	<target host="kosimak.com" />
+	<target host="www.kosimak.com" />
+
+
+	<securecookie host="^www\.kosimak\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

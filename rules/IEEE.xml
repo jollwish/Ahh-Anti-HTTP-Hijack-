@@ -1,0 +1,97 @@
+<!--
+	Disabled per https://trac.torproject.org/projects/tor/ticket/15653
+	For rules causing false/broken MCB, see IEEE.org-falsemixed.xml.
+
+	For problematic rules, see IEEE-mismatches.xml.
+	For ieee-security.org rules see IEEE-Security.org.xml
+
+	Other IEEE rulesets:
+
+		- IEEE_eLearning_Library.xml
+
+
+	CDN buckets:
+
+		- www.spectrum.ieee.org.edgesuite.net
+		- staticieeexplore.ieee.org.edgesuite.net
+
+
+	Nonfunctional subdomains:
+
+		- careers ¹
+		- grouper ¹
+		- lifesciences	Shows ewh.ieee.org
+		- oc ²
+		- sites ²
+		- smartgrid ¹
+		- spectrum ³
+		- theinstitute ⁴
+		- uce ²
+
+	¹ Refused
+	² Dropped
+	³ 503, akamai
+
+
+	Problematic subdomains:
+
+		- innovate ³
+		- jobs		(mismatched, CN: sitemanager2.adico.com)
+		- listserv *
+		- www.spectrum ⁴
+		- staticieeexplore ⁴
+
+	¹ Configured for rc4 only
+	² Timeout
+	³ Mixed css
+	* Server sends no certificate chain, see https://whatsmychaincert.com
+	⁴ Works, akamai
+
+	Mixed content:
+
+		- css, on:
+
+			- innovate from $self
+			- ieeexplore from staticieeexplore *
+
+		- Images, on:
+
+			- ieeexplore from staticieeexplore *
+			- innovate from $self
+			- standards from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="IEEE.org (needs testing)" default_off="needs testing">
+
+	<target host="ieee.org" />
+	<target host="www.ieee.org" />
+	<target host="ewh.ieee.org" />
+	<target host="www.ewh.ieee.org" />
+	<!--target host="listserv.ieee.org" /-->
+	<target host="mentor.ieee.org" />
+	<target host="securesso.ieee.org" />
+	<target host="services28.ieee.org" />
+	<target host="standards.ieee.org" />
+	<target host="development.standards.ieee.org" />
+	<target host="origin.www.ieee.org" />
+
+	<!--	Complications:
+				-->
+	<target host="ieeexplore.ieee.org" />
+
+		<!--	Avoid broken MCB:
+						-->
+		<exclusion pattern="^http://ieeexplore\.ieee\.org/+(?!assets/|favicon\.ico|xpl/statse\.webtrendslive\.com/)" />
+
+			<test url="http://ieeexplore.ieee.org/Xplore/accessinfo.jsp" />
+			<test url="http://ieeexplore.ieee.org/xpl/login.jsp" />
+			<test url="http://ieeexplore.ieee.org/xpl/mwInstForgotUserNamePassword.jsp" />
+			<test url="http://ieeexplore.ieee.org/xpl/mwInstSignIn.jsp" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

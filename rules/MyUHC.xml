@@ -1,0 +1,7 @@
+<ruleset name="MyUHC">
+  <target host="myuhc.com" />
+  <target host="www.myuhc.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>
+

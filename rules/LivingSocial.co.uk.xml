@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://help.livingsocial.co.uk/ => https://help.livingsocial.co.uk/: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other LivingSocial coverage, see LivingSocial.xml.
+
+
+	Fully covered hosts in *livingsocial.co.uk:
+
+		- (www.)?
+		- help
+
+-->
+<ruleset name="LivingSocial.co.uk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="livingsocial.co.uk" />
+	<target host="help.livingsocial.co.uk" />
+	<target host="www.livingsocial.co.uk" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Sinn Fein" platform="mixedcontent">
+  <target host="sinnfein.ie" />
+  <target host="www.sinnfein.ie" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://2016.appseccalifornia.org/ => https://2016.appseccalifornia.org/: (60, 'SSL certificate problem: certificate has expired')
+
+	www.appseccalifornia.org: Mismatched
+
+-->
+<ruleset name="AppSec California.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="appseccalifornia.org" />
+	<target host="2014.appseccalifornia.org" />
+	<target host="2015.appseccalifornia.org" />
+	<target host="2016.appseccalifornia.org" />
+
+	<!--	Complications:
+				-->
+	<target host="www.appseccalifornia.org" />
+
+
+	<securecookie host="^appseccalifornia\.org$" name=".+" />
+
+
+	<rule from="^http://www\.appseccalifornia\.org/"
+		to="https://appseccalifornia.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

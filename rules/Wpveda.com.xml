@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.wpveda.com/ => https://www.wpveda.com/: (6, 'Could not resolve host: www.wpveda.com')
+
+	Insecure cookies are set for these domains:
+
+		- .wpveda.com
+
+-->
+<ruleset name="wpveda.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="wpveda.com" />
+	<target host="www.wpveda.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.wpveda\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.wpveda\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

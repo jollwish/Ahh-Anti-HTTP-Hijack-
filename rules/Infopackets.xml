@@ -1,0 +1,18 @@
+<!--
+
+	Mismatched hosts in *infopackets.com:
+
+		- go
+		- mail
+		- track
+
+-->
+<ruleset name="Infopackets">
+
+	<target host="infopackets.com" />
+	<target host="www.infopackets.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

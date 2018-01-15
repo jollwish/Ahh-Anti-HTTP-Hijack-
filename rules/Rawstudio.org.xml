@@ -1,0 +1,24 @@
+<!--
+
+	Mismatched hosts in *rawstudio.org:
+
+		- www
+		- bugzilla (different content, redirects to gansoi.com over https)
+
+-->
+<ruleset name="Rawstudio.org (partial)">
+
+	<target host="rawstudio.org" />
+	<target host="www.rawstudio.org" />
+
+
+	<securecookie host="^\.rawstudio\.org$" name=".+" />
+
+
+	<rule from="^http://www\.rawstudio\.org/"
+		to="https://rawstudio.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

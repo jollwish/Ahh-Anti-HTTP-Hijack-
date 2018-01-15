@@ -1,0 +1,13 @@
+<ruleset name="Twinings">
+
+	<target host="twinings.co.uk" />
+	<target host="www.twinings.co.uk" />
+	<target host="facebook.twinings.co.uk" />
+	<target host="shop.twinings.co.uk" />
+	<target host="trade.twinings.co.uk" />
+
+	<securecookie host="^(www\.)?twinings\.co\.uk$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

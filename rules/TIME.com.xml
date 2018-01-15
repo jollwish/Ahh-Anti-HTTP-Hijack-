@@ -1,0 +1,55 @@
+<!--
+	For other Time Inc coverage, see Time_Inc.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - 100photos.time.com
+
+		SSL peer certificate was not OK:
+			 - www.time.com
+			 - 10questions.time.com
+			 - motto.time.com
+			 - thepage.time.com
+
+		Secure connection redirects to plaintext:
+			 - time.com
+			 - business.time.com
+			 - entertainment.time.com
+			 - healthland.time.com
+			 - ideas.time.com
+			 - labs.time.com
+			 - realestate.money.time.com
+			 - nation.time.com
+			 - newsfeed.time.com
+			 - poy.time.com
+			 - science.time.com
+			 - style.time.com
+			 - swampland.time.com
+			 - time100.time.com
+			 - techland.time.com
+			 - world.time.com
+
+		Time out:
+			 - life.time.com
+			 - lightbox.time.com
+
+-->
+<ruleset name="TIME.com (partial)">
+
+	<target host="assets.time.com" />
+		<test url="http://assets.time.com/scripts/brightcove-facade/1.1.0/brightcove-facade.min.js" />
+	<target host="auth.time.com" />
+	<target host="backissues.time.com" />
+	<target host="content.time.com" />
+	<target host="pages.email.time.com" />
+	<target host="shop.time.com" />
+	<target host="smetrics.time.com" />
+	<target host="subscription.time.com" />
+	<target host="subscription-assets.time.com" />
+		<test url="http://subscription-assets.time.com/prod/assets/themes/magazines/SUBS/templates/velocity/site/td-learnmore0711/smartphone.html" />
+		<test url="http://subscription-assets.time.com/prod/assets/themes/magazines/default/template-resources/html/legal/amazon/TD/tos.html" />
+		<test url="http://subscription-assets.time.com/prod/assets/themes/magazines/default/template-resources/html/legal/ios/TD/pp.html" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

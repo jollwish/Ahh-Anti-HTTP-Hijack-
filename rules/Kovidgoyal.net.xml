@@ -1,0 +1,9 @@
+<ruleset name="Kovidgoyal.net">
+
+	<target host="kovidgoyal.net" />
+	<target host="www.kovidgoyal.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

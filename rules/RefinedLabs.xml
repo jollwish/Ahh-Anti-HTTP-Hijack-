@@ -1,0 +1,4 @@
+<ruleset name="Refined Labs">
+<target host="d.refinedads.com" />
+<rule from="^http:" to="https:" />
+</ruleset>

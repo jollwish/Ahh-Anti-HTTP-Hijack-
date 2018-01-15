@@ -1,0 +1,7 @@
+<ruleset name="Ekm secure.com">
+	<target host="uifw.ekmsecure.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

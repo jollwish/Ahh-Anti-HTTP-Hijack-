@@ -1,0 +1,19 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bookie.io/ => https://bookie.io/: (28, 'Connection timed out after 20000 milliseconds')
+
+	www.bookie.io doesn't exist.
+
+-->
+<ruleset name="Bookie.io" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bookie.io" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

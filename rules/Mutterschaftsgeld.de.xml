@@ -1,0 +1,8 @@
+<ruleset name="Mutterschaftsgeld.de" default_off="missing certificate chain">
+
+	<target host="mutterschaftsgeld.de" />
+	<target host="www.mutterschaftsgeld.de" />
+	
+	<rule from="^http:" to="https:" />
+
+</ruleset>

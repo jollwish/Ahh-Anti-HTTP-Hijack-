@@ -1,0 +1,17 @@
+<!--
+	These altnames don't exist:
+
+		- www.blog.cyberwar.nl
+
+-->
+<ruleset name="Cyberwar.nl">
+
+	<target host="cyberwar.nl" />
+	<target host="blog.cyberwar.nl" />
+	<target host="news.cyberwar.nl" />
+	<target host="www.cyberwar.nl" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

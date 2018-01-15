@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://scieneo.de/ => https://www.scieneo.de/: (51, "SSL: no alternative certificate subject name matches target host name 'www.scieneo.de'")
+Fetch error: http://www.scieneo.de/ => https://www.scieneo.de/: (51, "SSL: no alternative certificate subject name matches target host name 'www.scieneo.de'")
+
+    Nonfunctional subdomains:
+	    - $
+
+    More rulesets for sites by Mirco Neubert:
+	    - Dynatech.de
+	    - Dynavision.de
+-->
+<ruleset name="Scieneo.de" default_off='failed ruleset test'>
+    <target host="scieneo.de" />
+    <target host="www.scieneo.de" />
+
+    <securecookie host="^www\.scieneo\.de" name=".+" />
+
+    <!-- Redirect broken domain -->
+    <rule from="^http://scieneo\.de/"
+            to="https://www.scieneo.de/" />
+
+    <rule from="^http:"
+            to="https:" />
+</ruleset>

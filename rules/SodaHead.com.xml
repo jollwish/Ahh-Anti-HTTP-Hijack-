@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://sodahead.com/ => https://sodahead.com/: (51, "SSL: no alternative certificate subject name matches target host name 'sodahead.com'")
+
+	CDN buckets:
+
+		- d33lglhhb8q63m.cloudfront.net
+		- d3ict7m6m7fhlt.cloudfront.net | s3.amazonaws.com/widgets.sodahead.com/
+		- d6fekxp9qbg3b.cloudfront.net
+
+
+	Problematic subdomains:
+
+		- images *
+		- statics *
+		- widgets *
+
+	* cloudfront.net
+
+-->
+<ruleset name="SodaHead.com" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<target host="sodahead.com" />
+	<target host="*.sodahead.com" />
+
+
+	<securecookie host=".+\.sodahead\.com$" name=".+" />
+
+
+	<rule from="^http://((?:de|latimes|m|partners|www)\.)?sodahead\.com/"
+		to="https://$1sodahead.com/" />
+
+	<rule from="^http://images\.sodahead\.com/"
+		to="https://d33lglhhb8q63m.cloudfront.net/" />
+
+	<rule from="^http://statics\.sodahead\.com/"
+		to="https://d6fekxp9qbg3b.cloudfront.net/" />
+
+	<rule from="^http://widgets\.sodahead\.com/"
+		to="https://d3ict7m6m7fhlt.cloudfront.net/" />
+
+</ruleset>

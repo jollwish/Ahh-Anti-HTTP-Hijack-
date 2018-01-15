@@ -1,0 +1,20 @@
+<!--
+	For other Intel coverage, see Intel.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - intel.co.jp
+			 - download.intel.co.jp
+
+		SSL peer certificate was not OK:
+			 - support.intel.co.jp
+-->
+<ruleset name="Intel.co.jp">
+	<target host="www.intel.co.jp" />
+	<target host="iq.intel.co.jp" />
+	<target host="newsroom.intel.co.jp" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

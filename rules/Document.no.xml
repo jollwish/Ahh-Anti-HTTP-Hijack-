@@ -1,0 +1,8 @@
+<ruleset name="Document.no">
+	<target host="document.no" />
+	<target host="www.document.no" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

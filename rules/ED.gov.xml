@@ -1,0 +1,52 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- e-grants.ed.gov
+
+		Timeout was reached:
+		- fafsalivehelp01.ed.gov
+		- www.fafsalivehelp01.ed.gov
+		- nces.ed.gov
+		- studentaid2.ed.gov
+		- www.studentaid2.ed.gov
+
+		SSL peer certificate was not OK:
+		- www.cbfisap.ed.gov
+		- www.faaaccess.ed.gov
+		- www.fsaregistration.ed.gov
+		- www.nces.ed.gov
+
+		Incomplete certificate chain error:
+		-  fsaregistration.ed.gov
+
+		4xx client error:
+		- fafsademo.test.ed.gov
+-->
+<ruleset name="ED.gov (partial)">
+	<target host="ed.gov" />
+	<target host="www.ed.gov" />
+	<target host="cbfisap.ed.gov" />
+	<target host="cod.ed.gov" />
+	<target host="ecdrappeals.ed.gov" />
+	<target host="faaaccess.ed.gov" />
+	<target host="fafsa.ed.gov" />
+	<target host="www.fafsa.ed.gov" />
+	<target host="fsadownload.ed.gov" />
+	<target host="www.fsadownload.ed.gov" />
+	<target host="fsawebenroll.ed.gov" />
+	<target host="ifap.ed.gov" />
+	<target host="www.ifap.ed.gov" />
+	<target host="nslds.ed.gov" />
+	<target host="www.nslds.ed.gov" />
+	<target host="pin.ed.gov" />
+	<target host="www.pin.ed.gov" />
+	<target host="sa.ed.gov" />
+	<target host="studentaid.ed.gov" />
+	<target host="www.studentaid.ed.gov" />
+	<target host="tcli.ed.gov" />
+	<target host="www.tcli.ed.gov" />
+	<target host="teach-ats.ed.gov" />
+	<target host="www.teach-ats.ed.gov" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

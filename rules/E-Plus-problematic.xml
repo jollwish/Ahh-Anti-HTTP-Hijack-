@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see E-Plus.xml.
+
+-->
+<ruleset name="E-Plus (problematic)" default_off="mismatched">
+
+	<target host="einstellungen.e-plus.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.anubisnetworks.com/ => https://support.anubisnetworks.com/: Too many redirects while fetching 'https://support.anubisnetworks.com/'
+
+	For other BitSight coverage, see BitSight_Tech.com.xml.
+
+
+	Problematic hosts in *anubisnetworks.com:
+
+		- ^ ¹
+		- blog ²
+
+	¹ Refused
+	² Akamai/mismatched
+
+-->
+<ruleset name="AnubisNetworks.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="support.anubisnetworks.com" />
+	<target host="www.anubisnetworks.com" />
+
+	<!--	Complications:
+				-->
+	<target host="anubisnetworks.com" />
+
+
+	<rule from="^http://anubisnetworks\.com/"
+		to="https://www.anubisnetworks.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

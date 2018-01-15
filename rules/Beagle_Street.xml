@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^		(times out)
+		- www		(record_too_long)
+
+-->
+<ruleset name="Beagle Street (partial)">
+
+	<target host="quotes.beaglestreet.com" />
+
+
+	<securecookie host="^quotes\.beaglestreet\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

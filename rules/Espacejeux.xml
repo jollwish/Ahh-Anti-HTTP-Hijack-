@@ -1,0 +1,6 @@
+<ruleset name="espacejeux">
+  <target host="www.espacejeux.com"/>
+  <target host="espacejeux.com"/>
+  <rule from="^http:" to="https:" />
+  <securecookie host="^(?:.*\.)?espacejeux\.com$" name=".+" />
+</ruleset>

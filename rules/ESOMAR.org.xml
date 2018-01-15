@@ -1,0 +1,42 @@
+<!--
+	Invalid certificate:
+		ana.esomar.org
+		www.ana.esomar.org
+		associations.esomar.org
+		www.directory.esomar.org
+		extranet.esomar.org
+		www.rating.esomar.org
+		survey.esomar.org
+		wiki.esomar.org
+
+	Login required:
+		cloud.esomar.org
+		library.esomar.org
+		tracker.esomar.org
+
+	Different content http/https:
+		jobs.esomar.org
+		my.esomar.org
+
+	Mixed content:
+		rwconnect.esomar.org
+		www.rwconnect.esomar.org
+
+-->
+<ruleset name="ESOMAR.org">
+
+	<target host="esomar.org" />
+	<target host="www.esomar.org" />
+	<target host="2016.esomar.org" />
+	<target host="directory.esomar.org" />
+	<target host="horus.esomar.org" />
+	<target host="payment.esomar.org" />
+	<target host="yes.esomar.org" />
+	<target host="young.esomar.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

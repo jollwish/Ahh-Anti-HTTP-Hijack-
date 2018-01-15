@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://comkort.com/ => https://comkort.com/: (6, 'Could not resolve host: comkort.com')
+Fetch error: http://www.comkort.com/ => https://www.comkort.com/: (6, 'Could not resolve host: www.comkort.com')
+
+	Fully covered hosts in *comkort.com:
+
+		- (www.)?
+
+
+	Insecure cookies are set for these domains:
+
+		- .comkort.com
+
+-->
+<ruleset name="Comkort.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="comkort.com" />
+	<target host="www.comkort.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.comkort\.com$" name="^(__cfduid|cf_clearance|cmk_session|lang)$" /-->
+
+	<securecookie host="^\.comkort\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

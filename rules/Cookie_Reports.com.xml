@@ -1,0 +1,8 @@
+<ruleset name="Cookie Reports.com (partial)">
+
+	<target host="policy.cookiereports.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

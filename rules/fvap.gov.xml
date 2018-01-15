@@ -1,0 +1,18 @@
+<!--
+	Federal Voting Assistance Program
+
+
+-->
+<ruleset name="FVAP.gov">
+
+	<target host="fvap.gov" />
+	<target host="www.fvap.gov" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

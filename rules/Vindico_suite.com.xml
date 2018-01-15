@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.vindicosuite.com/ => https://www.vindicosuite.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other Vindico coverage, see Vindico.com.xml.
+
+
+	^vindicosuite.com doesn't exist.
+
+
+	Insecure cookies are set for these domains:
+
+		- .vindicosuite.com
+
+-->
+<ruleset name="Vindico suite.com" default_off='failed ruleset test'>
+
+	<target host="mpp.vindicosuite.com" />
+	<target host="mpp2.vindicosuite.com" />
+	<target host="www.vindicosuite.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.vindicosuite\.com$" name="^ug$" /-->
+
+	<securecookie host="^\.vindicosuite\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,27 @@
+<!--
+	Nonfunctional domains:
+
+		- infinity-tracking.com		(dropped)
+		- www.infinity-tracking.com	(shows api; mismatched, CN: api.infinity-tracking.net)
+
+
+	Fully covered domains:
+
+		- portal.infinity-tracking.com
+		- api.infinity-tracking.net
+		- assets.infinity-tracking.net
+
+-->
+<ruleset name="Infinity Tracking (partial)">
+
+	<target host="portal.infinity-tracking.com" />
+	<target host="api.infinity-tracking.net" />
+	<target host="assets.infinity-tracking.net" />
+
+
+	<!--securecookie host="^\.infinity-tracking\.com$" name="^ict-portal-session$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

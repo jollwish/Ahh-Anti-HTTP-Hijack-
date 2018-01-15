@@ -1,0 +1,45 @@
+<!--
+	Nonfunctional hosts in *.ruby-lang.org:
+
+		ᵐ doc (redirects to docs)
+		ᵐ redmine (mirrors bugs)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+
+	See also Ruby-doc.org.xml
+-->
+<ruleset name="ruby-lang.org">
+
+	<target host="ruby-lang.org" />
+	<target host="*.ruby-lang.org" />
+
+	<test url="http://www.ruby-lang.org/"/>
+	<test url="http://bugs.ruby-lang.org/"/>
+	<test url="http://cache.ruby-lang.org/"/>
+	<test url="http://doc.ruby-lang.org/"/>
+	<test url="http://docs.ruby-lang.org/"/>
+	<test url="http://ftp.ruby-lang.org/"/>
+	<test url="http://lists.ruby-lang.org/"/>
+	<test url="http://redmine.ruby-lang.org/"/>
+	<test url="http://svn.ruby-lang.org/"/>
+
+
+	<securecookie host="^bugs\.ruby-lang\.org$" name=".+" />
+
+
+	<rule from="^http://ruby-lang\.org/"
+		to="https://www.ruby-lang.org/" />
+
+	<rule from="^http://doc\.ruby-lang\.org/"
+		to="https://docs.ruby-lang.org/" />
+	<rule from="^http://redmine\.ruby-lang\.org/"
+		to="https://bugs.ruby-lang.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

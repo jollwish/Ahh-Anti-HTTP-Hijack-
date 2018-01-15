@@ -1,0 +1,16 @@
+<!--
+	Amherst College
+
+
+	^: refused
+
+-->
+<ruleset name="Amherst.edu">
+
+	<target host="amherst.edu" />
+	<target host="www.amherst.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

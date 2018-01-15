@@ -1,0 +1,20 @@
+<!--
+	Other Discover rulesets:
+
+		- Discover_Card.com.xml
+		- Discover_Merchants.com.xml
+		- Discover_Network.com.xml
+		- Discover_Signage.com.xml
+
+-->
+<ruleset name="Discover.com">
+
+	<target host="discover.com" />
+	<target host="m.discover.com" />
+	<target host="search.discover.com" />
+	<target host="www.discover.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

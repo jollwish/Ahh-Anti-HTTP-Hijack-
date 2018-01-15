@@ -1,0 +1,26 @@
+<ruleset name="Alwaysdata.com">
+
+	<target host="alwaysdata.com" />
+	<target host="www.alwaysdata.com" />
+	<target host="admin.alwaysdata.com" />
+	<target host="analytics.alwaysdata.com" />
+	<target host="blog.alwaysdata.com" />
+	<target host="changelog.alwaysdata.com" />
+	<target host="forum.alwaysdata.com" />
+	<target host="help.alwaysdata.com" />
+	<target host="net2ftp.alwaysdata.com" />
+	<target host="phpmyadmin.alwaysdata.com" />
+	<target host="phppgadmin.alwaysdata.com" />
+	<target host="static.alwaysdata.com" />
+	<target host="stats.alwaysdata.com" />
+	<target host="status.alwaysdata.com" />
+	<target host="translate.alwaysdata.com" />
+	<target host="webmail.alwaysdata.com" />
+	<target host="wiki.alwaysdata.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

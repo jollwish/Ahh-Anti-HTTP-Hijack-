@@ -1,0 +1,16 @@
+<!--
+	Connection closed:
+		- blog
+-->
+
+<ruleset name="VirusTotal.com">
+	<target host="virustotal.com" />
+	<target host="www.virustotal.com" />
+	<target host="legacy.virustotal.com" />
+	<target host="developers.virustotal.com" />
+	<target host="support.virustotal.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

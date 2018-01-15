@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ecm74.com/ => https://ecm74.com/: (35, 'Unknown SSL protocol error in connection to ecm74.com:443 ')
+Fetch error: http://www.ecm74.com/ => https://ecm74.com/: (35, 'Unknown SSL protocol error in connection to ecm74.com:443 ')
+
+	Ads/marketing.
+
+	For other Tractional Digital coverage, see Traction-Digital.com.xml.
+
+
+	www: cert only matches ^ecm74.com.
+
+-->
+<ruleset name="ecm74.com (partial)" default_off='failed ruleset test'>
+
+	<target host="ecm74.com" />
+	<target host="www.ecm74.com" />
+		<!--
+			Redirect to http:
+						-->
+		<!--exclusion pattern="^http://(www\.)?ecm74\.com/+rp/\d+/ContestForm\.clsp" /-->
+
+
+	<rule from="^http://(?:www\.)?ecm74\.com/(?!rp/\d+/ContestForm\.clsp)"
+		to="https://ecm74.com/" />
+
+</ruleset>

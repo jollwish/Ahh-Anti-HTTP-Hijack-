@@ -1,0 +1,25 @@
+<!--
+	Insecure cookies are set for these hosts:
+
+		- iosdevweekly.com
+
+-->
+<ruleset name="iOS Dev Weekly.com">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="iosdevweekly.com" />
+	<target host="www.iosdevweekly.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^iosdevweekly\.com$" name="^(?:_herald_session|pid)$" /-->
+
+	<securecookie host="^iosdevweekly\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

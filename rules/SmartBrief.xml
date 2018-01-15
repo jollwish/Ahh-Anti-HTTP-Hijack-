@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://smartbrief.com/ (200) => https://smartbrief.com/ (404)
+Non-2xx HTTP code: http://www.smartbrief.com/ (200) => https://www.smartbrief.com/ (404)
+
+-->
+<ruleset name="SmartBrief" default_off='failed ruleset test'>
+
+	<target host="smartbrief.com" />
+	<target host="jobs.smartbrief.com" />
+	<target host="www.smartbrief.com" />
+
+
+	<!--	Observed cookie domains:
+
+			- $
+			- jobs
+			- www
+				-->
+	<securecookie host="^(?:.*\.)?smartbrief\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

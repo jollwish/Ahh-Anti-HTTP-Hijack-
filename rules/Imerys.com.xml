@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://imerys.com/ => https://imerys.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.imerys.com/ => https://www.imerys.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Mixed content:
+
+		- Images from $self ¹
+		- Ads from ir1.euroinvestor.com ²
+
+	¹ Secured by us
+	² Not secured by us <= mismatched
+
+-->
+<ruleset name="Imerys.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="imerys.com" />
+	<target host="www.imerys.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

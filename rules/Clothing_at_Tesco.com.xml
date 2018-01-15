@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://clothingattesco.com/ => https://clothingattesco.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.clothingattesco.com/ => https://www.clothingattesco.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other Tesco coverage, see Tesco.xml.
+
+
+	Insecure cookies are set for these domains:
+
+		- .clothingattesco.com
+		- .www.clothingattesco.com
+
+
+	Mixed content:
+
+		- Bug from i1.adis.ws *
+
+	* Secured by us
+
+-->
+<ruleset name="Clothing at Tesco.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="clothingattesco.com" />
+	<target host="www.clothingattesco.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.clothingattesco\.com$" name="^SID$" /-->
+	<!--securecookie host="^\.www\.clothingattesco\.com$" name="^(?:SID|device)$" /-->
+
+	<securecookie host="^[w.]*\.clothingattesco\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+
+</ruleset>

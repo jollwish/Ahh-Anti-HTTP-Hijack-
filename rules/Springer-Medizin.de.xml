@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://registrierung.springer-medizin.de/ => https://registrierung.springer-medizin.de/: (51, "SSL: no alternative certificate subject name matches target host name 'registrierung.springer-medizin.de'")
+
+	For other Springer coverage, see Springer.xml.
+
+
+	Nonfunctional hosts:
+
+		- www.mediadaten *
+
+	* Shows adwizard.springer.com
+
+
+	Insecure cookies are set for these hosts:
+
+		- registrierung.springer-medizin.de
+
+-->
+<ruleset name="Springer Zahnmedizin.de (partial)" default_off='failed ruleset test'>
+
+	<target host="registrierung.springer-medizin.de" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^registrierung\.springer-medizin\.de$" name="^Apache$" /-->
+
+	<securecookie host="^registrierung\.springer-medizin\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

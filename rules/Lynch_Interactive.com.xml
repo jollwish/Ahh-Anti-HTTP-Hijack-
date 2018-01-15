@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://lynchinteractive.com/ => https://lynchinteractive.com/: Too many redirects while fetching 'https://lynchinteractive.com/'
+
+-->
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://lynchinteractive.com/ (200) => https://lynchinteractive.com/ (404)
+
+-->
+<ruleset name="Lynch Interactive.com" default_off='failed ruleset test'>
+
+	<target host="lynchinteractive.com" />
+	<target host="www.lynchinteractive.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,78 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://beta.n-somerset.gov.uk/ => https://beta.n-somerset.gov.uk/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://ehmlive.n-somerset.gov.uk/ => https://ehmlive.n-somerset.gov.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	North Somerset Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+
+	Nonfunctional hosts in *n-somerset.gov.uk:
+
+		- adforms ʳ
+		- data ʳ
+		- fostering ʰ
+		- map ᵈ
+		- new ᶠ
+		- old ᶠ
+		- northsomersetonlinedirectory ʰ
+		- nsod ʰ
+
+	ᵈ Dropped
+	ᶠ Handshake fails
+	ʰ Redirects to http
+	ʳ Refused
+
+
+	Problematic hosts in *n-somerset.gov.uk:
+
+		- ^ ⁴
+		- consult ᵐ ˢ
+		- theaccessofficer ᵐ
+
+	⁴ 404
+	ᵐ Mismatched
+	ˢ Self-signed
+
+
+	Insecure cookies are set for these hosts:
+
+		- myaccount.n-somerset.gov.uk
+		- travelcardonline.n-somerset.gov.uk
+
+-->
+<ruleset name="N-Somerset.gov.uk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="apps.n-somerset.gov.uk" />
+	<target host="beta.n-somerset.gov.uk" />
+	<target host="ehmlive.n-somerset.gov.uk" />
+	<target host="jobs.n-somerset.gov.uk" />
+	<target host="myaccount.n-somerset.gov.uk" />
+	<target host="travelcardonline.n-somerset.gov.uk" />
+	<target host="www.n-somerset.gov.uk" />
+
+	<!--	Complications:
+				-->
+	<target host="n-somerset.gov.uk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^apps\.n-somerset\.gov\.uk$" name="^ASP\.NET_SessionId$" /-->
+	<!--securecookie host="^myaccount\.n-somerset\.gov\.uk$" name="^\.ASPXFORMSAUTH$" /-->
+	<!--securecookie host="^travelcardonline\.n-somerset\.gov\.uk$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://n-somerset\.gov\.uk/"
+		to="https://www.n-somerset.gov.uk/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

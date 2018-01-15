@@ -1,0 +1,23 @@
+<!--
+	Invalid certificate:
+		devcon.ethereum.org
+		wiki.ethereum.org (503 over http)
+
+-->
+<ruleset name="Ethereum.org">
+
+	<target host="ethereum.org" />
+	<target host="www.ethereum.org" />
+	<target host="blog.ethereum.org" />
+	<target host="bounty.ethereum.org" />
+	<target host="forum.ethereum.org" />
+	<target host="geth.ethereum.org" />
+	<target host="remix.ethereum.org" />
+	<target host="wallet.ethereum.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

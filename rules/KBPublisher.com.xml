@@ -1,0 +1,27 @@
+<!--
+	No working URL known:
+		ashubin.kbpublisher.com
+		panychek.kbpublisher.com
+		www.panychek.kbpublisher.com
+
+	Invalid certificate:
+		demo.kbpublisher.com
+		www.demo.kbpublisher.com
+		eleontev.kbpublisher.com
+		www.eleontev.kbpublisher.com
+		public.kbpublisher.com
+		www.public.kbpublisher.com
+		secure.kbpublisher.com
+
+-->
+<ruleset name="KBPublisher.com (partial)">
+
+	<target host="kbpublisher.com" />
+	<target host="www.kbpublisher.com" />
+	<target host="host.kbpublisher.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

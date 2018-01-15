@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://err.ee/ => https://err.ee/: Too many redirects while fetching 'https://err.ee/'
+Fetch error: http://otse.err.ee/ => https://otse.err.ee/: Too many redirects while fetching 'https://otse.err.ee/'
+Fetch error: http://www.err.ee/ => https://www.err.ee/: Too many redirects while fetching 'https://www.err.ee/'
+
+	Nonfunctional subdomains:
+
+		- ajakava.dev		(404)
+		- ee30481 *
+		- etv *
+		- etv2 **
+		- ilm ***
+		- klassikaraadio
+		- meelelahutus *
+		- menu *
+		- news **
+		- pood ***
+		- r2 ***
+		- rus *
+		- sport	*
+		- teadus ***
+		- uudised
+		- vikerraadio ***
+
+	* Times out
+	** 404, valid cert
+	*** No https
+
+-->
+<ruleset name="Estonian Public Broadcasting (partial)" default_off='failed ruleset test'>
+
+	<target host="err.ee" />
+	<target host="ext.err.ee" />
+	<target host="otse.err.ee" />
+	<target host="www.err.ee" />
+
+
+	<securecookie host="^(?:.+\.)?err\.ee$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,26 @@
+<!--
+	MacWorld.com has a wildcard SSL certificate.
+-->
+
+<ruleset name="MacWorld.com">
+	<target host="macworld.com" />
+	<target host="*.macworld.com" />
+
+	<test url="http://www.macworld.com/" />
+	<test url="http://edge.macworld.com/" />
+	<test url="http://files.macworld.com/" />
+	<test url="http://find.macworld.com/" />
+	<test url="http://forums.macworld.com/" />
+	<test url="http://hints.macworld.com/" />
+	<test url="http://images.macworld.com/" />
+	<test url="http://iphone.macworld.com/" />
+	<test url="http://podcasts.macworld.com/" />
+	<test url="http://rss.macworld.com/" />
+	<test url="http://shop.macworld.com/" />
+	<test url="http://static.macworld.com/" />
+	<test url="http://video.macworld.com/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

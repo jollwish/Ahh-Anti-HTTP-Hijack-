@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://photosynth.net/ => https://photosynth.net/: (7, 'Failed to connect to photosynth.net port 443: Connection timed out')
+Fetch error: http://www.photosynth.net/ => https://www.photosynth.net/: (7, 'Failed to connect to www.photosynth.net port 443: Connection timed out')
+Fetch error: http://cdn.photosynth.net/ => https://cdn.photosynth.net/: (6, 'Could not resolve host: cdn.photosynth.net')
+
+	For other Microsoft coverage, see Microsoft.xml.
+-->
+<ruleset name="Photosynth.net" default_off='failed ruleset test'>
+
+	<target host="photosynth.net" />
+	<target host="www.photosynth.net" />
+	<target host="cdn.photosynth.net" />
+
+	<securecookie host="^(?:www\.)?photosynth\.net$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

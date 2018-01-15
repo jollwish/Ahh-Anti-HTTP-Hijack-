@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cars.tigerair.com/ => https://cars.tigerair.com/: (51, "SSL: no alternative certificate subject name matches target host name 'cars.tigerair.com'")
+Fetch error: http://groups.tigerair.com/ => https://groups.tigerair.com/: (51, "SSL: no alternative certificate subject name matches target host name 'groups.tigerair.com'")
+
+	Non-functional subdomain:
+		- tigerair.com		(², CN: www.tigerair.com)
+			- www		(redirect to http)
+			- crewnet	¹
+			- crs		(handshake failure)
+			- gethelp	¹
+			- holidays	(redirect to packages)
+			- hotels	(², CN: ssl.goquo.com)
+			- notify	¹
+			- packages	(², CN: ssl.goquo.com)
+			- tigertours	(², CN: *.bluehost.com)
+
+		- .com.au
+			- crewnet	¹
+			- gethelp	¹
+			- hotels	(², CN: *.booking.com)
+			- manage	(invalid cert chain)
+
+	¹ timeout
+	² cert mismatch
+-->
+<ruleset name="Tiger Airways (partial)" default_off='failed ruleset test'>
+	<target host=         "tigerair.com.au" />
+	<target host=     "www.tigerair.com.au" />
+	<target host= "booking.tigerair.com.au" />
+	<target host="webcheck.tigerair.com.au" />
+
+	<target host= "booking.tigerair.com" />
+	<target host=    "cars.tigerair.com" />
+	<target host=  "groups.tigerair.com" />
+	<target host="intranet.tigerair.com" />
+	<target host=       "m.tigerair.com" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

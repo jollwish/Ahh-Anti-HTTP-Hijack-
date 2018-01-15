@@ -1,0 +1,17 @@
+<!--
+	Other EFF rulesets:
+		- Freerangekitten.com.xml
+		- IFightSurveillance.org.xml
+		- ManilaPrinciples.org.xml
+		- Panopticlick.com.xml
+
+-->
+
+<ruleset name="EFF">
+	<target host="httpsnow.org" />
+	<target host="www.httpsnow.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

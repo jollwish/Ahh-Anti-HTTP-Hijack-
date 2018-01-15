@@ -1,0 +1,11 @@
+<ruleset name="Advconversion.com">
+
+	<target host="advconversion.com" />
+	<target host="www.advconversion.com" />
+		<test url="http://www.advconversion.com/ads-conversiontrack/conversion/track.do?type=img&amp;advertiserId=" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

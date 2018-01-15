@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		blog.verifiedvoting.org
+
+-->
+<ruleset name="Verified Voting">
+
+	<target host="verifiedvoting.org" />
+	<target host="www.verifiedvoting.org" />
+	<target host="verifiedvotingfoundation.org" />
+	<target host="www.verifiedvotingfoundation.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

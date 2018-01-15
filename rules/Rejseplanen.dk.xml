@@ -1,0 +1,15 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - ptt.rejseplanen.dk
+
+		Different content:
+			 - info.rejseplanen.dk
+-->
+<ruleset name="Rejseplanen.dk (partial)">
+	<target host="rejseplanen.dk" />
+	<target host="www.rejseplanen.dk" />
+	<target host="xajax-prod.rejseplanen.dk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

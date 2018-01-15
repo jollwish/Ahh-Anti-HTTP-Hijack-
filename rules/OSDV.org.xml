@@ -1,0 +1,15 @@
+<!--
+	Redirect to http://www.osetfoundation.org/about
+
+-->
+<ruleset name="OSDV.org" default_off="mismatched">
+
+	<target host="osdv.org" />
+	<target host="www.osdv.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

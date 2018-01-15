@@ -1,0 +1,10 @@
+<ruleset name="BrightContext.com">
+
+	<target host="brightcontext.com" />
+	<target host="www.brightcontext.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

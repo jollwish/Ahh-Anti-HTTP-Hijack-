@@ -1,0 +1,6 @@
+<ruleset name="PrivatVPN">
+  <target host="privatevpn.com" />
+  <target host="www.privatevpn.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

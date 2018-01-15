@@ -1,0 +1,4 @@
+<ruleset name="Gamona.de">
+<target host="www.gamona.de" />
+<rule from="^http:" to="https:" />
+</ruleset>

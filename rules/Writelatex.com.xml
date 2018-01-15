@@ -1,0 +1,13 @@
+<!--
+	^: refused
+
+-->
+<ruleset name="writeLaTeX.com">
+
+	<target host="writelatex.com" />
+	<target host="www.writelatex.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

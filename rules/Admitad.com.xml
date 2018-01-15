@@ -1,0 +1,16 @@
+<!--
+	Fully covered subdomains:
+
+		- ad
+		- cdn
+
+-->
+<ruleset name="admitad.com">
+
+	<target host="ad.admitad.com" />
+	<target host="cdn.admitad.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

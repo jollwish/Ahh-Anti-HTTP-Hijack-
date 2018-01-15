@@ -1,0 +1,18 @@
+<!--
+	Mixed content:
+
+		- Images on www from www2 *
+
+	* Secured by us
+
+-->
+<ruleset name="Interlan.se">
+
+	<target host="interlan.se" />
+	<target host="www.interlan.se" />
+	<target host="www2.interlan.se" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

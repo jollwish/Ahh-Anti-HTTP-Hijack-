@@ -1,0 +1,55 @@
+<!--
+	Health and Social Care Information Centre
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- igtt.hscic.gov.uk
+		- www.igtt.hscic.gov.uk
+		- www.hscic.gov.uk
+
+		Timeout was reached:
+		- efm.hscic.gov.uk
+		- hefs.hscic.gov.uk
+		- link.ict.hscic.gov.uk
+		- systems.hscic.gov.uk
+
+		SSL connect error:
+		- qof.hscic.gov.uk
+		- www.qof.hscic.gov.uk
+
+		SSL peer certificate was not OK:
+		- healthsurvey.hscic.gov.uk
+		- web.ict.hscic.gov.uk
+
+		Incomplete certificate chain error:
+		- ckm.hscic.gov.uk
+
+		5xx server error:
+		- gpoutcomes.hscic.gov.uk
+-->
+<ruleset name="hscic.gov.uk">
+	<target host="hscic.gov.uk" />
+	<target host="www.hscic.gov.uk" />
+	<target host="clinicalaudit.hscic.gov.uk" />
+	<target host="datadepot.hscic.gov.uk" />
+	<target host="dd4c.hscic.gov.uk" />
+	<target host="did.hscic.gov.uk" />
+	<target host="dsp.hscic.gov.uk" />
+	<target host="www.igt.hscic.gov.uk" />
+	<target host="indicators.hscic.gov.uk" />
+	<target host="isd.hscic.gov.uk" />
+	<target host="iview.hscic.gov.uk" />
+	<target host="login.hscic.gov.uk" />
+	<target host="my.hscic.gov.uk" />
+	<target host="nascis.hscic.gov.uk" />
+	<target host="ncmp.hscic.gov.uk" />
+	<target host="omnibus.hscic.gov.uk" />
+
+	<rule from="^http://www\.hscic\.gov\.uk/"
+			to="https://hscic.gov.uk/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

@@ -1,0 +1,13 @@
+<ruleset name="Huggies Australia (partial)">
+	<!-- *huggies.com.au -->
+	<target host="huggies.com.au" />
+	<target host="www.huggies.com.au" />
+	<target host="m.huggies.com.au" />
+
+	<!-- *huggies-cdn.net -->
+	<target host="assets.huggies-cdn.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

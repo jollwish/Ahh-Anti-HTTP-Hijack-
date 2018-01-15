@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://transmode.com/ => https://transmode.com/: (7, 'Failed to connect to transmode.com port 443: Connection refused')
+Fetch error: http://www.transmode.com/ => https://www.transmode.com/: (7, 'Failed to connect to www.transmode.com port 443: Connection refused')
+
+	Other Transmode rulesets:
+
+		- Transmode.se.xml
+
+
+	Mixed content:
+
+		- Bugs from statse.webtrendslive.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Transmode" default_off='failed ruleset test'>
+
+	<target host="transmode.com"/>
+	<target host="www.transmode.com"/>
+
+	<securecookie host="^(?:.*\.)?transmode\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

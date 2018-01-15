@@ -1,0 +1,17 @@
+<ruleset name="APAN.org (partial)">
+	<target host="apan.org" />
+	<target host="chat.apan.org" />
+	<target host="community.apan.org" />
+	<target host="connect.apan.org" />
+	<target host="lite.apan.org" />
+	<target host="m.apan.org" />
+	<target host="mail.apan.org" />
+	<target host="map.apan.org" />
+	<target host="passport.apan.org" />
+	<target host="ronna.apan.org" />
+	<target host="translate.apan.org" />
+	<target host="wss.apan.org" />
+	<target host="www.apan.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

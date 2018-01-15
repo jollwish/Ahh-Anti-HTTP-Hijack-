@@ -1,0 +1,8 @@
+<ruleset name="HTWG Konstanz">
+    <target host="qisserver.htwg-konstanz.de" />
+    <target host="lsf.htwg-konstanz.de" />
+    <target host="login.rz.htwg-konstanz.de" />
+    <target host="webmail.htwg-konstanz.de" />
+
+    <rule from="^http:" to="https:" />
+</ruleset>

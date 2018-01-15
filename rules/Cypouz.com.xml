@@ -1,0 +1,20 @@
+<!--
+	No working URL known:
+		test.cypouz.com
+
+	Private subdomain:
+		wec.cypouz.com
+
+-->
+<ruleset name="cypouz.com">
+
+	<target host="cypouz.com" />
+	<target host="www.cypouz.com" />
+	<target host="photo.cypouz.com" />
+	<target host="showercounter.cypouz.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

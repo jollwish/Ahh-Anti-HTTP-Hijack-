@@ -1,0 +1,5 @@
+<ruleset name="Cyberquests (Partial)">
+  <target host="quiz-uscc.cyberquests.org" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

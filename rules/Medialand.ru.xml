@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mediamir.medialand.ru/ => https://mediamir.medialand.ru/: (6, 'Could not resolve host: mediamir.medialand.ru')
+
+	Nonfunctional subdomains:
+
+		- (www.) ¹
+		- content.mediamir ²
+		- engine.mediamir ²
+
+	¹ Dropped
+	² 404; mismatched, CN: *.medialand.ru
+
+-->
+<ruleset name="Medialand.ru (partial)" default_off='failed ruleset test'>
+
+	<target host="mediamir.medialand.ru" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^mediamir\.medialand\.ru$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^mediamir\.medialand\.ru$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

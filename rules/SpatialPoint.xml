@@ -1,0 +1,15 @@
+<!--
+	Problematic subdomains:
+
+		www	($ 404s)
+
+-->
+<ruleset name="SpatialPoint">
+
+	<target host="spatialpoint.com" />
+	<target host="www.spatialpoint.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

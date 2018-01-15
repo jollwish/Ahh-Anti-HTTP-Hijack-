@@ -1,0 +1,40 @@
+<!--
+	For other Gannett Company coverage, see Gannett-Company.xml.
+
+	Note: usatoday.com has a wildcard DNS record.
+
+	Dropped:
+		- ^ (fixed by this ruleset)
+		- crosswords
+		- games
+		- puzzles
+
+	Mismatched:
+		- ee (a248.e.akamai.net)
+		- reg.e (gannett.com)
+		- onlinestore (*.nexternal.com)
+
+	Redirect to HTTP:
+		- college
+-->
+
+<ruleset name="USA Today.com">
+	<target host="usatoday.com" />
+	<target host="www.usatoday.com" />
+	<target host="css.usatoday.com" />
+	<target host="images.usatoday.com" />
+	<target host="offers.usatoday.com" />
+	<target host="portfoliotracker.usatoday.com" />
+	<target host="service.usatoday.com" />
+	<target host="static.usatoday.com" />
+	<target host="usatoday30.usatoday.com" />
+	<target host="video-network.usatoday.com" />
+	<target host="videos.usatoday.com" />
+
+	<target host="usatodayw7vu5egc.onion" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://usatoday\.com/" to="https://www.usatoday.com/" />
+	<rule from="^http:" to="https:" />
+</ruleset>

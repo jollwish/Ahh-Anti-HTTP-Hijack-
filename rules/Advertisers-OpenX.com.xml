@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://d3.advertisers-openx.com/ => https://d3.advertisers-openx.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For other OpenX coverage, see OpenX.xml.
+
+
+	Fully covered hosts in *advertisers-openx.com:
+
+		- d3
+
+
+	Web bugs.
+
+-->
+<ruleset name="advertisers-OpenX.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="d3.advertisers-openx.com" />
+
+
+	<securecookie host="^d3\.advertisers-openx\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

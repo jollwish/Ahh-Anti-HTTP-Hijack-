@@ -1,0 +1,10 @@
+<ruleset name="Global Network Initiative.org">
+
+	<target host="globalnetworkinitiative.org" />
+	<target host="www.globalnetworkinitiative.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

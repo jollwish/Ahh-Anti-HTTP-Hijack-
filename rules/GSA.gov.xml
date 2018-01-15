@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fbopen.gsa.gov/ => https://fbopen.gsa.gov/: (6, 'Could not resolve host: fbopen.gsa.gov')
+
+	General Services Administration
+
+
+-->
+<ruleset name="GSA.gov (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="18f.gsa.gov" />
+	<target host="fbopen.gsa.gov" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

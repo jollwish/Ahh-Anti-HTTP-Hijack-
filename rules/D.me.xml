@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://d.me/ => https://delicious.com/: (6, 'Could not resolve host: delicious.com')
+
+	For other Delicious coverage, see Delicious.xml.
+
+
+	Problematic domains:
+
+		- d.me			(mismatched, CN: *.delicious.com)
+
+
+	Fully covered domains:
+
+		- d.me		(→ delicious.com)
+
+-->
+<ruleset name="D.me" default_off='failed ruleset test'>
+
+	<!--	Complications:
+				-->
+	<target host="d.me" />
+
+
+	<rule from="^http://d\.me/"
+		to="https://delicious.com/" />
+
+</ruleset>

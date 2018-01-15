@@ -1,0 +1,58 @@
+<!--
+	Time out:
+		blackhat.tenable.com
+		cn.tenable.com
+		elearn.tenable.com
+		jobs.tenable.com
+		rsa.tenable.com
+		wwwredir.tenable.com
+
+	Login required:
+		cloud.tenable.com
+		*.cloud.tenable.com
+		lookbook.tenable.com
+		nec-support.tenable.com
+		pci.tenable.com
+		perimeter-support.tenable.com
+
+	Refused:
+		go.tenable.com
+		uptime.tenable.com
+
+	Invalid certificate:
+		info.tenable.com
+		traincdn.tenable.com
+		videos.tenable.com
+
+-->
+<ruleset name="Tenable.com">
+
+	<target host="tenable.com" />
+	<target host="www.tenable.com" />
+	<target host="apps-discussions.tenable.com" />
+	<target host="blog.tenable.com" />
+	<target host="careers.tenable.com" />
+	<target host="cftest.tenable.com" />
+	<target host="cgi.tenable.com" />
+	<target host="community.tenable.com" />
+	<target host="companystore.tenable.com" />
+	<target host="de.tenable.com" />
+	<target host="discussions.tenable.com" />
+	<target host="docs.tenable.com" />
+	<target host="es-la.tenable.com" />
+	<target host="forms.tenable.com" />
+	<target host="fr.tenable.com" />
+	<target host="jp.tenable.com" />
+	<target host="static.tenable.com" />
+	<target host="store.tenable.com" />
+	<target host="support.tenable.com" />
+	<target host="university.tenable.com" />
+	<target host="zh-cn.tenable.com" />
+	<target host="zh-tw.tenable.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

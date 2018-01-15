@@ -1,0 +1,14 @@
+<ruleset name="General Logistics Systems">
+
+	<target host="gls-group.eu" />
+	<target host="www.gls-group.eu" />
+
+
+	<securecookie host="^www\.gls-group\.eu$" name=".+" />
+
+
+	<!--	Cert only matches *.gls-group.eu.
+							-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://kryptnostic.com/ => https://kryptnostic.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Problematic hosts in *kryptnostic.com:
+
+		- blog *
+
+	* Mismatched
+
+
+	Insecure cookies are set for these domains:
+
+		- .kryptnostic.com
+
+
+	Mixed content:
+
+		- favicons on www from blog *
+
+	* Secured by us
+
+-->
+<ruleset name="Kryptnostic.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="kryptnostic.com" />
+	<target host="www.kryptnostic.com" />
+
+	<!--	Complications:
+				-->
+	<target host="blog.kryptnostic.com" />
+
+		<!--	Mixed favicons:
+					-->
+		<test url="http://www.kryptnostic.com/blog/" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.kryptnostic\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.kryptnostic\.com$" name=".+" />
+
+
+	<rule from="^http://blog\.kryptnostic\.com/"
+		to="https://www.kryptnostic.com/blog/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

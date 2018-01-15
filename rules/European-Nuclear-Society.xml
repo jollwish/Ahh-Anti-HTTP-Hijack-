@@ -1,0 +1,10 @@
+<ruleset name="European Nuclear Society" platform="mixedcontent">
+
+	<target host="euronuclear.org" />
+	<target host="www.euronuclear.org" />
+
+
+	<!--	!www prints "It works!" over https.	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

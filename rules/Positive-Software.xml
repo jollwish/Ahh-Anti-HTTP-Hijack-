@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://license.psoft.net/ => https://license.psoft.net/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Positive Software
+
+	For other Parallels coverage, see Parallels.xml.
+
+
+	(www.)?psoft.net: Refused
+
+-->
+<ruleset name="PSoft.net (partial)" default_off='failed ruleset test'>
+
+	<target host="license.psoft.net" />
+
+	<!--	Complications:
+				-->
+	<target host="my.psoft.net" />
+
+
+	<!--	Redirect drops path, args,
+		and forward slash:
+					-->
+	<rule from="^http://my\.psoft\.net/.*"
+		to="https://www.odin.com/" />
+
+		<test url="http://my.psoft.net/index" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

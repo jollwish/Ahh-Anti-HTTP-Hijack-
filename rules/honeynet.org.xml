@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://public.honeynet.org/ => https://public.honeynet.org/: (60, 'SSL certificate problem: certificate has expired')
+
+
+	Problematic subdomains:
+	
+		- pl. mismatch
+
+	ˢ Secured by us
+
+-->
+<ruleset name="Honeynet.org" default_off='failed ruleset test'>
+
+	<target host="honeynet.org" />
+	<target host="www.honeynet.org" />
+	<target host="projects.honeynet.org" />
+	<target host="old.honeynet.org" />
+	<target host="sanantonio2016.honeynet.org" />
+	<target host="stavanger2015.honeynet.org" />
+	<target host="warsaw2014.honeynet.org" />
+	<target host="dubai2013.honeynet.org" />
+	<target host="public.honeynet.org" />
+	<target host="redmine.honeynet.org" />
+
+
+	<securecookie host="^\." name="^(?:__cfduid|cf_clearance)$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

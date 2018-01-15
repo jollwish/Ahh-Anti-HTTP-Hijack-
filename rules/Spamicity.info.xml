@@ -1,0 +1,8 @@
+<ruleset name="spamicity.info">
+	<target host="spamicity.info" />
+	<target host="www.spamicity.info" />
+
+	<securecookie host="^spamicity\.info$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

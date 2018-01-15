@@ -1,0 +1,13 @@
+<!--
+	Invalid certificate:
+	- action.imancentral.org
+
+-->
+<ruleset name="IMANCentral.org" >
+	<target host="imancentral.org" />
+	<target host="www.imancentral.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

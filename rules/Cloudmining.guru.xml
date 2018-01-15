@@ -1,0 +1,10 @@
+<ruleset name="Cloudmining.guru">
+
+	<target host="cloudmining.guru" />
+	<target host="www.cloudmining.guru" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

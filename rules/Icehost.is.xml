@@ -1,0 +1,13 @@
+<!--
+	Invalid Certificate:
+		www.icehost.is
+		account.icehost.is
+-->
+<ruleset name="Icehost.is (partial)" >
+	<target host="icehost.is" />
+	<target host="www.icehost.is" />
+
+	<rule from="^http://www\.icehost\.is/" to="https://icehost.is/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

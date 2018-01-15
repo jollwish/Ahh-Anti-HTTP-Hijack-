@@ -1,0 +1,34 @@
+<!--
+	Nonfunctional hosts in *nknews.org:
+
+		- kcnawatch *
+
+	* Shows www
+
+
+	Problematic hosts in *nknews.org:
+
+		signup *
+		support *
+		sendy *
+
+	* Invalid Certificate
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- nknews.org
+		- .nknews.org
+		- signup.nknews.org
+		- www.nknews.org
+-->
+<ruleset name="NK News.org (partial)">
+	<target host="nknews.org" />
+	<target host="www.nknews.org" />
+	<target host="kr.nknews.org" />
+	<target host="shop.nknews.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

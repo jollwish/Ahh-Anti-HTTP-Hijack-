@@ -1,0 +1,9 @@
+<ruleset name="America's Longest War" default_off="mismatched">
+
+	<target host="americaslongestwar.com" />
+	<target host="www.americaslongestwar.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

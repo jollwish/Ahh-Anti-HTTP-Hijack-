@@ -1,0 +1,13 @@
+<ruleset name="Papakaya.com">
+
+	<target host="papakaya.com" />
+	<target host="www.papakaya.com" />
+
+
+	<securecookie host="^papakaya\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="RawGit.com">
+	<target host="rawgit.com" />
+	<target host="www.rawgit.com" />
+	<target host="cdn.rawgit.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

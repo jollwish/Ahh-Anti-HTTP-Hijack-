@@ -1,0 +1,10 @@
+<ruleset name="Ford (partial)">
+
+	<target host="developer.ford.com" />
+	<target host="media.ford.com" />
+		<exclusion pattern="^http://media\.ford\.com/(?!graphics/|images/|include/)" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

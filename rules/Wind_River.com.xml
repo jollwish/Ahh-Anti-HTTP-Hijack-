@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://developer.windriver.com/ => https://developer.windriver.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For problematic coverage, see Wind_River.com-problematic.xml.
+
+
+	^: mismatched, CN: secure.windriver.com
+	www: akamai
+
+	secure: Expired 2012-10-04
+
+
+	Insecure cookies are set for these domains:
+
+		- windriver.com
+		- developer.windriver.com
+
+-->
+<ruleset name="Wind River.com (partial)" default_off='failed ruleset test'>
+
+	<target host="developer.windriver.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^windriver\.com$" name="^PHPSESSID$" /-->
+	<!--securecookie host="^developer\.windriver\.com$" name="^(BIGipServer\w{6}-\d+-pool|JSESSIONID|jive\.server\.info)$" /-->
+
+	<securecookie host="^developer\.windriver\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

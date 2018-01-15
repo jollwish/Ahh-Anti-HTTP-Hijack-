@@ -1,0 +1,9 @@
+<ruleset name="Arlanda.se">
+	<target host="arlanda.se" />
+	<target host="www.arlanda.se" />
+	<target host="taxfree.arlanda.se" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

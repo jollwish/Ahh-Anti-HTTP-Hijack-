@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.charterourcommunity.com/ => https://www.charterourcommunity.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.charterourcommunity.com'")
+
+	For other Charter Communications coverage, see Charter.com.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- charterourcommunity.com
+		- www.charterourcommunity.com
+
+-->
+<ruleset name="Charter our Community.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="charterourcommunity.com" />
+	<target host="www.charterourcommunity.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?charterourcommunity\.com$" name="^X-Mapping-[a-z]$" /-->
+
+	<securecookie host="^(?:www\.)?charterourcommunity\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

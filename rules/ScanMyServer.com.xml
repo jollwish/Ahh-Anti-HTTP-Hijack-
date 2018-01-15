@@ -1,0 +1,16 @@
+<!--
+	For other Beyond Security coverage, see Beyond-Security.xml.
+-->
+<ruleset name="ScanMyServer.com">
+
+	<target host="scanmyserver.com" />
+	<target host="www.scanmyserver.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

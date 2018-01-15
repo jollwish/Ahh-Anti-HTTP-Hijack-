@@ -1,0 +1,40 @@
+<!--
+	Incomplete cert chain:
+		engine.4chan-ads.org
+
+	Mismatched:
+		[01].t.4cdn.org
+
+		blog.4chan.org
+		\d.thumbs.4chan.org
+
+	Redirect to http:
+		status.4chan.org	(interrupted - blogger)
+-->
+<ruleset name="4chan (partial)">
+	<target host="4cdn.org" />
+	<target host="www.4cdn.org" />
+	<target host="i.4cdn.org" />
+	<target host="s.4cdn.org" />
+	<target host="t.4cdn.org" />
+
+	<target host="4chan.org" />
+	<target host="www.4chan.org" />
+	<target host="boards.4chan.org" />
+	<target host="dis.4chan.org" />
+	<target host="images.4chan.org" />
+	<target host="rs.4chan.org" />
+	<target host="static.4chan.org" />
+	<target host="sys.4chan.org" />
+	<target host="thumbs.4chan.org" />
+
+	<target host="4chan-ads.org" />
+	<target host="www.4chan-ads.org" />
+
+	<target host="4channel.org" />
+	<target host="www.4channel.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pledge.freestateproject.org/ => https://pledge.freestateproject.org/: (7, 'Failed to connect to pledge.freestateproject.org port 443: Connection refused')
+
+	These altnames don't exist:
+
+		- www.pledge.freestateproject.org
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .freestateproject.org
+		- pledge.freestateproject.org
+
+-->
+<ruleset name="Free State Project.org" default_off='failed ruleset test'>
+
+	<target host="freestateproject.org" />
+	<target host="pledge.freestateproject.org" />
+	<target host="www.freestateproject.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.freestateproject\.org$" name="^ubvt$" /-->
+	<!--securecookie host="^pledge\.freestateproject\.org$" name="^ub(?:pv|vs)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	^ikgalekkerslapen.nl doesn't exist.
+
+-->
+<ruleset name="ikgalekkerslapen.nl">
+
+	<target host="www.ikgalekkerslapen.nl" />
+
+
+	<securecookie host="^www\.ikgalekkerslapen\.nl$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,26 @@
+<!--
+	For more BioInfoBank.com related ruleset, see BioInfoBank.com.xml
+
+	Non-functional hosts
+		Timeout was reached:
+			 - dns2.bioinfo.pl
+			 - morasko.bioinfo.pl
+
+		SSL peer certificate was not OK:
+			 - dns1.bioinfo.pl
+			 - dns3.bioinfo.pl
+			 - ia.bioinfo.pl
+			 - seed.bioinfo.pl
+
+		Incomplete certificate chain error:
+			 - mail.bioinfo.pl
+			 - thc.bioinfo.pl
+-->
+<ruleset name="BioInfo.pl (partial)">
+	<target host="bioinfo.pl" />
+	<target host="www.bioinfo.pl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

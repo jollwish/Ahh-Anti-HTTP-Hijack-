@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blog.dandb.com/ => https://blog.dandb.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://careers.dandb.com/ => https://careers.dandb.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Mixed content:
+
+		- Images, on:
+		
+			- blog from $self *
+			- blog from assets.dandb.com *
+			- careers from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="DandB.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="dandb.com" />
+	<target host="assets.dandb.com" />
+	<target host="blog.dandb.com" />
+	<target host="careers.dandb.com" />
+	<target host="support.dandb.com" />
+	<target host="www.dandb.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

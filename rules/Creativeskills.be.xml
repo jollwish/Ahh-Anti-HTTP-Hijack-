@@ -1,0 +1,13 @@
+<ruleset name="Creativeskills.be">
+
+	<target host="creativeskills.be" />
+	<target host="www.creativeskills.be" />
+	<target host="mailings.creativeskills.be" />
+	<target host="tentoo.creativeskills.be" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

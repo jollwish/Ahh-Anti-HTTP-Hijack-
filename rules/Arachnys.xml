@@ -1,0 +1,13 @@
+<ruleset name="Arachnys">
+
+	<target host="arachnys.com" />
+	<target host="app.arachnys.com" />
+	<target host="www.arachnys.com" />
+
+
+	<securecookie host="^(?:app)?\.arachnys\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://store.snort.org/ => https://store.snort.org/: (6, 'Could not resolve host: store.snort.org')
+
+	Nonfunctional hosts in *snort.org:
+
+		- blog *
+		- vrt-blog *
+
+	* Blogger
+
+-->
+<ruleset name="Snort.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="snort.org" />
+	<target host="store.snort.org" />
+	<target host="www.snort.org" />
+
+
+	<securecookie host=".\.snort\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="Bruno Postle" default_off="expired, self-signed">
+
+	<target host="www.bruno.postle.net" />
+
+
+	<!--	- Cert is only valid for www
+		- !www shows CentOS Apache 2 test page over https
+		- !www 302s to www over http
+							-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

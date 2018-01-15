@@ -1,0 +1,51 @@
+<!--
+	Mismatch:
+		- *nzz.de
+		- *nzz-kollektion.ch
+		- *nzzdomizil.ch
+		- *nzzfilm.ch
+		- *nzzmediengruppe.ch
+		- *tvnzzshop.ch
+		- *nzz-siff.com
+		- assets.nzz.ch
+		- campus.nzz.ch
+		- podium.nzz.ch
+
+	Untrusted:
+		- netz.nzz.ch
+		- *nzzmediasolutions.ch
+
+	Refused:
+		- *nzz.com
+		- *nzzformat.ch
+		- folio.nzz.ch
+
+	No response:
+		- *nzzprint.ch
+
+	Incomplete certificate chain:
+		- englisch.nzz.ch
+		- franzoesisch.nzz.ch
+-->
+<ruleset name="NZZ">
+	<target host="nzz.ch"/>
+	<target host="www.nzz.ch"/>
+	<target host="abo.nzz.ch"/>
+	<target host="epaper.nzz.ch"/>
+	<target host="trauer.nzz.ch"/>
+	<target host="jobs.nzz.ch"/>
+	<target host="news.jobs.nzz.ch"/>
+	<target host="parship.nzz.ch"/>
+	<target host="static.nzz.ch"/>
+	<target host="webpaper.nzz.ch"/>
+	<target host="zeitungsarchiv.nzz.ch"/>
+
+	<target host="nzz-libro.ch"/>
+	<target host="www.nzz-libro.ch"/>
+
+	<target host="nzz.at"/>
+	<target host="www.nzz.at"/>
+
+	<rule from="^http:"
+		to="https:"/>
+</ruleset>

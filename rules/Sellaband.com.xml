@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://sellaband.com/ => https://sellaband.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+-->
+<ruleset name="Sellaband.com (partial)" default_off='failed ruleset test'>
+
+	<target host="sellaband.com"/>
+	<target host="*.sellaband.com"/>
+
+	<securecookie host="^(?:.*\.)?sellaband\.com$" name=".+" />
+
+	<rule from="^http://(www\.)?sellaband\.com/"
+		to="https://$1sellaband.com/"/>
+
+	<rule from="^http://(alternative|electronic|hiphop|pop|rnb|rock|world)\.sellaband\.com/"
+		to="https://$1.sellaband.com/"/>
+
+        <rule from="^http://support\.sellaband\.com/(access|generated|images|registration|system)"
+                to="https://sellaband.zendesk.com/$1"/>
+
+</ruleset>

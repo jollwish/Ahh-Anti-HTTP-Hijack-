@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://domainwho.is/ => https://domainwho.is/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://images.domainwho.is/ => https://images.domainwho.is/: (6, 'Could not resolve host: images.domainwho.is')
+Fetch error: http://styles.domainwho.is/ => https://styles.domainwho.is/: (6, 'Could not resolve host: styles.domainwho.is')
+Fetch error: http://www.domainwho.is/ => https://www.domainwho.is/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="DomainWho.is" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="domainwho.is" />
+	<target host="images.domainwho.is" />
+	<target host="styles.domainwho.is" />
+	<target host="www.domainwho.is" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

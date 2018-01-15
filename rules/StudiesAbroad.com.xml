@@ -1,0 +1,8 @@
+<ruleset name="StudiesAbroad.com (partial)">
+
+	<target host="secure.studiesabroad.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

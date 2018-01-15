@@ -1,0 +1,7 @@
+<ruleset name="intan.net">
+	<target host="icm.intan.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

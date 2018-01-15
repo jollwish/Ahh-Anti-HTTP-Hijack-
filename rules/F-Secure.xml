@@ -1,0 +1,149 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://analysis.f-secure.com/ => https://analysis.f-secure.com/: (6, 'Could not resolve host: analysis.f-secure.com')
+Fetch error: http://backup.f-secure.com/ => https://backup.f-secure.com/: (7, 'Failed to connect to backup.f-secure.com port 443: Network is unreachable')
+Fetch error: http://browsingprotection.f-secure.com/ => https://browsingprotection.f-secure.com/: (7, 'Failed to connect to browsingprotection.f-secure.com port 443: Connection refused')
+Fetch error: http://login.f-secure.com/ => https://login.f-secure.com/: (6, 'Could not resolve host: login.f-secure.com')
+Fetch error: http://backup.ob.f-secure.com/ => https://backup.ob.f-secure.com/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://safelinks.f-secure.com/ => https://safelinks.f-secure.com/: (6, 'Could not resolve host: safelinks.f-secure.com')
+Fetch error: http://safeprofile.f-secure.com/ => https://safeprofile.f-secure.com/: (6, 'Could not resolve host: safeprofile.f-secure.com')
+Fetch error: http://trial.f-secure.com/ => https://trial.f-secure.com/: (6, 'Could not resolve host: trial.f-secure.com')
+
+	CDN buckets:
+
+		- fs-freedome-production.s3.amazonaws.com
+
+		- f-secure.com.edgesuite.net
+
+			- campaigns
+
+		- fs-freedome-production-site.herokuapp.com
+
+			- freedome
+
+		- fsecured.i.lithium.com
+
+
+	Nonfunctional hosts in *f-secure.com:
+
+		- safeandsavvy ʰ
+
+	ʰ Redirects to http
+
+
+	Problematic subdomains:
+
+		- backup	(mismatched, CN: backup.ob.f-secure.com)
+		- sp		(works, mismatched, CN: europe.f-secure.com)
+
+	⁴ Works; mismatched, CN: www.younited.com
+
+
+	estore: Dropped over http & https
+
+
+	These altnames don't exist:
+
+		- ma.f-secure.com
+		- www.my.f-secure.com
+
+
+	Insecure cookies are set for these hosts and domains:
+
+		- .f-secure.com
+		- community.f-secure.com
+		- kic.f-secure.com
+		- my.f-secure.com
+		- .my.f-secure.com
+
+
+	Mixed content:
+
+		- Script on www from www ¹
+
+		- Images on www from www ¹
+
+		- Web bugs, on:
+
+			- community, freedome, shop, and www from fsecure.122.2o7.net ¹
+			- freedome from www ¹
+
+			- www from:
+
+				- www ¹
+				- www.haloscan.com ²
+				- creative.metalyzer.com ¹
+				- statse.webtrendslive.com ¹
+
+	¹ Secured by us
+	² Unsecurable
+
+-->
+<ruleset name="F-Secure.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="f-secure.com" />
+	<target host="analysis.f-secure.com" />
+	<target host="backup.f-secure.com" />
+	<target host="browsingprotection.f-secure.com" />
+	<target host="campaigns.f-secure.com" />
+	<target host="cgi.f-secure.com" />
+	<target host="community.f-secure.com" />
+	<target host="download.f-secure.com" />
+	<target host="europe.f-secure.com" />
+	<target host="freedome.f-secure.com" />
+	<target host="home.f-secure.com" />
+	<target host="kic.f-secure.com" />
+	<target host="login.f-secure.com" />
+	<target host="msp.f-secure.com" />
+	<target host="my.f-secure.com" />
+	<target host="mysafe.f-secure.com" />
+	<target host="newsletter.f-secure.com" />
+	<target host="backup.ob.f-secure.com" />
+	<target host="partnerportal.f-secure.com" />
+	<target host="privacy.f-secure.com" />
+	<target host="safelinks.f-secure.com" />
+	<target host="safeprofile.f-secure.com" />
+	<target host="search.f-secure.com" />
+	<target host="shop.f-secure.com" />
+	<target host="download.sp.f-secure.com" />
+	<target host="store.f-secure.com" />
+	<target host="trial.f-secure.com" />
+	<target host="webmail.f-secure.com" />
+	<target host="www.f-secure.com" />
+	<target host="www2.f-secure.com" />
+	<target host="www-stats-so.f-secure.com" />
+
+	<!--	Complications:
+				-->
+	<!--target host="estore.f-secure.com" /-->
+	<target host="sp.f-secure.com" />
+
+		<!--	Avoid breaking chat:
+						-->
+		<!--exclusion pattern="^http://www\.f-secure\.com/+(?!.+\.(?:css|gif|ico|jpg|js|png)$)" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.f-secure\.com$" name="^(__qca|country|mbox|s_vi)$" /-->
+	<!--securecookie host="^community\.f-secure\.com$" name="^Lithium(UserInfo|UserSecure|Visitor)$" /-->
+	<!--securecookie host="^kic\.f-secure\.com$" name="^(csrftoken|sessionid)$" /-->
+	<!--securecookie host="^my\.f-secure\.com$" name="^(COOKIE_SUPPORT|GUEST_LANGUAGE_ID|JSESSIONID)$" /-->
+	<!--securecookie host="^\.my\.f-secure\.com$" name="^MALB$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://sp\.f-secure\.com/"
+		to="https://www.f-secure.com/" />
+
+	<!--rule from="^http://estore\.f-secure\.com/"
+		to="https://my.f-secure.com/" /-->
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://app.keeptempo.com/ => https://app.keeptempo.com/: (6, 'Could not resolve host: app.keeptempo.com')
+
+	For other Zetetic coverage, see Zetetic.net.xml.
+
+
+	(www.)?keeptempo.com: Redirects to http and 404s
+
+
+	Insecure cookies are set for these hosts:
+
+		- app.keeptempo.com
+
+-->
+<ruleset name="keepTempo.com (partial)" default_off='failed ruleset test'>
+
+	<!--target host="keeptempo.com" /-->
+	<target host="app.keeptempo.com" />
+	<!--target host="www.keeptempo.com" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^app\.keeptempo\.com$" name="^_tempo_session_id$" /-->
+
+	<securecookie host="^app\.keeptempo\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,38 @@
+<!--
+	For other Evidon coverage, see Evidon.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+			 - choices.ghosteryenterprise.com
+
+		SSL peer certificate was not OK:
+			 - ghosteryenterprise.com
+			 - www.ghosteryenterprise.com
+			 - livescan.ghosteryenterprise.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - cdn.ghosteryenterprise.com
+			 - help.ghosteryenterprise.com
+			 - my-cdn.ghosteryenterprise.com
+			 - site-cdn.ghosteryenterprise.com
+			 - site-cdn1.ghosteryenterprise.com
+			 - site-cdn10.ghosteryenterprise.com
+			 - site-cdn2.ghosteryenterprise.com
+			 - site-cdn3.ghosteryenterprise.com
+			 - site-cdn4.ghosteryenterprise.com
+			 - site-cdn5.ghosteryenterprise.com
+			 - site-cdn6.ghosteryenterprise.com
+			 - site-cdn7.ghosteryenterprise.com
+			 - site-cdn8.ghosteryenterprise.com
+			 - site-cdn9.ghosteryenterprise.com
+
+
+-->
+<ruleset name="Ghostery Enterprise.com">
+	<target host="app.ghosteryenterprise.com" />
+	<target host="my.ghosteryenterprise.com" />
+	<target host="staging2my.ghosteryenterprise.com" />
+	<target host="trackermapibm.ghosteryenterprise.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

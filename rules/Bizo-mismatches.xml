@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see Bizo.xml.
+
+-->
+<ruleset name="Bizo.com (mismatches)" default_off="mismatched">
+
+	<target host="blog.bizo.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

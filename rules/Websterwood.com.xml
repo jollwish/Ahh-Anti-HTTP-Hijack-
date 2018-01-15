@@ -1,0 +1,28 @@
+<!--
+	Invalid certificate:
+		websterwood.com
+		www.websterwood.com
+		consulting.websterwood.com
+		lists.websterwood.com
+		trac.websterwood.com
+
+	No working URL known:
+		arwen.websterwood.com
+		static.websterwood.com
+
+-->
+<ruleset name="websterwood.com">
+
+	<target host="websterwood.com" />
+	<target host="www.websterwood.com" />
+	<target host="blog.websterwood.com" />
+	<target host="debian.websterwood.com" />
+	<target host="dynamic.websterwood.com" />
+
+	<rule from="^http://(www\.)?websterwood\.com/+"
+		to="https://blog.websterwood.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

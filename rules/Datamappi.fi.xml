@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://datamappi.fi/ => https://www.datamappi.fi/: (7, 'Failed to connect to www.datamappi.fi port 443: Connection refused')
+
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- owa
+
+-->
+<ruleset name="Datamappi.fi" default_off='failed ruleset test'>
+
+	<target host="datamappi.fi" />
+	<target host="*.datamappi.fi" />
+
+
+	<securecookie host="^(?:oma|www)\.datamappi\.fi$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?datamappi\.fi/"
+		to="https://www.datamappi.fi/" />
+
+	<rule from="^http://oma\.datamappi\.fi/"
+		to="https://oma.datamappi.fi/" />
+
+</ruleset>

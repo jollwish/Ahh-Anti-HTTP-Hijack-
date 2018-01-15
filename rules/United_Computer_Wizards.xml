@@ -1,0 +1,10 @@
+<ruleset name="United Computer Wizards (partial)">
+
+	<target host="ucw.cz" />
+	<target host="www.ucw.cz" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+<!--
+
+	Invalid certificate:
+		china.hrw.org
+		human.hrw.org
+		docs.hrw.org
+		*.nyc.hrw.org
+		votescount.hrw.org
+
+	Time out:
+		media.hrw.org
+
+-->
+<ruleset name="HRW.org">
+
+	<target host="hrw.org" />
+	<target host="www.hrw.org" />
+	<target host="action.hrw.org" />
+	<target host="careers.hrw.org" />
+	<target host="donate.hrw.org" />
+	<target host="features.hrw.org" />
+	<target host="ff.hrw.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

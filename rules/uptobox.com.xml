@@ -1,0 +1,15 @@
+<!--
+	Refused:
+		- support
+
+	Cloudflare error:
+		- status
+-->
+
+<ruleset name="uptobox.com">
+	<target host="uptobox.com"/>
+	<target host="www.uptobox.com"/>
+	<target host="login.uptobox.com"/>
+
+	<rule from="^http:"	to="https:"/>
+</ruleset>

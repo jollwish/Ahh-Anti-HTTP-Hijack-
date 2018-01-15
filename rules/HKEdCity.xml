@@ -1,0 +1,8 @@
+<ruleset name="HKEdCity (partial)">
+
+	<target host="www.hkedcity.net" />
+	<target host="hkedcity.net" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

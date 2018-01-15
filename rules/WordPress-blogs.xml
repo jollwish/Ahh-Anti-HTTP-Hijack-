@@ -1,0 +1,15 @@
+<!--
+	For blogs which redirect from wordpress subdomain and which otherwise have no rules.
+-->
+
+<ruleset name="WordPress blogs">
+	<target host="dictionaryblog.cambridge.org" />
+	<target host="news.efinancialcareers.com" />
+	<target host="blog.nanigans.com" />
+	<target host="blog.opengroup.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

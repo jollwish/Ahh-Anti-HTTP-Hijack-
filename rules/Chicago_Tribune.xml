@@ -1,0 +1,63 @@
+<!--
+	For other Tribune coverage, see Tribune.xml
+
+	Non-functional hosts in *.chicagotribune.com
+		Couldn't connect to server:
+			 - chicagotribune.com
+
+		Timeout was reached:
+			 - ad.chicagotribune.com
+			 - apps.chicagotribune.com
+			 - galleries.apps.chicagotribune.com
+			 - dealerspecials.chicagotribune.com
+			 - graphics.chicagotribune.com
+
+		SSL peer certificate was not OK:
+			 - autos.chicagotribune.com
+			 - digitaledition.chicagotribune.com
+			 - local.chicagotribune.com
+			 - www.chicagotribune.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - advertise.chicagotribune.com
+			 - crime.chicagotribune.com
+			 - schools.chicagotribune.com
+			 - touch.chicagotribune.com
+
+		Secure connection redirects to plaintext:
+			 - localdeals.chicagotribune.com
+
+		Mixed content blocking (MCB) tiggered:
+			 - membership.chicagotribune.com
+
+	Non-functional hosts in *.trbas.com
+		Timeout was reached:
+			 - www.preprod.trbas.com
+			 - s.preprod.trbas.com
+
+	Non-functional hosts in *.trbimg.com
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - trbimg.com
+
+-->
+<ruleset name="Chicago Tribune.com (partial)">
+	<!-- chicagotribune.com -->
+	<target host="community.chicagotribune.com" />
+	<target host="members.chicagotribune.com" />
+	<target host="myaccount2.chicagotribune.com" />
+	<target host="placeanad.chicagotribune.com" />
+
+	<!-- trbas.com -->
+	<target host="www.trbas.com" />
+		<test url="http://www.trbas.com/jive/prod/common/javascripts/lib.1q2w3_f2a845ae2ece8576ba7c4771b603432d.min.js" />
+
+	<!-- trbimg.com -->
+	<target host="www.trbimg.com" />
+		<test url="http://www.trbimg.com/img-584836fe/turbine/ct-magnifying-glass-20161207/" />
+		<test url="http://www.trbimg.com/img-592877d0/turbine/ct-lisle-home-on-private-road-12m-20170526/100/100x56" />
+		<test url="http://www.trbimg.com/img-592b2249/turbine/ct-elite-street-jay-cutler-kristin-cavallari-lake-forest-biz-20170528/400/400x225" />
+		<test url="http://www.trbimg.com/img-592b4f20/turbine/ct-bike-the-drive-2017-photos20170528/100/100x56" />
+		<test url="http://www.trbimg.com/img-592b9421/turbine/ct-trump-pic-20170528-002/650/650x366" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://accessprivacy.ca/ => https://accessprivacy.ca/: (7, 'Failed to connect to accessprivacy.ca port 443: Connection refused')
+Fetch error: http://www.accessprivacy.ca/ => https://www.accessprivacy.ca/: (7, 'Failed to connect to www.accessprivacy.ca port 443: Connection refused')
+
+	For other Access Privacy coverage, see Access_Privacy.com.xml.
+
+
+	Mixed content:
+
+		- Web bugs from img.constantcontact.com *
+
+	* Secured by us
+
+-->
+<ruleset name="AccessPrivacy.ca" default_off='failed ruleset test'>
+
+	<target host="accessprivacy.ca" />
+	<target host="www.accessprivacy.ca" />
+
+
+	<securecookie host="^(?:w*\.)?accessprivacy\.ca$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

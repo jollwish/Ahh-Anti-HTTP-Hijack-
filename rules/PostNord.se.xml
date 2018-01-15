@@ -1,0 +1,33 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- vykortsmotiv.postnord.se
+
+		SSL connect error:
+		- services3.postnord.se
+
+		SSL peer certificate was not OK:
+		- appfeedback.postnord.se
+		- dm.postnord.se
+		- pages.postnord.se
+		- pnlyssnar.postnord.se
+
+		Status code mismatch:
+		- ebutik.postnord.se
+
+		Secure connection redirects to plaintext:
+		- www.postnord.se
+-->
+<ruleset name="PostNord.se (partial)">
+	<target host="postnord.se" />
+	<target host="ebutik.postnord.se" />
+	<test url="http://ebutik.postnord.se/local/pics/pn_white_rgb.png" />
+	<target host="pnf.postnord.se" />
+	<target host="rv.postnord.se" />
+	<target host="rv2.postnord.se" />
+	<target host="rv3.postnord.se" />
+	<target host="rv4.postnord.se" />
+	<target host="starpayment.postnord.se" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

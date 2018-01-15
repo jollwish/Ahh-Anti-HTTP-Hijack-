@@ -1,0 +1,26 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+
+	Fully covered subdomains:
+
+		- llm
+		- lsaclookup
+		- os
+
+-->
+<ruleset name="Law School Admission Council (partial)">
+
+	<target host="llm.lsac.org" />
+	<target host="lsaclookup.lsac.org" />
+	<target host="os.lsac.org" />
+
+
+	<securecookie host="^.+\.lsac\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

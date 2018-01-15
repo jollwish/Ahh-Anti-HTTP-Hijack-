@@ -1,0 +1,49 @@
+<!--
+	For other Micro Focus coverage, see Micro_Focus.com.xml.
+
+	Nonfunctional hosts in *opensuse.org:
+		- ^ ²
+		- download ¹
+		- lists	²
+		- tube ¹
+
+	¹ Dropped
+	² Refused
+
+	Problematic hosts in *opensuse.org:
+		- paste (mismatched, cacert)
+-->
+
+<ruleset name="openSUSE.org (partial)">
+	<target host="opensuse.org" />
+	<target host="*.opensuse.org" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http://opensuse\.org/"	to="https://www.opensuse.org/" />
+
+	<rule from="^http://(\w\w|activedoc|beans|bugs|bugzilla|build|connect|count(?:down|er)|doc|features|forums|keyserver|lizards|news|openqa|shop|software|static|wiki|www)\.opensuse\.org/" to="https://$1.opensuse.org/" />
+
+	<test url="http://www.opensuse.org/" />
+	<test url="http://activedoc.opensuse.org/" />
+	<test url="http://beans.opensuse.org/" />
+	<test url="http://bugs.opensuse.org/" />
+	<test url="http://bugzilla.opensuse.org/" />
+	<test url="http://build.opensuse.org/" />
+	<test url="http://connect.opensuse.org/" />
+	<test url="http://countdown.opensuse.org/" />
+	<test url="http://counter.opensuse.org/" />
+	<test url="http://doc.opensuse.org/" />
+	<test url="http://en.opensuse.org/" />
+	<test url="http://features.opensuse.org/" />
+	<test url="http://forums.opensuse.org/" />
+	<test url="http://keyserver.opensuse.org/" />
+	<test url="http://lizards.opensuse.org/" />
+	<test url="http://news.opensuse.org/" />
+	<test url="http://openqa.opensuse.org/" />
+	<test url="http://shop.opensuse.org/" />
+	<test url="http://software.opensuse.org/" />
+	<test url="http://static.opensuse.org/" />
+	<test url="http://wiki.opensuse.org/" />
+	<test url="http://zh.opensuse.org/" />
+</ruleset>

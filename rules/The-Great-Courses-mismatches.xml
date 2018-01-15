@@ -1,0 +1,13 @@
+<!--
+	For rules that are on by default, see The-Great-Courses.xml.
+
+-->
+<ruleset name="The Great Courses (mismatches)" default_off="mismatched">
+
+	<!--	Akamai	-->
+	<target host="reviews.thegreatcourses.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

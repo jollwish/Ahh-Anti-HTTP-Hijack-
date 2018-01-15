@@ -1,0 +1,25 @@
+<!--
+	Dropped:
+		- hxcc
+
+	Incomplete certificate chain:
+		- p3smysqladmin01
+-->
+
+<ruleset name="Secureserver.net (partial)">
+	<target host="secureserver.net" />
+	<target host="www.secureserver.net" />
+	<target host="email.secureserver.net" />
+	<target host="hostingmanager.secureserver.net" />
+	<target host="images.secureserver.net" />
+	<target host="img.secureserver.net" />
+	<target host="login.secureserver.net" />
+	<target host="mobilemail.secureserver.net" />
+	<target host="p3nmssqladmin.secureserver.net" />
+	<target host="products.secureserver.net" />
+	<target host="sso.secureserver.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://player.pulpix.co/ => https://player.pulpix.co/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.pulpix.co/ => https://www.pulpix.co/: (7, 'Failed to connect to www.pulpix.co port 443: Connection refused')
+Fetch error: http://pulpix.co/ => https://www.pulpix.co/: (7, 'Failed to connect to www.pulpix.co port 443: Connection refused')
+
+	Problematic hosts in *pulpix.co:
+
+		- ^ *
+
+	* Refused
+
+
+	Fully covered hosts in *pulpix.co:
+
+		- (www.)?	(^ → www)
+		- cdn
+		- player
+
+
+	Insecure cookies are set for these hosts:
+
+		- player.pulpix.co
+		- www.pulpix.co
+
+-->
+<ruleset name="Pulpix.co" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cdn.pulpix.co" />
+	<target host="player.pulpix.co" />
+	<target host="www.pulpix.co" />
+
+	<!--	Complications:
+				-->
+	<target host="pulpix.co" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(player|www)\.pulpix\.co$" name="^csrftoken$" /-->
+
+	<securecookie host="^(?:player|www)\.pulpix\.co$" name=".+" />
+
+
+	<rule from="^http://pulpix\.co/"
+		to="https://www.pulpix.co/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

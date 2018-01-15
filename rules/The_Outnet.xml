@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://theoutnet.com/ (200) => https://www.theoutnet.com/ (403)
+
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+
+	Fully covered subdomains:
+
+		- cache
+
+-->
+<ruleset name="The Outnet" default_off='failed ruleset test'>
+
+	<target host="theoutnet.com" />
+	<target host="*.theoutnet.com" />
+
+
+	<securecookie host="^\.?www\.theoutnet\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?theoutnet\.com/"
+		to="https://www.theoutnet.com/" />
+
+	<rule from="^http://(cache|www-lt)\.theoutnet\.com/"
+		to="https://$1.theoutnet.com/" />
+
+</ruleset>

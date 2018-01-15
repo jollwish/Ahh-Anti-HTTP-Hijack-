@@ -1,0 +1,16 @@
+<!--
+	Cert only matches www.
+
+-->
+<ruleset name="Silicon Valley Bank">
+
+	<target host="svb.com" />
+	<target host="www.svb.com" />
+
+
+	<securecookie host="^www\.svb\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

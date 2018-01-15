@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://gluster.org/ => https://gluster.org/: (51, "SSL: no alternative certificate subject name matches target host name 'gluster.org'")
+Fetch error: http://forge.gluster.org/ => https://forge.gluster.org/: (6, 'Could not resolve host: forge.gluster.org')
+
+	For other Red Hat coverage, see Red_Hat.xml.
+
+
+	Fully covered hosts in *gluster.org:
+
+		- (www.)?
+		- forge
+
+-->
+<ruleset name="Gluster.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="gluster.org" />
+	<target host="forge.gluster.org" />
+	<target host="www.gluster.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.forge\.gluster\.org$" name="^_gitorious_sess$" /-->
+
+	<securecookie host="^\.forge\.gluster\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

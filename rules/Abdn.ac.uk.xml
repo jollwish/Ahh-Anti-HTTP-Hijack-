@@ -1,0 +1,32 @@
+<!--
+	University of Aberdeen
+
+
+	Nonfunctional subdomains:
+
+		- (www.)erg ¹
+		- eden-feed.erg ²
+
+	¹ Refused
+	² Dropped
+
+
+	^: cert only matches www
+
+
+	Mixed content:
+
+		- Images on www from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="Abdn.ac.uk (partial)">
+
+	<target host="abdn.ac.uk" />
+	<target host="www.abdn.ac.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

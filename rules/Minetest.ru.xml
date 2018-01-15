@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://minetest.ru/ => https://minetest.ru/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional subdomains:
+
+		- users *
+		- www *
+
+	* Shows ^ over https
+
+-->
+<ruleset name="Minetest.ru (partial)" default_off='failed ruleset test'>
+
+	<target host="minetest.ru" />
+
+
+	<securecookie host="^minetest\.ru$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

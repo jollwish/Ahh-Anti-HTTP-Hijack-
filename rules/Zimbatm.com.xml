@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.zimbatm.com/ => https://www.zimbatm.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.zimbatm.com'")
+
+-->
+<ruleset name="zimbatm.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="zimbatm.com" />
+	<target host="www.zimbatm.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

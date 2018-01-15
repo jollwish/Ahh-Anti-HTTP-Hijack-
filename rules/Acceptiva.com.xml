@@ -1,0 +1,14 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(dropped)
+
+-->
+<ruleset name="Acceptiva.com (partial)">
+
+	<target host="secure.acceptiva.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+<!--
+	For other Eventim coverage, see Eventim.xml.
+
+
+	Problematic subdomains:
+		- ^ (timeout)
+		- m (refused)
+-->
+<ruleset name="oeticket">
+	<target host="oeticket.com" />
+	<target host="www.oeticket.com" />
+
+	<rule from="^http://oeticket\.com/"
+		to="https://www.oeticket.com/" />
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

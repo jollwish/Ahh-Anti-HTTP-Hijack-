@@ -1,0 +1,21 @@
+<!--
+	Invalid certificate:
+		- www.subgraph.com
+		- keystream.subgraph.com
+
+-->
+<ruleset name="Subgraph.com">
+
+	<target host="subgraph.com" />
+	<target host="www.subgraph.com" />
+	<target host="dist.subgraph.com" />
+	<target host="myip.subgraph.com" />
+	<target host="support.subgraph.com" />
+
+	<rule from="^http://www\.subgraph\.com/"
+		to="https://subgraph.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

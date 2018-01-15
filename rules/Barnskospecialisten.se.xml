@@ -1,0 +1,6 @@
+<ruleset name="Barnskospecialisten.se" platform="mixedcontent">
+  <target host="www.barnskospecialisten.se" />
+  <target host="barnskospecialisten.se" />
+  <rule from="^http:" to="https:" />
+</ruleset>
+

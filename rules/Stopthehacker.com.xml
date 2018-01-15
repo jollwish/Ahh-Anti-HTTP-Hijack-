@@ -1,0 +1,21 @@
+<!--
+	No working URL known:
+		api.stopthehacker.com
+		api-dev.stopthehacker.com
+
+	Invalid certificate:
+		secure.stopthehacker.com
+
+-->
+<ruleset name="Stopthehacker.com">
+
+	<target host="stopthehacker.com"/>
+	<target host="www.stopthehacker.com"/>
+	<target host="panel.stopthehacker.com"/>
+
+	<securecookie host="^\.stopthehacker\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

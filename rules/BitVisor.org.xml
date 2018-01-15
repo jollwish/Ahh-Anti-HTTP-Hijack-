@@ -1,0 +1,10 @@
+<ruleset name="BitVisor.org">
+
+	<target host="bitvisor.org" />
+	<target host="www.bitvisor.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

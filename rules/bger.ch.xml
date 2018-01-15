@@ -1,0 +1,21 @@
+<!--
+	Different content:
+		- expert.bger.ch
+			(test url: http://expert.bger.ch/php/clir/http/)
+
+	Mismatch:
+		- jumpcgi.bger.ch
+		- relevancy.bger.ch
+		- relevancy2.bger.ch
+
+	Refused:
+		- jurivoc.bger.ch
+
+	^ does not exist
+-->
+<ruleset name="bger.ch">
+	<target host="www.bger.ch" />
+
+	<rule from="^http:"
+		to="https:"/>
+</ruleset>

@@ -1,0 +1,7 @@
+<ruleset name="UKFur">
+  <target host="forum.ukfur.org" />
+
+  <securecookie host="^forum\.ukfur\.org$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

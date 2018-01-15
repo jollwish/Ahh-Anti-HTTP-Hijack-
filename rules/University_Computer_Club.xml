@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- planet *
+		- www *
+
+	* Shows matt
+
+-->
+<ruleset name="University Computer Club (partial)">
+
+	<target host="matt.ucc.asn.au" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

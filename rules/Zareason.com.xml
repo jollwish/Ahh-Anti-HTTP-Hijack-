@@ -1,0 +1,12 @@
+<ruleset name="Zareason.com">
+
+	<target host="zareason.com" />
+	<target host="www.zareason.com" />
+
+
+	<securecookie host="^\.zareason\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

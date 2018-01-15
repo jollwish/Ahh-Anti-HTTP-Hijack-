@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://ticketonline.de/ (200) => https://www.ticketonline.de/ (403)
+
+	Problematic domains:
+
+		- ticketonline.de	(times out)
+
+-->
+<ruleset name="Ticket Online" default_off='failed ruleset test'>
+
+	<target host="ticketonline.de" />
+	<target host="*.ticketonline.de" />
+
+
+	<securecookie host="^.*\.ticketonline\.de$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?ticketonline\.de/"
+		to="https://www.ticketonline.de/" />
+
+	<rule from="^http://secure\.ticketonline\.de/"
+		to="https://secure.ticketonline.de/" />
+
+</ruleset>

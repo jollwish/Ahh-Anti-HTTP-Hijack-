@@ -1,0 +1,36 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- en *
+		- gradschool
+		- wlkt
+
+	* Refused
+
+
+	Fully covered subdomains:
+
+		- bbs
+		- servers.blog
+
+		- lug
+		- fonts.lug
+		- fonts-gstatic.lug
+
+		- mirrors
+
+-->
+<ruleset name="USTC.edu.cn (partial)">
+
+	<target host="bbs.ustc.edu.cn" />
+	<target host="servers.blog.ustc.edu.cn" />
+	<target host="lug.ustc.edu.cn" />
+	<target host="fonts.lug.ustc.edu.cn" />
+	<target host="fonts-gstatic.lug.ustc.edu.cn" />
+	<target host="mirrors.ustc.edu.cn" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

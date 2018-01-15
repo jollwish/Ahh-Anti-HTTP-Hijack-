@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://research.sparx.org.nz/ => https://research.sparx.org.nz/: (28, 'Connection timed out after 20001 milliseconds')
+
+	These altnames don't exist:
+
+		- www.research.sparx.org.nz
+
+-->
+<ruleset name="Sparx.org.nz" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="sparx.org.nz" />
+	<target host="research.sparx.org.nz" />
+	<target host="www.sparx.org.nz" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

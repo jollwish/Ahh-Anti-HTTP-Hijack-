@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.gem.co/ => https://www.gem.co/: (51, "SSL: no alternative certificate subject name matches target host name 'www.gem.co'")
+
+	Nonfunctional hosts in *gem.co:
+
+		- blog ¹
+		- guide ²
+
+	¹ Tumblr
+	² Refused
+
+
+	Fully covered hosts in *gem.co:
+
+		- (www.)?
+		- api
+		- my
+
+-->
+<ruleset name="Gem.co (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="gem.co" />
+	<target host="api.gem.co" />
+	<target host="my.gem.co" />
+	<target host="www.gem.co" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

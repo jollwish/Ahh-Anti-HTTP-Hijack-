@@ -1,0 +1,11 @@
+<ruleset name="TouchNet Information Systems (partial)">
+
+	<target host="secure.touchnet.com" />
+
+
+	<securecookie host="^secure\.touchnet\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

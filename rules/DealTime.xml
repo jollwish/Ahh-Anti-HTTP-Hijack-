@@ -1,0 +1,8 @@
+<ruleset name="DealTime (partial)">
+
+	<target host="sc.dealtime.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

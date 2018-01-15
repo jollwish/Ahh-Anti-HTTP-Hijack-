@@ -1,0 +1,13 @@
+<!--
+	For rules that are on by default, see Flightloader.xml.
+
+-->
+<ruleset name="Flightglobal (mismatches)" default_off="mismatched">
+
+	<!--	Cert: secure.mediastorehouse.com	-->
+	<target host="www.flightglobalimages.com" />
+
+	<!--	!www times out.		-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

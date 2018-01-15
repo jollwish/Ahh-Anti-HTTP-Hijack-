@@ -1,0 +1,6 @@
+<ruleset name="Mikrocontroller.net">
+    <target host="mikrocontroller.net" />
+    <target host="www.mikrocontroller.net" />
+
+    <rule from="^http:" to="https:" />
+</ruleset>

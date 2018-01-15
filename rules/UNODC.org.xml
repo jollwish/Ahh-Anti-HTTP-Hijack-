@@ -1,0 +1,54 @@
+<!--
+	Private subdomain:
+		arq.unodc.org
+		arq-qat.unodc.org
+		budget.unodc.org
+		crowd.unodc.org
+		cts.unodc.org
+		cybercrime-study.unodc.org
+		firearmstrafficking.unodc.org
+		golearn-integrity.unodc.org
+		gosupport.unodc.org
+		ip.unodc.org
+		iseek-external.un.org
+		jira.unodc.org
+		memberstates.unodc.org
+		profi.unodc.org
+		staffingtable.unodc.org
+		wiki.unodc.org
+		
+	No working URL known:
+		cns.unodc.org
+		services2.unodc.org
+		static.unodc.org
+		trackservices.unodc.org
+	
+	Invalid certificate:
+		www.track.unodc.org
+	
+-->
+<ruleset name="UNODC.org">
+
+	<target host="unodc.org" />
+	<target host="www.unodc.org" />
+	<target host="adrs.unodc.org" />
+	<target host="css.unodc.org" />
+	<target host="ctlp.unodc.org" />
+	<target host="data.unodc.org" />
+	<target host="goaml.unodc.org" />
+	<target host="gocase.unodc.org" />
+	<target host="goidm.unodc.org" />
+	<target host="golearn.unodc.org" />
+	<target host="goprs.unodc.org" />
+	<target host="gotrace.unodc.org" />
+	<target host="integrity.unodc.org" />
+	<target host="multimedia.unodc.org" />
+	<target host="sherloc.unodc.org" />
+	<target host="stats.unodc.org" />
+	<target host="thefightagainstcorruption.unodc.org" />
+	<target host="www.thefightagainstcorruption.unodc.org" />
+	<target host="track.unodc.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

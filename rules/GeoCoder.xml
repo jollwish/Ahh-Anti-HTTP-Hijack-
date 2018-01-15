@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.geocoder.ca/ => https://www.geocoder.ca/: Too many redirects while fetching 'https://www.geocoder.ca/'
+
+	Insecure cookies are set for these hosts:
+
+		- geocoder.ca
+		- www.geocoder.ca
+
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="GeoCoder.ca" default_off='failed ruleset test'>
+
+	<target host="geocoder.ca"/>
+	<target host="www.geocoder.ca"/>
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?geocoder\.ca$" name="^geocoder_ca$" /-->
+
+	<securecookie host="^(?:.*\.)?geocoder\.ca$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

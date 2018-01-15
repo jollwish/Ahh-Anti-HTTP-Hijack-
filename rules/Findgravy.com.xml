@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://findgravy.com/ => https://findgravy.com/: (51, "SSL: no alternative certificate subject name matches target host name 'findgravy.com'")
+Fetch error: http://img01.findgravy.com/ => https://img01.findgravy.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://img02.findgravy.com/ => https://img02.findgravy.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://img03.findgravy.com/ => https://img03.findgravy.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://img04.findgravy.com/ => https://img04.findgravy.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.findgravy.com/ => https://www.findgravy.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.findgravy.com'")
+
+	Insecure cookies are set for these hosts:
+
+		- findgravy.com
+
+
+	Mixed content:
+
+		- favicon on ^ from favicon.domainsigma.com *
+
+	* Not secured by us <= mismatched (forced endpoint)
+
+-->
+<ruleset name="find Gravy.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="findgravy.com" />
+	<target host="img01.findgravy.com" />
+	<target host="img02.findgravy.com" />
+	<target host="img03.findgravy.com" />
+	<target host="img04.findgravy.com" />
+	<target host="www.findgravy.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^findgravy\.com$" name="^connect\.sid$" /-->
+
+	<securecookie host="^findgravy\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

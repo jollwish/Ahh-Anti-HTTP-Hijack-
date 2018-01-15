@@ -1,0 +1,15 @@
+<!--
+	All subdomains redirect to https://chime.aws/
+
+-->
+<ruleset name="Chime.in">
+
+	<target host="chime.in" />
+	<target host="www.chime.in" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

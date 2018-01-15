@@ -1,0 +1,51 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pinocc.io/ => https://pinocc.io/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.pinocc.io/ => https://pinocc.io/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional hosts in *pinocc.io:
+
+		- discuss ¹
+		- support ²
+
+	¹ Refused
+	² Zendesk
+
+
+	www.pinocc.io: Redirects to filament.com
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- pinocc.io
+		- .pinocc.io
+		- www.pinocc.io
+
+-->
+<ruleset name="Pinocc.io (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="pinocc.io" />
+
+	<!--	Complications:
+				-->
+	<target host="www.pinocc.io" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?pinocc\.io$" name="NB_SRVID$" /-->
+	<!--securecookie host="^\.pinocc\.io$" name="^pinoccio_id$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://www\.pinocc\.io/"
+		to="https://pinocc.io/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

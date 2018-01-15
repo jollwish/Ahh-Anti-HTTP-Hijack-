@@ -1,0 +1,19 @@
+<!--
+	Refused:
+		operations.afnic.fr
+
+-->
+<ruleset name="AFNIC.fr">
+
+	<target host="afnic.fr" />
+	<target host="www.afnic.fr" />
+	<target host="extranet.nic.fr" />
+	<target host="opendata.afnic.fr" />
+	<target host="www.sandbox.afnic.fr" />
+
+	<securecookie host="^www\.(?:sandbox\.)?afnic\.fr$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

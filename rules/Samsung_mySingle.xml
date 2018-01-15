@@ -1,0 +1,41 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://light.samsung.net/ => https://light.samsung.net/: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other Samsung coverage, see Samsung.com.xml.
+	
+	Mismatch:
+		test.cyber.*
+		drm.*
+		ext.*
+		images.*
+		insurance.*
+		mail.insurance.*
+		sec.*
+		cpc.sec.*
+		scms.sec.*
+		www.stage.*
+		value.*
+		w\d+.*
+
+	401:
+		^
+		m
+		www
+
+-->
+
+<ruleset name="Samsung_mySingle (partial)" default_off='failed ruleset test'>
+
+	<target host="light.samsung.net" />
+	<target host="scsi.sec.samsung.net" />
+	<target host="tcs.sec.samsung.net" />
+	<target host="sfts.samsung.net" />
+	<target host="ssdrm.samsung.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

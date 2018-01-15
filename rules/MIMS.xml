@@ -1,0 +1,44 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://www.idr-trade.com/ (200) => https://www.idr-trade.com/ (502)
+Fetch error: http://pub.mims.com/ => https://pub.mims.com/: (60, 'SSL certificate problem: self signed certificate')
+Non-2xx HTTP code: http://www.mims.com.vn/ (200) => https://www.mims.com.vn/ (502)
+Non-2xx HTTP code: http://www.mimsonline.com/ (200) => https://www.mimsonline.com/ (502)
+Non-2xx HTTP code: http://www.idrtrade.com/ (200) => https://www.idrtrade.com/ (502)
+Non-2xx HTTP code: http://www.mims.com.ph/ (200) => https://www.mims.com.ph/ (502)
+Non-2xx HTTP code: http://www.mims.com.tw/ (200) => https://www.mims.com.tw/ (502)
+
+	Non-functional subdomains:
+		- mims.com
+			- pubmiddleware		(timeout)
+-->
+<ruleset name="MIMS (partial)" platform="mixedcontent" default_off='failed ruleset test'>
+	<target host="www.mims.com" />
+	<target host="mims.com" />
+	<target host="www.cimsasia.com" />
+	<target host="www.mims.co.id" />
+	<target host="www.idr-trade.com" />
+	<target host="www.mims.com.sg" />
+	<target host="www.mims.com.my" />
+	<target host="pub.mims.com" />
+	<target host="china.mims.com" />
+	<target host="www.mims.com.vn" />
+	<target host="subscription.mims.com" />
+	<target host="healthtoday.mims.com" />
+	<target host="www.mimsonline.com" />
+	<target host="www.mimsonline.com.au" />
+	<target host="www.idrbiz.com" />
+	<target host="www.idrtrade.com" />
+	<target host="www.mims-online.com" />
+	<target host="www.mims.com.ph" />
+	<target host="www.idr-biz.com" />
+	<target host="www.mims.com.tw" />
+	<target host="sso.mims.com" />
+	<target host="www.mims.com.hk" />
+	<target host="admin.mims.com" />
+	<target host="news.mims.com" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

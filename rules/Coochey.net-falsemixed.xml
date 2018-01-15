@@ -1,0 +1,12 @@
+<!--
+	For rules not causing false/broken MCB, see Coochey.net.xml.
+
+-->
+<ruleset name="Coochey.net (false MCB)" platform="mixedcontent">
+
+	<target host="www.coochey.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

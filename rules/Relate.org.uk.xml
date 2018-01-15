@@ -1,0 +1,12 @@
+<ruleset name="Relate.org.uk">
+
+	<target host="relate.org.uk" />
+	<target host="www.relate.org.uk" />
+
+
+	<securecookie host="^www\.relate\.org\.uk$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

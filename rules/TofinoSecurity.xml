@@ -1,0 +1,6 @@
+<ruleset name="TofinoSecurity">
+  <target host="www.tofinosecurity.com" />
+  <target host="tofinosecurity.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

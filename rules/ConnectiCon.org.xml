@@ -1,0 +1,13 @@
+<ruleset name="ConnectiCon.org">
+
+	<target host="connecticon.org" />
+	<target host="www.connecticon.org" />
+
+
+	<securecookie host="^connecticon\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

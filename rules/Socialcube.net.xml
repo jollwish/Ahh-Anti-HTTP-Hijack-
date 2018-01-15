@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://lite.socialcube.net/ => https://lite.socialcube.net/: (60, 'SSL certificate problem: certificate has expired')
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- lite
+
+-->
+<ruleset name="Socialcube.net (partial)" default_off='failed ruleset test'>
+
+	<target host="socialcube.net" />
+	<target host="lite.socialcube.net" />
+	<target host="www.socialcube.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

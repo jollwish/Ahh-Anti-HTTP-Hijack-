@@ -1,0 +1,7 @@
+<ruleset name="wpa_supplicant" default_off="broken">
+
+	<target host="hostap.epitest.fi"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

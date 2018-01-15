@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bitvc.com/ => https://bitvc.com/: (7, 'Failed to connect to bitvc.com port 443: Connection refused')
+
+	Insecure cookies are set for these domains and hosts:
+
+		- www.bitvc.com
+		- .www.bitvc.com
+
+-->
+<ruleset name="BitVC.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bitvc.com" />
+	<target host="static.bitvc.com" />
+	<target host="www.bitvc.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.bitvc\.com$" name="^__jsluid$" /-->
+	<!--securecookie host="^\.www\.bitvc\.com$" name="^(BITVCPRODSESSID|i_str|lang|source|zh_cn)$" /-->
+
+	<securecookie host="^\.?www\.bitvc\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

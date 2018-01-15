@@ -1,0 +1,8 @@
+<ruleset name="Technical University of Lisbon (self-signed)" default_off="self-signed">
+
+	<target host="darkstar.ist.utl.pt" />
+	<target host="tecnica.ist.utl.pt" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="dataHC.com">
+
+	<target host="cdn.datahc.com" />
+	<target host="media.datahc.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

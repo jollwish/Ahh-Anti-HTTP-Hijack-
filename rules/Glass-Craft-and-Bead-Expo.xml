@@ -1,0 +1,11 @@
+<ruleset name="Glass Craft &amp; Bead Expo">
+
+	<target host="glasscraftexpo.com" />
+	<target host="www.glasscraftexpo.com" />
+
+
+	<!--	Cert doesn't match !www.
+						-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

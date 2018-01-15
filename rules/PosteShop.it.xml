@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.posteshop.it/ => https://www.posteshop.it/: (6, 'Could not resolve host: www.posteshop.it')
+Fetch error: http://posteshop.it/ => https://www.posteshop.it/: (6, 'Could not resolve host: www.posteshop.it')
+
+	For other Poste Italiane coverage, see Poste.it.xml.
+
+
+	^posteshop.it: Mismatched
+
+-->
+<ruleset name="PosteShop.it" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.posteshop.it" />
+
+	<!--	Complications:
+				-->
+	<target host="posteshop.it" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://posteshop\.it/"
+		to="https://www.posteshop.it/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

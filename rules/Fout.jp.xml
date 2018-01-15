@@ -1,0 +1,32 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^ *
+		- en *
+		- www	(shows login, valid cert)
+
+	* Shows another domain; mismatched, CN: *.sakura.ne.jp
+
+
+	Fully covered subdomains:
+
+		- cnt
+		- dsp
+		- js
+
+-->
+<ruleset name="Fout.jp (partial)">
+
+	<target host="cnt.fout.jp" />
+	<target host="dsp.fout.jp" />
+	<target host="js.fout.jp" />
+
+
+	<!--	Set by cnt:
+				-->
+	<securecookie host="^\.fout\.jp$" name="^uid$" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

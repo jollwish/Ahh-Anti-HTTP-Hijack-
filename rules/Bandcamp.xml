@@ -1,0 +1,35 @@
+<!--
+	Wildcard DNS and certificate.
+
+	Invalid certificate:
+		bandcamp.mu
+		*.bandcamp.mu
+
+-->
+<ruleset name="Bandcamp">
+
+	<target host="bandcamp.com" />
+	<target host="*.bandcamp.com" />
+		<test url="http://testurl1.bandcamp.com/" />
+		<test url="http://testurl2.bandcamp.com/" />
+		<test url="http://testurl3.bandcamp.com/" />
+		<test url="http://testurl4.bandcamp.com/" />
+
+	<target host="bandcamp.mu" />
+	<target host="www.bandcamp.mu" />
+
+	<target host="*.bcbits.com" />
+		<test url="http://s1.bcbits.com/img/bc_favicon.ico" />
+		<test url="http://s4.bcbits.com/img/bc_favicon.ico" />
+		<test url="http://f1.bcbits.com/img/0010600821_0" />
+		<test url="http://f4.bcbits.com/img/0010600821_0" />
+
+	<securecookie host="^\.bandcamp\.com$" name=".+" />
+
+	<rule from="^http://(www\.)?bandcamp\.mu/"
+		to="https://bandcamp.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset> 

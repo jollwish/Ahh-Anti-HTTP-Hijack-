@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://dimebag.peteraba.com/ => https://dimebag.peteraba.com/: (51, "SSL: no alternative certificate subject name matches target host name 'dimebag.peteraba.com'")
+
+	www.peteraba.com: Mismatched
+
+-->
+<ruleset name="Peter Aba.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="peteraba.com" />
+	<target host="dimebag.peteraba.com" />
+
+	<!--	Complications:
+				-->
+	<target host="www.peteraba.com" />
+
+
+	<rule from="^http://www\.peteraba\.com/"
+		to="https://peteraba.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

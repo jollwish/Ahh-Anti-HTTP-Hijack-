@@ -1,0 +1,48 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://canary.silentcircle.com/ => https://canary.silentcircle.com/: (6, 'Could not resolve host: canary.silentcircle.com')
+Fetch error: http://mail.silentcircle.com/ => https://mail.silentcircle.com/: (6, 'Could not resolve host: mail.silentcircle.com')
+
+	Other Silent Circle rulesets:
+
+		- Secure_in_the_Circle.xml.
+
+
+	Fully covered silentcircle.com subdomains:
+
+		- (www.)
+		- accounts
+		- blog
+		- home
+		- mail
+		- stats
+
+
+	Mixed content:
+
+		- css on blog from fonts.googleapis.com *
+
+	* Secured by us
+
+
+	No respone:
+		- (www.)silentcircle.org
+-->
+<ruleset name="Silent Circle" default_off='failed ruleset test'>
+	<target host="silentcircle.com" />
+	<target host="www.silentcircle.com" />
+	<target host="accounts.silentcircle.com" />
+	<target host="blog.silentcircle.com" />
+	<target host="canary.silentcircle.com" />
+	<target host="home.silentcircle.com" />
+	<target host="mail.silentcircle.com" />
+	<target host="sccps.silentcircle.com" />
+	<target host="stats.silentcircle.com" />
+	<target host="support.silentcircle.com" />
+
+	<securecookie host="^accounts\.silentcircle\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

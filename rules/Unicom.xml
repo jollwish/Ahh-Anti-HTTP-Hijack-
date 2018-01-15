@@ -1,0 +1,7 @@
+<ruleset name="Unicom (partial)">
+
+	<target host="totalrecall.switchingon.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

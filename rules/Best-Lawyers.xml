@@ -1,0 +1,13 @@
+<ruleset name="Best Lawyers">
+
+	<target host="bestlawyers.com" />
+	<target host="www.bestlawyers.com" />
+
+
+	<securecookie host="^www\.bestlawyers\.com$" name=".+" />
+
+
+	<!--	Cert doesn't match !www.	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

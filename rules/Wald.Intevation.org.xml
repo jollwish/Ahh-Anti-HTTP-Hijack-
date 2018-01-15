@@ -1,0 +1,18 @@
+<!--
+	Remark: *.wald.intevation.org has a wildcard DNS record.
+
+	Other Intevation rulesets:
+
+		- Greenbone.xml
+		- Intevation-GmbH.xml
+-->
+<ruleset name="wald.intevation.org" default_off="mismatched">
+
+	<target host="wald.intevation.org" />
+	<target host="lists.wald.intevation.org" />
+
+	<securecookie host="^wald\.intevation\.org$" name=".+" />
+
+	<rule from="^http:"
+		  to="https:" />
+</ruleset>

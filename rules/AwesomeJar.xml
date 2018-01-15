@@ -1,0 +1,8 @@
+<ruleset name="AwesomeJar.com">
+
+	<target host="awesomejar.com" />
+	<target host="www.awesomejar.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

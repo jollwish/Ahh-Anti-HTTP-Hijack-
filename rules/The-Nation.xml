@@ -1,0 +1,87 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://nationbuilders.thenation.com/default.aspx => https://donate.thenation.com/nb-launch-pages/5_2015_nationbuildersmembership/default.aspx: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://donate.thenation.com/ => https://donate.thenation.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://subscribe.thenation.com/ => https://subscribe.thenation.com/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://nationbuilders.thenation.com/ => https://donate.thenation.com/nb-launch-pages/5_2015_nationbuildersmembership: (28, 'Connection timed out after 20000 milliseconds')
+
+	CDN buckets:
+
+		- s3.amazonaws.com/thenation/
+
+
+	Problematic hosts in *thenation.com:
+
+		- ^ ʳ
+		- activism ¹
+		- nationbuilders ʳ
+
+	¹ Mismatched
+	ʳ Refused, preemptable redirect
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- donate.thenation.com
+		- subscribe.thenation.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+
+	Mixed content:
+
+		- css on nationbuilders.thenation.com from static.ning.com *
+
+		- Images, on:
+
+			- nationbuilders.thenation.com from api.ning.com *
+			- www.thenation.com from $self *
+
+		- Bugs, on:
+
+			- www.thenation.com from b.scorecardresearch.com *
+			- www.thenation.com from platform.twitter.com *
+
+	* Secured by us, see https://www.paulirish.com/2010/the-protocol-relative-url/
+
+-->
+<ruleset name="The Nation.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="donate.thenation.com" />
+	<target host="subscribe.thenation.com" />
+	<target host="www.thenation.com" />
+
+	<!--	Complications:
+				-->
+	<target host="thenation.com" />
+	<target host="nationbuilders.thenation.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^donate\.thenation\.com$" name="^(?:ASP\.NET_SessionId$|NSC_|VisitorGuid$)" /-->
+	<!--securecookie host="^subscribe\.thenation\.com$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://thenation\.com/"
+		to="https://www.thenation.com/" />
+
+	<rule from="^http://nationbuilders\.thenation\.com/$"
+		to="https://donate.thenation.com/nb-launch-pages/5_2015_nationbuildersmembership" />
+
+	<!--	Redirect keeps all and prepends forward slash:
+								-->
+	<rule from="^http://nationbuilders\.thenation\.com/"
+		to="https://donate.thenation.com/nb-launch-pages/5_2015_nationbuildersmembership/" />
+
+		<test url="http://nationbuilders.thenation.com/default.aspx" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

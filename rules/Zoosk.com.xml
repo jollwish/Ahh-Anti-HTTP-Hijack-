@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://zoosk.com/ (200) => https://zoosk.com/ (403)
+
+-->
+<ruleset name="Zoosk.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="zoosk.com" />
+	<target host="about.zoosk.com" />
+	<target host="dating.zoosk.com" />
+	<target host="www.zoosk.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

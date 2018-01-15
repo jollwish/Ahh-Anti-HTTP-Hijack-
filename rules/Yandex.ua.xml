@@ -1,0 +1,84 @@
+<!--
+	For other Yandex coverage, see Yandex.xml.
+
+	Nonfunctional subdomains:
+		- an ¹
+		- auto ³
+		- beta ¹
+		- bm ¹
+		- bs-meta ¹
+		- clck ¹
+		- contact ¹
+		- contact2 ¹
+		- dns ¹
+		- family ²
+		- informer ¹
+		- m.internet ¹
+		- islands ¹
+		- market ³
+		- mc ¹
+		- news ¹
+		- m.news ¹
+		- pda.news ¹
+		- store ¹
+		- www.store ¹
+		- mobile.yandex.uamobile ¹
+		- interactive-answers.webmaster ³
+		- wdgt ⁴
+
+	¹ Dropped
+	² Redirect differs
+	³ Redirects to http
+	⁴ 403
+
+	Problematic subdomains:
+		- www.browser ¹
+		- interactive-answers ²
+		- m ³
+		- www.mobile ³
+		- money ⁴
+		- www.taras ¹
+
+	¹ 404
+	² Mismatched
+	³ Differs from http
+	⁴ Blocks Tor users
+-->
+
+<ruleset name="Yandex.ua (partial)">
+	<target host="yandex.ua" />
+	<target host="www.yandex.ua" />
+	<target host="avia.yandex.ua" />
+	<target host="awaps.yandex.ua" />
+	<target host="blogs.yandex.ua" />
+	<target host="browser.yandex.ua" />
+	<target host="city.yandex.ua" />
+	<target host="disk.yandex.ua" />
+	<target host="feedback.yandex.ua" />
+	<target host="m.feedback.yandex.ua" />
+	<target host="fotki.yandex.ua" />
+	<target host="m.fotki.yandex.ua" />
+	<target host="gorod.yandex.ua" />
+	<target host="help.yandex.ua" />
+	<target host="images.yandex.ua" />
+	<target host="kiks.yandex.ua" />
+	<target host="legal.yandex.ua" />
+	<target host="m.legal.yandex.ua" />
+	<target host="m.yandex.ua" />
+	<target host="mail.yandex.ua" />
+	<target host="maps.yandex.ua" />
+	<target host="mobile.yandex.ua" />
+	<target host="pass.yandex.ua" />
+	<target host="slovari.yandex.ua" />
+	<target host="stat.yandex.ua" />
+	<target host="translate.yandex.ua" />
+	<target host="tune.yandex.ua" />
+	<target host="video.yandex.ua" />
+	<target host="webmaster.yandex.ua" />
+	<target host="yabs.yandex.ua" />
+	<target host="zno.yandex.ua" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

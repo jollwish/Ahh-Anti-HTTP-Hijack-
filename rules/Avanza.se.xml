@@ -1,0 +1,8 @@
+<!-- already enforces SSL. adding to prevent ssl strip attacks -->
+<ruleset name="Avanza.se">
+	<target host="avanza.se" />
+	<target host="www.avanza.se" />
+
+	<rule from="^http:" to="https:"/>
+</ruleset>
+

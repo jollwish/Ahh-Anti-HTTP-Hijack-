@@ -1,0 +1,11 @@
+<ruleset name="Suburban Records">
+
+	<target host="suburban.nl" />
+	<target host="www.suburban.nl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

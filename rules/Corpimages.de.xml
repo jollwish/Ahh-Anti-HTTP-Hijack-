@@ -1,0 +1,18 @@
+<!--
+	For other United Internet coverage, see United-Internet.xml.
+
+
+	Problematic subdomains:
+
+		- www	(cert only matches ^corpimages.de)
+
+-->
+<ruleset name="corpimages.de">
+
+	<target host="corpimages.de" />
+	<target host="www.corpimages.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

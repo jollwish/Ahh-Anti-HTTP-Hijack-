@@ -1,0 +1,24 @@
+<!--
+	For other Elsevier coverage, see Elsevier.xml.
+
+	No working URL known:
+		cert1-*.els-cdn.com
+
+-->
+<ruleset name="Els-CDN.com (partial)">
+
+	<target host="ac.els-cdn.com" />
+		<!-- Test url looks like it's leaking a private key. Confirmed working 11/2017 -->
+	<target host="ars.els-cdn.com" />
+		<test url="http://ars.els-cdn.com/content/image/1-s2.0-S0008621517304457-mmc1.pdf" />
+	<target host="cdn.els-cdn.com" />
+		<test url="http://cdn.els-cdn.com/sd/clear.gif" />
+	<target host="origin-ars.els-cdn.com" />
+	<target host="origin-cdn.els-cdn.com" />
+
+	<securecookie host="^origin-ars\.els-cdn\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

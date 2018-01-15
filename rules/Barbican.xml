@@ -1,0 +1,16 @@
+<!--
+	Cert only matches www.
+
+-->
+<ruleset name="Barbican">
+
+	<target host="barbican.org.uk" />
+	<target host="www.barbican.org.uk" />
+
+
+	<securecookie host="^www\.barbican\.org\.uk$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

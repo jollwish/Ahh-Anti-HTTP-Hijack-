@@ -1,0 +1,17 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - www.vufind.org
+-->
+<ruleset name="VuFind.org">
+	<target host="vufind.org" />
+	<target host="www.vufind.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.vufind\.org/"
+			to="https://vufind.org/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

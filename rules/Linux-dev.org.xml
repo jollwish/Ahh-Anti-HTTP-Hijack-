@@ -1,0 +1,20 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - misc.linux-dev.org
+			 - odamvlw2iq.linux-dev.org
+			 - pnopaste.linux-dev.org
+			 - srv1.linux-dev.org
+
+		Different content:
+			 - svn.linux-dev.org
+-->
+<ruleset name="linux-dev.org">
+	<target host="linux-dev.org" />
+	<target host="www.linux-dev.org" />
+	<target host="nopaste.linux-dev.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fabricatorz.com/ => https://fabricatorz.com/: (51, "SSL: no alternative certificate subject name matches target host name 'fabricatorz.com'")
+
+	Problematic subdomains:
+
+		- ^	(mismatched)
+
+-->
+<ruleset name="Fabricatorz" default_off='failed ruleset test'>
+
+	<target host="fabricatorz.com" />
+	<target host="*.fabricatorz.com" />
+
+
+	<securecookie host="^fabricatorz\.com$" name=".+" />
+
+
+	<rule from="^http://(?:(private\.)|www\.)?fabricatorz\.com/"
+		to="https://$1fabricatorz.com/" />
+
+</ruleset>

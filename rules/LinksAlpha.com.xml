@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://api.linksalpha.com/ => https://api.linksalpha.com/: (35, 'Unknown SSL protocol error in connection to api.linksalpha.com:443 ')
+
+	Nonfunctional subdomains:
+
+		- apidocs *
+		- help *
+		- support	(redirects to http, mismatched, CN: *.zendesk.com)
+
+	 * Interrupted
+
+
+	^linksalpha.com: Handshake fails
+
+
+	Mixed content:
+
+		- Bug on www from www.facebook.com *
+
+	* Secured by us
+
+-->
+<ruleset name="LinksAlpha.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="api.linksalpha.com" />
+	<target host="www.linksalpha.com" />
+
+	<!--	Complications:
+				-->
+	<target host="linksalpha.com" />
+
+
+	<securecookie host=".+\.linksalpha\.com$" name=".+" />
+
+
+	<rule from="^http://linksalpha\.com/"
+		to="https://www.linksalpha.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

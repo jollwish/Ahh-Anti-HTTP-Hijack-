@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(redirect to http, valid cert)
+
+-->
+<ruleset name="Cirrus Media.com.au (partial)">
+
+	<target host="ccbnstatic.cirrusmedia.com.au" />
+	<target host="media.cirrusmedia.com.au" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

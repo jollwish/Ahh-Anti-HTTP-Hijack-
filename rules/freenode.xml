@@ -1,0 +1,20 @@
+<!--
+	No working URL known:
+		www.freenode.org (404)
+
+-->
+<ruleset name="freenode">
+
+	<target host="freenode.net" />
+	<target host="www.freenode.net" />
+	<target host="blog.freenode.net" />
+	<target host="webchat.freenode.net" />
+
+	<target host="freenode.org" />
+
+    <securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,27 @@
+<!--
+	No working URL known:
+		git.ens-lyon.org
+		pat.perso.ens-lyon.org
+		smtp.ens-lyon.org
+		sonata.ens-lyon.org
+		svn.ens-lyon.org
+		toccata.ens-lyon.org
+
+	Timeout:
+		interens.ens-lyon.org
+
+	Different content http/https:
+		wiki.ens-lyon.org
+
+-->
+<ruleset name="ens-lyon.org">
+
+	<target host="ens-lyon.org" />
+	<target host="www.ens-lyon.org" />
+	<target host="listes.ens-lyon.org" />
+	<target host="web.ens-lyon.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

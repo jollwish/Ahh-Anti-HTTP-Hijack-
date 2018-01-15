@@ -1,0 +1,12 @@
+<ruleset name="German Privacy Foundation">
+
+	<target host="privacyfoundation.de" />
+	<target host="www.privacyfoundation.de" />
+
+
+	<securecookie host="^(?:www\.)?privacyfoundation\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

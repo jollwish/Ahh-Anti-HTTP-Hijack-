@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bloo.ie/ => https://bloo.ie/: (6, 'Could not resolve host: bloo.ie')
+
+	www: refused
+
+
+	Insecure cookies are set for these domains:
+
+		- .bloo.ie
+
+-->
+<ruleset name="Bloo.ie" default_off='failed ruleset test'>
+
+	<target host="bloo.ie" />
+	<target host="*.bloo.ie" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.bloo\.ie$" name="^connect\.sid$" /-->
+
+	<securecookie host="^\.bloo\.ie$" name=".+" />
+
+
+	<rule from="^http://(?:(auth\.|client\.)|www\.)?bloo\.ie/"
+		to="https://$1bloo.ie/" />
+
+</ruleset>

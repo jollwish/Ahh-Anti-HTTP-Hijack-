@@ -1,0 +1,17 @@
+<!--
+	if we are going to include ads and tracking info, lets atleast do it by https.
+
+
+	Nonfunctional hosts in *coxnewsweb.com:
+
+		- img ᵃ
+
+	ᵃ Shows alt.coxnewsweb.com
+
+-->
+<ruleset name="coxnewsweb.net">
+	<target host="alt.coxnewsweb.com" />
+	<rule from="^http:"
+		to="https:"/>
+</ruleset>
+

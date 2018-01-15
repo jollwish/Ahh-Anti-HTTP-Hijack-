@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://upaymobile.co.uk/ => https://www.upaymobile.co.uk/: (51, "SSL: no alternative certificate subject name matches target host name 'www.upaymobile.co.uk'")
+Fetch error: http://www.upaymobile.co.uk/ => https://www.upaymobile.co.uk/: (51, "SSL: no alternative certificate subject name matches target host name 'www.upaymobile.co.uk'")
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://upay.co.uk/ => https://www.upay.co.uk/: (6, 'Could not resolve host: upay.co.uk')
+-->
+<ruleset name="Upay" platform="mixedcontent" default_off='failed ruleset test'>
+  <target host="upay.co.uk" />
+  <target host="www.upay.co.uk" />
+  <target host="upaymobile.co.uk" />
+  <target host="www.upaymobile.co.uk" />
+
+  <rule from="^http://(?:www\.)?upay\.co\.uk/" to="https://www.upay.co.uk/" />
+  <rule from="^http://(?:www\.)?upaymobile\.co\.uk/" to="https://www.upaymobile.co.uk/" />
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Mismatched:
+		h1
+		h2
+		digitalpagecontent.cdntwrk.com
+-->
+<ruleset name="cdntwrk.com">
+	<target host="content.cdntwrk.com" />
+	<target host="uberflip.cdntwrk.com" />
+
+		<test url="http://uberflip.cdntwrk.com/css/hubs/hubs.min.css" />
+		<test url="http://uberflip.cdntwrk.com/img/hubs/uparrow.png" />
+		<test url="http://uberflip.cdntwrk.com/js/hubs/hubs_app.js" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

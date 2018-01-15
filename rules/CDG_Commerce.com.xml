@@ -1,0 +1,40 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cdgcommerce.com/ => https://cdgcommerce.com/: Too many redirects while fetching 'https://cdgcommerce.com/'
+Fetch error: http://myapp.cdgcommerce.com/ => https://myapp.cdgcommerce.com/: Too many redirects while fetching 'https://myapp.cdgcommerce.com/'
+Fetch error: http://www.cdgcommerce.com/ => https://www.cdgcommerce.com/: Too many redirects while fetching 'https://www.cdgcommerce.com/'
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- myapp
+		- secure
+
+
+	Insecure cookies are set for these hosts:
+
+		- cdgcommerce.com
+		- myapp.cdgcommerce.com
+		- www.cdgcommerce.com
+
+-->
+<ruleset name="CDG Commerce.com" default_off='failed ruleset test'>
+
+	<target host="cdgcommerce.com" />
+	<target host="myapp.cdgcommerce.com" />
+	<target host="secure.cdgcommerce.com" />
+	<target host="www.cdgcommerce.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(myapp\.|www\.)?cdgcommerce\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:myapp\.|www\.)?cdgcommerce\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

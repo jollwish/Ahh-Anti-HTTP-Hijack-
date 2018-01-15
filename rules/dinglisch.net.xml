@@ -1,0 +1,15 @@
+<!--
+	Remark: *.dinglisch.net has a expired certificate as of Feb 2017
+-->
+<ruleset name="dinglisch.net" default_off="expired">
+	<target host="dinglisch.net" />
+	<target host="apps.dinglisch.net" />
+	<target host="filemagic.dinglisch.net" />
+	<target host="ipack.dinglisch.net" />
+	<target host="lee.dinglisch.net" />
+		<test url="http://lee.dinglisch.net/markets/" />
+	<target host="tasker.dinglisch.net" />
+	<target host="zoom.dinglisch.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.parsecdn.com/js/parse-1.2.19.min.js => https://www.parsecdn.com/js/parse-1.2.19.min.js: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other Parse coverage, see Parse.xml.
+
+
+	Fully covered domains:
+
+		- *.parsecdn.com:
+
+			- www
+
+
+	^parsecdn.com doesn't exist.
+
+-->
+<ruleset name="ParseCDN.com" default_off='failed ruleset test'>
+
+	<target host="*.parsecdn.com" />
+
+		<test url="http://www.parsecdn.com/js/parse-1.2.19.min.js" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

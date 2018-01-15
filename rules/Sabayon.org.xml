@@ -1,0 +1,41 @@
+<!--
+	Invalid certificate:
+		best.sabayon.org
+		lists.sabayon.org
+		tinderbox.sabayon.org
+
+	Secure connection failed:
+		mirror.de.sabayon.org
+		distfiles.sabayon.org
+		git.sabayon.org
+		gitweb.sabayon.org
+		mirror.it.sabayon.org
+		pkg.sabayon.org
+		pkgs.sabayon.org
+		torrents.sabayon.org
+		tracker.sabayon.org
+
+	Different content http/https:
+		dl.sabayon.org
+		eapi.sabayon.org
+
+-->
+<ruleset name="Sabayon.org">
+
+	<target host="sabayon.org" />
+	<target host="www.sabayon.org" />
+	<target host="bugs.sabayon.org" />
+	<target host="community.sabayon.org" />
+	<target host="forum.sabayon.org" />
+	<target host="next.sabayon.org" />
+	<target host="packages.sabayon.org" />
+	<target host="pastebin.sabayon.org" />
+	<target host="static.sabayon.org" />
+	<target host="wiki.sabayon.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

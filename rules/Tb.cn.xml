@@ -1,0 +1,12 @@
+<!--
+	For other Alibaba Group coverage, see Alibaba.xml.
+-->
+<ruleset name="Tb.cn">
+
+	<target host="tb.cn" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

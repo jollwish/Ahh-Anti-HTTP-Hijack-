@@ -1,0 +1,17 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fazekas.hu/ => https://fazekas.hu/: Too many redirects while fetching 'https://fazekas.hu/'
+Fetch error: http://www.fazekas.hu/ => https://fazekas.hu/: Too many redirects while fetching 'https://fazekas.hu/'
+
+-->
+<ruleset name="Fazekas" default_off='failed ruleset test'>
+	<target host="fazekas.hu" />
+	<target host="www.fazekas.hu" />
+	<target host="sas.fazekas.hu" />
+	<target host="summertime.fazekas.hu" />
+
+	<rule from="^http://(?:www\.)?fazekas\.hu/" to="https://fazekas.hu/" />
+	<rule from="^http://sas\.fazekas\.hu/" to="https://sas.fazekas.hu/" />
+	<rule from="^http://summertime\.fazekas\.hu/" to="https://summertime.fazekas.hu/" />
+</ruleset>

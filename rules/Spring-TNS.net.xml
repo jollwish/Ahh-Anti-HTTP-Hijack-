@@ -1,0 +1,47 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://foreca.spring-tns.net/blank.gif => https://ssl-foreca.spring-tns.net/blank.gif: (6, 'Could not resolve host: ssl-foreca.spring-tns.net')
+
+	Web bugs.
+
+
+	(www.)?spring-tns.net does not exist.
+
+
+	Problematic subdomains:
+
+		- nelonen	(refused)
+
+-->
+<ruleset name="Spring-TNS.net (partial)" default_off='failed ruleset test'>
+
+	<target host="*.spring-tns.net" />
+
+		<exclusion pattern="^http://(?:[^./]+\.){2,}spring-tns\.net/" />
+
+			<!--	+ve:
+					-->
+			<test url="http://this.host.spring-tns.net/" />
+			<test url="http://exists.not.spring-tns.net/" />
+
+
+	<!--securecookie host="^\.spring-tns\.net$" name="^i00$" /-->
+	<!--securecookie host=".+\.spring-tns\.net$" name="^srp$" /-->
+	<securecookie host=".\.spring-tns\.net$" name=".+" />
+
+
+	<rule from="^http://(?!ssl-)([^.]+)\.spring-tns\.net/"
+		to="https://ssl-$1.spring-tns.net/" />
+
+		<test url="http://foreca.spring-tns.net/blank.gif" />
+		<test url="http://mtv3.spring-tns.net/blank.gif" />
+		<test url="http://nelonen.spring-tns.net/blank.gif" />
+		<test url="http://tori.spring-tns.net/blank.gif" />
+
+	<rule from="^http:"
+		to="https:" />
+
+		<test url="http://ssl-tori.spring-tns.net/blank.gif" />
+
+</ruleset>

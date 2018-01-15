@@ -1,0 +1,103 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://spthumbnails.5min.com/10392461/519623035_3v1_300_170.jpg => https://spthumbnails.5min.com/10392461/519623035_3v1_300_170.jpg: (6, 'Could not resolve host: spthumbnails.5min.com')
+Fetch error: http://admin.5min.com/ => https://admin.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://files.5min.com/ => https://files.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://l.5min.com/ => https://l.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://spthumbnails.5min.com/ => https://spthumbnails.5min.com/: (6, 'Could not resolve host: spthumbnails.5min.com')
+Fetch error: http://syn.5min.com/ => https://syn.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://thumbnails.5min.com/ => https://thumbnails.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://videos.5min.com/ => https://videos.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.5min.com/ => https://www.5min.com/: (7, 'Failed to connect to www.5min.com port 443: Connection refused')
+Fetch error: http://5min.com/ => https://www.5min.com/: (7, 'Failed to connect to www.5min.com port 443: Connection refused')
+Fetch error: http://athumbnails.5min.com/ => https://thumbnails.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://pthumbnails.5min.com/ => https://thumbnails.5min.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For other AOL coverage, see AOL.xml.
+
+
+	CDN buckets:
+
+		- ashared.5min.com.edgesuite.net
+
+			- [ap]shared.5min.com
+
+		- athumbnails.5min.com.edgesuite.net
+
+			- [ap]thumbnails.5min.com
+
+
+	Nonfunctional domains:
+
+		- 5min.com subdomains:
+
+			- stg.api
+			- blog
+			- stg.embed
+			- stg.files
+			- stg.shared
+			- solutions	(times out)
+			- www.stg
+			- stg.syn
+			- stg.thumbnails
+			- stg.videos
+
+		- 5minmedia.com subdomains:
+
+			- (www.)	(times out)
+			- c		(400, CN: *.hs.llnwd.net)
+			- console
+			- editorsroom
+
+
+	Problematic 5min.com subdomains:
+
+		- ^ ¹
+		- [ap]shared *
+		- [ap]thumbnails *
+
+	¹ Refused
+	* Akamai
+
+-->
+<ruleset name="5min.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="admin.5min.com" />
+	<target host="api.5min.com" />
+	<target host="embed.5min.com" />
+	<target host="files.5min.com" />
+	<target host="l.5min.com" />
+	<target host="shared.5min.com" />
+	<target host="spthumbnails.5min.com" />
+	<target host="spvideos.5min.com" />
+	<target host="syn.5min.com" />
+	<target host="thumbnails.5min.com" />
+	<target host="videos.5min.com" />
+	<target host="www.5min.com" />
+
+		<test url="http://spthumbnails.5min.com/10392461/519623035_3v1_300_170.jpg" />
+
+	<!--	Complications:
+				-->
+	<target host="5min.com" />
+	<target host="ashared.5min.com" />
+	<target host="athumbnails.5min.com" />
+	<target host="pshared.5min.com" />
+	<target host="pthumbnails.5min.com" />
+
+
+	<rule from="^http://5min\.com/"
+		to="https://www.5min.com/" />
+
+	<!--	shared: Ads
+				-->
+	<rule from="^http://[ap](shared|thumbnails)\.5min\.com/"
+		to="https://$1.5min.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

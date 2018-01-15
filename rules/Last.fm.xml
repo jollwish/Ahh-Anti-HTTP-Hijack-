@@ -1,0 +1,52 @@
+<!--
+	For other CBS coverage, see CBS.xml.
+	For coverage of the last.fm API, see Audioscrobbler.com.xml.
+
+	CDN buckets:
+		- lastfm-img2.akamaized.net
+
+	Mismatch:
+		- m.cn.last.fm
+		- originals.last.fm
+		- trends.last.fm
+		- cdn.lst.fm
+
+	Refused:
+		- autodiscover.last.fm
+		- cdn-origin.last.fm
+		- status.last.fm
+
+	Timeout:
+		- blog.last.fm
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- secure.last.fm
+		- www.last.fm
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Last.fm">
+	<target host="last.fm" />
+	<target host="www.last.fm" />
+	<target host="beta.last.fm" />
+	<target host="build.last.fm" />
+	<target host="cdn.last.fm" />
+	<target host="cn.last.fm" />
+	<target host="freedownloads.last.fm" />
+	<target host="m.last.fm" />
+	<target host="musicmanager.last.fm" />
+	<target host="secure.last.fm" />
+	<target host="shop.last.fm" />
+	<target host="static.last.fm" />
+	<target host="static-web.last.fm" />
+	<target host="store.last.fm" />
+	
+	<!-- Not secured by server: -->
+	<!--securecookie host="^(?:secure|www)\.last\.fm$" name="^csrftoken$" /-->
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	^ times out over http
+
+-->
+<ruleset name="eduroam ES">
+
+	<target host="www.eduroam.es" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

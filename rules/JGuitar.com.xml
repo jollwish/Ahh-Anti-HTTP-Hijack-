@@ -1,0 +1,10 @@
+<ruleset name="JGuitar.com">
+
+	<target host="jguitar.com" />
+	<target host="www.jguitar.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,35 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - ece.uakron.edu
+			 - eohs.uakron.edu
+			 - www.lawalum.uakron.edu
+			 - lawclerk.uakron.edu
+			 - wiep.uakron.edu
+
+		Incomplete certificate chain error:
+			 - lists.uakron.edu
+
+		5xx server error:
+			 - ztv.uakron.edu
+
+		Different content:
+			 - lawscout.uakron.edu
+-->
+<ruleset name="Uakron.edu (partial)">
+	<target host="uakron.edu" />
+	<target host="auth.uakron.edu" />
+	<target host="blogs.uakron.edu" />
+	<target host="id.uakron.edu" />
+	<target host="library.uakron.edu" />
+	<target host="maps.uakron.edu" />
+	<target host="my.uakron.edu" />
+	<target host="springboard.uakron.edu" />
+	<target host="support.uakron.edu" />
+	<target host="supportchat.uakron.edu" />
+	<target host="wayne.uakron.edu" />
+	<target host="www.uakron.edu" />
+	<target host="zipline.uakron.edu" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

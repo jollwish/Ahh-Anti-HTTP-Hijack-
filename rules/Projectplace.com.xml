@@ -1,0 +1,38 @@
+<!--
+	Refused:
+		challenge.projectplace.com
+
+	Different content http/https:
+		clients.projectplace.com
+		feeds.projectplace.com
+		service.projectplacedocs.com
+
+	Invalid certificate:
+		follow-up.projectplace.com
+		ideas.projectplace.com
+		styleguide.projectplace.com
+
+	Login required:
+		service.projectplace.com
+
+-->
+<ruleset name="Projectplace.com">
+
+	<target host="projectplace.com" />
+	<target host="www.projectplace.com" />
+	<target host="api.projectplace.com" />
+	<target host="blog.projectplace.com" />
+	<target host="customercare.projectplace.com" />
+	<target host="edu.projectplace.com" />
+	<target host="get.projectplace.com" />
+	<target host="help.projectplace.com" />
+	<target host="m.projectplace.com" />
+	<target host="newsletter.projectplace.com" />
+	<target host="support.projectplace.com" />
+	<target host="todo.projectplace.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

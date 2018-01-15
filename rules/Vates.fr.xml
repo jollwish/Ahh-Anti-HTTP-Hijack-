@@ -1,0 +1,28 @@
+<!--
+	Invalid certificate:
+		andromeda.vates.fr
+		www.business.vates.fr
+		centaurus.vates.fr
+		orion.vates.fr
+		pegasus.vates.fr
+		xoa.vates.fr
+
+	No working URL known:
+		business.vates.fr
+		shelter.vates.fr
+		web.vates.fr
+		web1.vates.fr
+
+-->
+<ruleset name="Vates.fr">
+
+	<target host="vates.fr" />
+	<target host="www.vates.fr" />
+	<target host="piwik.vates.fr" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

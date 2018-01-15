@@ -1,0 +1,6 @@
+<ruleset name="Spirit Airlines" platform="mixedcontent">
+  <target host="spirit.com" />
+  <target host="www.spirit.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

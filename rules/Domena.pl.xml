@@ -1,0 +1,26 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(redirects to http; expired 2002-04-09, CN: localhost)
+
+
+	Fully covered subdomains:
+
+		- domeny
+		- hosting
+		- poczta
+
+-->
+<ruleset name="Domena.pl (partial)">
+
+	<target host="domeny.domena.pl" />
+	<target host="hosting.domena.pl" />
+	<target host="poczta.domena.pl" />
+
+
+	<securecookie host="^(?:domeny|hosting|poczta)\.domena\.pl$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

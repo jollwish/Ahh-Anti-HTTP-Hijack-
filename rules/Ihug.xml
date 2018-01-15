@@ -1,0 +1,8 @@
+<ruleset name="Ihug (partial)" default_off="expired">
+
+	<target host="homepages.ihug.co.nz" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

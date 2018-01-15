@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://hints.netflame.cc/ => https://hints.netflame.cc/: (51, "SSL: no alternative certificate subject name matches target host name 'hints.netflame.cc'")
+Fetch error: http://ssl-hints.netflame.cc/ => https://ssl-hints.netflame.cc/: (51, "SSL: no alternative certificate subject name matches target host name 'ssl-hints.netflame.cc'")
+
+	For other Digital River coverage, see Digital-River.xml.
+
+
+	CDN buckets:
+
+		- https://a248.e.akamai.net/f/248/5462/3h/hints.netflame.cc/
+
+
+	hints sets the following cookies on whichever domain it is loaded from:
+
+		- fcC
+		- fcOOS
+		- fcP
+		- fcR
+
+-->
+<ruleset name="netflame.cc" default_off='failed ruleset test'>
+
+	<target host="hints.netflame.cc" />
+	<target host="ssl-hints.netflame.cc" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

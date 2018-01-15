@@ -1,0 +1,71 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://uploads.www.theplatform.com/ => https://uploads.www.theplatform.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For problematic rules, see ThePlatform-problematic.xml.
+
+
+	CDN buckets:
+
+		- mpx.theplatform.com.edgesuite.net
+		- web.theplatform.com.edgesuite.net
+
+
+	Problematic subdomains:
+
+		- feed ***
+		- mpx *
+		- pdk **
+		- player ***
+		- support ⁴
+		- web *
+
+	* Works, akamai
+	** https://github.com/EFForg/https-everywhere/issues/1431
+	*** https://github.com/EFForg/https-everywhere/issues/1816
+	⁴ Mismatched
+
+
+	NB: crossdomain.xml on player forbids https (FUU!)
+		=> we must avoid securing clients
+
+	OTOH, we could rewrite crossdomain.xml from player to release....
+
+
+	Insecure cookies are set for these hosts:
+
+		- console.theplatform.com
+		- mps.theplatform.com
+
+-->
+<ruleset name="thePlatform.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="theplatform.com" />
+	<target host="console.theplatform.com" />
+	<target host="help.theplatform.com" />
+	<target host="mps.theplatform.com" />
+	<target host="release.theplatform.com" />
+	<target host="delivery.support.theplatform.com" />
+	<target host="www.theplatform.com" />
+	<target host="uploads.www.theplatform.com" />
+
+	<!--	Complications:
+				-->
+	<target host="support.theplatform.com" />
+		
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(console|mps)\.theplatform\.com$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^(?:console|mps|release)\.theplatform\.com$" name=".+" />
+
+
+	<rule from="^http://support\.theplatform\.com/"
+		to="https://delivery.support.theplatform.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

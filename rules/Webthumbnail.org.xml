@@ -1,0 +1,10 @@
+<ruleset name="Webthumbnail.org">
+
+	<target host="webthumbnail.org" />
+	<target host="www.webthumbnail.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

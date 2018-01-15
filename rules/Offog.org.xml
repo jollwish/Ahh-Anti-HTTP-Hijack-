@@ -1,0 +1,24 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - cartman.offog.org
+			 - fuego.offog.org
+			 - phd.offog.org
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - frets.offog.org
+			 - a.mx.offog.org
+-->
+<ruleset name="Offog.org (partial)">
+	<target host="offog.org" />
+	<target host="www.offog.org" />
+	<target host="bookmarks.offog.org" />
+	<target host="www.bookmarks.offog.org" />
+	<target host="photos.offog.org" />
+	<target host="www.photos.offog.org" />
+	<target host="stuff.offog.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ads	(502; mismatched, CN: 
+
+-->
+<ruleset name="moviease.com">
+
+	<target host="moviease.com" />
+	<target host="www.moviease.com" />
+
+
+	<securecookie host="^(?:w*\.)?moviease\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

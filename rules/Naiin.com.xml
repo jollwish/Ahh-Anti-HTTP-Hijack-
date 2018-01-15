@@ -1,0 +1,6 @@
+<ruleset name="Naiin.com">
+  <target host="naiin.com" />
+  <target host="www.naiin.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

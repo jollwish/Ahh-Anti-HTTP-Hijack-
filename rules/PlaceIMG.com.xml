@@ -1,0 +1,9 @@
+<ruleset name="PlaceIMG.com">
+
+	<target host="placeimg.com" />
+	<target host="www.placeimg.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- caps.gloucestershire.gov.uk
+		- planning.gloucestershire.gov.uk
+		- ww3.gloucestershire.gov.uk
+
+		Timeout was reached:
+		- gistest.gloucestershire.gov.uk
+		- glostext.gloucestershire.gov.uk
+
+		SSL peer certificate was not OK:
+		- adulteducation.gloucestershire.gov.uk
+
+		Status code mismatch:
+		- ww5.gloucestershire.gov.uk
+-->
+<ruleset name="Gloucestershire.gov.uk (partial)">
+	<target host="gloucestershire.gov.uk" />
+	<target host="www.gloucestershire.gov.uk" />
+	<target host="emsonline.gloucestershire.gov.uk" />
+		<test url="http://emsonline.gloucestershire.gov.uk/CitizenPortal/Account/Login?ReturnUrl=%2FCitizenPortal%2F" />
+	<target host="myjobs.gloucestershire.gov.uk" />
+	<target host="mytempjobs.gloucestershire.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

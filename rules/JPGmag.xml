@@ -1,0 +1,17 @@
+<!--
+	Invalid certificate:
+		box.jpgmag.com
+		li.jpgmag.com
+		photos.jpgmag.com
+		8020.photos.jpgmag.com
+
+-->
+<ruleset name="JPGmag.com">
+
+	<target host="jpgmag.com" />
+	<target host="www.jpgmag.com" />
+	<target host="shop.jpgmag.com" />
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

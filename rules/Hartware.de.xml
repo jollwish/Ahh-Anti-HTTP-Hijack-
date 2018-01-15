@@ -1,0 +1,4 @@
+<ruleset name="Hartware.de">
+<target host="www.hartware.de" />
+<rule from="^http:" to="https:" />
+</ruleset>

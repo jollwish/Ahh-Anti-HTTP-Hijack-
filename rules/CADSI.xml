@@ -1,0 +1,12 @@
+<ruleset name="CADSI">
+
+	<target host="defenceandsecurity.ca" />
+	<target host="www.defenceandsecurity.ca" />
+
+
+	<securecookie host="^(?:www\.)?defenceandsecurity\.ca$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

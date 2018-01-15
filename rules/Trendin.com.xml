@@ -1,0 +1,12 @@
+<ruleset name="Trendin.com">
+
+	<target host="trendin.com" />
+	<target host="www.trendin.com" />
+
+
+	<securecookie host="^(?:www)?\.trendin\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

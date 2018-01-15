@@ -1,0 +1,17 @@
+<!--
+	Mixed content:
+
+		- Images from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="Biallo.de">
+
+	<target host="biallo.de" />
+	<target host="www.biallo.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

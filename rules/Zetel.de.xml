@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://intranet.zetel.de/ => https://intranet.zetel.de/: (51, "SSL: no alternative certificate subject name matches target host name 'intranet.zetel.de'")
+
+
+	Nonfunctional domains:
+
+		- ^ (ERR_CERT_COMMON_NAME_INVALID)
+		- mail (self-signed)
+
+
+-->
+<ruleset name="Zetel.de" default_off='failed ruleset test'>
+	<target host="zetel.de" />
+	<target host="www.zetel.de" />
+	<target host="intranet.zetel.de" />
+
+	<rule from="^http://(?:www\.)?zetel\.de/" to="https://www.zetel.de/"/>
+	<rule from="^http://intranet\.zetel\.de/" to="https://intranet.zetel.de/" />
+</ruleset>

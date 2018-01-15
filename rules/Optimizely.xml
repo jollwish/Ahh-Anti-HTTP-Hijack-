@@ -1,0 +1,79 @@
+<!--
+	For rules covering resources which do not secure
+	mixed content, see optimizely.com-resources.xml.
+
+
+	CDN buckets:
+
+		- d1qmdf3vop2l07.cloudfront.net
+		- cdn.optimizely.com.edgekey.net	← cdn3
+
+
+	Problematic hosts in *optimizely.com:
+
+		- cdn4 ᴬ
+		- log3 ᵐ
+		- pages ᵐ
+
+	ᴬ Akamai / mismatched
+	ᵐ Mismatched
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- community.optimizely.com
+		- learn.optimizely.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+
+	cdn sets the following insecure wildcard cookies
+	on whichever domain it is loaded from:
+
+		- optimizelyBuckets
+		- optimizelyEndUserId
+		- optimizelyPendingLogEvents
+		- optimizelySegments
+
+-->
+<ruleset name="Optimizely (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="optimizely.com" />
+	<target host="app.optimizely.com" />
+	<target host="blog.optimizely.com" />
+	<target host="cdn.optimizely.com" />
+	<target host="cdn2.optimizely.com" />
+	<target host="cdn3.optimizely.com" />
+	<target host="community.optimizely.com" />
+	<target host="developers.optimizely.com" />
+	<target host="help.optimizely.com" />
+	<target host="learn.optimizely.com" />
+	<target host="log.optimizely.com" />
+	<target host="*.log.optimizely.com" />
+	<target host="support.optimizely.com" />
+	<target host="www.optimizely.com" />
+
+		<exclusion pattern="^http://(?:[^./]+\.){2,}log\.optimizely\.com/" />
+
+			<!--	+ve:
+					-->
+			<test url="http://this.host.log.optimizely.com/" />
+			<test url="http://exists.not.log.optimizely.com/" />
+
+		<test url="http://cdn.optimizely.com/js/geo2.js" />
+		<test url="http://cdn2.optimizely.com/js/geo2.js" />
+		<test url="http://cdn3.optimizely.com/js/geo2.js" />
+
+	<!--	Complications:
+				-->
+	<target host="log3.optimizely.com" />
+
+	<rule from="^http://log3\.optimizely\.com/"
+		to="https://3.log.optimizely.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

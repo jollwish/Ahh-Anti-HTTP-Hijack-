@@ -1,0 +1,9 @@
+<ruleset name="r00tz.org">
+
+	<target host="r00tz.org" />
+	<target host="www.r00tz.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

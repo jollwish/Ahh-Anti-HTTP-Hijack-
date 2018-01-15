@@ -1,0 +1,19 @@
+<!--
+	Problematic subdomains:
+
+		- maheo *
+
+	* Self-signed
+
+
+	^cines.fr doesn't exist.
+
+-->
+<ruleset name="CINES.fr (partial)">
+
+	<target host="www.cines.fr" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

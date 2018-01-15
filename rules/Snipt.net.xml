@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blog.snipt.net/ => https://blog.snipt.net/: (6, 'Could not resolve host: blog.snipt.net')
+
+	Insecure cookies are set for these domains:
+
+		- .snipt.net
+
+-->
+<ruleset name="Snipt.net" default_off='failed ruleset test'>
+
+	<target host="snipt.net" />
+	<target host="blog.snipt.net" />
+	<target host="www.snipt.net" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.snipt\.net$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

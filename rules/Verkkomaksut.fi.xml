@@ -1,0 +1,18 @@
+<!--
+	Fully covered subdomains:
+
+		- payment
+
+-->
+<ruleset name="Verkkomaksut.fi (partial)">
+
+	<target host="img.verkkomaksut.fi" />
+	<target host="payment.verkkomaksut.fi" />
+
+
+	<securecookie host="^(?:\.?payment)?\.verkkomaksut\.fi$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

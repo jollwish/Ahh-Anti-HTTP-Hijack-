@@ -1,0 +1,33 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- hrusecky.net
+		- arch.jan.hrusecky.net
+		- architecture.jan.hrusecky.net
+		- photo.jan.hrusecky.net
+		- people.photo.jan.hrusecky.net
+		- www.michal.hrusecky.net
+		- queeg.hrusecky.net
+		- sobas.hrusecky.net
+		- www.sobas.hrusecky.net
+		- svatba.hrusecky.net
+		- fotky.svatba.hrusecky.net
+		- www.svatba.hrusecky.net
+		- www.hrusecky.net
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- analytics.hrusecky.net
+		- piwik.hrusecky.net
+
+		Incomplete certificate chain error:
+		- friends.hrusecky.net
+		- mail.hrusecky.net
+
+		Mixed content blocking (MCB) triggered:
+		- michal.hrusecky.net
+-->
+<ruleset name="Michal Hrušecký" platform="mixedcontent">
+	<target host="michal.hrusecky.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

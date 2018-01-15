@@ -1,0 +1,112 @@
+<!--
+	Other OVH Group rulesets:
+		- Hubic.com.xml
+		- Kimsufi.com.xml
+		- OVH.biz.xml
+		- OVH.us.xml
+		- OVH_Telecom.fr.xml
+		- RunAbove.xml
+		- So_you_Start.com.xml
+
+	Nonfunctional domains:
+		- guides.ovh.com ¹
+		- prirucky.ovh.cz ¹
+		- status.ovh.net ²
+		- travaux.ovh.net ²
+
+	¹ Refused
+	² 401
+
+	Problematic domains:
+		- cluster016.ovh.net (expired)
+		- imp.ovh.net (mismatched, ssl0.ovh.net)
+		- ssl\d+.ovh.net
+			- 4 (self-signed)
+			- 8 (dropped)
+			- 9 (mismatched, ssl7.ovh.net)
+			- 16 (refused)
+-->
+
+<ruleset name="OVH (partial)">
+	<target host="ovh.com" />
+	<target host="www.ovh.com" />
+	<target host="eu.api.ovh.com" />
+	<target host="ca.ovh.com" />
+	<target host="forum.ovh.com" />
+	<target host="imp.ovh.net" />
+	<target host="ex.mail.ovh.net" />
+	<target host="mailconfig.ovh.net" />
+	<target host="ssl0.ovh.net" />
+	<target host="ssl2.ovh.net" />
+	<target host="ssl3.ovh.net" />
+	<target host="ssl4.ovh.net" />
+	<target host="ssl5.ovh.net" />
+	<target host="ssl6.ovh.net" />
+	<target host="ssl7.ovh.net" />
+	<target host="ssl9.ovh.net" />
+	<target host="ssl11.ovh.net" />
+	<target host="ssl12.ovh.net" />
+	<target host="ssl13.ovh.net" />
+	<target host="ssl14.ovh.net" />
+	<target host="ssl15.ovh.net" />
+	<target host="ssl17.ovh.net" />
+	<target host="webanalytics2.ovh.net" />
+	<target host="webmail.ovh.net" />
+
+	<target host="ovh.co.uk" />
+	<target host="www.ovh.co.uk" />
+	<target host="forum.ovh.co.uk" />
+
+	<target host="ovh.cz" />
+	<target host="www.ovh.cz" />
+	<target host="forum.ovh.cz" />
+
+	<target host="ovh.de" />
+	<target host="www.ovh.de" />
+	<target host="forum.ovh.de" />
+
+	<target host="ovh.es" />
+	<target host="www.ovh.es" />
+	<target host="forum.ovh.es" />
+
+	<target host="ovh.ie" />
+	<target host="www.ovh.ie" />
+	<target host="forum.ovh.ie" />
+
+	<target host="ovh.it" />
+	<target host="www.ovh.it" />
+	<target host="forum.ovh.it" />
+
+	<target host="ovh.lt" />
+	<target host="www.ovh.lt" />
+	<target host="forum.ovh.lt" />
+
+	<target host="ovh.nl" />
+	<target host="www.ovh.nl" />
+	<target host="forum.ovh.nl" />
+
+	<target host="ovh.pl" />
+	<target host="www.ovh.pl" />
+	<target host="forum.ovh.pl" />
+
+	<target host="ovh.pt" />
+	<target host="www.ovh.pt" />
+	<target host="forum.ovh.pt" />
+
+	<target host="ovh.sn" />
+	<target host="www.ovh.sn" />
+	<target host="forum.ovh.sn" />
+
+	<target host="ovh-hosting.fi" />
+	<target host="www.ovh-hosting.fi" />
+	<target host="foorumi.ovh-hosting.fi" />
+	<target host="forum.ovh-hosting.fi" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(imp|webmail)\.ovh\.net/" to="https://ssl0.ovh.net/" />
+
+	<rule from="^http:" to="https:" />
+
+	<test url="http://webanalytics2.ovh.net/piwik.php" />
+</ruleset>

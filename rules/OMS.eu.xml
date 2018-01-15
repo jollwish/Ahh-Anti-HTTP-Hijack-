@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://coyote.srv1.oms.eu/ => https://coyote.srv1.oms.eu/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="OMS Vermarktungs GmbH" default_off='failed ruleset test'>
+
+	<target host="www.video.oms.eu"/>
+	<target host="cdn-t.omsnative.de"/>
+	<target host="coyote.srv1.oms.eu"/>
+	<target host="video.oms.eu"/>
+
+	<!-- cert mismatch on:
+		- (www.\)oms.eu 
+		- werbeformate.oms.eu
+		- (www.)mobileformate.oms.eu
+	-->
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

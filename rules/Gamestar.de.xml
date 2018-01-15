@@ -1,0 +1,6 @@
+<ruleset name="Gamestar.de">
+<target host="images.gamestar.de" />
+<!-- www redirects to plain http currently -->
+
+<rule from="^http:" to="https:" />
+</ruleset>

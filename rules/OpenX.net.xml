@@ -1,0 +1,41 @@
+<!--
+	For other OpenX coverage, see OpenX.xml.
+
+
+	Nonfunctional hosts in *openx.net:
+
+		- (www.) -  self-signed & expired & mismatched, CN: *.openx.com
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .openx.net
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+	OpenX runs a subdomain for every customer, for maintenance reasons we use a wildcard here.
+-->
+<ruleset name="OpenX.net (partial)">
+
+	<target host="*.openx.net" />
+
+		<!--	Set cookies without Secure:
+							-->
+		<test url="http://u.openx.net/w/1.0/sc?r=http%3A%2F%2Fox-d.openxadexchange.com%2Fw%2F1.0%2Frs%3Fcc%3D1%26as%3D1%26cb%3D1" />
+		<test url="http://us-u.openx.net/w/1.0/pd?plm=1&amp;ph=00000000-0000-0000-0000-000000000000" />
+		<test url="http://us-ads.openx.net/" />
+		<test url="http://bid.openx.net/" />
+		<test url="http://www.openx.net/" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.openx\.net$" name="^(?:i|pd)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<exclusion pattern="^http://www\.openx\.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

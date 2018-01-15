@@ -1,0 +1,29 @@
+<!--
+	Invalid certificate:
+		activate.roboform.com
+		blog.roboform.com
+		buy.roboform.com
+		enterprise.roboform.com
+		support.roboform.com
+		upgrade.roboform.com
+
+-->
+<ruleset name="RoboForm.com">
+
+	<target host="roboform.com" />
+	<target host="www.roboform.com" />
+	<target host="blog.roboform.com" />
+	<target host="help.roboform.com" />
+	<target host="online.roboform.com" />
+	<target host="secure.roboform.com" />
+	<target host="start.roboform.com" />
+
+	<securecookie host="^secure\.roboform\.com$" name=".+" />
+
+	<rule from="^http://blog\.roboform\.com/"
+		to="https://www.roboform.com/blog/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

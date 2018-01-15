@@ -1,0 +1,44 @@
+<!--
+
+	For mixed content rules, see aircrack-ng.org-mixedcontent.xml.
+
+	Mismatched hosts in *aircrack-ng.org:
+
+		- blog
+		- twitter
+
+-->
+<ruleset name="aircrack-ng.org">
+
+	<target host="aircrack-ng.org" />
+	<target host="www.aircrack-ng.org" />
+	<target host="airoscript.aircrack-ng.org" />
+	<target host="archive.aircrack-ng.org" />
+	<target host="aspj.aircrack-ng.org" />
+	<target host="dl.aircrack-ng.org" />
+	<target host="download.aircrack-ng.org" />
+	<target host="forum.aircrack-ng.org" />
+	<target host="hirte.aircrack-ng.org" />
+	<target host="nightly.aircrack-ng.org" />
+	<target host="patches.aircrack-ng.org" />
+	<target host="pictures.aircrack-ng.org" />
+	<target host="securitytube.aircrack-ng.org" />
+	<target host="storage.aircrack-ng.org" />
+	<target host="svn.aircrack-ng.org" />
+	<target host="svn.mdk3.aircrack-ng.org" />
+	<target host="trac.aircrack-ng.org" />
+	<target host="video.aircrack-ng.org" />
+	<target host="videos.aircrack-ng.org" />
+	<target host="vmware.aircrack-ng.org" />
+	<target host="wiki.aircrack-ng.org" />
+	<target host="wiki-files.aircrack-ng.org" />
+	<target host="ww.aircrack-ng.org" />
+	<target host="zaurus.aircrack-ng.org" />
+	<target host="zerochaos.aircrack-ng.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+<ruleset name="Pachube.com">
+
+	<target host="api.pachube.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

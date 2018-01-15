@@ -1,0 +1,17 @@
+<!--
+	For rules that are on by default, see BitMissile.xml.
+
+-->
+<ruleset name="BitMissile (mismatches)" default_off="mismatched">
+
+	<!--	Cert: live.bitmissile.com	-->
+	<target host="mirror.bitmissile.com" />
+	<target host="www.bitmissile.com" />
+
+
+	<!--	Cookies are handled in BitMissile.xml.	-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

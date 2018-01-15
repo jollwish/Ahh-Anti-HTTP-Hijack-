@@ -1,0 +1,22 @@
+<!--
+	Other Wells Fargo rulesets:
+		- Wachovia.xml
+
+	Mixed content:
+		- Image on blogs from 187hrynv8uv1zp0cw32838b1aoz-wpengine.netdna-ssl.com
+-->
+
+<ruleset name="Wells Fargo.com">
+  <target host="wellsfargo.com" />
+  <target host="*.wellsfargo.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+	<test url="http://financial.wellsfargo.com/" />
+	<test url="http://mortgage.wellsfargo.com/" />
+	<test url="http://myed.wellsfargo.com/" />
+	<test url="http://onlineservices.wellsfargo.com/" />
+	<test url="http://www.wellsfargo.com/" />
+</ruleset>

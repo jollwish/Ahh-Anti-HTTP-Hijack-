@@ -1,0 +1,25 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- hg.cpunk.de
+		- imap.cpunk.de
+		- smtp.cpunk.de
+		- tresor-scripts.cpunk.de
+
+		Incomplete certificate chain error:
+		- dav.cpunk.de
+		- gpg4usb.cpunk.de
+		- gutscheingruppe.cpunk.de
+		- theaterkeller.cpunk.de
+-->
+<ruleset name="cpunk.de">
+	<target host="cpunk.de" />
+	<target host="www.cpunk.de" />
+	<target host="mail.cpunk.de" />
+	<target host="oc.cpunk.de" />
+	<target host="php.cpunk.de" />
+	<target host="rss.cpunk.de" />
+	<target host="webmail.cpunk.de" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

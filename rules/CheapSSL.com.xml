@@ -1,0 +1,20 @@
+<!--
+	For other Namecheap coverage, see NameCheap.xml.
+
+	Invalid certificate:
+		www.support.cheapssl.com
+
+-->
+<ruleset name="CheapSSL.com">
+
+	<target host="cheapssl.com" />
+	<target host="www.cheapssl.com" />
+	<target host="support.cheapssl.com" />
+	<target host="sandbox.support.cheapssl.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

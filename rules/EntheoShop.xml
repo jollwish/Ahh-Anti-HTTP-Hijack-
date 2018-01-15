@@ -1,0 +1,11 @@
+<ruleset name="EntheoShop">
+
+	<target host="shop.entheogene.de" />
+
+
+	<securecookie host="^shop\.entheogene\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

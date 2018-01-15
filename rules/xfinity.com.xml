@@ -1,0 +1,68 @@
+<!--
+	For other Comcast coverage, see Comcast.xml.
+
+	Nonfunctional hosts in *xfinity.com:
+
+		- constantguard ᵈ
+		- dns ᵈ
+		- games ᵈ
+		- networkmanagement ʳ
+		- parents ʳ
+		- speedtest ᵈ
+		- techfund ʳ
+		- hotspots.wifi ᵈ
+
+	ᵈ Dropped
+	ʳ Refused
+
+	Problematic hosts in *xfinity.com:
+
+		- my ²
+		- serviceo ³
+		- store ¹
+		- tvgo ²
+
+	¹ Redirects to 200 notfound.html
+	² Mismatched (akamai)
+	³ Mismatched (2o7.net)
+
+	Mixed content:
+
+		- Images, on:
+			- forums from i221.photobucket.com *
+			- www.stg from cdn.comcast.com *
+			- www.stg from $self *
+
+		- favicon on forums from www.xfinity.com *
+
+	* Secured by us
+-->
+
+<ruleset name="Xfinity.com (partial)">
+	<target host="customer.xfinity.com" />
+	<target host="es.xfinity.com" />
+	<target host="forums.xfinity.com" />
+	<target host="partner.xfinity.com" />
+	<target host="customer.pdc.prd.xfinity.com" />
+	<target host="www.pdc.prd.xfinity.com" />
+	<target host="referafriend.xfinity.com" />
+	<target host="secure.xfinity.com" />
+	<target host="securestore.xfinity.com" />
+	<target host="customer.stg.xfinity.com" />
+	<target host="www.stg.xfinity.com" />
+	<target host="wifi.xfinity.com" />
+	<target host="accesspass.wifi.xfinity.com" />
+	<target host="prov.wifi.xfinity.com" />
+	<target host="wifilogin.xfinity.com" />
+	<target host="www.xfinity.com" />
+	<target host="serviceo.xfinity.com" />
+	<target host="store.xfinity.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://serviceo\.xfinity\.com/" to="https://xfinity.112.2o7.net/" />
+
+	<rule from="^http://store\.xfinity\.com/" to="https://securestore.xfinity.com/" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

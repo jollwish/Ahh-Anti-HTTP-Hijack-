@@ -1,0 +1,23 @@
+<!--
+	Nonfunctional subdomains:
+
+		- www1 *
+		- www2 *
+		- www12 *
+
+	* Self-signed
+
+-->
+<ruleset name="Kaiserslautern.de (partial)">
+
+	<target host="kaiserslautern.de" />
+	<target host="www.kaiserslautern.de" />
+	<target host="geoportal.kaiserslautern.de" />
+
+	<securecookie host="^kaiserslautern\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

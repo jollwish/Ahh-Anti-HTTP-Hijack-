@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://piratehd.com/ => https://piratehd.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	www.piratehd.com doesn't exist
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- piratehd.com
+		- .piratehd.com
+
+-->
+<ruleset name="PirateHD.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="piratehd.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^piratehd\.com$" name="^xbtit$" /-->
+	<!--securecookie host="^\.piratehd\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.?piratehd\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

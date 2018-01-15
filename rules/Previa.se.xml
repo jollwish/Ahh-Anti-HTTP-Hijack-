@@ -1,0 +1,6 @@
+<ruleset name="Previa.se">
+  <target host="previa.se" />
+  <target host="www.previa.se" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,13 @@
+<ruleset name="Merca2.0">
+
+	<target host="merca20.com" />
+	<target host="www.merca20.com" />
+
+
+	<securecookie host="^www\.merca20\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+<ruleset name="Getprice (partial)">
+
+	<target host="secure.getprice.com.au" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

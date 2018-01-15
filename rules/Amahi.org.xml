@@ -1,0 +1,56 @@
+<!--
+	Invalid certificate:
+		amahi.org
+		acs.amahi.org
+		docs.amahi.org
+		help.amahi.org
+		static.amahi.org
+		store.amahi.org
+		talk.amahi.org
+		transparent.amahi.org
+
+	Different content http/https:
+		api.amahi.org
+			<test url="http://api.amahi.org/assets/audio-9da276ef9eee60aab3c591e4a658600b016bfc02e5c77802e973d4d5e71e81c4.png" />
+
+	Mixed content:
+		blog.amahi.org (ads)
+
+	Login required:
+		gitlab.amahi.org
+		grinder.amahi.org
+
+	No working URL known:
+		shop.amahi.org (500)
+
+-->
+<ruleset name="Amahi.org">
+
+	<target host="amahi.org" />
+	<target host="www.amahi.org" />
+	<target host="assets.amahi.org" />
+	<target host="blog.amahi.org" />
+	<target host="bugs.amahi.org" />
+	<target host="forums.amahi.org" />
+	<target host="talk.amahi.org" />
+	<target host="wiki.amahi.org" />
+	<target host="wtp.amahi.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<!--	Redirect drops path and args:
+						-->
+	<rule from="^http://talk\.amahi\.org/.*"
+		to="https://webchat.freenode.net/?channels=amahi" />
+
+		<test url="http://talk.amahi.org/test1" />
+		<test url="http://talk.amahi.org/test2" />
+		<test url="http://talk.amahi.org/test3" />
+
+	<rule from="^http://amahi\.org/"
+		to="https://www.amahi.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

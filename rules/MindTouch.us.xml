@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://help.mindtouch.us/ => https://help.mindtouch.us/: (51, "SSL: no alternative certificate subject name matches target host name 'help.mindtouch.us'")
+Fetch error: http://f1.help.mindtouch.us/ => https://f1.help.mindtouch.us/: (51, "SSL: no alternative certificate subject name matches target host name 'f1.help.mindtouch.us'")
+
+	For other MindTouch coverage, see MindTouch.com.xml.		- 
+
+
+	Fully covered hosts:
+
+		- (www.)?
+		- help
+		- f1.help
+		- sapseod
+		- f1.sapseod
+
+-->
+<ruleset name="MindTouch.us" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="mindtouch.us" />
+	<target host="help.mindtouch.us" />
+	<target host="f1.help.mindtouch.us" />
+	<target host="sapseod.mindtouch.us" />
+	<target host="f1.sapseod.mindtouch.us" />
+	<target host="www.mindtouch.us" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

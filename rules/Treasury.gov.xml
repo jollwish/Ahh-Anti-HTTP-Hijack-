@@ -1,0 +1,74 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://portal.donotpay.treasury.gov/ => https://portal.donotpay.treasury.gov/: (6, 'Could not resolve host: portal.donotpay.treasury.gov')
+Fetch error: http://m.treasury.gov/ => https://m.treasury.gov/: (51, "SSL: no alternative certificate subject name matches target host name 'm.treasury.gov'")
+
+
+
+	Nonfunctional hosts in *treasury.gov:
+
+		- donotpay ¹
+		- search ²
+
+	¹ Dropped
+	² 403
+
+
+	^treasury.gov: Dropped
+
+
+	These altnames don't exist:
+
+		- www.sdc.fiscal.treasury.gov
+
+
+	Insecure cookies are set for these hosts:
+
+		- fiscal.treasury.gov
+		- sdc.fiscal.treasury.gov
+		- www.fiscal.treasury.gov
+		- m.treasury.gov
+		- www.treasury.gov
+
+
+	Mixed content:
+
+		- Images on m, www from farm\d.staticflickr.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Treasury.gov (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="portal.donotpay.treasury.gov" />
+	<target host="sdc.fiscal.treasury.gov" />
+	<target host="www.fiscal.treasury.gov" />
+	<target host="m.treasury.gov" />
+	<target host="thenew10.treasury.gov" />
+	<target host="www.thenew10.treasury.gov" />
+	<target host="www.treasury.gov" />
+
+	<!--	Complications:
+				-->
+	<target host="treasury.gov" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?fiscal\.treasury\.gov$" name="^BIGipServer" /-->
+	<!--securecookie host="^sdc\.fiscal\.treasury\.gov$" name="^(?:ACOOKIE|WEBTRENDS_ID)$" /-->
+	<!--securecookie host="^(?:m|www)\.treasury\.gov$" name="^(?:HASH_)?ROUTEID\.[\da-f]{32}$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://treasury\.gov/"
+		to="https://www.treasury.gov/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

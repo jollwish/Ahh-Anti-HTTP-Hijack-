@@ -1,0 +1,62 @@
+<!--
+	Nonfunctional hosts in *.lego.com:
+		- aboutus.lego.com (m)
+		- assets.lego.com (m)
+		- cache.lego.com (m)
+		- club.lego.com (m)
+		- community.lego.com (m)
+		- factory.lego.com (m)
+		- ldd.lego.com (m)
+		- learninginstitute.lego.com (m)
+		- rebrick.lego.com (m)
+		- reviews.lego.com (m)
+		- thehobbit.lego.com (m)
+		- service.lego.com (404)
+		- ldd.us.lego.com (m)
+		- thelordoftherings.us.lego.com (m)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+
+	legocdn.com has a wildcard DNS record.
+-->
+<ruleset name="LEGO.com (partial)">
+
+	<target host="lego.com" />
+	<target host="www.lego.com" />
+	<target host="account.lego.com" />
+	<target host="services.account.lego.com" />
+	<target host="account2.lego.com" />
+	<target host="catalogs.lego.com" />
+	<target host="citystudio.lego.com" />
+	<target host="education.lego.com" />
+	<target host="shop.education.lego.com" />
+	<target host="ideas.lego.com" />
+	<target host="jobsearch.lego.com" />
+		<!-- 403 -->
+		<exclusion pattern="^http://jobsearch\.lego\.com/$" />
+		<test url="http://jobsearch.lego.com/sap/bc/webdynpro/sap/" />
+	<target host="lan.lego.com" />
+	<target host="moderation.lego.com" />
+	<target host="ninjagochallenge.lego.com" />
+	<target host="savethecity.lego.com" />
+	<target host="services.lego.com" />
+	<target host="shop.lego.com" />
+	<target host="www.us.lego.com" />
+	<target host="wwwsecure.us.lego.com" />
+	<target host="usaevents.lego.com" />
+	<target host="worldofcreativity.lego.com" />
+	<target host="wwwsecure.lego.com" />
+
+	<target host="lc-www-live-s.legocdn.com" />
+	<test url="http://lc-www-live-s.legocdn.com/r/www/r/globalnavigationservices/content/images/lego-logo-menu.svg" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

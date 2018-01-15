@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ott.odessa.tv/ => https://ott.odessa.tv/: (60, 'SSL certificate problem: certificate has expired')
+
+wiki.odessa.tv ⁴
+webmail.odessa.tv different content
+revera.odessa.tv ⁴
+www.sana.odessa.tv ¹
+
+¹ mismatch
+⁴ self signed
+-->
+<ruleset name="odessa.tv" default_off='failed ruleset test'>
+	<target host="odessa.tv" />
+	<target host="www.odessa.tv" />
+	<target host="billing.odessa.tv" />
+	<target host="ott.odessa.tv" />
+	<target host="sana.odessa.tv" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

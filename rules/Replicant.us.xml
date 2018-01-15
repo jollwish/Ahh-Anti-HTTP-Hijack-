@@ -1,0 +1,17 @@
+<ruleset name="Replicant.us">
+
+	<target host="replicant.us" />
+	<target host="www.replicant.us" />
+	<target host="blog.replicant.us" />
+	<target host="git.replicant.us" />
+	<target host="redmine.replicant.us" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^redmine\.replicant\.us$" name="^_redmine_session$" /-->
+	<securecookie host="^redmine\.replicant\.us$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

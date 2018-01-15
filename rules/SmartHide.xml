@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional hosts in smarthide.com:
+
+		- blog ᵃ
+
+	ᵃ Shows ^smarthide.com
+
+-->
+<ruleset name="SmartHide (partial)">
+
+	<target host="smarthide.com" />
+	<target host="www.smarthide.com" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

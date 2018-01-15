@@ -1,0 +1,8 @@
+<ruleset name="ZeroC.com">
+
+	<target host="www.zeroc.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

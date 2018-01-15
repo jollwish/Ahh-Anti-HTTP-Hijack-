@@ -1,0 +1,8 @@
+<ruleset name="Pearson (mismatches)" default_off="mismatched">
+
+	<!--	Akamai	-->
+	<target host="ptgmedia.pearsoncmg.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

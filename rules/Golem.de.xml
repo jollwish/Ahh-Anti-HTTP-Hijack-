@@ -1,0 +1,58 @@
+<!--
+	Invalid certificate:
+		dev1.golem.de
+		*.damoh.golem.de
+
+	Not found:
+		damoh.golem.de
+		stage1.golem.de
+
+	Refused:
+		hybrid[1-3].golem.de
+		video2.golem.de
+		www[1-3].golem.de
+
+	Timeout:
+		mail.golem.de
+		speedkit.golem.de
+		vcs1.golem.de
+		whitepaperdb.golem.de
+-->
+<ruleset name="Golem.de">
+
+	<target host="golem.de" />
+	<target host="www.golem.de" />
+	<target host="4scotty-dev.golem.de" />
+	<target host="account.golem.de" />
+	<target host="ads.golem.de" />
+	<target host="api.golem.de" />
+	<target host="backend.golem.de" />
+	<target host="cpx.golem.de" />
+	<target host="cpxl.golem.de" />
+	<target host="ecruos.golem.de" />
+	<target host="events.golem.de" />
+	<target host="forum.golem.de" />
+	<target host="hits.golem.de" />
+	<target host="imode.golem.de" />
+	<target host="intra.golem.de" />
+	<target host="jobs.golem.de" />
+	<target host="login.golem.de" />
+	<target host="m.golem.de" />
+	<target host="markt.golem.de" />
+	<target host="nl.golem.de" />
+	<target host="podcast.golem.de" />
+	<target host="preisvergleich.golem.de" />
+	<target host="profis.golem.de" />
+	<target host="redirect.golem.de" />
+	<target host="rss.golem.de" />
+	<target host="scr.golem.de" />
+	<target host="scr3.golem.de" />
+	<target host="sidebar.golem.de" />
+	<target host="suche.golem.de" />
+	<target host="video.golem.de" />
+	<target host="wap.golem.de" />
+	<target host="www6.golem.de" />
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

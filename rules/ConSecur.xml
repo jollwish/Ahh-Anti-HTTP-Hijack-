@@ -1,0 +1,18 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(times out)
+
+-->
+<ruleset name="ConSecur">
+
+	<target host="consecur.de" />
+	<target host="www.consecur.de" />
+
+
+	<securecookie host="^www\.consecur\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- community	(uservoice.com)
+
+-->
+<ruleset name="Shiftboard.com (partial)">
+
+	<target host="shiftboard.com" />
+	<target host="www.shiftboard.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

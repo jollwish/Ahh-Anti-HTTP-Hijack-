@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://hesaplabakalim.com/ => https://hesaplabakalim.com/: (7, 'Failed to connect to hesaplabakalim.com port 443: Connection refused')
+Fetch error: http://www.hesaplabakalim.com/ => https://www.hesaplabakalim.com/: (7, 'Failed to connect to www.hesaplabakalim.com port 443: Connection refused')
+
+	CDN buckets:
+
+		- hesaplabakalim-production.s3.amazonaws.com
+
+
+	Mixed content:
+
+		- Images, from:
+
+			- s3.amazonaws.com *
+			- hesaplabakalim-production.s3.amazonaws.com *
+
+		- Web bugs from platform.twitter.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Hesapla Bakalim.com" default_off='failed ruleset test'>
+
+	<target host="hesaplabakalim.com" />
+	<target host="www.hesaplabakalim.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^\.?hesaplabakalim\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	Nonfunctional domains:
+
+		- (www.)squidsolutions.com
+
+-->
+<ruleset name="Squid Solutions (partial)">
+
+	<target host="aws.tracker.squidanalytics.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+<ruleset name="NicAc">
+  <target host="nic.ac" />
+  <target host="www.nic.ac" />
+
+  <securecookie host="^(?:.+\.)?nic\.ac$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

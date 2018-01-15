@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://threat2alert.com/ => https://threat2alert.com/: (6, 'Could not resolve host: threat2alert.com')
+
+	For other Nettitude coverage, see Nettitude.co.uk.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- threat2alert.com
+		- www.threat2alert.com
+
+-->
+<ruleset name="Threat2Alert.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="threat2alert.com" />
+	<target host="www.threat2alert.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.threat2alert\.com$" name="^(?:PHPSESSID|wfvt_\d+)$" /-->
+
+	<securecookie host="^www\.threat2alert\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

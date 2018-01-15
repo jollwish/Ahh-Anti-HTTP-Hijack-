@@ -1,0 +1,16 @@
+<!--
+	Invalid certificate:
+		ntop.org
+		www.ntop.org
+		packages.ntop.org
+		svn.ntop.org"
+
+-->
+<ruleset name="ntop.org">
+
+	<target host="shop.ntop.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

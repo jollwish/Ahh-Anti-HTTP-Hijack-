@@ -1,0 +1,34 @@
+<!--
+
+
+	CDN buckets:
+
+		- www.uscourts.gov.edgesuite.net
+
+			- a381.g.akamai.net
+
+
+	Non-functional hosts
+
+		Timeout was reached:
+			 - coop.ca9.uscourts.gov
+			 - hosting.ca9.uscourts.gov
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - ecf-test.ca9.uscourts.gov
+			 - ecf-train.ca9.uscourts.gov
+
+		Incomplete certificate chain error:
+			 - evoucher.ca9.uscourts.gov
+
+		Mixed Content Blocking (MCB) tiggered:
+			- www.ca9.uscourts.gov/rules/
+
+-->
+<ruleset name="US Courts.gov (partial)" platform="mixedcontent">
+	<target host="www.ca9.uscourts.gov" />
+	<target host="cdn.ca9.uscourts.gov" />
+	<target host="ecf.ca9.uscourts.gov" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

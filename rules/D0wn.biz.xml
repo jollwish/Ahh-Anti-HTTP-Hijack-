@@ -1,0 +1,12 @@
+<ruleset name="d0wn.biz">
+
+	<target host="d0wn.biz" />
+	<target host="dns.d0wn.biz" />
+	<target host="www.d0wn.biz" />
+
+	<securecookie host="^d0wn\.biz$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

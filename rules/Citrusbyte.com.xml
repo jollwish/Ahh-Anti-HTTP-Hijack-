@@ -1,0 +1,15 @@
+<ruleset name="Citrusbyte.com">
+
+	<target host="citrusbyte.com" />
+	<target host="www.citrusbyte.com" />
+
+
+	<securecookie host="^(?:www\.)?citrusbyte\.com$" name=".+" />
+
+
+	<!--	www redirects to !www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Bungie">
+  <target host="www.bungie.net" />
+  <target host="bungie.net" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

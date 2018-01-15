@@ -1,0 +1,27 @@
+<!--
+	CDN buckets:
+
+		- image.vam.synacor.com.edgesuite.net
+		- /synacor.vo.llnwd.net/o37/
+
+
+	Nonfunctional domains:
+
+		- image.vam.synacor.com.edgesuite.net	(504)
+
+
+	Fully covered subdomains:
+
+		- static.garnet
+
+-->
+<ruleset name="Synacor (partial)">
+
+	<target host="static.coral.synacor.com" />
+	<target host="web.coral.synacor.com" />
+	<target host="static.garnet.synacor.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	For rules that are on by default, see RubyGems.xml.
+
+-->
+<ruleset name="RubyGems.org (problematic)" default_off="mismatched">
+
+	<target host="help.rubygems.org" />
+	<target host="m.rubygems.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

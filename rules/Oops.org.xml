@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.oops.org/ => https://www.oops.org/: (51, "SSL: no alternative certificate subject name matches target host name 'www.oops.org'")
+
+mirror.kr1.oops.org refused
+-->
+<ruleset name="oops.org" default_off='failed ruleset test'>
+	<target host="oops.org" />
+	<target host="www.oops.org" />
+	<target host="annyung.oops.org" />
+	<target host="devel.oops.org" />
+	<target host="my.oops.org" />
+	<target host="jokbo.oops.org" />
+	<target host="pear.oops.org" />
+	<target host="mirror.oops.org" />
+	<target host="cdn.oops.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

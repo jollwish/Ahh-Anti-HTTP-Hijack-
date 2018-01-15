@@ -1,0 +1,19 @@
+<!--
+	Refused:
+		buydomains.com
+		www.buydomains.com
+
+-->
+<ruleset name="BuyDomains.com (partial)">
+
+	<target host="checkout.buydomains.com" />
+	<target host="static.buydomains.com" />
+		<test url="http://static.buydomains.com/browser/img/favicon.ico" />
+		<test url="http://static.buydomains.com/browser/img/main/bg-select.png" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

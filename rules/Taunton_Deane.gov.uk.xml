@@ -1,0 +1,26 @@
+<!--
+	Taunton Deane Borough Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- mail.tauntondeane.gov.uk
+		- webgate.tauntondeane.gov.uk
+
+		SSL peer certificate was not OK:
+		- consultldf.tauntondeane.gov.uk
+
+		4xx client error:
+		- autodiscover.tauntondeane.gov.uk
+		- www2.tauntondeane.gov.uk
+-->
+<ruleset name="Taunton Deane.gov.uk">
+	<target host="www.tauntondeane.gov.uk" />
+	<target host="eventspaces.tauntondeane.gov.uk" />
+	<target host="extranet.tauntondeane.gov.uk" />
+	<target host="owa.tauntondeane.gov.uk" />
+	<target host="www1.tauntondeane.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

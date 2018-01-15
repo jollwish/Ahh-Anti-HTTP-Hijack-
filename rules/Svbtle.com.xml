@@ -1,0 +1,25 @@
+<!--
+	Wildcard DNS and certificate.
+
+	Each user gets its own subdomain.
+
+-->
+<ruleset name="Svbtle.com">
+
+	<target host="svbtle.com" />
+	<target host="*.svbtle.com" />
+	
+		<test url="http://testurl1.svbtle.com/" />
+		<test url="http://testurl2.svbtle.com/" />
+		<test url="http://testurl3.svbtle.com/" />
+
+		<test url="http://locks.svbtle.com/" />
+		<test url="http://playhdstream.svbtle.com/" />
+		<test url="http://summercampamerica.svbtle.com/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

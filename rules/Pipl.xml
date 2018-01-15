@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- dev
+		- t1.thumb
+		- t13.thumb
+
+-->
+<ruleset name="Pipl (partial)">
+
+	<target host="pipl.com" />
+	<target host="www.pipl.com" />
+
+
+	<securecookie host="^\.pipl\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

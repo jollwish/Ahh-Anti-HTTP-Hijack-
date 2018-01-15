@@ -1,0 +1,13 @@
+<ruleset name="Praegnanz.de">
+
+	<target host="praegnanz.de" />
+	<target host="www.praegnanz.de" />
+
+
+	<securecookie host="^praegnanz\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

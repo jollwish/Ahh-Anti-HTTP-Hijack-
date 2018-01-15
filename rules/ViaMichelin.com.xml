@@ -1,0 +1,26 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) ¹
+		- b2capi ²
+		- m ²
+		- mobile ²
+		- mrest ²
+
+	¹ Shows webservices; mismatched, CN: webservices.viamichelin.com
+	² Dropped
+
+-->
+<ruleset name="ViaMichelin.com (partial)">
+
+	<target host="ccu.viamichelin.com" />
+	<target host="download.viamichelin.com" />
+	<target host="webservices.viamichelin.com" />
+
+
+	<securecookie host="^download\.viamichelin\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

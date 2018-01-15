@@ -1,0 +1,18 @@
+<!--
+	Problematic subdomains:
+
+		 - www	(redirects to http, valid cert)
+
+-->
+<ruleset name="Cool Key West">
+
+	<target host="coolkeywest.com" />
+	<target host="www.coolkeywest.com" />
+
+
+	<securecookie host="^coolkeywest\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

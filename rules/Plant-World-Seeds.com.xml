@@ -1,0 +1,8 @@
+<ruleset name="Plant-World-Seeds.com">
+
+	<target host="plant-world-seeds.com" />
+	<target host="www.plant-world-seeds.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,25 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - jako-o.lu
+			 - www.jako-o.lu
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - jako-o.eu
+			 - www.jako-o.eu
+-->
+<ruleset name="JAKO-O (partial)">
+	<!-- jako-o.at -->
+	<target host="jako-o.at" />
+	<target host="www.jako-o.at" />
+
+	<!-- jako-o.com -->
+	<target host="jako-o.com" />
+	<target host="www.jako-o.com" />
+
+	<!-- jako-o.de -->
+	<target host="jako-o.de" />
+	<target host="www.jako-o.de" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

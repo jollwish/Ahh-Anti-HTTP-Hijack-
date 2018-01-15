@@ -1,0 +1,17 @@
+<!--
+	For other Sony coverage, see
+		+ Sony.xml
+
+	Non-functional hosts
+		Incomplete certificate chain error:
+		- sony.eu
+		- www.sony.eu
+		- shop.sony.eu
+-->
+<ruleset name="Sony.eu (partial)">
+	<target host="global.sony.eu" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

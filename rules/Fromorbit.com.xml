@@ -1,0 +1,17 @@
+<!--
+	Mixed content:
+
+		- Images from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="fromorbit.com">
+
+	<target host="fromorbit.com" />
+	<target host="www.fromorbit.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

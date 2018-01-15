@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://apress.com/ => https://apress.com/: (51, "SSL: no alternative certificate subject name matches target host name 'apress.com'")
+
+	Insecure cookies are set for these domains:
+
+		- .www.apress.com
+
+
+	Mixed content:
+
+		- Images from springeruploads.com
+
+-->
+<ruleset name="Apress.com" default_off='failed ruleset test'>
+  <target host="apress.com" />
+  <target host="www.apress.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.www\.apress.com$" name="^frontend$" /-->
+
+	<securecookie host="^\.www\.apress.com$" name=".+" />
+
+
+  <rule from="^http:" to="https:" />
+</ruleset>

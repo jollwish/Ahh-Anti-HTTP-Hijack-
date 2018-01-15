@@ -1,0 +1,21 @@
+<!--
+	See the main Mozdev ruleset, see Mozdev.xml.
+-->
+<ruleset name="Mozdev (mismatches)" default_off="mismatched">
+
+	<target host="*.mozdev.org" />
+		<test url="http://firefox.mozdev.org/" />
+		<test url="http://maf.mozdev.org/" />
+		<test url="http://zombiekeys.mozdev.org/" />
+		<!-- Domains handled in Mozdev.xml. -->
+		<exclusion pattern="^http://(bugzilla\.|www\.)?mozdev\.org/"/>
+			<test url="http://bugzilla.mozdev.org/" />
+			<test url="http://www.mozdev.org/" />
+			<test url="http://mozdev.org/" />
+
+	<securecookie host="^.*\.mozdev\.org$" name=".+" />
+
+	<rule from="^http://([\w\-]+)\.mozdev\.org/"
+		to="https://$1.mozdev.org/"/>
+
+</ruleset>

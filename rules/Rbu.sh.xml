@@ -1,0 +1,15 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - jabber.rbu.sh
+			 - conference.jabber.rbu.sh
+			 - sync.rbu.sh
+-->
+<ruleset name="Rbu.sh (partial)">
+	<target host="rbu.sh" />
+	<target host="www.rbu.sh" />
+
+	<securecookie host="^(www\.)?rbu\.sh$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

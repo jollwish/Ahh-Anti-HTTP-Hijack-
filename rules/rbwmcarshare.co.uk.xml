@@ -1,0 +1,13 @@
+<ruleset name="RBWM Car Share.co.uk">
+
+	<target host="rbwmcarshare.co.uk" />
+	<target host="www.rbwmcarshare.co.uk" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

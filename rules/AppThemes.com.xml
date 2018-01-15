@@ -1,0 +1,37 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)
+		- cdn
+		- demos
+		- docs
+		- forums
+		- ideas
+		- marketplace
+		- my
+
+
+	Mixed content:
+
+		- Images on forums from $self *
+		- Images on forums from cdn *
+
+	* Secured by us
+
+-->
+<ruleset name="AppThemes.com">
+
+	<target host="appthemes.com" />
+	<target host="cdn.appthemes.com" />
+	<target host="demos.appthemes.com" />
+	<target host="docs.appthemes.com" />
+	<target host="forums.appthemes.com" />
+	<target host="ideas.appthemes.com" />
+	<target host="marketplace.appthemes.com" />
+	<target host="my.appthemes.com" />
+	<target host="www.appthemes.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

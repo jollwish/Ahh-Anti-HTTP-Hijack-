@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mysociety.org/ => https://mysociety.org/: (51, "SSL: no alternative certificate subject name matches target host name 'mysociety.org'")
+
+	Insecure cookies are set for these hosts:
+
+		- www.mysociety.org
+
+-->
+<ruleset name="mySociety.org" default_off='failed ruleset test'>
+
+	<target host="mysociety.org" />
+	<target host="www.mysociety.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.mysociety\.org$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^www\.mysociety\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

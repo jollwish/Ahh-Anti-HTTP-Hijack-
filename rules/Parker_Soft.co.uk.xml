@@ -1,0 +1,33 @@
+<!--
+	Other Parker Software rulesets:
+
+		- WhosOn.com.xml
+
+
+	Fully covered subdomains:
+
+		- gateway
+		- gateway2
+		- www
+
+
+	^parkersoft.co.uk doesn't exist.
+
+
+	Mixed content:
+
+		- fonts on www from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Parker Soft.co.uk">
+
+	<target host="gateway.parkersoft.co.uk" />
+	<target host="gateway2.parkersoft.co.uk" />
+	<target host="www.parkersoft.co.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

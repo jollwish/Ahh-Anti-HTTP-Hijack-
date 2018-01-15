@@ -1,0 +1,12 @@
+<ruleset name="Eli Lilly (partial)">
+
+	<target host="lillypad.lilly.ca" />
+	<target host="lillypad.lilly.com" />
+
+
+	<securecookie host="^lillypad\.lilly\.c(?:a|om)$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

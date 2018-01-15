@@ -1,0 +1,20 @@
+<!--
+	No working URL known:
+		ret-tool.retriever-info.com
+
+	Invalid certificate:
+		error.retriever-info.com
+
+-->
+<ruleset name="Retriever-Info.com">
+
+	<target host="retriever-info.com" />
+	<target host="www.retriever-info.com" />
+	<target host="web.retriever-info.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

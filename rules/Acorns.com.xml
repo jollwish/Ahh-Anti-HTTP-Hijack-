@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- blog *
+
+	* Tumblr
+
+
+	^: cert only matches *.acorns.com
+
+-->
+<ruleset name="Acorns.com (partial)">
+
+	<target host="acorns.com" />
+	<target host="www.acorns.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

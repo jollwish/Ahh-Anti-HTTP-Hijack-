@@ -1,0 +1,5 @@
+<ruleset name="jsDelivr.net">
+	<target host="cdn.jsdelivr.net" />
+	<securecookie host=".+" name=".+" />
+	<rule from="^http:" to="https:" />
+</ruleset>

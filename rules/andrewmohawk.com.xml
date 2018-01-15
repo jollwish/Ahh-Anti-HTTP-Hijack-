@@ -1,0 +1,13 @@
+<ruleset name="andrewmohawk.com">
+
+	<target host="andrewmohawk.com" />
+	<target host="www.andrewmohawk.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

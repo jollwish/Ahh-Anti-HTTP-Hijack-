@@ -1,0 +1,9 @@
+<ruleset name="Auth0.com">
+	<target host="auth0.com" />
+	<target host="www.auth0.com" />
+	<target host="cdn.auth0.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

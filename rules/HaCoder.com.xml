@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://hacoder.com/ (200) => https://hacoder.com/ (401)
+Non-2xx HTTP code: http://www.hacoder.com/ (200) => https://www.hacoder.com/ (401)
+
+	Insecure cookies are set for these domains:
+
+		- .hacoder.com
+
+
+	Mixed content:
+
+		- css, from:
+
+			- fonts.googleapis.com *
+			- $self *
+
+		- Images from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="HaCoder.com (false MCB)" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="hacoder.com" />
+	<target host="www.hacoder.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.hacoder\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.hacoder\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

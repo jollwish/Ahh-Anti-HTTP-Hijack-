@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bidtellect.com/ => https://bidtellect.com/: (7, 'Failed to connect to bidtellect.com port 443: Connection refused')
+
+	Other Bidtellect rulesets:
+
+		- Bttrack.com.xml
+
+
+	Mixed content:
+
+		- css, on:
+
+			- dsp from fonts.googleapis.com ˢ
+			- www from maxcdn.bootstrapcdn.com ˢ
+
+		- Images, on:
+
+			- dsp from $self ˢ
+			- www from ^bidtellect.com ˢ
+
+	ˢ Secured by us
+
+-->
+<ruleset name="Bidtellect.com" default_off='failed ruleset test'>
+
+	<target host="bidtellect.com" />
+	<target host="dsp.bidtellect.com" />
+	<target host="www.bidtellect.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

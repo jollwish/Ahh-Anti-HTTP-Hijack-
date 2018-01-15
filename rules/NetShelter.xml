@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ad.netshelter.net/ => https://ad.netshelter.net/: (6, 'Could not resolve host: ad.netshelter.net')
+
+	CDN buckets:
+
+		- s3.amazonaws.com/track.netshelter.net/
+		- track.nsredirector.com.s3.amazonaws.com
+
+			- track.netshelter.net
+
+
+	Nonfunctional domains:
+
+		- (www.)netshelter.com
+		- (www.)netshelter.net
+
+-->
+<ruleset name="NetShelter (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ad.netshelter.net" />
+	<target host="ad1.netshelter.net" />
+	<target host="ad2.netshelter.net" />
+	<target host="ad3.netshelter.net" />
+	<target host="ad4.netshelter.net" />
+	<target host="ad5.netshelter.net" />
+	<target host="track.netshelter.net" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

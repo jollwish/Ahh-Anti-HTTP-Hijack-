@@ -1,0 +1,17 @@
+<!--
+
+	Problematic hosts in *hemk.es:
+
+		- andre (mismatched)
+
+-->
+<ruleset name="Hemk.es">
+
+	<target host="hemk.es" />
+	<target host="www.hemk.es" />
+	<target host="panel.hemk.es" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

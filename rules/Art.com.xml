@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://art.com/ => https://art.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Other Art.com rulesets:
+
+		- Art_print_images.com.xml
+
+
+	Nonfunctional hosts in *art.com:
+
+		- blog ¹
+		- go ²
+
+	¹ Redirects to http
+	¹ Refused
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .art.com
+		- .atrack.art.com
+		- eu.art.com
+
+
+	Mixed content:
+
+		- Images on eu from cache1.artprintimages.com
+		- Ads on eu from cache1.artprintimages.com
+
+-->
+<ruleset name="Art.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="art.com" />
+	<target host="eu.art.com" />
+	<target host="www.art.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.art\.com$" name="^(?:CustSessionID|sessionid)$" /-->
+	<!--securecookie host="^\.atrack\.art\.com$" name="^E8L9$" /-->
+	<!--securecookie host="^eu\.art\.com$" name="^ipCountryCode$" /-->
+
+	<securecookie host="^(?:\.atrack|eu)?\.art\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

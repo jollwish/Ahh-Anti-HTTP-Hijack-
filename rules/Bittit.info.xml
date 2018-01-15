@@ -1,0 +1,5 @@
+<ruleset name="Bittit.info">
+  <target host="bittit.info" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

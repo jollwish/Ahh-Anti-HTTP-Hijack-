@@ -1,0 +1,11 @@
+<ruleset name="Kinfolk.com">
+
+	<target host="kinfolk.com" />
+	<target host="www.kinfolk.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

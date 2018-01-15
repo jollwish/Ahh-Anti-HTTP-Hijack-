@@ -1,0 +1,31 @@
+<!--
+	Nonfunctional domains:
+
+
+		- umanitoba.ca subdomains: 
+
+			- crscalprod1.cc
+			- fasprod.cc		(interrupted)
+
+		- (www.)umcommunityreport.ca	(ssl_error_rx_record_too_long)
+
+-->
+<ruleset name="University of Manitoba (partial)" platform="mixedcontent">
+
+	<target host="umanitoba.ca" />
+	<target host="aurora.umanitoba.ca" />
+	<target host="angel.cc.umanitoba.ca" />
+	<target host="baninb1.cc.umanitoba.ca" />
+	<target host="home.cc.umanitoba.ca" />
+	<target host="webapps.cc.umanitoba.ca" />
+	<target host="webware.cc.umanitoba.ca" />
+	<target host="wiki.cc.umanitoba.ca" />
+	<target host="iridium.umanitoba.ca" />
+	<target host="jump.umanitoba.ca" />
+	<target host="myuminfo.umanitoba.ca" />
+	<target host="www.umanitoba.ca" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

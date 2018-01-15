@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ma.mesaazcorruptionreport.com/ => https://ma.mesaazcorruptionreport.com/: (6, 'Could not resolve host: ma.mesaazcorruptionreport.com')
+Fetch error: http://ripoffreport.com/ => https://www.ripoffreport.com/: Too many redirects while fetching 'https://www.ripoffreport.com/'
+
+	!www: mismatched
+
+-->
+<ruleset name="Ripoff Report" default_off='failed ruleset test'>
+
+	<target host="ma.mesaazcorruptionreport.com" />
+	<target host="ripoffreport.com" />
+	<target host="*.ripoffreport.com" />
+
+
+	<securecookie host="^www\.ripoffreport\.com$" name=".+" />
+
+
+	<rule from="^http://ma\.mesaazcorruptionreport\.com/"
+		to="https://ma.mesaazcorruptionreport.com/" />
+
+	<rule from="^http://ripoffreport\.com/"
+		to="https://www.ripoffreport.com/" />
+
+	<rule from="^http://(verified|www)\.ripoffreport\.com/"
+		to="https://$1.ripoffreport.com/" />
+
+</ruleset>

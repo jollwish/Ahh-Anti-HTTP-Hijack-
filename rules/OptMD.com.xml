@@ -1,0 +1,12 @@
+<!--
+	(www.): refused
+
+-->
+<ruleset name="OptMD.com (partial)">
+
+	<target host="cdn-sec.optmd.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

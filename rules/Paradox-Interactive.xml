@@ -1,0 +1,25 @@
+<!--
+Invalid certificate:
+	career.paradoxplaza.com
+	humanresources.paradoxplaza.com
+
+Refused connection:
+	connect.paradoxplaza.com
+	holiday.paradoxplaza.com
+	old.paradoxplaza.com
+	oldforum.paradoxplaza.com
+	wiki.paradoxplaza.com
+	wikis.paradoxplaza.com
+-->
+<ruleset name="Paradox Plaza.com">
+	<target host="paradoxplaza.com"/>
+	<target host="www.paradoxplaza.com"/>
+	<target host="accounts.paradoxplaza.com"/>
+	<target host="api.paradoxplaza.com"/>
+	<target host="beta.paradoxplaza.com"/>
+	<target host="forum.paradoxplaza.com"/>
+	<target host="forumcontent.paradoxplaza.com"/>
+	<target host="support.paradoxplaza.com"/>
+
+	<rule from="^http:" to="https:"/>
+</ruleset>

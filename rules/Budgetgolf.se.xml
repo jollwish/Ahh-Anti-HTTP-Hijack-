@@ -1,0 +1,8 @@
+<ruleset name="Budgetgolf.se" >
+	<target host="budgetgolf.se" />
+	<target host="www.budgetgolf.se" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

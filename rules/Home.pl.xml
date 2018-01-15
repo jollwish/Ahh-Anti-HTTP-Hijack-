@@ -1,0 +1,21 @@
+<!--
+	Targets solely for wildcard cookies:
+
+		- *.akcje.home.pl
+		- *.panel.home.pl
+		- *.m.poczta.home.pl
+
+-->
+<ruleset name="home.pl">
+
+	<target host="home.pl" />
+	<target host="*.home.pl" />
+
+
+	<securecookie host="^(?:.+\.)?home\.pl$" name=".+" />
+
+
+	<rule from="^http://((?:akcje|hq|m|panel|(?:m\.)?poczta|pomoc|rozwijaj|www)\.)?home\.pl/"
+		to="https://$1home.pl/" />
+
+</ruleset>

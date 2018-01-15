@@ -1,0 +1,8 @@
+<ruleset name="DataVantage">
+
+	<target host="datavantage.com"/>
+	<target host="www.datavantage.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

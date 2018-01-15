@@ -1,0 +1,47 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.translations.com/ => https://www.translations.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://translations.com/ => https://www.translations.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Nonfunctional hosts in *translations.com:
+
+		- rips ᵈ
+
+	ᵈ Dropped
+
+
+	^translations.com: server sends no certificate chain, see https://whatsmychaincert.com
+
+
+	Mixed content:
+
+		- Images on www from cdn.transperfect.com ˡ
+		- Bug on www from a.analytics.yahoo.com *
+
+	ˡ Unsecurable <= redirect loop 
+	* See https://www.paulirish.com/2010/the-protocol-relative-url/
+
+-->
+<ruleset name="Translations.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="secureportal.translations.com" />
+	<target host="www.translations.com" />
+
+	<!--	Complications:
+				-->
+	<target host="translations.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://translations\.com/"
+		to="https://www.translations.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

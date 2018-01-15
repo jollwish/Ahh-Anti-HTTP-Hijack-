@@ -1,0 +1,49 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://forum.siteground.com/ => https://forum.siteground.com/: (60, 'SSL certificate problem: self signed certificate')
+
+	Problematic hosts in *siteground.com:
+
+		- forum *
+
+	* Blocks Tor users
+
+
+	Fully covered hosts in *siteground.com:
+
+		- (www.)?
+		- blog
+		- forum
+		- kb
+		- ua
+
+
+	Insecure cookies are set for these domains:
+
+		- .siteground.com
+
+-->
+<ruleset name="SiteGround.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="siteground.com" />
+	<target host="blog.siteground.com" />
+	<target host="forum.siteground.com" />
+	<target host="kb.siteground.com" />
+	<target host="ua.siteground.com" />
+	<target host="www.siteground.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.siteground\.com$" name="^PHPSESSID$"/-->
+
+	<securecookie host="^.*\.siteground\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

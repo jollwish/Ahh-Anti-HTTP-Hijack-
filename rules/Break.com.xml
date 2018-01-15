@@ -1,0 +1,8 @@
+<ruleset name="break.com">
+
+	<target host="media1.break.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

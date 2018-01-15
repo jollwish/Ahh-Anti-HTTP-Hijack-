@@ -1,0 +1,12 @@
+<ruleset name="MyScore180.com">
+
+	<target host="myscore180.com" />
+	<target host="www.myscore180.com" />
+
+
+	<securecookie host="^(?:[w.]*\.)?myscore180\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

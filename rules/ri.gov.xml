@@ -1,0 +1,18 @@
+<!--
+	Rhode Island Government
+
+
+-->
+<ruleset name="RI.gov">
+
+	<target host="ri.gov" />
+	<target host="www.ri.gov" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,25 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://schools.oxfordshire.gov.uk/ (200) => https://schools.oxfordshire.gov.uk/ (403)
+Non-2xx HTTP code: http://volunteering.oxfordshire.gov.uk/ (200) => https://volunteering.oxfordshire.gov.uk/ (403)
+Non-2xx HTTP code: http://winter.oxfordshire.gov.uk/ (200) => https://winter.oxfordshire.gov.uk/ (403)
+
+	For rules not causing false/broken MCB, see oxfordshire.gov.uk.xml.
+
+-->
+<ruleset name="Oxfordshire.gov.uk (false MCB)" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<target host="insight.oxfordshire.gov.uk" />
+	<target host="schools.oxfordshire.gov.uk" />
+	<target host="volunteering.oxfordshire.gov.uk" />
+	<target host="winter.oxfordshire.gov.uk" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://marsocial.com/ => https://marsocial.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.marsocial.com/ => https://www.marsocial.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Insecure cookies are set for these domains and hosts:
+
+		- marsocial.com
+		- .marsocial.com
+
+
+	Mixed content:
+
+		- Ads from ads-by.yieldselect.com *
+
+	* Not secured by us <= missing certificate chain
+
+-->
+<ruleset name="MARSocial.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="marsocial.com" />
+	<target host="www.marsocial.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^marsocial\.com$" name="^(invite-anyone|wfvt_\d+)$" /-->
+	<!--securecookie host="^\.marsocial\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.?marsocial\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

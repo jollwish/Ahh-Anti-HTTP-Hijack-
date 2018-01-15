@@ -1,0 +1,11 @@
+<!--
+	GiNaC.de: GiNaC is Not a CAS
+-->
+<ruleset name="GiNaC.de">
+	<target host="ginac.de" />
+	<target host="www.ginac.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,16 @@
+<!--
+	American Macular Degeneration Foundation
+
+
+	^: cert only matches www
+
+-->
+<ruleset name="Macular.org">
+
+	<target host="macular.org" />
+	<target host="www.macular.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see Transformative_Works.org.xml.
+
+-->
+<ruleset name="Transformative Works.org (mismatched)" default_off="mismatched">
+
+	<target host="elections.transformativeworks.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

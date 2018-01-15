@@ -1,0 +1,20 @@
+<!--
+	Fully covered subdomains:
+
+		- app
+		- index.app
+		- integrator
+		- qa
+
+-->
+<ruleset name="cloudset.net">
+
+	<target host="app.cloudset.net" />
+	<target host="index.app.cloudset.net" />
+	<target host="integrator.cloudset.net" />
+	<target host="qa.cloudset.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://statistik-gallup.net/ => https://statistik-gallup.net/: (7, 'Failed to connect to statistik-gallup.net port 443: Connection refused')
+
+	For other TNS coverage, see TNS-Global.xml
+
+
+	Nonfunctional:
+
+		- tnsdk.spring-tns.net
+		- (www.)tns-gallup.dk
+		- kt.tns-gallup.dk *
+
+	* Refused
+
+-->
+<ruleset name="TNS Gallup (partial)" default_off='failed ruleset test'>
+
+	<target host="statistik-gallup.net" />
+
+
+	<securecookie host="^statistik-gallup.net$" name=".+" />
+
+
+	<!--	Cert only matches /stat...	-->
+	<rule from="^http://www\.statistik-gallup\.net/"
+		to="https://statistik-gallup.net/" />
+
+	<!--	Sets tracking beacons, e.g.:
+
+	 	https://statistik-gallup.net/V11***billetnet_dk/dk/ISO-8859-15/tmsec=billetnet_dk/
+				-->
+	<rule from="^http://statistik-gallup\.net/"
+		to="https://statistik-gallup.net/" />
+</ruleset>

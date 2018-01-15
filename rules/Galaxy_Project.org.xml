@@ -1,0 +1,8 @@
+<ruleset name="Galaxy Project.org (partial)">
+
+	<target host="wiki.galaxyproject.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

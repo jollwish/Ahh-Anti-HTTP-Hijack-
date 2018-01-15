@@ -1,0 +1,16 @@
+<!--
+	For other Pirate Party coverage, see PirateParty.xml.
+-->
+<ruleset name="US Pirates.org">
+
+	<target host="uspirates.org" />
+	<target host="www.uspirates.org" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

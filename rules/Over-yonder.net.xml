@@ -1,0 +1,12 @@
+<!--
+	^over-yonder.net doesn't exist.
+
+-->
+<ruleset name="over-yonder.net">
+
+	<target host="www.over-yonder.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

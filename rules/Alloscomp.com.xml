@@ -1,0 +1,18 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - www.alloscomp.com
+-->
+<ruleset name="Alloscomp.com">
+	<target host="alloscomp.com" />
+	<target host="www.alloscomp.com" />
+	<target host="tron.alloscomp.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.alloscomp\.com/"
+			to="https://alloscomp.com/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

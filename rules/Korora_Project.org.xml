@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://archive.kororaproject.org/ => https://archive.kororaproject.org/: (51, "SSL: no alternative certificate subject name matches target host name 'archive.kororaproject.org'")
+
+	www.kororaproject.org: Mismatched
+
+-->
+<ruleset name="Korora Project.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="kororaproject.org" />
+	<target host="archive.kororaproject.org" />
+
+	<!--	Complications:
+				-->
+	<target host="www.kororaproject.org" />
+
+
+	<rule from="^http://www\.kororaproject\.org/"
+		to="https://kororaproject.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,33 @@
+<!--
+	Other Etarget rulesets:
+
+		- Etarget.hu.xml
+		- Etarget.ro.xml
+		- Etarget.sk.xml
+		- Etarget_net.com.xml
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- www.etarget.cz
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Etarget.cz">
+
+	<target host="etarget.cz" />
+	<target host="www.etarget.cz" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.etarget\.cz$" name="^SESS$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

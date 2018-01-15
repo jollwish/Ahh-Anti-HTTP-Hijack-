@@ -1,0 +1,13 @@
+<!--
+	For other Oracle coverage, see Oracle.xml.
+
+-->
+<ruleset name="atgsvcs.com">
+
+	<target host="rules.atgsvcs.com" />
+	<target host="static.atgsvcs.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

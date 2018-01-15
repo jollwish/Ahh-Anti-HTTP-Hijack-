@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://drchrono.com/ => https://drchrono.com/: Too many redirects while fetching 'https://drchrono.com/'
+
+	Insecure cookies are set for these hosts:
+
+		- drchrono.com
+		- www.drchrono.com
+
+-->
+<ruleset name="Drchrono.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="drchrono.com" />
+	<target host="www.drchrono.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?drchrono\.com$" name="^csrftoken$" /-->
+
+	<securecookie host="^(?:www\.)?drchrono\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

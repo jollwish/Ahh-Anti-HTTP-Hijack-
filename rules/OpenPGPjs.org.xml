@@ -1,0 +1,7 @@
+<ruleset name="OpenPGPjs.org">
+
+	<target host="openpgpjs.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

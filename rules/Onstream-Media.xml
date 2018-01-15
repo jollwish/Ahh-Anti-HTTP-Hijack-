@@ -1,0 +1,20 @@
+<!--
+	Other Onstream Media rulesets:
+
+		- Onstream_secure.com.xml
+
+
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="Onstream Media (partial)" default_off="mismatched">
+
+	<target host="sas-origin.onstreammedia.com" />
+
+
+	<!--	Akamai	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

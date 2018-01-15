@@ -1,0 +1,20 @@
+<!--
+	Invalid certificate:
+		pyweek.org
+		media.pyweek.org
+		pyggy.pyweek.org
+		media.pyggy.pyweek.org
+
+-->
+<ruleset name="PyWeek.org">
+
+	<target host="pyweek.org" />
+	<target host="www.pyweek.org" />
+
+	<rule from="^http://www\.pyweek\.org/"
+		to="https://pyweek.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

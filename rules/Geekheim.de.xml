@@ -1,0 +1,8 @@
+<ruleset name="Geekheim.de" default_off="self-signed">
+
+	<target host="frank.geekheim.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

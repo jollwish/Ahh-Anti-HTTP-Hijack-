@@ -1,0 +1,68 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://devwiki.pfsense.org/ => https://devwiki.pfsense.org/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional subdomains:
+
+		- various downloads URLs not listed below 
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- blog
+		- devwiki
+		- doc
+		- files
+		- forum
+		- lists
+		- portal
+		- redmine
+		- snapshots
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- forum.pfsense.org
+		- redmine.pfsense.org
+
+
+	Mixed content:
+
+		- css on blog from fonts.googleapis.com *
+
+		- Images on (www.) from www *
+
+	* Secured by us
+
+-->
+<ruleset name="pfSense.org (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="pfsense.org" />
+	<target host="blog.pfsense.org" />
+	<target host="devwiki.pfsense.org" />
+	<target host="doc.pfsense.org" />
+	<target host="files.pfsense.org" />
+	<target host="forum.pfsense.org" />
+	<target host="lists.pfsense.org" />
+	<target host="portal.pfsense.org" />
+	<target host="redmine.pfsense.org" />
+	<target host="snapshots.pfsense.org" />
+	<target host="www.pfsense.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^forum\.pfsense\.org$" name="^PHPSESSID$" /-->
+	<!--securecookie host="^redmine\.pfsense\.org$" name="^_redmine_session$" /-->
+
+	<securecookie host=".+\.pfsense\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

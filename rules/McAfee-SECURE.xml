@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www2.mcafeesecure.com/ => https://www2.mcafeesecure.com/: (6, 'Could not resolve host: www2.mcafeesecure.com')
+
+	For other Intel coverage, see Intel.xml.
+
+	Problematic domains
+		Timeout
+			- email.mcafeesecure.com
+		Mismatch
+			- email-cio.mcafeesecure.com
+		Incomplete certificate chain
+			- blog.mcafeesecure.com
+-->
+<ruleset name="McAfeeSECURE.com" default_off='failed ruleset test'>
+	<target host="mcafeesecure.com" />
+	<target host="www.mcafeesecure.com" />
+	<target host="www2.mcafeesecure.com" />
+	<target host="images.mcafeesecure.com" />
+		<test url="http://images.mcafeesecure.com/static/css/fonts.css" />
+	<target host="support.mcafeesecure.com" />
+
+	<securecookie host="^(support\.|www\.|www2\.)?mcafeesecure\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

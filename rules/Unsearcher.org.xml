@@ -1,0 +1,9 @@
+<ruleset name="Unsearcher.org">
+
+	<target host="unsearcher.org" />
+	<target host="www.unsearcher.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

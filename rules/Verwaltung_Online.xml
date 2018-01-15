@@ -1,0 +1,32 @@
+<!--
+	Other bund.de rulesets:
+ 	- Federal-Office-for-Information-Security.xml
+	- Bundesnachrichtendienst.xml
+	- Bundesministerium_des_Innern.xml
+	- Federal_Office_of_Administration.xml
+	- bbk.bund.de.xml
+	- Umweltbundesamt.de.xml
+	- Bundesamt_fuer_Strahlenschutz.xml
+	- Bundesamt_fuer_Kartographie_und_Geodaesie.xml
+	- bescha.bund.de.xml
+	- bbsr.bund.de.xml
+	- bakoev.bund.de.xml
+	- lernplattform-bakoev.bund.de.xml
+	- baks.bund.de.xml
+	- bbr.bund.de.xml
+	- bag.bund.de.xml
+	- bfe.bund.de.xml
+	- bvl.bund.de.xml
+-->
+<ruleset name="Verwaltung Online">
+
+	<target host="bund.de" />
+	<target host="www.bund.de" />
+	<target host="service.bund.de" />
+	<target host="www.service.bund.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

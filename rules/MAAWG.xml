@@ -1,0 +1,6 @@
+<ruleset name="MAAWG">
+  <target host="maawg.org" />
+  <target host="www.maawg.org" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

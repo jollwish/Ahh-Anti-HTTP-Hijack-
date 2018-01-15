@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see Viddler.com.xml.
+
+-->
+<ruleset name="Viddler.com (mismatches)" default_off="mismatched">
+
+	<target host="blog.viddler.com" />
+
+
+	<securecookie host="^blog\.viddler\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

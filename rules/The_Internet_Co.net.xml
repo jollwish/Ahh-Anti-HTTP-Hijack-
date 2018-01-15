@@ -1,0 +1,8 @@
+<ruleset name="The Internet Co.net">
+
+	<target host="theinternetco.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

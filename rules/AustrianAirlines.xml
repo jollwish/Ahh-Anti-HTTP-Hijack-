@@ -1,0 +1,6 @@
+<ruleset name="Austrian Airlines">
+  <target host="austrian.com" />
+  <target host="www.austrian.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

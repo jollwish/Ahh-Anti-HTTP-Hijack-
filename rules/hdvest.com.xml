@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://why.hdvest.com/ => https://why.hdvest.com/: (51, "SSL: no alternative certificate subject name matches target host name 'why.hdvest.com'")
+Fetch error: http://bcp.hdvlink.com/ => https://bcp.hdvlink.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Problematic domains:
+		- my.hdvest.com			(incomplete cert chain)
+		- (my|www).myhdvest.com		(incomplete cert chain)
+-->
+<ruleset name="HD Vest" default_off='failed ruleset test'>
+	<target host=    "hdvest.com" />
+	<target host="www.hdvest.com" />
+	<target host="why.hdvest.com" />
+	<target host=        "hdvlink.com" />
+	<target host=    "bcp.hdvlink.com" />
+	<target host="compass.hdvlink.com" />
+	<target host=  "login.hdvlink.com" />
+	<target host=     "vw.hdvlink.com" />
+	<target host=    "www.hdvlink.com" />
+
+	<securecookie host="www\.hdvest\.com$" name=".+" />
+	<securecookie host=".*\.hdvlink\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

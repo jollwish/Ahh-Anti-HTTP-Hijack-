@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://otumm.com/ => https://otumm.com/: (60, 'SSL certificate problem: self signed certificate')
+Fetch error: http://www.otumm.com/ => https://otumm.com/: (60, 'SSL certificate problem: self signed certificate')
+
+	www.otumm.com: Mismatched
+
+
+	Insecure cookies are set for these otumm.com:
+
+		- otumm.com
+
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Otumm.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="otumm.com" />
+
+	<!--	Complications:
+				-->
+	<target host="www.otumm.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^otumm\.com$" name="^addis_es$" /-->
+
+	<securecookie host="^otumm\.com$" name=".+" />
+
+
+	<rule from="^http://www\.otumm\.com/"
+		to="https://otumm.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

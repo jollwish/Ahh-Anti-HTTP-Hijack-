@@ -1,0 +1,26 @@
+<!--
+ 	Problematic hosts in *twittercounter.com:
+ 
+ 		- help ᵐ
+		- press ᵐ
+		- styleguide ³
+ 
+	ᵐ Mismatched
+	³: Serves different content on http/https
+
+-->
+<ruleset name="Twitter Counter">
+
+	<target host="twittercounter.com" />
+	<target host="api.twittercounter.com" />
+	<target host="auth.twittercounter.com" />
+	<target host="blog.twittercounter.com" />
+	<target host="button.twittercounter.com" />
+	<target host="cdn.twittercounter.com" />
+	<target host="static.twittercounter.com" />
+	<target host="www.twittercounter.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

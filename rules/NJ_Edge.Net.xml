@@ -1,0 +1,16 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^		(redirects to lists, valid cert)
+		- www		(times out)
+
+-->
+<ruleset name="NJ Edge.Net (partial)">
+
+	<target host="federation.njedge.net" />
+	<target host="lists.njedge.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

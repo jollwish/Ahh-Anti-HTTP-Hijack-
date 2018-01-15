@@ -1,0 +1,60 @@
+<!--
+
+	Nonfunctional hosts in *centrify.com:
+
+		- community ʳ
+
+	ʳ Refused
+
+
+	Problematic hosts in *centrify.com:
+
+		- uptime ᵐ	(StatusPage.io)
+
+	ᵐ Mismatched
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .partners.centrify.com
+		- www.centrify.com
+		- .www.centrify.com
+
+
+	Mixed content:
+
+		- css on kibble from fonts.googleapis.com ˢ
+
+	ˢ Secured by us
+
+-->
+<ruleset name="Centrify.com">
+
+	<target host="centrify.com" />
+	<target host="www.centrify.com" />
+	<target host="blog.centrify.com" />
+	<target host="cloud.centrify.com" />
+	<target host="developer.centrify.com" />
+	<target host="docs.centrify.com" />
+	<target host="edge.centrify.com" />
+	<target host="emea.centrify.com" />
+	<target host="info.centrify.com" />
+	<target host="kibble.centrify.com" />
+	<target host="dmu.my.centrify.com" />
+	<target host="otps.my.centrify.com" />
+	<target host="partners.centrify.com" />
+	<target host="uptime.centrify.com" />
+
+		<!--	Mixed css from fonts.googleapis.com:
+								-->
+		<!--test url="http://kibble.centrify.com/vfslow/lib/docs/adminref/cloudhelp/SupportedDevices.html" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://uptime\.centrify\.com/"
+		to="https://centrify.statuspage.io/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

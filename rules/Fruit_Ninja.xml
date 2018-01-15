@@ -1,0 +1,19 @@
+<ruleset name="Fruit Ninja.com">
+	<target host="fruitninja.com" />
+	<target host="www.fruitninja.com" />
+	<target host="academy.fruitninja.com" />
+	<target host="anniversary.fruitninja.com" />
+	<target host="beta.fruitninja.com" />
+	<target host="dev.beta.fruitninja.com" />
+	<target host="fx.fruitninja.com" />
+	<target host="kinect.fruitninja.com" />
+	<target host="r.fruitninja.com" />
+	<target host="shop.fruitninja.com" />
+	<target host="store.fruitninja.com" />
+	<target host="vr.fruitninja.com" />
+	<target host="dev.vr.fruitninja.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

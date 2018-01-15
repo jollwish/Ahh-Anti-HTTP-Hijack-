@@ -1,0 +1,17 @@
+<ruleset name="Connect.me">
+
+	<!--	Complications:
+                  The domain connect.me is
+                  currently serving an incomplete
+                  certificate chain.
+				-->
+  <target host="www.connect.me"/>
+
+
+	<!--	Redirect keeps path and args,
+		but not forward slash:
+					-->
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

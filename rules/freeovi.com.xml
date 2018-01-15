@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.freeovi.com/ => https://www.freeovi.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.freeovi.com'")
+Fetch error: http://freeovi.com/ => https://www.freeovi.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.freeovi.com'")
+
+	^freeovi.com: Refused
+
+-->
+<ruleset name="free OVI.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.freeovi.com" />
+
+	<!--	Complications:
+				-->
+	<target host="freeovi.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://freeovi\.com/"
+		to="https://www.freeovi.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

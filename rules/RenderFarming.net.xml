@@ -1,0 +1,25 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://renderfarming.net/ => https://renderfarming.net/: (51, "SSL: no alternative certificate subject name matches target host name 'renderfarming.net'")
+
+
+	Domains covered by certificate:
+	- renderfarming.net
+	- burp.renderfarming.net
+
+	Invalid:
+	- www.renderfarming.net
+
+-->
+<ruleset name="RenderFarming.net" default_off='failed ruleset test'>
+
+	<target host="burp.renderfarming.net" />
+	<target host="renderfarming.net" />
+
+	<securecookie host="^burp\.renderfarming\.net$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>
+

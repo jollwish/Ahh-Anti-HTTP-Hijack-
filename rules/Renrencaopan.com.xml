@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://renrencaopan.com/ => https://renrencaopan.com/: (6, 'Could not resolve host: renrencaopan.com')
+Fetch error: http://www.renrencaopan.com/ => https://www.renrencaopan.com/: (6, 'Could not resolve host: www.renrencaopan.com')
+
+	Insecure cookies are set for these hosts:
+
+		- renrencaopan.com
+		- www.renrencaopan.com
+
+-->
+<ruleset name="renrencaopan.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="renrencaopan.com" />
+	<target host="www.renrencaopan.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?renrencaopan\.com$" name="^(?:SERVERID|koa:sess|koa:sess\.sig)$" /-->
+
+	<securecookie host="^(?:www\.)?renrencaopan\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

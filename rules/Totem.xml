@@ -1,0 +1,33 @@
+<!--
+	CDN buckets:
+
+		- s3.amazonaws.com/totem_production/
+
+-->
+<ruleset name="Totem">
+
+	<target host="totemapp.com" />
+	<target host="*.totemapp.com" />
+
+	<exclusion pattern="^http://help\.totemapp\.com/" />
+
+		<test url="http://help.totemapp.com/help_center" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(www\.)?totemapp\.com/"
+		to="https://www.totemapp.com/"/>
+
+	<!--	Clients have unique subdomains.	-->
+	<rule from="^http://([\w\-]+)\.totemapp\.com/"
+		to="https://$1.totemapp.com/"/>
+
+		<test url="http://codeproof.totemapp.com/" />
+		<test url="http://gnupg.totemapp.com/" />
+		<test url="http://ingredientmatcher.totemapp.com/" />
+	
+	<!-- Invalid certificate
+		<test url="http://www.fracture.totemapp.com/" />
+	-->
+
+</ruleset>

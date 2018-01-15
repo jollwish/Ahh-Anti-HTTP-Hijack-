@@ -1,0 +1,28 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- as2test.bm.ru
+
+		SSL peer certificate was not OK:
+		- www.mos-broker.bm.ru
+		- realestate.bm.ru
+		- soccard.bm.ru
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- hce.bm.ru
+-->
+<ruleset name="bm.ru">
+	<target host="bm.ru" />
+	<target host="www.bm.ru" />
+	<target host="anketa.bm.ru" />
+	<target host="anketa-ipoteka.bm.ru" />
+	<target host="blagodarim.bm.ru" />
+	<target host="bmmobile.bm.ru" />
+	<target host="m.bm.ru" />
+	<target host="mobile.bm.ru" />
+	<target host="online.bm.ru" />
+	<target host="partner.bm.ru" />
+	<target host="ssl.bm.ru" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

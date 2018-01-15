@@ -1,0 +1,38 @@
+<!--
+	For other Wolfram Research coverage:
+
+		- Wolfram_Alpha.xml
+		- Wolfram_CDN.com.xml
+		- Wolframcloud.com.xml
+
+	Problematic hosts in *wolfram.com:
+
+		- challenges ᵐ
+		- datarepository ᵐ
+		- mvid ᵐ
+		- open.exploration ᵐ
+		- open.sandbox ᵐ
+		- streamingmedia (timeout)
+
+	ᵐ Mismatched
+
+-->
+<ruleset name="Wolfram (partial)">
+
+	<target host="wolfram.com" />
+	<target host="www.wolfram.com" />
+	<target host="account.wolfram.com" />
+	<target host="amoeba.wolfram.com" />
+	<target host="billing.wolfram.com" />
+	<target host="calendar.wolfram.com" />
+	<target host="community.wolfram.com" />
+	<target host="education.wolfram.com" />
+	<target host="reference.wolfram.com" />
+	<target host="user.wolfram.com" />
+
+	<securecookie host="^user\.wolfram\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

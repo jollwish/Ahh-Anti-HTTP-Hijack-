@@ -1,0 +1,25 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://insurance.valleyfirst.com/ => https://insurance.valleyfirst.com/: (35, 'Unknown SSL protocol error in connection to insurance.valleyfirst.com:443 ')
+
+	Incomplete certificate chain:
+		- dashband.valleyfirst.com
+-->
+
+<ruleset name="Valley First Credit Union" default_off='failed ruleset test'>
+	<target host="valleyfirst.com" />
+	<target host="www.valleyfirst.com" />
+	<target host="autodiscover.valleyfirst.com" />
+	<target host="insurance.valleyfirst.com" />
+	<target host="keepingitsimple.valleyfirst.com" />
+	<target host="lyncdiscover.valleyfirst.com" />
+	<target host="mdws.valleyfirst.com" />
+	<target host="meet.valleyfirst.com" />
+	<target host="refer.valleyfirst.com" />
+	<target host="webmail.valleyfirst.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

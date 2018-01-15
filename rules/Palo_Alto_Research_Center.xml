@@ -1,0 +1,14 @@
+<ruleset name="Palo Alto Research Center">
+
+	<target host="blogs.parc.com" />
+	<target host="www.parc.com" />
+
+
+	<securecookie host="^blogs\.parc\.com$" name=".+" />
+
+
+	<!--	^parc.com doesn't exist.
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

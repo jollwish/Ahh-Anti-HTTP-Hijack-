@@ -1,0 +1,40 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://talktalkbusiness.co.uk/ => https://talktalkbusiness.co.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://myaccount.talktalkbusiness.co.uk/ => https://myaccount.talktalkbusiness.co.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.talktalkbusiness.co.uk/ => https://www.talktalkbusiness.co.uk/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other TalkTalk coverage, see TalkTalk.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- blog.talktalkbusiness.co.uk
+		- blogmaintenance.talktalkbusiness.co.uk
+		- www.talktalkbusiness.co.uk
+
+-->
+<ruleset name="TalkTalk Business.co.uk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="talktalkbusiness.co.uk" />
+	<target host="blog.talktalkbusiness.co.uk" />
+	<target host="blogmaintenance.talktalkbusiness.co.uk" />
+	<target host="myaccount.talktalkbusiness.co.uk" />
+	<target host="www.talktalkbusiness.co.uk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^blog(?:maintenance)?\.talktalkbusiness\.co\.uk$" name="^ISAWPLB\{[\dA-F-]+\}$" /-->
+	<!--securecookie host="^www\.talktalkbusiness\.co\.uk$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:"/>
+
+</ruleset>

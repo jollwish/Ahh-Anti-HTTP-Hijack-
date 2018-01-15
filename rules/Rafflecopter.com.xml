@@ -1,0 +1,6 @@
+<ruleset name="Rafflecopter.com">
+  <target host="rafflecopter.com" />
+  <target host="www.rafflecopter.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

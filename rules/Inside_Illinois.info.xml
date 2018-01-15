@@ -1,0 +1,19 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://insideillinois.info/ => https://insideillinois.info/: (28, 'Connection timed out after 20001 milliseconds')
+
+	www.insideillinois.info doesn't exist.
+
+-->
+<ruleset name="Inside Illinois.info" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="insideillinois.info" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

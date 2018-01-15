@@ -1,0 +1,66 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://orange.co.il/ => https://www.orange.co.il/: (51, "SSL: no alternative certificate subject name matches target host name 'www.orange.co.il'")
+Fetch error: http://www.orange.co.il/ => https://www.orange.co.il/: (51, "SSL: no alternative certificate subject name matches target host name 'www.orange.co.il'")
+Fetch error: http://orange.ch/ => https://www.orange.ch/: (7, 'Failed to connect to www.orange.ch port 443: Connection timed out')
+
+	Although shop.orange.co.uk supports ssl, on
+	some pages it keeps falling back to http.
+
+
+	CDN buckets:
+
+		- melt-orange-live-orangedigital.s3.amazonaws.com
+
+
+	Nonfunctional domains:
+
+		- (www.)orange.co.uk
+
+			- Used to work, but started redirecting to http.
+
+			  Thanks Orange!
+
+		- www2.orange.co.uk
+
+			- cert: www.orange.co.uk
+			- Redirects to www
+			- 404s on www
+
+		- devicehelp-*.orange.ch,
+		  www.blackberry.orange.ch,
+		  www2.orange.ch
+			- mismatch
+
+		- dsl.orange.ch,
+		  img.orange.ch,
+		  mba.fixed.orange.ch
+			- connection failed
+
+-->
+<ruleset name="Orange" default_off='failed ruleset test'>
+
+	<target host="orange.co.il" />
+	<target host="www.orange.co.il" />
+	<target host="*.orange.co.uk" />
+	<target host="orange.ch"/>
+	<target host="*.orange.ch"/>
+
+
+	<securecookie host="^(?:kareena|shop)\.orange\.co\.uk$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?orange\.co\.il/"
+		to="https://www.orange.co.il/" />
+
+	<rule from="^http://(kareena|services|shop|wassup|web)\.orange\.co\.uk/"
+		to="https://$1.orange.co.uk/" />
+		
+	<rule from="^http://(?:www\.)?orange\.ch/"
+		to="https://www.orange.ch/"/>
+
+	<rule from="^http://(apps|community|mobilesettings|my|rbt|shop)\.orange\.ch/"
+		to="https://$1.orange.ch/" />
+
+</ruleset>

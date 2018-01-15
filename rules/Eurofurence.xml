@@ -1,0 +1,7 @@
+<ruleset name="Eurofurence">
+  <target host="forum.eurofurence.org" />
+
+  <securecookie host="^forum\.eurofurence\.org$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

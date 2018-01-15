@@ -1,0 +1,40 @@
+<!--
+	Runnymede Borough Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- butlerdata.runnymede.gov.uk
+		- butlertestdata.runnymede.gov.uk
+		- documents.runnymede.gov.uk
+		- freja.runnymede.gov.uk
+		- mail.runnymede.gov.uk
+		- planning.runnymede.gov.uk
+		- ww4.runnymede.gov.uk
+
+		SSL peer certificate was not OK:
+		- myaccount.runnymede.gov.uk
+		- ww2.runnymede.gov.uk
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- myforms.runnymede.gov.uk
+		- ww5.runnymede.gov.uk
+
+		Incomplete certificate chain error:
+		- parking.runnymede.gov.uk
+
+		Mixed content blocking (MCB) triggered:
+		- petitions.runnymede.gov.uk
+-->
+<ruleset name="Runnymede.gov.uk (partial)">
+	<target host="runnymede.gov.uk" />
+	<target host="www.runnymede.gov.uk" />
+	<target host="m.runnymede.gov.uk" />
+	<target host="maps.runnymede.gov.uk" />
+	<target host="payments.runnymede.gov.uk" />
+	<target host="remote.runnymede.gov.uk" />
+	<target host="webmail.runnymede.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

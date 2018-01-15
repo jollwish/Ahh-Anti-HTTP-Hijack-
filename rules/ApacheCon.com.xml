@@ -1,0 +1,25 @@
+<!--
+	For other Apache coverage, see Apache.xml.
+
+	Mismatched hosts in *apachecon.com:
+
+		- na
+		- www.na
+		- eu
+		- eu12
+		- na11
+		- na13
+		- us
+		- www.us
+
+-->
+<ruleset name="ApacheCon.com">
+
+	<target host="apachecon.com" />
+	<target host="www.apachecon.com" />
+	<target host="archive.apachecon.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

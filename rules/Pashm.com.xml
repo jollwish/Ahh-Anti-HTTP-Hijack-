@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pashm.com/ => https://pashm.com/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.pashm.com/ => https://pashm.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- pashm.com
+		- www.pashm.com
+
+	Problematic subdomains:
+
+		- www (redirects to http)
+
+-->
+<ruleset name="Pashm.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="pashm.com" />
+	<target host="www.pashm.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?pashm\.com$" name="^X-Mapping-[a-z]}$" /-->
+
+	<securecookie host="^(?:www\.)?pashm\.com$" name=".+" />
+
+
+	<rule from="^http://www\.pashm\.com/"
+		to="https://pashm.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="Comenity.net (partial)">
+
+	<target host="c.comenity.net" />
+	<target host="d.comenity.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

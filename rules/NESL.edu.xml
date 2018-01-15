@@ -1,0 +1,20 @@
+<!--
+	New England School of Law-Boston
+
+
+	Mixed content:
+
+		- favicon from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="NESL.edu">
+
+	<target host="nesl.edu" />
+	<target host="www.nesl.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

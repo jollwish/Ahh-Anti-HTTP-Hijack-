@@ -1,0 +1,13 @@
+<ruleset name="Ubuntu-FR.org (partial)">
+	<target host="ubuntu-fr.org" />
+	<target host="www.ubuntu-fr.org" />
+	<target host="doc.ubuntu-fr.org" />
+	<target host="forum.ubuntu-fr.org" />
+	<target host="planet.ubuntu-fr.org" />
+	<target host="tour.ubuntu-fr.org" />
+	<target host="www-static.ubuntu-fr.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

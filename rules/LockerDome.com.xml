@@ -1,0 +1,17 @@
+<!--
+	These altnames don't exist:
+
+		- www.cdn2.lockerdome.com
+
+-->
+<ruleset name="LockerDome.com">
+
+	<target host="lockerdome.com" />
+	<target host="cdn.lockerdome.com" />
+	<target host="cdn2.lockerdome.com" />
+	<target host="www.lockerdome.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

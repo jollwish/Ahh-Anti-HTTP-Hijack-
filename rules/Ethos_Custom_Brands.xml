@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ethoscustombrands.com/ => https://ethoscustombrands.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+-->
+<ruleset name="Ethos Custom Brands" default_off='failed ruleset test'>
+
+	<target host="ethoscustombrands.com" />
+	<target host="www.ethoscustombrands.com" />
+
+
+	<securecookie host="^(?:www)?\.ethoscustombrands\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,26 @@
+<!--
+	Refused:
+		normalesup.org
+		www.mail.normalesup.org
+		semaphore.normalesup.org
+
+	Bad certificate:
+		phare.normalesup.org
+
+	No working URL known:
+		www.phare.normalesup.org
+		phare4.normalesup.org
+ 		phare5.normalesup.org
+-->
+<ruleset name="normalesup.org">
+
+	<target host="normalesup.org" />
+	<target host="www.normalesup.org" />
+	<target host="phare.normalesup.org" />
+
+	<rule from="^http://(phare\.)?normalesup\.org/"
+			to="https://www.normalesup.org/" />
+	<rule from="^http:"
+		  	to="https:" />
+
+</ruleset>

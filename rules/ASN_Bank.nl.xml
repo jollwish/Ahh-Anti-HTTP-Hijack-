@@ -1,0 +1,13 @@
+<ruleset name="ASN Bank.nl (partial)">
+
+	<target host="asnbank.nl" />
+	<target host="www.asnbank.nl" />
+	<target host="nieuws.asnbank.nl" />
+
+	<securecookie host="^\.www\.asnbank\.nl$" name=".+" />
+	<securecookie host="^nieuws\.asnbank\.nl$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

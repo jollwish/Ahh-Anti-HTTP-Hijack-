@@ -1,0 +1,25 @@
+<!--
+	Mismatch:
+		api.contextly.com
+		blog.contextly.com
+		press.contextly.com
+		www.rest.contextly.com
+-->
+<ruleset name="Contextly.com">
+	<target host="contextly.com" />
+	<target host="www.contextly.com" />
+	<target host="app.contextly.com" />
+	<target host="contextlysitescripts.contextly.com" />
+	<target host="dev.contextly.com" />
+	<target host="rest.contextly.com" />
+		<test url="http://rest.contextly.com/robots.txt" />
+	<target host="support.contextly.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://contextlysitescripts\.contextly\.com/"
+		to="https://c714015.ssl.cf2.rackcdn.com/" />
+		<test url="http://contextlysitescripts.contextly.com/kit/assets/2.4/widgets--page-view.css" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

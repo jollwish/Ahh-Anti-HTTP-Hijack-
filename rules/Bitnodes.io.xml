@@ -1,0 +1,8 @@
+<ruleset name="Bitnodes.io (partial)">
+
+	<target host="getaddr.bitnodes.io" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

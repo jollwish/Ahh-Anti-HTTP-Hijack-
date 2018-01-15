@@ -1,0 +1,20 @@
+<!--
+
+	Other SecDev rulesets:
+
+		- SecDev.ca.xml
+
+	Problematic hosts in *secdev.com:
+
+		- status (expired)
+
+-->
+<ruleset name="SecDev.com">
+
+	<target host="secdev.com" />
+	<target host="www.secdev.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

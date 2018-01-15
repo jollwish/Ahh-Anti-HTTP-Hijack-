@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://iproduction.com/ => https://www.iproduction.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic subdomains:
+
+		- ^ 	(cert only matches *.iproduction.com)
+		- cdn	(403; mismatched, CN: *.pantherssl.com)
+
+-->
+<ruleset name="IProduction" default_off='failed ruleset test'>
+
+	<target host="iproduction.com" />
+	<target host="*.iproduction.com" />
+
+
+	<securecookie host="^(?:www)?\.iproduction\.com$" name=".+" />
+
+
+	<rule from="^http://(?:cdn\.|www\.)?iproduction\.com/"
+		to="https://www.iproduction.com/" />
+
+</ruleset>

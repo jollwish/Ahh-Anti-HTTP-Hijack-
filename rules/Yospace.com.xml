@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- demo *
+
+	* Shows default Sun Web Stack page, expired 2010-09-04
+
+-->
+<ruleset name="Yospace.com (partial)">
+
+	<target host="cds1.yospace.com" />
+
+
+	<securecookie host="^cds1\.yospace\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

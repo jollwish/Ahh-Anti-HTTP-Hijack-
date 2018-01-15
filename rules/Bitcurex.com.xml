@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.bitcurex.com/ => https://www.bitcurex.com/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+
+	For other Digital Future coverage, see Digital-Future.it.xml.
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- eur
+		- pln
+
+-->
+<ruleset name="Bitcurex.com" default_off='failed ruleset test'>
+
+	<target host="bitcurex.com" />
+	<target host="eur.bitcurex.com" />
+	<target host="pln.bitcurex.com" />
+	<target host="www.bitcurex.com" />
+
+
+	<securecookie host="^(?:eur|pln)?\.bitcurex\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

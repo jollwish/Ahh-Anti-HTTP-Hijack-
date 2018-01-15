@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blogads.com/ => https://web.blogads.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For problematic rules, see Pressflex-self-signed.xml.
+
+
+	Nonfunctional domains:
+
+		- blogads.com subdomains:
+
+			- cache	(cert: gp1.wac.edgecastcdn.net; 404)
+			- i	(ditto)
+			- st
+			- z	(ssl_error_rx_record_too_long)
+
+		- adserver.pressflex.com	(self-signed; 404)
+
+-->
+<ruleset name="Pressflex (partial)" default_off='failed ruleset test'>
+
+	<target host="blogads.com" />
+	<target host="*.blogads.com" />
+
+
+	<!--	- Cert only matches web
+		- // & www 301 to web
+						-->
+	<rule from="^http://(?:web\.|www\.)?blogads\.com/"
+		to="https://web.blogads.com/" />
+
+</ruleset>

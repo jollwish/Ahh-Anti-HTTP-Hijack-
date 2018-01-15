@@ -1,0 +1,7 @@
+<ruleset name="YMcdn.com">
+	<target host="c.ymcdn.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

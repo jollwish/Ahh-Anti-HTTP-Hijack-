@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://broadland.gov.uk/ (200) => https://secure.broadland.gov.uk/ (403)
+Non-2xx HTTP code: http://www.broadland.gov.uk/ (200) => https://secure.broadland.gov.uk/ (403)
+
+	For rules not causing false/broken MCB, see Broadland.gov.uk.xml.
+
+
+	NB: See https://www.paulirish.com/2010/the-protocol-relative-url/
+
+-->
+<ruleset name="Broadland.gov.uk (false MCB)" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="secure.broadland.gov.uk" />
+
+	<!--	Complications:
+				-->
+	<target host="broadland.gov.uk" />
+	<target host="www.broadland.gov.uk" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?broadland\.gov\.uk/"
+		to="https://secure.broadland.gov.uk/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

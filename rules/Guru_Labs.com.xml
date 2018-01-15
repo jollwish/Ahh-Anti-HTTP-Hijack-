@@ -1,0 +1,9 @@
+<ruleset name="Guru Labs.com">
+
+	<target host="gurulabs.com" />
+	<target host="www.gurulabs.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	Other PassMark rulesets:
+		- CPU_Benchmark.net.xml
+
+	Invalid certificate:
+		salesmanager.passmark.com
+
+-->
+<ruleset name="PassMark.com">
+
+	<target host="passmark.com" />
+	<target host="www.passmark.com" />
+	<target host="downloads.passmark.com" />
+
+	<securecookie host="^www\.passmark\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

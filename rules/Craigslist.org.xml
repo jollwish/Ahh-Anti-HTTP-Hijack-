@@ -1,0 +1,27 @@
+<!--
+	Other Craigslist rulesets:
+		- Craigslist.ca.xml
+		- Craigslist.co.uk.xml
+
+	Mismatched:
+		blog.craigslist.org
+-->
+
+<ruleset name="Craigslist.org">
+	<target host="craigslist.org" />
+	<target host="*.craigslist.org" />
+		<test url="http://losangeles.craigslist.org/" />
+		<test url="http://sfbay.craigslist.org/" />
+		<test url="http://amsterdam.craigslist.org/" />
+		<test url="http://moscow.craigslist.org/" />
+
+	<exclusion pattern="^http://blog\.craigslist\.org/" />
+		<test url="http://blog.craigslist.org/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://craigslist\.org/" to="https://craigslist.org/" />
+
+	<!-- As of 3/2017, 4th level craigslist.org domains do not support SSL. -->
+	<rule from="^http://([\w-]+)\.craigslist\.org/" to="https://$1.craigslist.org/" />
+</ruleset>

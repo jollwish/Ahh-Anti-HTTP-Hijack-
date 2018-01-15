@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://x.translateth.is/ (200) => https://s3.amazonaws.com/x.translateth.is/ (403)
+
+	CDN buckets:
+
+		- x.translateth.is
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(prints "dashd", invalid cert)
+
+-->
+<ruleset name="TranslateThi.is (partial)" default_off='failed ruleset test'>
+
+	<target host="x.translateth.is" />
+
+
+	<rule from="^http://x\.translateth\.is/"
+		to="https://s3.amazonaws.com/x.translateth.is/" />
+
+</ruleset>

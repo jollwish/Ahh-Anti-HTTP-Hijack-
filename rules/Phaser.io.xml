@@ -1,0 +1,8 @@
+<ruleset name="Phaser.io">
+	<target host="phaser.io" />
+	<target host="www.phaser.io" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

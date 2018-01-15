@@ -1,0 +1,21 @@
+<!--
+	Other Morningstar rulesets:
+
+		- Morningstar.co.uk.xml
+		- Mstar.com.xml
+
+-->
+<ruleset name="Morningstar (partial)">
+
+	<target host="corporate.morningstar.com" />
+	<target host="media.morningstar.com" />
+	<target host="video.morningstar.com" />
+
+
+	<!--securecookie host="^\.morningstar\.com$" name="^fp$" /-->
+	<securecookie host="^corporate\.morningstar\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

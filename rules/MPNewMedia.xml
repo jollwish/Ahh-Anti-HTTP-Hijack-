@@ -1,0 +1,4 @@
+<ruleset name="MPNewMedia">
+<target host="www1.mpnrs.com" />
+<rule from="^http:" to="https:" />
+</ruleset>

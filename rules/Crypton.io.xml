@@ -1,0 +1,9 @@
+<ruleset name="Crypton.io">
+
+	<target host="encryptrservice.crypton.io" />
+	<target host="kloakservice.crypton.io" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

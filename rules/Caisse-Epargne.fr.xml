@@ -1,0 +1,21 @@
+<!--
+	https://caisse-epargne.fr asks to go to https://www.caisse-epagne.fr
+
+	Invalid certificate:
+		www.recrute.caisse-epargne.com
+
+	Refused:
+		www.societaires.caisse-epargne.fr
+
+-->
+<ruleset name="Caisse d'Epargne (partial)">
+
+	<target host="www.caisse-epargne.fr" />
+	<target host="www.gestionprivee.caisse-epargne.fr" />
+	<target host="www.m.caisse-epargne.fr" />
+	<target host="www.netdemo.caisse-epargne.fr" />
+		<test url="http://www.netdemo.caisse-epargne.fr/Portail.aspx" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

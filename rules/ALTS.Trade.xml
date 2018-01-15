@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://alts.trade/ => https://alts.trade/: (7, 'Failed to connect to alts.trade port 443: Connection refused')
+Fetch error: http://www.alts.trade/ => https://alts.trade/: (7, 'Failed to connect to alts.trade port 443: Connection refused')
+
+	www.alts.trade: 526 (invalid origin cert)
+
+
+	Insecure cookies are set for these domains:
+
+		- .alts.trade
+
+-->
+<ruleset name="ALTS.Trade" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="alts.trade" />
+
+	<!--	Complications:
+				-->
+	<target host="www.alts.trade" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.alts\.trade$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.alts\.trade$" name=".+" />
+
+
+	<rule from="^http://www\.alts\.trade/"
+		to="https://alts.trade/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

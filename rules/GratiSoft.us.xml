@@ -1,0 +1,14 @@
+<ruleset name="GratiSoft.us">
+
+	<!--
+		All targets redirect to https://www.sudo.ws/
+	-->
+	<target host="courtesan.com" />
+	<target host="www.courtesan.com" />
+	<target host="gratisoft.us" />
+	<target host="www.gratisoft.us" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

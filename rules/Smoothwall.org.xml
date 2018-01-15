@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(interrupted)
+		- community	(refused)
+
+-->
+<ruleset name="Smoothwall.org (partial)">
+
+	<target host="my.smoothwall.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

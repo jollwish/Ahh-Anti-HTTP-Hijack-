@@ -1,0 +1,24 @@
+<!--
+	^livebusinesschat.com doesn't exist.
+
+
+	Mixed content:
+
+		- Images, from:
+
+			- $self *
+			- www.feedburner.com *
+
+		- Bugs from s7.addthis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Live Business Chat.com">
+
+	<target host="www.livebusinesschat.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

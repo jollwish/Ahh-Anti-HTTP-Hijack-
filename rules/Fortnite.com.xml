@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://alpha.fortnite.com/ => https://alpha.fortnite.com/: (6, 'Could not resolve host: alpha.fortnite.com')
+
+	For other Epic Games coverage, see Epic_Games.xml.
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- alpha
+
+
+	These altnames don't exist:
+
+		- www.alpha.fortnite.com
+
+
+	Insecure cookies are set for these hosts:
+
+		- fortnite.com
+		- alpha.fortnite.com
+		- www.fortnite.com
+
+-->
+<ruleset name="Fortnite.com" default_off='failed ruleset test'>
+
+	<target host="fortnite.com" />
+	<target host="alpha.fortnite.com" />
+	<target host="www.fortnite.com" />
+
+		<test url="http://www.fortnite.com/blog" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(alpha\.|www\.)?fortnite\.com$" name="^AWSELB$" /-->
+
+	<securecookie host="^(?:alpha\.|www\.)?fortnite\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

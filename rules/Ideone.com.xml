@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://okta6.ideone.com/ => https://okta6.ideone.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Fully covered hosts in *ideone.com:
+
+		- (www.)?
+		- okta6
+
+
+	Insecure cookies are set for these hosts:
+
+		- ideone.com
+		- www.ideone.com
+
+-->
+<ruleset name="Ideone.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ideone.com" />
+	<target host="okta6.ideone.com" />
+	<target host="www.ideone.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?ideone\.com$" name="^(JIDEONE|PHPSESSID)$" /-->
+
+	<securecookie host="^(?:www\.)?ideone\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

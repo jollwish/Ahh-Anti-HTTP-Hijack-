@@ -1,0 +1,59 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://media.zylom.com/ => https://media.zylom.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://secure2.zylom.com/ => https://secure2.zylom.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://cdn.media.zylom.com/ => https://media.zylom.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	CDN buckets:
+
+		- gamehouse.http.internapcdn.net
+
+			- cdn.media
+
+
+	Problematic hosts in *zylom.com:
+
+		- (www.)? ᶜ
+		- cdn.media *
+
+	ᶜ Server sends no certificate chain, see https://whatsmychaincert.com
+	* 403; mismatched, CN: *.https.internapcdn.net
+
+
+	Mixed content:
+
+		- css, on:
+
+			- www from cdn.ghstatic.com *
+			- www from fonts.googleapis.com *
+
+		- Images, on:
+
+			- www from cdn.ghstatic.com *
+			- www from cdn.media.zylom.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Zylom.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<!--target host="zylom.com" /-->
+	<target host="media.zylom.com" />
+	<target host="secure2.zylom.com" />
+	<!--target host="www.zylom.com" /-->
+
+	<!--	Complications:
+				-->
+	<target host="cdn.media.zylom.com" />
+
+
+	<rule from="^http://cdn\.media\.zylom\.com/"
+		to="https://media.zylom.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

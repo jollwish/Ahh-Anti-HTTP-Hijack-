@@ -1,0 +1,60 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://img.marvelstore.com/ => https://img.marvelstore.com/: (28, 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received')
+Fetch error: http://static1.marvelstore.com/ => https://static1.marvelstore.com/: (28, 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received')
+Fetch error: http://cdn.static1.marvelstore.com/ => https://cdn.static1.marvelstore.com/: (51, "SSL: no alternative certificate subject name matches target host name 'cdn.static1.marvelstore.com'")
+
+	For other Marvel coverage, see Marvel.com.xml.
+
+
+	Nonfunctional subdomains:
+
+		- ^	(refused)
+
+
+	Problematic subdomains:
+
+		- cdn.img *
+		- cdn.s7 *
+		- cdn.static[12] *
+
+	* works, akamai
+
+
+	Partially covered subdomains:
+
+		- www	(some pages redirect to http)
+
+-->
+<ruleset name="Marvel Store.com" default_off='failed ruleset test'>
+
+	<target host="img.marvelstore.com" />
+	<target host="static1.marvelstore.com" />
+	<target host="www.marvelstore.com" />
+	<target host="cdn.static1.marvelstore.com" />
+		<exclusion pattern="^http://www\.marvelstore\.com/(?!marvel/store/(?:DSIAjaxOrderItemAdd|DSIProcessWidget)(?:$|\?)|static/)" />
+
+
+	<!--	Tracking cookies:
+					-->
+	<securecookie host="^\.marvelstore\.com$" name="s_(?:per|ses)s$" />
+
+
+	<!--	!www drops path and redirects like so,
+		and since www.../$ redirects to http,
+		there is little point in handling it:
+
+	<rule from="^http://marvelstore\.com/.*"
+		to="https://www.marvelstore.com/" /-->
+
+	<!--	Causes resources to be loaded from akamai.net/$
+		when rewritten to akamai:
+								-->
+	<rule from="^http://cdn\.static1\.marvelstore\.com/static/\?\?css/"
+		to="https://static1.marvelstore.com/static/??css/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

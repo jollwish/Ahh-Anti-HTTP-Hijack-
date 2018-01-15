@@ -1,0 +1,11 @@
+<ruleset name="AJ's Ski &amp; Sports">
+
+	<target host="stowesports.com" />
+	<target host="www.stowesports.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

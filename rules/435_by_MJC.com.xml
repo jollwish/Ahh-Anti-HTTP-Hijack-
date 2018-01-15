@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://435bymjc.com/ => https://435bymjc.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.435bymjc.com/ => https://www.435bymjc.com/: (60, 'SSL certificate problem: certificate has expired')
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .435bymjc.com
+		- www.435bymjc.com
+
+-->
+<ruleset name="435 by MJC.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="435bymjc.com" />
+	<target host="www.435bymjc.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.435bymjc\.com$" name="^BIPSvr$" /-->
+	<!--securecookie host="^www\.435bymjc\.com$" name="^CustomerPortal$" /-->
+
+	<securecookie host="^(?:www)?\.435bymjc\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

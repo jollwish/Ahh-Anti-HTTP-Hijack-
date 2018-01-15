@@ -1,0 +1,20 @@
+<!--
+	Falkirk Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- edevelopment.falkirk.gov.uk
+
+		SSL peer certificate was not OK:
+		- beta.falkirk.gov.uk
+		- collections.falkirk.gov.uk
+-->
+<ruleset name="Falkirk.gov.uk (partial)">
+	<target host="falkirk.gov.uk" />
+	<target host="www.falkirk.gov.uk" />
+	<target host="homespot.falkirk.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

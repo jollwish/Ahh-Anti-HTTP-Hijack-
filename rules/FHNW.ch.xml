@@ -1,0 +1,28 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) ¹
+		- m ²
+
+	¹ Redirects to aai-logon
+	² Redirects to http
+
+
+	These altnames don't exist:
+
+		- www.en.fhnw.ch
+
+-->
+<ruleset name="FHNW.ch (partial)">
+
+	<target host="aai-logon.fhnw.ch" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.fhnw\.ch$" name="^_saml_sp$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

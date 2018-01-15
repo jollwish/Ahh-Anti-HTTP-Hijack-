@@ -1,0 +1,28 @@
+<!--
+	Zakonyprolidi.cz website
+
+	// Do not cover whole domain - some subdomains have no valid certficate!
+
+	Invalid certificate:
+		zakonyprolidi.cz
+		m.zakonyprolidi.cz
+		atom.zakonyprolidi.cz
+
+https://zakonyprolidi.cz has certificate mismatch, but
+http://zakonyprolidi.cz redirects to http://zakonyprolidi.cz
+https://zakonyprolidi.cz has correct certificate
+-->
+<ruleset name="Zakonyprolidi.cz">
+	<target host="zakonyprolidi.cz" />
+	<target host="www.zakonyprolidi.cz" />
+	<target host="new.zakonyprolidi.cz" />
+
+	<securecookie host="^(?:www\.)?zakonyprolidi\.cz$" name="\.AUTH" />
+
+	<rule from="^http://zakonyprolidi\.cz/"
+	to="https://www.zakonyprolidi.cz/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

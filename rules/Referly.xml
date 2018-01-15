@@ -1,0 +1,10 @@
+<ruleset name="Referly">
+
+	<target host="refer.ly" />
+	<target host="beta.refer.ly" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

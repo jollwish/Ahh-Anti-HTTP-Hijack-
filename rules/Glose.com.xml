@@ -1,0 +1,13 @@
+<!--
+	www: 401
+
+-->
+<ruleset name="Glose.com">
+
+	<target host="glose.com" />
+	<target host="www.glose.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

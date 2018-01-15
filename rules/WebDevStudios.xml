@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.webdevstudios.com/ => https://www.webdevstudios.com/: Too many redirects while fetching 'https://www.webdevstudios.com/'
+
+	Other WebDevStudios rulesets:
+
+		- EWebScapes.com.xml
+		- StartBox.xml
+
+
+	Insecure cookies are set for these hosts:
+
+		 - webdevstudios.com
+		 - www.webdevstudios.com
+
+-->
+<ruleset name="WebDevStudios.com" default_off='failed ruleset test'>
+
+	<target host="webdevstudios.com" />
+	<target host="www.webdevstudios.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?webdevstudios\.com$" name="^X-Mapping-fjhppofk$" /-->
+
+	<securecookie host="^(?:www\.)?webdevstudios\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>
+

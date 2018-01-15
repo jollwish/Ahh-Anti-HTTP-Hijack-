@@ -1,0 +1,12 @@
+<!--
+	(www.): shows secure
+
+-->
+<ruleset name="eSupport.com (partial)">
+
+	<target host="secure.esupport.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- annualreport.axa.com
+		- channel.axa.com
+-->
+<ruleset name="AXA (partial)">
+	<target host="axa.com" />
+	<target host="www.axa.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,27 @@
+<!--
+	No working URL known:
+		seobox.wpmudev.org
+		smushpro.wpmudev.org
+		staging.wpmudev.org
+
+	Invalid certificate:
+		www.premium.wpmudev.org
+		videos.wpmudev.org
+
+-->
+<ruleset name="wpmudev.org">
+
+	<target host="wpmudev.org" />
+	<target host="www.wpmudev.org" />
+	<target host="premium.wpmudev.org" />
+	<target host="www.premium.wpmudev.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.premium\.wpmudev\.org/"
+		to="https://premium.wpmudev.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

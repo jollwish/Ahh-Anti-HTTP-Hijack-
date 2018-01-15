@@ -1,0 +1,13 @@
+<ruleset name="Craphound">
+
+	<target host="craphound.com" />
+	<target host="www.craphound.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

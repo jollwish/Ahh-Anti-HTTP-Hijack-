@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://telepigeon.com/ => https://telepigeon.com/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.telepigeon.com/ => https://www.telepigeon.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Fully covered hosts in *telepigeon.com:
+
+		- (www.)?
+
+
+	Insecure cookies are set for these hosts:
+
+		- telepigeon.com
+		- www.telepigeon.com
+
+-->
+<ruleset name="Telepigeon.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="telepigeon.com" />
+	<target host="www.telepigeon.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?telepigeon\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:www\.)?telepigeon\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

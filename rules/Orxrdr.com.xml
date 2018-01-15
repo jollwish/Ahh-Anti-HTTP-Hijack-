@@ -1,0 +1,12 @@
+<!--
+	^orxrdr.com does not exist.
+
+-->
+<ruleset name="orxrdr.com">
+
+	<target host="www.orxrdr.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

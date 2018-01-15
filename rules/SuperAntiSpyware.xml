@@ -1,0 +1,6 @@
+<ruleset name="SuperAntiSpyware.com">
+	<target host="superantispyware.com" />
+	<target host="www.superantispyware.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

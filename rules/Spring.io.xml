@@ -1,0 +1,40 @@
+<!--
+	Nonfunctional hosts in *.spring.io:
+		502 error:
+			* forum.spring.io
+		Invalid Certificate:
+			* redirect.spring.io
+			* search.spring.io
+
+	Mixed content on:
+		* Some docs.spring.io pages
+-->
+<ruleset name="Spring.io (partial)">
+
+	<target host="spring.io" />
+	<target host="www.spring.io" />
+	<target host="assets.spring.io" />
+		<test url="http://assets.spring.io/drupal/files/Spring_A_Managers_OverviewVer05.pdf" />
+	<target host="build.spring.io" />
+	<target host="ci.spring.io" />
+	<target host="cloud.spring.io" />
+		<test url="http://cloud.spring.io/spring-cloud-config/" />
+	<target host="cloud-start.spring.io" />
+	<target host="docs.spring.io" />
+		<test url="http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html" />
+	<target host="jenkins.spring.io" />
+	<target host="platform.spring.io" />
+		<test url="http://platform.spring.io/platform/" />
+	<target host="projects.spring.io" />
+		<test url="http://projects.spring.io/spring-framework/" />
+	<target host="repo.spring.io" />
+	<target host="schema.spring.io" />
+	<target host="sonar.spring.io" />
+	<target host="start.spring.io" />
+	<target host="store.spring.io" />
+	<target host="jira.spring.io" />
+
+	<securecookie host="^\." name="^(?:__cfduid|cf_clearance)$" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

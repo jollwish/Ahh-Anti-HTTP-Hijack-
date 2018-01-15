@@ -1,0 +1,41 @@
+
+<!--
+	snapabug.appspot.com sets the following cookies
+	on whichever domain it is loaded from:
+
+		- SnapABugRef
+		- SnapABugHistory
+		- SnapABugVisit
+
+	No working URL known:
+		code.snapengage.com
+
+	Invalid certificate:
+		info.snapengage.com
+
+-->
+<ruleset name="SnapEngage">
+
+	<target host="snapengage.com" />
+	<target host="www.snapengage.com" />
+	<target host="ajuda.snapengage.com" />
+	<target host="awesome.snapengage.com" />
+	<target host="ayuda.snapengage.com" />
+	<target host="blog.snapengage.com" />
+	<target host="de.snapengage.com" />
+	<target host="developer.snapengage.com" />
+	<target host="en.snapengage.com" />
+	<target host="es.snapengage.com" />
+	<target host="eu.snapengage.com" />
+	<target host="help.snapengage.com" />
+	<target host="new.snapengage.com" />
+	<target host="pt.snapengage.com" />
+	<target host="secure.snapengage.com" />
+	<target host="status.snapengage.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	(www.): refused
+
+-->
+<ruleset name="ispgateway.de (partial)">
+
+	<target host="ml01.ispgateway.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

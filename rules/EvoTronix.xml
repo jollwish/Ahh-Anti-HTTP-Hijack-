@@ -1,0 +1,19 @@
+<!--
+	Problematic hosts in *evotronix.com:
+
+		- faq ᵐ
+
+	ᵐ Mismatched
+
+-->
+<ruleset name="EvoTronix.com (partial)">
+
+	<target host="evotronix.com" />
+	<target host="mail.evotronix.com" />
+	<target host="www.evotronix.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,51 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.jobamatic.com/ => https://www.jobamatic.com/: (7, 'Failed to connect to www.jobamatic.com port 443: Connection refused')
+Fetch error: http://computerworld.jobamatic.com/ => https://computerworld.jobamatic.com/: (7, 'Failed to connect to computerworld.jobamatic.com port 443: Connection refused')
+Fetch error: http://jobamatic.com/ => https://jobamatic.com/: (7, 'Failed to connect to jobamatic.com port 443: Connection refused')
+
+	For other Simply Hired coverage, see Simply-Hired.xml.
+
+
+	Insecure cookies are set for these domains:
+
+		- .jobamatic.com
+
+
+	Mixed content:
+
+		- Bugs, on:
+
+			- www from pixel.quantserve.com *
+			- www from b.scorecardresearch.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Job a matic.com" default_off='failed ruleset test'>
+
+	<target host="jobamatic.com"/>
+	<target host="*.jobamatic.com"/>
+
+		<test url="http://www.jobamatic.com/" />
+
+		<!--	Users:
+				-->
+		<test url="http://computerworld.jobamatic.com/" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.jobamatic\.com$" name="^__qca$" /-->
+
+	<securecookie host="^\.jobamatic\.com$" name="^__qca$" />
+	<securecookie host="^www\.jobamatic\.com$" name=".+" />
+
+
+	<!--	clients have unique subdomains
+						-->
+	<rule from="^http://([\w-]+\.)?jobamatic\.com/"
+		to="https://$1jobamatic.com/"/>
+
+</ruleset>

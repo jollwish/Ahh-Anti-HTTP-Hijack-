@@ -1,0 +1,51 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://piwik.bytemark.co.uk/ => https://piwik.bytemark.co.uk/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+Fetch error: http://status.bytemark.co.uk/ => https://status.bytemark.co.uk/: (6, 'Could not resolve host: status.bytemark.co.uk')
+
+	Other Bytemark Hosting rulesets:
+
+		- BigV.io.xml
+
+
+	Nonfunctional hosts in *bytemark.co.uk:
+
+		- symbiosis *
+
+	* Refused
+
+
+	Insecure cookies are set for these hosts:
+
+		- status.bytemark.co.uk
+
+-->
+<ruleset name="Bytemark.co.uk (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bytemark.co.uk" />
+	<target host="blog.bytemark.co.uk" />
+	<target host="forum.bytemark.co.uk" />
+	<target host="order.bytemark.co.uk" />
+	<target host="panel.bytemark.co.uk" />
+	<target host="panel-beta.bytemark.co.uk" />
+	<target host="piwik.bytemark.co.uk" />
+	<target host="status.bytemark.co.uk" />
+	<target host="www.bytemark.co.uk" />
+
+		<!--exclusion pattern="^http://symbiosis\.bytemark\.co\.uk/" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="status\.bytemark\.co\.uk$" name="^_netstat_session$" /-->
+
+	<securecookie host=".+\.bytemark\.co\.uk$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

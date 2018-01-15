@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://console.lingospot.com/ => https://console.lingospot.com/: (7, 'Failed to connect to console.lingospot.com port 443: Connection refused')
+Fetch error: http://engine.lingospot.com/ => https://engine.lingospot.com/: (6, 'Could not resolve host: engine.lingospot.com')
+
+	Nonfunctional subdomains:
+
+		- blog *
+		- corp *
+		- get		(shows engine; mismatched, CN: chill.planetdiscover.com)
+		- login ³
+		- wordpress *
+		- www		(redirects to http, cert valid)
+
+	* WP Engine
+	³ Shows console.lingospot.com
+
+
+	Insecure cookies are set for these domains:
+
+		- .lingospot.com
+
+-->
+<ruleset name="Lingospot.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="console.lingospot.com" />
+	<target host="engine.lingospot.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.lingospot\.com$" name="^LUI$" /-->
+
+
+	<rule from="^http:"
+		to="https:" />
+
+
+</ruleset>

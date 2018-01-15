@@ -1,0 +1,25 @@
+<!--
+	Redirect to http:
+		zamzar.com
+		www.zamzar.com
+		www\d.zamzar.com
+		secure.zamzar.com
+
+	See also https://github.com/EFForg/https-everywhere/issues/4147
+
+	No working URL known:
+		api.zamzar.com
+
+	Invalid certificate:
+		files.zamzar.com
+
+-->
+<ruleset name="Zamzar.com (partial)">
+
+	<target host="blog.zamzar.com" />
+	<target host="developers.zamzar.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

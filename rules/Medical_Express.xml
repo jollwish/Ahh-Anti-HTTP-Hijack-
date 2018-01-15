@@ -1,0 +1,14 @@
+<ruleset name="Medical Xpress.com">
+
+	<target host="medicalxpress.com" />
+	<target host="m.medicalxpress.com" />
+	<target host="www.medicalxpress.com" />
+
+
+	<securecookie host="^\." name="^__qca" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+<!--
+	www.firstclassmagazine.se: mismatched
+
+
+	Mixed content:
+
+		- Images on www from media ¹
+
+	¹ Secured by us
+
+-->
+<ruleset name="First Class Magazine.se">
+
+	<target host="firstclassmagazine.se" />
+	<target host="media.firstclassmagazine.se" />
+	<target host="www.firstclassmagazine.se" />
+
+
+	<securecookie host="^\." name="^__cfduid$" />
+
+
+	<!--	s? for protocol-relative includes:
+							-->
+	<rule from="^https?://www\.firstclassmagazine\.se/"
+		to="https://firstclassmagazine.se/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

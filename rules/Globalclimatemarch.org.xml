@@ -1,0 +1,19 @@
+<!--
+	Certificate is signed for IP address, not domain name.
+
+-->
+<ruleset name="Globalclimatemarch.org" default_off="cert-invalid">
+
+	<target host="globalclimatemarch.org" />
+	<target host="www.globalclimatemarch.org" />
+
+	<securecookie host="^globalclimatemarch\.org" name=".+" />
+
+	<!-- redirect www subdomain to main domain -->
+	<rule from="^http://www\.globalclimatemarch\.org/"
+		to="https://globalclimatemarch.org/" />
+	
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

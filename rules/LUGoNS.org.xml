@@ -1,0 +1,46 @@
+
+<!--
+	No working URL known:
+		atlantic777.lugons.org
+		bandigarf.lugons.org
+		barbossa.lugons.org
+		new.lugons.org
+		samurai.lugons.org
+		tron.lugons.org
+
+	Invalid certificate:
+		gallery.lugons.org
+		jack.lugons.org
+		jelena.lugons.org
+		lab.lugons.org
+		mumble.lugons.org
+		oootranslit.lugons.org
+		posta.lugons.org
+		planet.lugons.org
+		sparrow.lugons.org
+		wiki.lugons.org
+		zion.lugons.org
+
+	Chain issue:
+		forum.lugons.org
+		gentoo-handbook.lugons.org
+		hacker.lugons.org
+		slackbook.lugons.org
+
+-->
+<ruleset name="LUGoNS.org">
+
+	<target host="lugons.org" />
+	<target host="www.lugons.org" />
+	<target host="events.lugons.org" />
+	<target host="libre.lugons.org" />
+	<target host="milobit.lugons.org" />
+	<target host="paste.lugons.org" />
+	<target host="tor.lugons.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

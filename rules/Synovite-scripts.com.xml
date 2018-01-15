@@ -1,0 +1,8 @@
+<ruleset name="synovite-scripts.com">
+
+	<target host="ssl.synovite-scripts.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

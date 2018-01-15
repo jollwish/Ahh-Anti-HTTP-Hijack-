@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="Dancing Astronaut (partial)">
+
+	<target host="static.dancingastronaut.com" />
+	<target host="uploads.dancingastronaut.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

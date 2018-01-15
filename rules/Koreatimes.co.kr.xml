@@ -1,0 +1,6 @@
+<ruleset name="Koreatimes" default_off="Certificate expired">
+	<target host="www.koreatimes.co.kr" />
+	<!-- www2 uses an invalid cert , img can't use tls -->
+
+	<rule from="^http:" to="https:" />
+</ruleset>

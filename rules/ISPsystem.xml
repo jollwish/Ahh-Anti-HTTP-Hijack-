@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^		(times out)
+		- download ²
+		- forum		(shows login)
+
+	² Refused
+
+-->
+<ruleset name="ISPsystem (partial)">
+
+	<target host="my.ispsystem.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

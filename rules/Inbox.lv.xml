@@ -1,0 +1,30 @@
+<ruleset name="Inbox.lv (partial)">
+	<target host="inbox.lv" />
+	<target host="www.inbox.lv" />
+	<target host="ads.inbox.lv" />
+	<target host="b.inbox.lv" />
+	<target host="dating.inbox.lv" />
+	<target host="fun.inbox.lv" />
+	<target host="games.inbox.lv" />
+	<target host="help.inbox.lv" />
+	<target host="labiedarbi.inbox.lv" />
+	<target host="login.inbox.lv" />
+	<target host="mail.inbox.lv" />
+	<target host="meteo.inbox.lv" />
+	<target host="money.inbox.lv" />
+	<target host="polls.inbox.lv" />
+	<target host="polls-framed.inbox.lv" />
+	<target host="pricelist.inbox.lv" />
+	<target host="purchase.inbox.lv" />
+	<target host="search.inbox.lv" />
+	<target host="search-framed.inbox.lv" />
+	<target host="shop.inbox.lv" />
+	<target host="smart.inbox.lv" />
+	<target host="travel.inbox.lv" />
+
+	<securecookie host="^polls-framed\.inbox\.lv$" name=".+" />
+	<securecookie host="^shop\.inbox\.lv$" name=".+" />
+	<securecookie host="^travel\.inbox\.lv$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

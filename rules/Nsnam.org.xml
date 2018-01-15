@@ -1,0 +1,23 @@
+<!--
+	Problematic hosts in *nsnam.org:
+
+	These altnames don't exist:
+
+		- nsnam.org
+
+-->
+<ruleset name="nsnam.org">
+	<target host="code.nsnam.org" />
+	<target host="www.nsnam.org" />
+
+	<test url="http://code.nsnam.org/ns-3-dev/" />
+
+	<rule from="^http://code\.nsnam\.org/$"
+	       to="https://code.nsnam.org/" />
+
+	<rule from="^http://code\.nsnam\.org/"
+	      to="https://code.nsnam.org/index.cgi/" />
+
+	<rule from="^http:"
+	      to="https:" />
+</ruleset>

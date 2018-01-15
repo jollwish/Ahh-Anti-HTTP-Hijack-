@@ -1,0 +1,6 @@
+<ruleset name="Changemakers">
+  <target host="changemakers.com" />
+  <target host="www.changemakers.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

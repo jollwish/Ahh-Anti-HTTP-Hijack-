@@ -1,0 +1,9 @@
+<ruleset name="Capitol Machine.com">
+
+	<target host="capitolmachine.com" />
+	<target host="www.capitolmachine.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

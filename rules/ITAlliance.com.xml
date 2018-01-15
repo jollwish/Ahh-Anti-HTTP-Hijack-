@@ -1,0 +1,12 @@
+<ruleset name="ITAlliance.com">
+
+	<target host="italliance.com" />
+	<target host="www.italliance.com" />
+
+
+	<securecookie host="^(?:www\.)?italliance\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

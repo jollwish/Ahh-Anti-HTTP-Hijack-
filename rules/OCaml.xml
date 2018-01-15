@@ -1,0 +1,22 @@
+
+<!--
+	Mismatched:
+		www.ocaml.org
+		planet.ocaml.org
+		preview.ocaml.org
+		tools.ocaml.org
+
+	Refused:
+		forge.ocaml.org
+		lists.ocaml.org
+
+-->
+<ruleset name="OCaml.org (partial)">
+
+	<target host="ocaml.org" />
+	<target host="opam.ocaml.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

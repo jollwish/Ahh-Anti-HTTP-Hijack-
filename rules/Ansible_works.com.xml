@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ansibleworks.com/ => https://ansibleworks.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://galaxy.ansibleworks.com/ => https://galaxy.ansibleworks.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.ansibleworks.com/ => https://www.ansibleworks.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other Ansible coverage, see Ansible.com.xml.
+
+
+	Nonfunctional hosts in *ansibleworks.com:
+
+		- blog *
+
+	* Dropped
+
+
+	These altnames don't exist:
+
+		- www.galaxy.ansibleworks.com
+
+-->
+<ruleset name="Ansible works.com (partial)" default_off='failed ruleset test'>
+
+	<target host="ansibleworks.com" />
+	<target host="galaxy.ansibleworks.com" />
+	<target host="www.ansibleworks.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

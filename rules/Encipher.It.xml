@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.encipher.it/ => https://www.encipher.it/: (51, "SSL: no alternative certificate subject name matches target host name 'www.encipher.it'")
+
+	Insecure cookies are set for these hosts:
+
+		- encipher.it
+		- www.encipher.it
+
+-->
+<ruleset name="Encipher.It" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="encipher.it" />
+	<target host="www.encipher.it" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?encipher\.it$" name="^connect\.sess$" /-->
+
+	<securecookie host="^(?:www\.)?encipher\.it$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

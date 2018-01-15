@@ -1,0 +1,11 @@
+<ruleset name="AlreadyHosting.com (partial)">
+
+	<target host="bestwebhostinggeek.com" />
+	<target host="www.bestwebhostinggeek.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

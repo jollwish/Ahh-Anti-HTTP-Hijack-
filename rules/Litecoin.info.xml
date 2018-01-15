@@ -1,0 +1,15 @@
+<ruleset name="Litecoin.info">
+
+	<target host="litecoin.info" />
+	<target host="www.litecoin.info" />
+
+
+	<securecookie host="^\.?litecoin\.info$" name=".+" />
+
+
+	<!--	www redirects to ^ over http,
+		so copy that behavior:
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

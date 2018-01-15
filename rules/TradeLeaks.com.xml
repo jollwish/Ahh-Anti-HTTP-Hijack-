@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://tradeleaks.com/ => https://tradeleaks.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.tradeleaks.com/ => https://www.tradeleaks.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	NB: politically sensitive => backport?
+
+
+	Mixed content:
+
+		- Bugs, from:
+
+			- twitter-badges.s3.amazonaws.com *
+			- www.facebook.com *
+
+	* Secured by us
+
+-->
+<ruleset name="TradeLeaks.com" default_off='failed ruleset test'>
+
+	<target host="tradeleaks.com" />
+	<target host="www.tradeleaks.com" />
+
+
+	<securecookie host="^\.tradeleaks\.com$" name="^__cfduid$" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

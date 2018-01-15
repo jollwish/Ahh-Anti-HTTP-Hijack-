@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://archlinux.limun.org/ => https://archlinux.limun.org/: (7, 'Failed to connect to archlinux.limun.org port 443: Connection refused')
+
+-->
+<ruleset name="limun.org" default_off='failed ruleset test'>
+
+	<target host="limun.org" />
+	<target host="*.limun.org" />
+
+	<test url="http://alice.limun.org/" />
+	<test url="http://archlinux.limun.org/" />
+	<test url="http://cinnarch.limun.org/" />
+	<test url="http://karin.limun.org/" />
+	<test url="http://marko.limun.org/" />
+	<test url="http://mots.limun.org/" />
+	<test url="http://mpranj.limun.org/" />
+	<test url="http://redmine.limun.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

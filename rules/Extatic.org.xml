@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		bugs.extatic.org
+
+	Refused:
+		mail.extatic.org
+		secure.extatic.org
+
+-->
+<ruleset name="extatic.org">
+
+	<target host="extatic.org" />
+	<target host="www.extatic.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

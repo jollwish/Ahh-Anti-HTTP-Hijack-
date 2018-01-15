@@ -1,0 +1,19 @@
+<!--
+	Other PowerPay rulesets:
+
+		- E-onlinedata.com.xml
+
+
+	(www.): 404; mismatched, CN: www.e-onlinedata.com
+
+-->
+<ruleset name="PowerPay.biz (partial)">
+
+	<target host="app.powerpay.biz" />
+	<target host="merchantcenter.powerpay.biz" />
+	<target host="secure.powerpay.biz" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="auctionthing.net">
+
+	<target host="auctionthing.net" />
+	<target host="www.auctionthing.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

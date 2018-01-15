@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://portal.thalysnet.com/ => https://portal.thalysnet.com/: (6, 'Could not resolve host: portal.thalysnet.com')
+
+	Mixed content:
+
+		- Bug on (www.)?thalysthecard.com from logi\d+.xiti.com
+
+-->
+<ruleset name="Thalys" default_off='failed ruleset test'>
+    <target host="thalys.com" />
+    <target host="www.thalys.com" />
+    <target host="thalysthecard.com" />
+    <target host="www.thalysthecard.com" />
+
+    <!-- Accessible from Thalys trains. -->
+    <target host="portal.thalysnet.com" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.thalysthecard\.com$" name="^SESS[\da-f]{32}$" /-->
+
+    <securecookie host="^(?:.*\.)?thalys(?:net|thecard)?\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

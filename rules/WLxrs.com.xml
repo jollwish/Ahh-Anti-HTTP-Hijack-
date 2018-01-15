@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://js2.wlxrs.com/ => https://js2.wlxrs.com/: (51, "SSL: no alternative certificate subject name matches target host name 'js2.wlxrs.com'")
+Fetch error: http://secure.wlxrs.com/ => https://secure.wlxrs.com/: (51, "SSL: no alternative certificate subject name matches target host name 'secure.wlxrs.com'")
+
+	For other Microsoft coverage, see Microsoft.xml.
+
+
+	Fully covered domains:
+
+		- \w+.wlxrs.com:
+
+			- js2
+			- secure
+
+-->
+<ruleset name="WLxrs.com" default_off='failed ruleset test'>
+
+	<target host="*.wlxrs.com" />
+
+		<!--	Direct rewrites:
+					-->
+		<test url="http://js2.wlxrs.com/" />
+		<test url="http://secure.wlxrs.com/" />
+
+
+	<rule from="^http://(\w+)\.wlxrs\.com/"
+		to="https://$1.wlxrs.com/" />
+
+</ruleset>

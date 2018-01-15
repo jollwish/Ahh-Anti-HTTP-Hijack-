@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://app.cactuscompletecommerce.com/ => https://app.cactuscompletecommerce.com/: (51, "SSL: no alternative certificate subject name matches target host name 'app.cactuscompletecommerce.com'")
+
+	For other Web.com coverage, see Web.com.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(replies with http)
+
+-->
+<ruleset name="Cactus Complete Commerce (partial)" default_off='failed ruleset test'>
+
+	<target host="app.cactuscompletecommerce.com" />
+
+
+	<securecookie host="^app\.cactuscompletecommerce\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

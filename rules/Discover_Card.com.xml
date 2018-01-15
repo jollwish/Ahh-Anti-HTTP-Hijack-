@@ -1,0 +1,18 @@
+<!--
+	For other Discover coverage, see Discover.com.xml.
+
+-->
+<ruleset name="Discover Card.com">
+
+	<target host="discovercard.com" />
+	<target host="m.discovercard.com" />
+	<target host="mst0.m.discovercard.com" />
+	<target host="qsys.m.discovercard.com" />
+	<target host="mapi.discovercard.com" />
+	<target host="search.discovercard.com" />
+	<target host="www.discovercard.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

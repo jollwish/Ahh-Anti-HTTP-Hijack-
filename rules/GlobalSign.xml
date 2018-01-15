@@ -1,0 +1,88 @@
+<!--
+	For other GMO coverage, see GMO_Internet.xml.
+
+	Non-functional hosts in *globalsign.com
+		Couldn't connect to server:
+			 - expired.globalsign.com
+
+		SSL peer certificate was not OK:
+			 - apac.globalsign.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - dev.cn.globalsign.com
+
+		Incomplete certificate chain error:
+			 - revoked.globalsign.com
+-->
+<ruleset name="GlobalSign (partial)">
+	<!-- *globalsign.com.au -->
+	<target host="globalsign.com.au" />
+	<target host="www.globalsign.com.au" />
+
+	<!-- *globalsign.com -->
+	<target host="globalsign.com" />
+	<target host="www.globalsign.com" />
+	<target host="apac.globalsign.com" />
+	<target host="cn.globalsign.com" />
+	<target host="dev.globalsign.com" />
+	<target host="e-sign.globalsign.com" />
+	<target host="eu.globalsign.com" />
+	<target host="hk.globalsign.com" />
+	<target host="jp.globalsign.com" />
+	<target host="profile.globalsign.com" />
+	<target host="seal.globalsign.com" />
+	<target host="secure.globalsign.com" />
+	<target host="ssif1.globalsign.com" />
+	<target host="sslcheck.globalsign.com" />
+	<target host="static1.globalsign.com" />
+	<target host="static2.globalsign.com" />
+	<target host="status.globalsign.com" />
+	<target host="system.globalsign.com" />
+	<target host="systemeu.globalsign.com" />
+	<target host="systemus.globalsign.com" />
+	<target host="th.globalsign.com" />
+
+	<!-- *globalsign.de -->
+	<target host="globalsign.de" />
+	<target host="www.globalsign.de" />
+
+	<!-- *globalsign.es -->
+	<target host="globalsign.es" />
+	<target host="www.globalsign.es" />
+
+	<!-- *globalsign.eu -->
+	<target host="globalsign.eu" />
+	<target host="m.globalsign.eu" />
+	<target host="www.globalsign.eu" />
+
+	<!-- *globalsign.fr -->
+	<target host="globalsign.fr" />
+	<target host="www.globalsign.fr" />
+
+	<!-- *globalsign.co.in -->
+	<target host="globalsign.co.in" />
+	<target host="www.globalsign.co.in" />
+
+	<!-- *globalsign.net -->
+	<target host="www.globalsign.net" />
+
+	<!-- *globalsign.nl -->
+	<target host="globalsign.nl" />
+	<target host="www.globalsign.nl" />
+
+	<!-- *globalsign.com.sg -->
+	<target host="globalsign.com.sg" />
+	<target host="www.globalsign.com.sg" />
+
+	<!-- *globalsign.co.uk -->
+	<target host="globalsign.co.uk" />
+	<target host="www.globalsign.co.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://apac\.globalsign\.com/"
+			to="https://www.globalsign.com.sg/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

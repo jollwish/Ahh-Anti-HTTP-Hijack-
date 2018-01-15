@@ -1,0 +1,12 @@
+<!--
+	www doesn't exist
+
+-->
+<ruleset name="Interac PoS Centre.ca">
+
+	<target host="interacposcentre.ca" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

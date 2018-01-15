@@ -1,0 +1,12 @@
+<!--
+	For rules not causing false/broken MCB, see Tradepub.com.xml.
+
+-->
+<ruleset name="TradePub.com (false MCB)" platform="mixedcontent">
+
+	<target host="betanews.tradepub.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

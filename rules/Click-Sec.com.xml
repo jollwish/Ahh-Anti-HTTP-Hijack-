@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://click-sec.com/ => https://click-sec.com/: (6, 'Could not resolve host: click-sec.com')
+
+	For other GMO coverage, see GMO_Internet.xml.
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .click-sec.com
+		- support.click-sec.com
+		- www.click-sec.com
+
+-->
+<ruleset name="Click-Sec.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="click-sec.com" />
+	<target host="sec-sso.click-sec.com" />
+	<target host="support.click-sec.com" />
+	<target host="www.click-sec.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.click-sec\.com$" name="^(cid|entryAid|entrySearch|lid|mid|ppno)$" /-->
+	<!--securecookie host="^support\.click-sec\.com$" name="^cp_session$" /-->
+	<!--securecookie host="^www\.click-sec\.com$" name="^Click-sec$" /-->
+
+	<securecookie host="^(?:support|www)?\.click-sec\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

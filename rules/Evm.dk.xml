@@ -1,0 +1,7 @@
+<ruleset name="Evm.dk">
+	<target host="evm.dk" />
+	<target host="www.evm.dk" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

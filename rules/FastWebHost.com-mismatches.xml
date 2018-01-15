@@ -1,0 +1,9 @@
+<ruleset name="FastWebHost.com (mismatches)" default_off="mismatched">
+
+	<target host="webmail.fastwebhost.com"/>
+
+	<securecookie host="^webmail\.fastwebhost\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

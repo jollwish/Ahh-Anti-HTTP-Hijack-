@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://manage.nodeserv.com/ => https://manage.nodeserv.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+-->
+<ruleset name="NodeServ.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="nodeserv.com" />
+	<target host="billing.nodeserv.com" />
+	<target host="manage.nodeserv.com" />
+	<target host="www.nodeserv.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^billing\.nodeserv\.com$" name="^WHMCS[a-zA-Z]{12}$" /-->
+	<!--securecookie host="^manage\.nodeserv\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:billing|manage)\.nodeserv\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

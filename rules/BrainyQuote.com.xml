@@ -1,0 +1,26 @@
+<!--
+	Invalid certificate:
+		ads.brainyquote.com
+		mdev.brainyquote.com
+
+	Different content http/https:
+		dev.brainyquote.com
+
+-->
+<ruleset name="BrainyQuote.com">
+
+	<target host="brainyquote.com" />
+	<target host="www.brainyquote.com" />
+	<target host="i.brainyquote.com" />
+		<test url="http://i.brainyquote.com/st/img/2204012/splash/20.jpg" />
+	<target host="images.brainyquote.com" />
+	<target host="m.brainyquote.com" />
+	<target host="mobile.brainyquote.com" />
+	<target host="ranking.brainyquote.com" />
+	<target host="shop.brainyquote.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

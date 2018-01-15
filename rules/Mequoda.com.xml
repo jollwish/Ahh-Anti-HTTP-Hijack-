@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mequoda.com/ => https://www.mequoda.com/: (60, 'SSL certificate problem: self signed certificate')
+Fetch error: http://www.mequoda.com/ => https://www.mequoda.com/: (60, 'SSL certificate problem: self signed certificate')
+
+	Nonfunctional subdomains:
+
+		- ox	(shows CentOS test page; expired 2013-01-12, self-signed)
+
+
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+-->
+<ruleset name="Mequoda.com (partial)" default_off='failed ruleset test'>
+
+	<target host="mequoda.com" />
+	<target host="www.mequoda.com" />
+
+
+	<securecookie host="^www\.mequoda\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?mequoda\.com/"
+		to="https://www.mequoda.com/" />
+
+</ruleset>

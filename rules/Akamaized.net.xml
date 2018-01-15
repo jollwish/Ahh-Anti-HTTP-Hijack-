@@ -1,0 +1,7 @@
+<ruleset name="Akamaized.net">
+	<target host="untappd.akamaized.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

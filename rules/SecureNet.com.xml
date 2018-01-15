@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.securenet.com/ => https://www.securenet.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://securenet.com/ => https://www.securenet.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	^securenet.com: works; mismatched, CN: acquia-sites.com
+
+
+	Mixed content:
+
+		- css on www from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="SecureNet.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="terminal.securenet.com" />
+	<target host="www.securenet.com" />
+
+	<!--	Complications:
+				-->
+	<target host="securenet.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^terminal\.securenet\.com$" name="^(ASP.NET_SessionId|TS[0-9a-f]{8}|TS[0-9a-f]{8)_\d+)$" /-->
+
+	<securecookie host="^terminal\.securenet\.com$" name=".+" />
+
+
+	<rule from="^http://securenet\.com/"
+		to="https://www.securenet.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

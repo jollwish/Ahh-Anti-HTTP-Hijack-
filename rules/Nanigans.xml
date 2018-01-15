@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://lp.nanigans.com/ => https://lp.nanigans.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Other Nanigans rulesets:
+
+		- Socialtyzetracking.com.xml
+		- Unifiedtracking.com.xml
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .nanigans.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Nanigans.com (partial)" default_off='failed ruleset test'>
+
+	<target host="api.nanigans.com" />
+	<target host="lp.nanigans.com" />
+
+		<!--	Sets cookies without Secure:
+							-->
+		<!--test url="http://api.nanigans.com/event.php?app_id=&amp;type=visit&amp;name=landing&amp;gtmcb=" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.nanigans\.com$" name="^(NaN_fbx|NaN_fbxa|NaN_hash|NaN_mt)$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

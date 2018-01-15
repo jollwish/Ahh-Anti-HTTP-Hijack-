@@ -1,0 +1,74 @@
+<!--
+
+	Other Linux Foundation rulesets:
+
+		- AllSeen_Alliance.org.xml
+		- Automotive_Linux.org.xml
+		- FOSSBazaar.org.xml
+		- hyperledger.org.xml
+		- iovisor.org.xml
+		- LinuxFound.info.xml
+		- OpenDaylight.xml
+		- Open_Virtualization_Alliance.org.xml
+		- Openprinting.xml
+		- Poky.xml
+		- SPDX.org.xml
+		- xen.org.xml
+		- Xen_Project.org.xml
+		- Yocto_Project.org.xml
+
+
+	Partially covered hosts in *linuxfoundation.org:
+
+		- events ʰ
+
+	ʰ Some pages redirect to http
+
+-->
+<ruleset name="Linux Foundation.org (partial)" >
+
+	<!--	Direct rewrites:
+				-->
+	<target host="lists.linux-foundation.org" />
+
+	<target host="linuxfoundation.org" />
+	<target host="www.linuxfoundation.org" />
+	<target host="admin.linuxfoundation.org" />
+	<target host="automotive.linuxfoundation.org" />
+	<target host="collabprojects.linuxfoundation.org" />
+	<target host="developerbugs.linuxfoundation.org" />
+	<target host="events.linuxfoundation.org" />
+		<exclusion pattern="^http://events\.linuxfoundation\.org/((events/|\?).*)?$" />
+		<!-- Secured -->
+		<test url="http://events.linuxfoundation.org/sponsor" />
+		<test url="http://events.linuxfoundation.org/sites/events/files/styles/events_listing_192x192/public/ccc_eu_color.png" />
+		<!-- Excluded -->
+		<test url="http://events.linuxfoundation.org/events/embedded-linux-conference-europe/attend/register" />
+		<test url="http://events.linuxfoundation.org/events/linuxcon-europe/program/cfp" />
+		<test url="http://events.linuxfoundation.org/events/mesoscon/attend/register?utm_source=lf" />
+		<test url="http://events.linuxfoundation.org/" />
+		<test url="http://events.linuxfoundation.org/?utm_source=lf" />
+	<target host="go.linuxfoundation.org" />
+		<exclusion pattern="^http://go\.linuxfoundation\.org/$" />
+	<target host="identity.linuxfoundation.org" />
+	<target host="ldn.linuxfoundation.org" />
+	<target host="lists.linuxfoundation.org" />
+	<target host="lsbbugs.linuxfoundation.org" />
+	<target host="training.linuxfoundation.org" />
+
+	<securecookie host="^(?!collabprojects\.|events\.)." name=".+" />
+
+	<!-- http://help.pardot.com/customer/portal/articles/2126757-using-vanity-urls -->
+	<!-- http://help.pardot.com/customer/portal/articles/2126640-how-to-ssl-enable-http-secure-pardot-urls -->
+	<rule from="^http://go\.linuxfoundation\.org/([el])/"
+		to="https://go.pardot.com/$1/" />
+
+		<test url="http://go.linuxfoundation.org/e/6342/TheLinuxFoundation/ymc8q/578968329" />
+		<test url="http://go.linuxfoundation.org/l/6342/2016-03-23/33c3kc" />
+
+	<rule from="^http://linuxfoundation\.org/" to="https://linuxfoundation.org/" />
+	<rule from="^http://(www|admin|automotive|collabprojects|developerbugs|events|identity|ldn|lists|lsbbugs|training)\.linuxfoundation\.org/"
+		to="https://$1.linuxfoundation.org/" />
+	<rule from="^http://lists\.linux-foundation\.org/" to="https://lists.linux-foundation.org/" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Notebooksbilliger.de">
+	<target host="blog.notebooksbilliger.de" />
+	<target host="img.notebooksbilliger.de" />
+	<target host="www.notebooksbilliger.de" />
+	<rule from="^http:" to="https:" />
+</ruleset>

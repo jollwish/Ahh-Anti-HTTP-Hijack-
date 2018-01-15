@@ -1,0 +1,8 @@
+<ruleset name="AAU.at (partial)">
+
+	<target host="pervasive.aau.at" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

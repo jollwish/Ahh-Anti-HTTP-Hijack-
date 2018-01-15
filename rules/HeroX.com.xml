@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.herox.com/ => https://www.herox.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.herox.com'")
+
+-->
+<ruleset name="HeroX.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="herox.com" />
+	<target host="www.herox.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

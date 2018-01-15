@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see Parse.ly.xml.
+
+-->
+<ruleset name="Parse.ly (mismatches)" default_off="mismatched">
+
+	<!--	Cert: *.totemapp.com	-->
+	<target host="press.parsely.com" />
+	<!--	Cert: ghs-ssl.googlehosted.com	-->
+	<target host="status.parsely.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

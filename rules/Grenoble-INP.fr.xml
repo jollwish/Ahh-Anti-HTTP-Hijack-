@@ -1,0 +1,28 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)? *
+		- ensimag *
+		- intranet *
+		- presse *
+
+	* Refused
+
+
+	Fully covered subdomains:
+
+		- applicationform
+		- edt 
+		- emploi-du-temps
+
+-->
+<ruleset name="Grenoble-INP.fr (partial)">
+
+	<target host="applicationform.grenoble-inp.fr" />
+	<target host="edt.grenoble-inp.fr" />
+	<target host="emploi-du-temps.grenoble-inp.fr" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

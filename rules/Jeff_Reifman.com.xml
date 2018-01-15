@@ -1,0 +1,16 @@
+<!--
+	Invalid certificate:
+		jeffreifman.com
+		www.jeffreifman.com
+		cloud.jeffreifman.com
+		misc.jeffreifman.com
+		twitter.jeffreifman.com
+
+-->
+<ruleset name="Jeff Reifman.com (partial)">
+
+	<target host="resume.jeffreifman.com" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

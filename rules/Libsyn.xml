@@ -1,0 +1,41 @@
+<!--
+	Invalid certificate:
+		ec.libsyn.com
+		hwcdn.libsyn.com
+
+-->
+<ruleset name="libsyn.com">
+
+	<target host="libsyn.com" />
+	<target host="*.libsyn.com" />
+
+		<test url="http://www.libsyn.com/" />
+		<test url="http://assets.libsyn.com/" />
+		<test url="http://fusion.libsyn.com/" />
+		<test url="http://html5-player.libsyn.com/" />
+		<test url="http://imake.libsyn.com/" />
+		<test url="http://ssl-static.libsyn.com/" />
+		<test url="http://three.libsyn.com/" />
+		<test url="http://traffic.libsyn.com/" />
+		<test url="http://secure-ec.libsyn.com/" />
+		<test url="http://secure-hwcdn.libsyn.com/" />
+		<test url="http://static.libsyn.com/" />
+	
+		<!-- Each user gets their own subdomain -->
+		<test url="http://fightsgoneby.libsyn.com/" />
+		<test url="http://revolutionaryleftradio.libsyn.com/" />
+		<test url="http://securityinfive.libsyn.com/" />
+		<test url="http://stoicmettle.libsyn.com/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(ec|hwcdn)\.libsyn\.com/"
+		to="https://secure-$1.libsyn.com/" />
+
+		<test url="http://ec.libsyn.com/" />
+		<test url="http://hwcdn.libsyn.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

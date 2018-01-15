@@ -1,0 +1,25 @@
+<!--
+	Non-functional hosts
+		SSL connect error:
+		- dobrochan.com
+		- www.dobrochan.com
+		- dobrochan.org
+		- www.dobrochan.org
+		- dobrochan.ru
+		- www.dobrochan.ru
+-->
+<ruleset name="Dobrochan" default_off="ssl-error">
+	<!-- dobrochan.com -->
+	<target host="dobrochan.com" />
+	<target host="www.dobrochan.com" />
+
+	<!-- *dobrochan.org -->
+	<target host="dobrochan.org" />
+	<target host="www.dobrochan.org" />
+
+	<!-- *dobrochan.ru -->
+	<target host="dobrochan.ru" />
+	<target host="www.dobrochan.ru" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,16 @@
+<!--
+	Other Celartem rulesets:
+
+		- Extensis.com.xml
+		- WebINK.com.xml
+
+-->
+<ruleset name="Celartem (partial)" platform="mixedcontent">
+
+	<target host="lizardtech.com" />
+	<target host="www.lizardtech.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

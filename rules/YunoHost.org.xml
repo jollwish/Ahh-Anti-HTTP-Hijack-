@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://doc.yunohost.org/ => https://doc.yunohost.org/: (51, "SSL: no alternative certificate subject name matches target host name 'doc.yunohost.org'")
+
+	Insecure cookies are set for these hosts:
+
+		- forum.yunohost.org
+
+-->
+<ruleset name="YunoHost.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="yunohost.org" />
+	<target host="doc.yunohost.org" />
+	<target host="forum.yunohost.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^forum\.yunohost\.org$" name="^_forum_session$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

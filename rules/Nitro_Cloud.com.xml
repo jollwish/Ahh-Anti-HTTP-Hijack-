@@ -1,0 +1,23 @@
+<!--
+
+	Other Nitro Software rulesets:
+
+		- PDF_to_Word.com.xml
+
+-->
+<ruleset name="Nitro Cloud.com">
+
+	<target host="nitrocloud.com" />
+	<target host="www.nitrocloud.com" />
+
+
+	<!--	Secured by server:
+					-->
+	<!--securecookie host="^www\.nitrocloud\.com$" name="^PLAY_SESSION$" /-->
+
+	<securecookie host="^\.nitrocloud\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,10 @@
+<ruleset name="All Above Offers" platform="mixedcontent">
+
+	<target host="abovealloffers.com" />
+	<target host="www.abovealloffers.com" />
+
+
+	<!--	Cert only matches www.	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

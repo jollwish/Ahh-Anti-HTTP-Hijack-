@@ -1,0 +1,17 @@
+<ruleset name="mozfr.org">
+	<target host="mozfr.org" />
+	<target host="www.mozfr.org" />
+	<target host="blog.mozfr.org" />
+	<target host="firefoxos.mozfr.org" />
+	<target host="forums.mozfr.org" />
+	<target host="nightly.mozfr.org" />
+	<target host="notreinternet.mozfr.org" />
+	<target host="piwik.mozfr.org" />
+	<target host="planete.mozfr.org" />
+	<target host="tech.mozfr.org" />
+	<target host="wiki.mozfr.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

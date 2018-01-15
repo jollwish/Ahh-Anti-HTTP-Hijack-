@@ -1,0 +1,9 @@
+<ruleset name="Ugly Mugs.ie">
+	<target host="uglymugs.ie" />
+	<target host="www.uglymugs.ie" />
+	<target host="support.uglymugs.ie" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

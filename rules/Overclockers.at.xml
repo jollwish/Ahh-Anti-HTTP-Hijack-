@@ -1,0 +1,17 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bitte.overclockers.at/ => https://bitte.overclockers.at/: (6, 'Could not resolve host: bitte.overclockers.at')
+
+-->
+<ruleset name="overclockers.at" default_off='failed ruleset test'>
+  <target host="overclockers.at" />
+  <target host="www.overclockers.at" />
+  <target host="bitte.overclockers.at" />
+  <target host="shop.overclockers.at" />
+  <target host="clockers.at" />
+  <target host="www.clockers.at" />
+
+  <rule from="^http:"
+    to="https:" />
+</ruleset>

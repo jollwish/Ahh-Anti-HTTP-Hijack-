@@ -1,0 +1,8 @@
+<ruleset name="staticmy.com">
+
+	<target host="img.staticmy.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

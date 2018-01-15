@@ -1,0 +1,23 @@
+<ruleset name="Netgear (partial)">
+
+	<target host="netgear.com" />
+	<target host="www.netgear.com" />
+	<target host="api.netgear.com" />
+	<target host="www.downloads.netgear.com" />
+	<target host="es.netgear.com" />
+	<target host="facebook.netgear.com" />
+	<target host="license.netgear.com" />
+	<target host="m.netgear.com" />
+	<target host="my.netgear.com" />
+	<target host="policy.netgear.com" />
+	<target host="powershift.netgear.com" />
+	<target host="support.netgear.com" />
+	<target host="th.netgear.com" />
+	<target host="updates.netgear.com" />
+	<target host="za.netgear.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

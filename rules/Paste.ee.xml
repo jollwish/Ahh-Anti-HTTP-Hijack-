@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://www.paste.ee/ (200) => https://www.paste.ee/ (404)
+
+	Fully covered hosts in *paste.ee:
+
+		- (www.)?
+		- analytics
+
+
+	Insecure cookies are set for these hosts:
+
+		- paste.ee
+		- www.paste.ee
+
+-->
+<ruleset name="Paste.ee" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="paste.ee" />
+	<target host="analytics.paste.ee" />
+	<target host="www.paste.ee" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?paste\.ee$" name="^session$" /-->
+
+	<securecookie host="^(?:www\.)?paste\.ee$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

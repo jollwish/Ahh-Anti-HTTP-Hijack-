@@ -1,0 +1,8 @@
+<ruleset name="EBSCO-content.com">
+
+	<target host="global.ebsco-content.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

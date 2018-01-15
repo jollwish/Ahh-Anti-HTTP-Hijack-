@@ -1,0 +1,21 @@
+<!--
+	Nonfunctional subdomains:
+
+		- thai
+		- translator
+		- translator-login	(times out)
+
+-->
+<ruleset name="Babylon (partial)">
+
+	<target host="img.babylon.com" />
+	<target host="store.babylon.com" />
+	<target host="utils.babylon.com" />
+
+
+	<securecookie host="^store\.babylon\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

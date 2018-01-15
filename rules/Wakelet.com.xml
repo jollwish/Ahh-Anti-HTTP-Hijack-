@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://img3.wakelet.com/ => https://img3.wakelet.com/: (6, 'Could not resolve host: img3.wakelet.com')
+
+	CDN buckets:
+
+		- wakelet-style-static.s3.amazonaws.com
+
+
+	Insecure cookies are set for these hosts:
+
+		- wakelet.com
+
+-->
+<ruleset name="Wakelet.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="wakelet.com" />
+	<target host="embed.wakelet.com" />
+	<target host="embed-assets.wakelet.com" />
+	<target host="img3.wakelet.com" />
+	<target host="www.wakelet.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^wakelet\.com$" name="^(?:HS|JSESSIONID|homeV)$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

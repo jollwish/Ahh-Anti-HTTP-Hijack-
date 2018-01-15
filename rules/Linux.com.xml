@@ -1,0 +1,29 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- archive09.linux.com
+		- japan.linux.com
+		- jobs.linux.com
+
+		4xx client error:
+		- shop.linux.com
+		- store.linux.com
+
+		Mixed content blocking (MCB) triggered:
+		- jp.linux.com
+-->
+<ruleset name="Linux.com">
+	<target host="linux.com" />
+	<target host="www.linux.com" />
+	<target host="archive15.linux.com" />
+	<target host="ideaforge.linux.com" />
+	<target host="ideas.linux.com" />
+	<target host="video.linux.com" />
+	<target host="videos.linux.com" />
+	<target host="w.linux.com" />
+	<target host="ww.linux.com" />
+	<target host="wwwnew.linux.com" />
+	<target host="wwww.linux.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

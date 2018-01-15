@@ -1,0 +1,29 @@
+
+<!--
+
+	Mismatched hosts in *nbnco.com.au:
+
+		- click.email
+		- glocals-competition
+		- image.email
+		- metrics
+		- mobile
+		- response
+		- www.egslb
+
+-->
+<ruleset name="NBN Co.com.au">
+
+	<target host="nbnco.com.au" />
+	<target host="www.nbnco.com.au" />
+	<target host="autodiscover.nbnco.com.au" />
+	<target host="enable.nbnco.com.au" />
+	<target host="www1.nbnco.com.au" />
+	<target host="www2.nbnco.com.au" />
+
+	<securecookie host="^(www\d?)?\.nbnco\.com\.au$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	Wildcard DNS and certificate.
+
+-->
+<ruleset name="NeoBux.com">
+
+	<target host="neobux.com" />
+	<target host="www.neobux.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.letstalkbitcoin.com/ => https://www.letstalkbitcoin.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.letstalkbitcoin.com'")
+
+	Fully covered hosts in *letstalkbitcoin.com:
+
+		- (www.)?
+
+
+	Insecure cookies are set for these domains:
+
+		- .letstalkbitcoin.com
+
+-->
+<ruleset name="Lets Talk Bitcoin.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="letstalkbitcoin.com" />
+	<target host="www.letstalkbitcoin.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.letstalkbitcoin\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^\.letstalkbitcoin\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

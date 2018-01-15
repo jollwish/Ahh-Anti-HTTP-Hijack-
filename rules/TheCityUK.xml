@@ -1,0 +1,16 @@
+<!--
+	!www: 401
+
+-->
+<ruleset name="TheCityUK">
+
+	<target host="thecityuk.com" />
+	<target host="www.thecityuk.com" />
+
+
+	<securecookie host="^www\.thecityuk\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

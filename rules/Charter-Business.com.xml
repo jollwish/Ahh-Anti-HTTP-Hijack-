@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://connect.charter-business.com/ => https://connect.charter-business.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For other Charter Communications coverage, see Charter.com.xml.
+
+
+	Problematic hosts in *charter-business.com:
+
+		- connect *
+
+	* Mixed content
+
+
+	Fully covered hosts in *charter-business.com:
+
+		- connect
+
+
+	Mixed content:
+
+		- css, on:
+
+			- connect from connect.charter.com *
+			- connect from fonts.googleapis.com *
+
+		- Images on connect from connect.charter.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Charter-Business.com (false MCB)" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="connect.charter-business.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

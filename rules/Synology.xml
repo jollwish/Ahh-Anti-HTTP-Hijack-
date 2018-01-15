@@ -1,0 +1,53 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://stc.synology.com/ => https://stc.synology.com/: (6, 'Could not resolve host: stc.synology.com')
+Fetch error: http://synokm.synology.com/ => https://synokm.synology.com/: (6, 'Could not resolve host: synokm.synology.com')
+
+	Other Synology rulesets:
+
+		- Synology.com.tw.xml
+
+
+	Fully covered hosts:
+
+		- (www.)?
+		- blog
+		- myds
+		- srs
+		- stc
+		- synokm
+
+
+	Insecure cookies are set for these hosts:
+
+		- myds.synology.com
+		- stc.synology.com
+		- synokm.synology.com
+		- www.synology.com
+
+-->
+<ruleset name="Synology.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="synology.com" />
+	<target host="blog.synology.com" />
+	<target host="myds.synology.com" />
+	<target host="srs.synology.com" />
+	<target host="stc.synology.com" />
+	<target host="synokm.synology.com" />
+	<target host="www.synology.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(myds|stc|synokm|www)\.synology\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host=".*\.synology\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

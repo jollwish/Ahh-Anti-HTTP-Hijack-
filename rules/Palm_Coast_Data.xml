@@ -1,0 +1,28 @@
+
+<!--
+
+	Nonfunctional hosts in *palmcoastd.com:
+
+		- ^ (does not exist)
+		- biportal (timeout)
+		- ssologin (ssl error)
+
+-->
+<ruleset name="Palm Coast Data">
+
+	<target host="www.palmcoastd.com" />
+	<target host="internal.palmcoastd.com" />
+	<target host="pcdtest.palmcoastd.com" />
+	<target host="remedy.palmcoastd.com" />
+	<target host="secure.palmcoastd.com" />
+	<target host="ssl.palmcoastd.com" />
+	<target host="ssltest.palmcoastd.com" />
+
+
+	<securecookie host="^\.palmcoastd\.com$" name="^:xCOOKIEx:$" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

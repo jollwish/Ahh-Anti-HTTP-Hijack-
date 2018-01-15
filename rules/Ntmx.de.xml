@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://ntmx.de/ (200) => https://ntmx.de/ (403)
+Non-2xx HTTP code: http://mail.ntmx.de/ (200) => https://mail.ntmx.de/ (403)
+Non-2xx HTTP code: http://www.ntmx.de/ (200) => https://ntmx.de/ (403)
+
+	www: Mismatched
+
+
+	Fully covered hosts in *ntmx.de:
+
+		- (www.)?	(www → ^)
+		- mail
+
+-->
+<ruleset name="ntmx.de" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ntmx.de" />
+	<target host="mail.ntmx.de" />
+
+	<!--	Complications:
+				-->
+	<target host="www.ntmx.de" />
+
+
+	<rule from="^http://www\.ntmx\.de/"
+		to="https://ntmx.de/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

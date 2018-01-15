@@ -1,0 +1,19 @@
+<!--
+	BankID Norge
+
+-->
+<ruleset name="BankID.no">
+
+	<target host="bankid.no" />
+	<target host="www.bankid.no" />
+
+
+	<securecookie host="^www\.bankid\.no$" name=".+" />
+
+
+	<!--	^ redirects to www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

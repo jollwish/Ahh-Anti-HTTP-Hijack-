@@ -1,0 +1,30 @@
+<!--
+	Problematic subdomains:
+
+		- support *
+		- www *
+
+	* Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- wrapbootstrap.com
+
+-->
+<ruleset name="WrapBootstrap.com (partial)">
+
+	<target host="wrapbootstrap.com" />
+	<target host="www.wrapbootstrap.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^wrapbootstrap\.com$" name="^ref$" /-->
+
+	<securecookie host="^wrapbootstrap\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

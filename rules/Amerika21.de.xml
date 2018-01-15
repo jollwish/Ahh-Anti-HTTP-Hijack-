@@ -1,0 +1,7 @@
+<ruleset name="Amerika21.de">
+  <target host="www.amerika21.de" />
+  <target host="amerika21.de" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>
+

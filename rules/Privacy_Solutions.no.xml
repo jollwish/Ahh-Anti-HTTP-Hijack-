@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://privacysolutions.no/ => https://privacysolutions.no/: (60, 'SSL certificate problem: certificate has expired')
+
+	Fully covered subdomains:
+
+		- (www.)
+		- blog
+		- track
+
+
+	Mixed content:
+
+		css on (www.), blog, and track from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Privacy Solutions.no" default_off='failed ruleset test'>
+
+	<target host="privacysolutions.no" />
+	<target host="*.privacysolutions.no" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^track\.privacysolutions\.no$" name="^_redmine_session$" /-->
+
+	<securecookie host="^track\.privacysolutions\.no$" name="" />
+
+
+	<rule from="^http://((?:blog|track|www)\.)?privacysolutions\.no/"
+		to="https://$1privacysolutions.no/" />
+
+</ruleset>

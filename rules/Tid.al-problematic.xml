@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see Tid.al.xml.
+
+-->
+<ruleset name="Tid.al (mismatched)" default_off="mismatched">
+
+	<target host="news.tid.al" />
+
+
+	<securecookie host="^news\.tid\.al$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

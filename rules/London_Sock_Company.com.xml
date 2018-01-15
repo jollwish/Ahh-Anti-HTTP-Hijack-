@@ -1,0 +1,9 @@
+<ruleset name="London Sock Company.com">
+
+	<target host="londonsockcompany.com" />
+	<target host="www.londonsockcompany.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

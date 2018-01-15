@@ -1,0 +1,12 @@
+<ruleset name="Collateral Murder">
+
+	<target host="collateralmurder.com" />
+	<target host="www.collateralmurder.com" />
+
+
+	<securecookie host="^\.collateralmurder\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

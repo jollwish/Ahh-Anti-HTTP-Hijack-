@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		staging\d.sciencealert.com
+		www.staging\d.sciencealert.com
+
+-->
+<ruleset name="ScienceAlert.com">
+
+	<target host="sciencealert.com" />
+	<target host="www.sciencealert.com" />
+	<target host="academy.sciencealert.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

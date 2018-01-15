@@ -1,0 +1,67 @@
+<!--
+	Other domains:
+		unblocked.pub
+		unblckd.biz
+		
+-->
+<ruleset name="Unblocked">
+
+	<target host="unblocked.red" />
+	<target host="*.unblocked.red" />
+		<test url="http://www.unblocked.red/" />
+		<test url="http://1337x.unblocked.red/" />
+		<test url="http://avxhome.unblocked.red/" />
+		<test url="http://beemp3.unblocked.red/" />
+		<test url="http://ebookee.unblocked.red/" />
+		<test url="http://extratorrent.unblocked.red/" />
+		<test url="http://eztv.unblocked.red/" />
+		<test url="http://freebookspot.unblocked.red/" />
+		<test url="http://isohunt.unblocked.red/" />
+		<test url="http://kickass.unblocked.red/" />
+		<test url="http://limetorrents.unblocked.red/" />
+		<test url="http://megasearch.unblocked.red/" />
+		<test url="http://movie25.unblocked.red/" />
+		<test url="http://movie4k.unblocked.red/" />
+		<test url="http://putlocker.unblocked.red/" />
+		<test url="http://rarbg.unblocked.red/" />
+		<test url="http://softarchive.unblocked.red/" />
+		<test url="http://tnaflix.unblocked.red/" /><!-- NSFW -->
+		<test url="http://torrentbutler.unblocked.red/" />
+		<test url="http://tubeplus.unblocked.red/" />
+		<test url="http://watchfree.unblocked.red/" />
+		<test url="http://watchseries.unblocked.red/" />
+		<test url="http://watchtvseries.unblocked.red/" />
+
+	<target host="unblocked.li" />
+	<target host="*.unblocked.li" />
+		<test url="http://unblocked.li/" />
+		<test url="http://1337x.unblocked.li/" />
+		<test url="http://emp3.unblocked.li/" />
+		<test url="http://eztv.unblocked.li/" />
+		<test url="http://isohunt.unblocked.li/" />
+		<test url="http://iwatchonline.unblocked.li/" />
+		<test url="http://kickass.unblocked.li/" />
+		<test url="http://libgen.unblocked.li/" />
+		<test url="http://limetorrents.unblocked.li/" />
+		<test url="http://megasearch.unblocked.li/" />
+		<test url="http://primewire.unblocked.li/" />
+		<test url="http://softarchive.unblocked.li/" />
+		<test url="http://solarmovie.unblocked.li/" />
+		<test url="http://torlock.unblocked.li/" />
+		<test url="http://torrenthound.unblocked.li/" />
+		<test url="http://torrentz.unblocked.li/" />
+		<test url="http://watchseries.unblocked.li/" />
+		<test url="http://watchtvseries.unblocked.li/" />
+
+	<target host="unblckd.biz" />
+	<target host="*.unblckd.biz" />
+		<test url="http://livetv.unblckd.biz/" />
+		<test url="http://vipleague.unblckd.biz/" />
+		<test url="http://watchtvseries.unblckd.biz/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>
+

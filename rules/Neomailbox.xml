@@ -1,0 +1,25 @@
+<!--
+	Invalid certificate:
+		support.neomailbox.com
+
+		www.neomailbox.net
+
+-->
+<ruleset name="neomailbox">
+
+	<target host="neomailbox.com" />
+	<target host="www.neomailbox.com" />
+	<target host="secure.neomailbox.com" />
+
+	<target host="neomailbox.net" />
+	<target host="www.neomailbox.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.neomailbox\.net/"
+		to="https://www.neomailbox.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

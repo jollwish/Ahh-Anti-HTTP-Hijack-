@@ -1,0 +1,13 @@
+<ruleset name="Scalability.org">
+
+	<target host="scalability.org" />
+	<target host="www.scalability.org" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

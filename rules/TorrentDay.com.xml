@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://editor.torrentday.com/ => https://editor.torrentday.com/: (6, 'Could not resolve host: editor.torrentday.com')
+
+	Refused on (March 2016):
+		announce.torrentday.com
+		irc.torrentday.com
+-->
+<ruleset name="Torrent Day" default_off='failed ruleset test'>
+
+	<target host="torrentday.com" />
+	<target host="www.torrentday.com" />
+	<target host="classic.torrentday.com" />
+	<target host="editor.torrentday.com" />
+	<target host="s.torrentday.com" />
+	<target host="secure.torrentday.com" />
+	<target host="static.torrentday.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

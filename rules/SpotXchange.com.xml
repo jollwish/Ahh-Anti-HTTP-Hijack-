@@ -1,0 +1,24 @@
+<!--
+	Fully covered subdomains:
+
+		- search
+
+
+	Mixed content:
+
+		- Images on www from www *
+
+	* Secured by us
+
+-->
+<ruleset name="SpotXchange.com (partial)">
+
+	<target host="spotxchange.com" />
+	<target host="search.spotxchange.com" />
+	<target host="sync.search.spotxchange.com" />
+	<target host="www.spotxchange.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

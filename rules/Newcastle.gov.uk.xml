@@ -1,0 +1,27 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- democracy.newcastle.gov.uk
+		- envirocall.newcastle.gov.uk
+		- www2.newcastle.gov.uk
+
+		Status code mismatch:
+		- buslanepayments.newcastle.gov.uk
+-->
+<ruleset name="Newcastle.gov.uk (partial)">
+	<target host="community2.newcastle.gov.uk" />
+	<target host="envirocallservice.newcastle.gov.uk" />
+	<target host="jobs.newcastle.gov.uk" />
+	<target host="library.newcastle.gov.uk" />
+	<target host="myaccount.newcastle.gov.uk" />
+	<target host="newcastlecollection.newcastle.gov.uk" />
+	<target host="parking.newcastle.gov.uk" />
+		<test url="http://parking.newcastle.gov.uk/pcn/" />
+	<target host="publicaccessapplications.newcastle.gov.uk" />
+	<target host="securenscb.newcastle.gov.uk" />
+	<target host="www.newcastle.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,19 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://zaption.com/ => https://zaption.com/: (51, "SSL: no alternative certificate subject name matches target host name 'zaption.com'")
+Fetch error: http://www.zaption.com/ => https://www.zaption.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.zaption.com'")
+
+-->
+<ruleset name="Zaption" default_off='failed ruleset test'>
+
+	<target host="zaption.com" />
+	<target host="www.zaption.com" />
+
+
+	<securecookie host="^(?:www)?\.zaption\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

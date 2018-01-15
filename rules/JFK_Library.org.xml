@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(dropped)
+
+-->
+<ruleset name="JFK library.org (partial)">
+
+	<target host="store.jfklibrary.org" />
+
+
+	<securecookie host="^store\.jfklibrary\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

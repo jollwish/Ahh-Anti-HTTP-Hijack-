@@ -1,0 +1,8 @@
+<ruleset name="York College of New York">
+
+	<target host="york.cuny.edu" />
+	<target host="www.york.cuny.edu" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

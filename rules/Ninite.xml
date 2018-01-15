@@ -1,0 +1,8 @@
+<ruleset name="Ninite.com">
+	<target host="ninite.com" />
+	<target host="www.ninite.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

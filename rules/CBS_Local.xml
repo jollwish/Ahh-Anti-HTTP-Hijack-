@@ -1,0 +1,11 @@
+<ruleset name="CBS Local (partial)" default_off="akamai cert">
+
+	<target host="sacramento.cbslocal.com" />
+
+
+	<securecookie host="^sacramento\.cbslocal\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

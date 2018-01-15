@@ -1,0 +1,7 @@
+<ruleset name="Gameswelt.de">
+<target host="www.gameswelt.de" />
+<target host="mediang.gameswelt.net" />
+<target host="static.gameswelt.net" />
+
+<rule from="^http:" to="https:" />
+</ruleset>

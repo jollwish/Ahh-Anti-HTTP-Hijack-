@@ -1,0 +1,62 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - archiver.nuug.no
+			 - dugnadsnett.nuug.no
+			 - fiksgatami-prod.nuug.no
+			 - fiksgatami2-dev.nuug.no
+			 - frikanalen.nuug.no
+			 - mapit.nuug.no
+			 - master.nuug.no
+			 - master2.nuug.no
+			 - portal.nuug.no
+			 - scraper.nuug.no
+			 - vert.nuug.no
+
+		Timeout was reached:
+			 - cserv.nuug.no
+			 - fiksgatami-dev.nuug.no
+			 - fiksgatami2-prod.nuug.no
+			 - sqldb.nuug.no
+
+		SSL peer certificate was not OK:
+			 - alaveteli-prod.nuug.no
+			 - bsd.nuug.no
+			 - foundation.nuug.no
+			 - freebsd.nuug.no
+			 - haugalandlug.nuug.no
+			 - login.nuug.no
+			 - munin.nuug.no
+			 - mx1.nuug.no
+			 - ns1.nuug.no
+			 - openbsd.nuug.no
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - frikanalen-dev.nuug.no
+			 - tjener.nuug.no
+
+		Status code mismatch:
+			 - video.nuug.no (require auth)
+
+		4xx client error:
+			 - approve.nuug.no
+
+		5xx server error:
+			 - varnish.nuug.no
+-->
+<ruleset name="NUUG.no">
+	<target host="nuug.no" />
+	<target host="www.nuug.no" />
+	<target host="alaveteli-dev.nuug.no" />
+	<target host="home.nuug.no" />
+	<target host="hotell.nuug.no" />
+	<target host="lists.nuug.no" />
+	<target host="memberdb.nuug.no" />
+	<target host="nerdhaven.nuug.no" />
+	<target host="piwik.nuug.no" />
+	<target host="planet.nuug.no" />
+	<target host="rt.nuug.no" />
+	<target host="wiki.nuug.no" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

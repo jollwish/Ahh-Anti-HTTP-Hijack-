@@ -1,0 +1,69 @@
+<!--
+	Other OkCupid rulesets:
+		+ OkCimg.com.xml
+
+	Non-functional hosts
+		Timeout was reached:
+			 - cdn.okcupid.com
+			 - nameserver1.okcupid.com
+			 - nameserver2.okcupid.com
+			 - staffrobot.okcupid.com
+
+		SSL peer certificate was not OK:
+			 - o2.mailgrid.okcupid.com
+			 - o1.supportmail.okcupid.com
+
+		Status code mismatch:
+			 - api.okcupid.com
+
+		4xx client error:
+			 - developer.okcupid.com
+			 - li.okcupid.com
+			 - mailgrid.okcupid.com
+			 - services.okcupid.com
+			 - supportmail.okcupid.com
+			 - techblog-static.okcupid.com
+
+		5xx server error:
+			 - piwik.okcupid.com
+
+		Different content:
+			 - jobs.okcupid.com
+			 - quiz.okcupid.com
+-->
+<ruleset name="OkCupid.com (partial)">
+	<target host="okcupid.com" />
+	<target host="www.okcupid.com" />
+	<target host="1-instant.okcupid.com" />
+	<target host="10-instant.okcupid.com" />
+	<target host="11-instant.okcupid.com" />
+	<target host="12-instant.okcupid.com" />
+	<target host="2-instant.okcupid.com" />
+	<target host="3-instant.okcupid.com" />
+	<target host="4-instant.okcupid.com" />
+	<target host="5-instant.okcupid.com" />
+	<target host="6-instant.okcupid.com" />
+	<target host="7-instant.okcupid.com" />
+	<target host="8-instant.okcupid.com" />
+	<target host="9-instant.okcupid.com" />
+	<target host="blog.okcupid.com" />
+	<target host="de.okcupid.com" />
+	<target host="en.okcupid.com" />
+	<target host="fr.okcupid.com" />
+	<target host="he.okcupid.com" />
+	<target host="helloquizzy.okcupid.com" />
+	<target host="m.okcupid.com" />
+	<target host="mobile-web.okcupid.com" />
+	<target host="mobile_web.okcupid.com" />
+	<target host="nl.okcupid.com" />
+	<target host="oktrends.okcupid.com" />
+	<target host="status.okcupid.com" />
+	<target host="tech.okcupid.com" />
+	<target host="theblog.okcupid.com" />
+	<target host="trends.okcupid.com" />
+	<target host="www2.okcupid.com" />
+
+	<securecookie host="^(www\.)?okcupid\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

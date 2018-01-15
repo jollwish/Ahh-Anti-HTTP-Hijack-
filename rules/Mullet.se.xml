@@ -1,0 +1,6 @@
+<ruleset name="Mullet.se">
+	<target host="mullet.se" />
+	<target host="www.mullet.se" />
+	<rule from="^http:" to="https:" />
+</ruleset>
+

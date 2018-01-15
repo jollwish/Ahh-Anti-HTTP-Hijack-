@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://api.challenge.gov/ => https://api.challenge.gov/: (35, 'Unknown SSL protocol error in connection to api.challenge.gov:443 ')
+Fetch error: http://staging-api.challenge.gov/ => https://staging-api.challenge.gov/: (35, 'Unknown SSL protocol error in connection to staging-api.challenge.gov:443 ')
+
+
+
+	Insecure cookies are set for these hosts:
+
+		- api.challenge.gov
+		- staging-api.challenge.gov
+		- www.challenge.gov
+
+-->
+<ruleset name="Challenge.gov" default_off='failed ruleset test'>
+
+	<target host="challenge.gov" />
+	<target host="api.challenge.gov" />
+	<target host="staging-api.challenge.gov" />
+	<target host="www.challenge.gov" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:staging-)?api\.challenge\.gov$" name="^_ChallengeApp_session$" /-->
+	<!--securecookie host="^www\.challenge\.gov$" name="^(?:PHPSESSID|wfvt_\d+)$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

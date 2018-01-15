@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bikeji.com/ => https://bikeji.com/: (7, 'Failed to connect to bikeji.com port 443: Connection refused')
+Fetch error: http://www.bikeji.com/ => https://www.bikeji.com/: (7, 'Failed to connect to www.bikeji.com port 443: Connection refused')
+
+-->
+<ruleset name="bikeji.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bikeji.com" />
+	<target host="www.bikeji.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

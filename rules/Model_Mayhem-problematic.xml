@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see Model_Mayhem.xml.
+
+-->
+<ruleset name="Model Mayhem (problematic)" default_off="mismatched">
+
+	<target host="photos.modelmayhem.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

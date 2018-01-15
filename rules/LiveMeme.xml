@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://i.lvme.me/ => https://i.lvme.me/: (60, 'SSL certificate problem: certificate has expired')
+
+
+	Nonfunctional domains:
+
+		aht.livememe.com	(reset)
+		t1.livememe.com		(reset)
+		lvme.me			(reset)
+		www.lvme.me		(reset)
+		static.lvme.me		(mismatched)
+
+-->
+
+<ruleset name="LiveMeme (partial)" default_off='failed ruleset test'>
+
+	<target host="livememe.com" />
+	<target host="www.livememe.com" />
+
+	<target host="e.lvme.me" />
+	<target host="i.lvme.me" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	No working URL known:
+		dev.head-fi.org
+
+-->
+<ruleset name="Head-Fi.org">
+
+	<target host="head-fi.org" />
+	<target host="www.head-fi.org" />
+	<target host="cdn.head-fi.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

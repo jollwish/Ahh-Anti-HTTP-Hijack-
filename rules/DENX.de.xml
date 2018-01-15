@@ -1,0 +1,13 @@
+<ruleset name="DENX.de" platform="mixedcontent">
+
+	<target host="denx.de" />
+	<target host="www.denx.de" />
+
+
+	<securecookie host="^www\.denx\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

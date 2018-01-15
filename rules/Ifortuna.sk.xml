@@ -1,0 +1,6 @@
+<ruleset name="Ifortuna.sk">
+  <target host="ifortuna.sk" />
+  <target host="www.ifortuna.sk" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

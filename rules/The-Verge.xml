@@ -1,0 +1,19 @@
+<!--
+For other Vox Media coverage, see Vox.com.xml.
+
+Timeout:
+	mobile.theverge.com
+	status.theverge.com
+-->
+<ruleset name="The Verge.com">
+	<target host="theverge.com"/>
+	<target host="www.theverge.com"/>
+	<target host="live.theverge.com"/>
+	<target host="mobile.theverge.com"/>
+	<target host="status.theverge.com"/>
+	<target host="store.theverge.com"/>
+
+	<rule from="^http://mobile\.theverge\.com/" to="https://www.theverge.com/" />
+	<rule from="^http://status\.theverge\.com/" to="https://voxmedia.statuspage.io/" />
+	<rule from="^http:" to="https:" />
+</ruleset>

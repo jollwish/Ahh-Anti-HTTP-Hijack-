@@ -1,0 +1,56 @@
+<!--
+	CDN buckets:
+
+		- wac.1257.edgecastcdn.net/??1257/
+
+			- static.jquery.com
+
+		- learningjquery.kswedberg.netdna-cdn.com
+
+			- -ssl doesn't exist
+
+		- jquery-groups.ning.com
+
+
+	Nonfunctional hosts in *jquery.com:
+
+		- try *
+
+	* Refused
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .jquery.com
+		- forum.jquery.com
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- forum from static.jquery.com
+			- forum from www.zoho.com
+
+-->
+<ruleset name="jQuery.com (partial)">
+
+	<target host="jquery.com" />
+	<target host="www.jquery.com" />
+	<target host="api.jquery.com" />
+	<target host="blog.jquery.com" />
+	<target host="bugs.jquery.com" />
+	<target host="code.jquery.com" />
+	<target host="forum.jquery.com" />
+	<target host="learn.jquery.com" />
+	<target host="meetups.jquery.com" />
+	<target host="plugins.jquery.com" />
+	<target host="static.jquery.com" />
+		<test url="http://static.jquery.com/files/rocker/css/screen.css" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- images
+
+-->
+<ruleset name="Street Moda (partial)" platform="mixedcontent">
+
+	<target host="streetmoda.com" />
+	<target host="www.streetmoda.com" />
+
+
+	<securecookie host="^.*\.streetmoda\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

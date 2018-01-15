@@ -1,0 +1,12 @@
+<!--
+	For other NHN Corporation coverage, see NHN-Corporation.xml.
+
+-->
+<ruleset name="unthem">
+
+	<target host="api.unthem.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

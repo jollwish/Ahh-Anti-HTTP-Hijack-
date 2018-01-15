@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bnc4free.com/ => https://bnc4free.com/: (35, 'error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol')
+Fetch error: http://cdn.bnc4free.com/ => https://cdn.bnc4free.com/: (6, 'Could not resolve host: cdn.bnc4free.com')
+Fetch error: http://panel.bnc4free.com/ => https://panel.bnc4free.com/: (6, 'Could not resolve host: panel.bnc4free.com')
+Fetch error: http://status.bnc4free.com/ => https://status.bnc4free.com/: (6, 'Could not resolve host: status.bnc4free.com')
+Fetch error: http://www.bnc4free.com/ => https://www.bnc4free.com/: (35, 'error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol')
+
+	For rules causing false/broken MCB, see Bnc4free.com-falsemixed.xml.
+
+
+	Problematic hosts in *bnc4free.com:
+
+		- wiki *
+
+	* Mixed css
+
+
+	Mixed content:
+
+		- css on wiki from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="bnc4free.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bnc4free.com" />
+	<target host="cdn.bnc4free.com" />
+	<target host="panel.bnc4free.com" />
+	<target host="status.bnc4free.com" />
+	<!--target host="wiki.bnc4free.com" /-->
+	<target host="www.bnc4free.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

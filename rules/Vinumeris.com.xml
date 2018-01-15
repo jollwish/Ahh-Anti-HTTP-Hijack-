@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://vinumeris.com/ => https://vinumeris.com/: (7, 'Failed to connect to vinumeris.com port 443: Connection refused')
+Fetch error: http://www.vinumeris.com/ => https://www.vinumeris.com/: (7, 'Failed to connect to www.vinumeris.com port 443: Connection refused')
+
+	Insecure cookies are set for these hosts:
+
+		- vinumeris.com
+		- www.vinumeris.com
+
+-->
+<ruleset name="Vinumeris.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="vinumeris.com" />
+	<target host="www.vinumeris.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?vinumeris\.com$" name="^NINJA_FLASH$" /-->
+
+	<securecookie host="^(?:www\.)?vinumeris\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

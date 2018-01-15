@@ -1,0 +1,32 @@
+<!--
+	For other Microsoft coverage, see Microsoft.xml.
+
+	Nonfunctional hosts in *.skypeassets.com:
+
+		- www.skypeassets.com (m, secure.skypeassets.com would work but status code is not the same)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+-->
+<ruleset name="Skypeassets.com">
+
+	<target host="apps.skypeassets.com" />
+	<target host="secure.skypeassets.com" />
+	<target host="static.skypeassets.com" />
+
+	<!-- connection times out on $ for Travis -->
+	<exclusion pattern="^http://secure\.skypeassets\.com/$" />
+
+	<test url="http://apps.skypeassets.com/static/skype.client.login/3.0/3.30/release/images/normal/skype-logo-136x60.png" />
+	<test url="http://secure.skypeassets.com/favicon.ico" />
+	<test url="http://static.skypeassets.com/adserver/AdLoader.html" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	For other AllDebrid coverage, see AllDebrid.com.xml.
+
+-->
+<ruleset name="AllDebrid.fr">
+
+	<target host="alldebrid.fr" />
+	<target host="www.alldebrid.fr" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

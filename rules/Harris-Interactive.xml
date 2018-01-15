@@ -1,0 +1,7 @@
+<ruleset name="Harris Interactive (partial)">
+
+	<target host="www1.pollg.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

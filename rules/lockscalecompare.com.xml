@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://gets.lockscalecompare.com/ => https://gets.lockscalecompare.com/: (6, 'Could not resolve host: gets.lockscalecompare.com')
+
+	Problematic hosts in *lockscalecompare.com:
+
+		- data ᵐ
+
+	ᵐ Mismatched
+
+
+	These altnames do not exist:
+
+		- www.gets.lockscalecompare.com
+
+-->
+<ruleset name="lockscalecompare.com (partial)" default_off='failed ruleset test'>
+
+	<target host="lockscalecompare.com" />
+	<target host="gets.lockscalecompare.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

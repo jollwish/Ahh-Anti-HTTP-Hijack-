@@ -1,0 +1,6 @@
+<ruleset name="StrongVPN.com">
+  <target host="strongvpn.com" />
+  <target host="www.strongvpn.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

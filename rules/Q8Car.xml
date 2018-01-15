@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://images1.q8car.com/ => https://images1.q8car.com/: (6, 'Could not resolve host: images1.q8car.com')
+Fetch error: http://images2.q8car.com/ => https://images2.q8car.com/: (6, 'Could not resolve host: images2.q8car.com')
+Fetch error: http://images3.q8car.com/ => https://images3.q8car.com/: (6, 'Could not resolve host: images3.q8car.com')
+
+	Mixed content:
+
+		- Images, on:
+
+			- kuwait from images[23].q8car.com *
+			- kuwait from www.q8car.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Q8Car.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="q8car.com" />
+	<target host="images1.q8car.com" />
+	<target host="images2.q8car.com" />
+	<target host="images3.q8car.com" />
+	<target host="kuwait.q8car.com" />
+	<target host="www.q8car.com" />
+
+		<test url="http://kuwait.q8car.com/ar/cars/registration/registration.aspx" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cloud.seafile.com/ => https://cloud.seafile.com/: (51, "SSL: no alternative certificate subject name matches target host name 'cloud.seafile.com'")
+
+	Other Seafile rulesets:
+
+		- Seafile-Server.de.xml
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(shows seacloud.cc; mismatched, CN: cloud.seafile.com)
+
+-->
+<ruleset name="Seafile (partial)" default_off='failed ruleset test'>
+
+	<target host="cloud.seafile.com" />
+
+
+	<securecookie host="^cloud\.seafile\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

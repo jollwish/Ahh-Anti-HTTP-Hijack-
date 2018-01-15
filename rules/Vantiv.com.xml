@@ -1,0 +1,27 @@
+<!--
+	Problematic subdomains:
+
+		- investor *
+
+	* corporate-ir.net
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- (www.)?clientconnection
+		- sales
+
+-->
+<ruleset name="Vantiv.com (partial)">
+
+	<target host="vantiv.com" />
+	<target host="clientconnection.vantiv.com" />
+	<target host="www.clientconnection.vantiv.com" />
+	<target host="sales.vantiv.com" />
+	<target host="www.vantiv.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

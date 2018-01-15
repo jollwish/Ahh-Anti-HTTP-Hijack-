@@ -1,0 +1,12 @@
+<ruleset name="Blumenthals">
+
+	<target host="blumenthals.com" />
+	<target host="www.blumenthals.com" />
+
+
+	<securecookie host="^blumenthals\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

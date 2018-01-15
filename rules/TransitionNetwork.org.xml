@@ -1,0 +1,14 @@
+<!--
+	Invalid certificate:
+		transitionese.transitionnetwork.org
+
+-->
+<ruleset name="TransitionNetwork.org">
+
+	<target host="transitionnetwork.org" />
+	<target host="www.transitionnetwork.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+<ruleset name="Eregon.ch">
+
+	<target host="ergon.ch" />
+	<target host="secure.ergon.ch" />
+	<target host="techzone.ergon.ch" />
+	<target host="www.ergon.ch" />
+
+
+	<!--	Secured by server:
+					-->
+	<!--securecookie host="^\.ergon\.ch$" name="^SES_SESS-S$" /-->
+	<!--securecookie host="^techzone\.ergon\.ch$" name="^AL_SESS-S$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

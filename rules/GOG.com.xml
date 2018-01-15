@@ -1,0 +1,16 @@
+<ruleset name="GOG.com">
+	<target host="gog.com" />
+	<target host="www.gog.com" />
+	<target host="images-1.gog.com" />
+	<target host="images-2.gog.com" />
+	<target host="images-3.gog.com" />
+	<target host="images-4.gog.com" />
+	<target host="secure.gog.com" />
+	<target host="static.gog.com" />
+	<target host="www4-static1.gog.com" />
+	<target host="www4-static4.gog.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

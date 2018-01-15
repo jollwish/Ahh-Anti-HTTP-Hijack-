@@ -1,0 +1,23 @@
+<!--
+	Invalid certificate:
+		mail.fuskator.com
+-->
+<ruleset name="Fuskator.com">
+	<target host="fuskator.com" />
+	<target host="www.fuskator.com" />
+	<target host="i1.fuskator.com" />
+	<target host="i2.fuskator.com" />
+	<target host="i3.fuskator.com" />
+	<target host="i4.fuskator.com" />
+	<target host="i5.fuskator.com" />
+	<target host="i6.fuskator.com" />
+	<target host="i7.fuskator.com" />
+	<target host="i8.fuskator.com" />
+  	<target host="i9.fuskator.com" />
+	<target host="images.fuskator.com" />
+	<target host="imgsrv.fuskator.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

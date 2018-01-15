@@ -1,0 +1,21 @@
+<!--
+	Nonfunctional hosts in *dixcart.com:
+
+		- development ʳ
+		- stats ʳ
+
+	ʳ Refused
+
+-->
+<ruleset name="Dixcart.com (partial)">
+
+	<target host="dixcart.com" />
+	<target host="www.dixcart.com" />
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

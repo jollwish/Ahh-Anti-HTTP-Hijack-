@@ -1,0 +1,41 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://affiliates.nitetimetoys.com/ => https://affiliates.nitetimetoys.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	These altnames don't exist:
+
+		- www.affiliates.nitetimetoys.com
+
+
+	Observed cookie domains:
+
+		- . *
+		- affiliates *
+		- www *
+
+	* Secured by us <= not secured by server
+
+
+	Mixed content:
+
+		- Images on affiliates and www from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="NiteTimeToys.com" default_off='failed ruleset test'>
+
+	<target host="nitetimetoys.com" />
+	<target host="affiliates.nitetimetoys.com" />
+	<target host="www.nitetimetoys.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^(?:affiliates|\.www)?\.nitetimetoys\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

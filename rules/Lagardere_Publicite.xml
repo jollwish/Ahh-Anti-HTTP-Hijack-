@@ -1,0 +1,21 @@
+<!--
+	Invalid certificate:
+		demo.lagardere-pub.com
+		info.lagardere-pub.com
+		portailpresse.lagardere-pub.com
+		www.portailpresse.lagardere-pub.com
+		presse.lagardere-pub.com
+		specs.lagardere-pub.com
+		youme.lagardere-pub.com
+
+-->
+<ruleset name="Lagardère Publicité (partial)">
+
+	<target host="lagardere-pub.com" />
+	<target host="www.lagardere-pub.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

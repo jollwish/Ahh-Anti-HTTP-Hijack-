@@ -1,0 +1,11 @@
+<ruleset name="Spankwire (partial)">
+
+	<target host="spankwire.com" />
+	<target host="www.spankwire.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

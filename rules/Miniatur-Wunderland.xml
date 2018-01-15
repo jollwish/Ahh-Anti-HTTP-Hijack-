@@ -1,0 +1,6 @@
+<ruleset name="Miniatur Wunderland" platform="mixedcontent">
+ <target host="www.miniatur-wunderland.de" />
+ <target host="miniatur-wunderland.de" />
+
+ <rule from="^http:" to="https:" />
+</ruleset>

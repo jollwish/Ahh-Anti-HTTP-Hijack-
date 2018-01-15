@@ -1,0 +1,25 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://deutsche-boerse.com/ => https://www.deutsche-boerse.com/: Too many redirects while fetching 'https://www.deutsche-boerse.com/'
+Fetch error: http://www.deutsche-boerse.com/ => https://www.deutsche-boerse.com/: Too many redirects while fetching 'https://www.deutsche-boerse.com/'
+
+     Deutsche Börse
+
+	Other Deutsche Börse rulesets:
+
+		- Eurex_Repo.com.xml
+		- Eurexchange.com.xml
+		- Xetra.com.xml
+
+-->
+
+<ruleset name="Deutsche Börse Group" default_off='failed ruleset test'>
+    <target host="deutsche-boerse.com" />
+    <target host="www.deutsche-boerse.com" />
+
+    <rule from="^http://deutsche-boerse\.com/"
+        to="https://www.deutsche-boerse.com/" />
+    <rule from="^http://([^/:@]+)?\.deutsche-boerse\.com/"
+        to="https://$1.deutsche-boerse.com/" />
+</ruleset>

@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://map.virustracker.net/ => https://map.virustracker.net/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Fully covered hosts *virustracker.net:
+
+		- (www.)?
+		- map
+
+
+	Insecure cookies are set for these hosts:
+
+		- virustracker.net
+
+-->
+<ruleset name="Virus Tracker.net" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="virustracker.net" />
+	<target host="map.virustracker.net" />
+	<target host="www.virustracker.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^virustracker\.net$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^virustracker\.net$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

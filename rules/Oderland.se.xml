@@ -1,0 +1,9 @@
+<ruleset name="Oderland.se">
+
+	<target host="oderland.se" />
+	<target host="www.oderland.se" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

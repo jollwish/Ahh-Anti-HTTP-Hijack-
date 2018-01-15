@@ -1,0 +1,7 @@
+<ruleset name="Cultura Sparebank">
+  <target host="cultura.no" />
+  <target host="www.cultura.no" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>
+

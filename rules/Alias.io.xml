@@ -1,0 +1,9 @@
+<ruleset name="alias.io">
+
+	<target host="alias.io" />
+	<target host="www.alias.io" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

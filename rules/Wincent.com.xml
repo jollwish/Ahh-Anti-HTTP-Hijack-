@@ -1,0 +1,13 @@
+<!--
+	git & www: redirects to http
+
+-->
+<ruleset name="Wincent.com">
+
+	<target host="wincent.com" />
+	<target host="www.wincent.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

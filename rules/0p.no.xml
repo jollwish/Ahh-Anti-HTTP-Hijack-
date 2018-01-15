@@ -1,0 +1,15 @@
+
+<!--
+	Invalid Certificate:
+		www.0p.no
+-->
+<ruleset name="0p.no">
+	<target host="0p.no" />
+	<target host="www.0p.no" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.0p\.no/" to="https://0p.no/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

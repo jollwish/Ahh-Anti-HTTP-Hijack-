@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://community.muselive.com/ => https://community.muselive.com/: (7, 'Failed to connect to community.muselive.com port 443: Connection refused')
+
+	(www.)?muselive.com: Dropped
+
+
+	Insecure cookies are set for these hosts:
+
+		- community.muselive.com
+
+-->
+<ruleset name="Muselive.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="community.muselive.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^community\.muselive\.com$" name="^_forum_session$" /-->
+
+	<securecookie host="^community\.muselive\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

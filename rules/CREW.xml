@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.secure.citizensforethics.org/ => https://www.secure.citizensforethics.org/: (6, 'Could not resolve host: www.secure.citizensforethics.org')
+
+	Nonfunctional subdomains:
+
+		- (www.)	(shows secure; mismatched, CN: secure.citizensforethics.org)
+
+-->
+<ruleset name="CREW (partial)" default_off='failed ruleset test'>
+
+	<target host="secure.citizensforethics.org" />
+	<target host="www.secure.citizensforethics.org" />
+
+
+	<securecookie host="^\.?secure\.citizensforethics\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

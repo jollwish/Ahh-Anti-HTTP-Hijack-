@@ -1,0 +1,13 @@
+<ruleset name="Source Conference.com">
+
+	<target host="sourceconference.com" />
+	<target host="www.sourceconference.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="carrier-lost.org">
+
+	<target host="carrier-lost.org" />
+	<target host="www.carrier-lost.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

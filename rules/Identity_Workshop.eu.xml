@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://identityworkshop.eu/ => https://identityworkshop.eu/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.identityworkshop.eu/ => https://www.identityworkshop.eu/: (60, 'SSL certificate problem: certificate has expired')
+
+	Insecure cookies are set for these hosts:
+
+		- identityworkshop.eu
+		- www.identityworkshop.eu
+
+-->
+<ruleset name="Identity Workshop.eu" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="identityworkshop.eu" />
+	<target host="www.identityworkshop.eu" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?identityworkshop\.eu$" name="^[\da-f]{32}$" /-->
+
+	<securecookie host="^(?:www\.)?identityworkshop\.eu$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,31 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - a.racjonalista.pl
+			 - i.racjonalista.pl
+
+		SSL connect error:
+			 - bracia.racjonalista.pl
+			 - fsm.racjonalista.pl
+			 - synopsa.racjonalista.pl
+
+		SSL peer certificate was not OK:
+			 - galeria.racjonalista.pl
+			 - lista.racjonalista.pl
+			 - mobile.racjonalista.pl
+			 - moralne-zwierze.racjonalista.pl
+			 - neutrum.racjonalista.pl
+			 - psr.racjonalista.pl
+			 - reshumana.racjonalista.pl
+			 - wydawnictwo.racjonalista.pl
+
+		Different content:
+			 - ceremonie.racjonalista.pl
+-->
+<ruleset name="Racjonalista.pl">
+	<target host="racjonalista.pl" />
+	<target host="www.racjonalista.pl" />
+	<target host="ksiegarnia.racjonalista.pl" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

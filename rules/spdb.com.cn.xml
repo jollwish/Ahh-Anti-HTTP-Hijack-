@@ -1,0 +1,11 @@
+<!--
+	Incomplete cert chain:
+		eservice.spdb.com.cn	https://eservice.spdb.com.cn/eservice/welcome.do
+-->
+<ruleset name="spdb.com.cn">
+	<target host="download.spdb.com.cn" />
+	<target host="ebank.spdb.com.cn" />
+	<target host="wap.spdb.com.cn" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

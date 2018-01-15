@@ -1,0 +1,26 @@
+<!--
+
+	Problematic hosts in *ausgamers.com:
+
+		- au1cdn (mismatched)
+		- files (mismatched)
+		- mail (mismatched)
+		- mail1 (mismatched)
+		- network (expired)
+		- qmailadmin (mismatched)
+		- syd1 (mismatched)
+		- us3cdn (mismatched)
+		- video (mismatched)
+		- whisper (mismatched)
+
+-->
+<ruleset name="AusGamers.com">
+
+	<target host="ausgamers.com" />
+	<target host="www.ausgamers.com" />
+	<target host="test.ausgamers.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

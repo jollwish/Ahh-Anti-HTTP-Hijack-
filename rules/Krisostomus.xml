@@ -1,0 +1,41 @@
+<!--
+	Breaks search by subject on www.kriso.ee
+		http://www.kriso.ee/health-personal-development-su-V-english2.html
+		http://www.kriso.ee/language-su-C-english2.html
+		http://www.kriso.ee/technology-engineering-agriculture-su-T-english2.html
+
+	Invalid certificate:
+		blog.kriso.ee
+		static.kriso.ee
+		tarturatsakool.kriso.ee
+		test.kriso.ee
+		winserver.kriso.ee
+
+		kriso.lt
+
+		kriso.lv
+
+-->
+<ruleset name="Krisostomus" default_off="other">
+
+	<target host="kriso.ee" />
+	<target host="www.kriso.ee" />
+	<target host="m.kriso.ee" />
+
+	<target host="kriso.lt" />
+	<target host="www.kriso.lt" />
+	<target host="m.kriso.lt" />
+
+	<target host="kriso.lv" />
+	<target host="www.kriso.lv" />
+	<target host="m.kriso.lv" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://kriso\.(lt|lv)/"
+		to="https://www.kriso.$1/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

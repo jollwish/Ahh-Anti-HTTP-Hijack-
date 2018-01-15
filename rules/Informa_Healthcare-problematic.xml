@@ -1,0 +1,16 @@
+<!--
+	For rules that are on by default, see Informa_Healthcare.xml.
+
+-->
+<ruleset name="Informa Healthcare (problematic)" default_off="mismatched">
+
+	<target host="comms.informahealthcare.com" />
+	<target host="contact.informahealthcare.com" />
+
+
+	<securecookie host="^comms\.informahealthcare\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

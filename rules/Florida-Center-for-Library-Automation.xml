@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- status
+
+-->
+<ruleset name="Florida Center for Library Automation (partial)">
+
+	<target host="fclaweb.fcla.edu" />
+	<target host="metalib.fcla.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://anon-ib.com/ => https://anon-ib.com/: (7, 'Failed to connect to anon-ib.com port 443: Connection refused')
+Fetch error: http://www.anon-ib.com/ => https://www.anon-ib.com/: (7, 'Failed to connect to www.anon-ib.com port 443: Connection refused')
+
+	Insecure cookies are set for these domains:
+
+		- .anon-ib.com
+
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+		- Image from anon-ib.co
+
+	* Secured by us
+
+-->
+<ruleset name="Anon-IB.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="anon-ib.com" />
+	<target host="www.anon-ib.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.anon-ib\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.anon-ib\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

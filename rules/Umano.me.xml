@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://umano.me/ => https://umano.me/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.umano.me/ => https://www.umano.me/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- umano.me
+		- www.umano.me
+
+-->
+<ruleset name="Umano.me" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="umano.me" />
+	<target host="www.umano.me" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?umano\.me$" name="^connect\.sid$" /-->
+
+	<securecookie host="^(?:www\.)?umano\.me$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

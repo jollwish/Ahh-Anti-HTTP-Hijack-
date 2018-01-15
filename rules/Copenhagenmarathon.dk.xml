@@ -1,0 +1,13 @@
+<!--
+	Mixed content from $self (secured in Copenhagenmarathon.dk-falsemixed.xml):
+		map.copenhagenmaraton.dk
+
+-->
+<ruleset name="Copenhagenmarathon.dk">
+
+	<target host="copenhagenmarathon.dk" />
+	<target host="www.copenhagenmarathon.dk" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

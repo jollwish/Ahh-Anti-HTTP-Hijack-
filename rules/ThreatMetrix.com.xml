@@ -1,0 +1,50 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - autodiscover.threatmetrix.com
+			 - go.threatmetrix.com
+			 - portal2-qa2.threatmetrix.com
+			 - portal3.threatmetrix.com
+			 - tardis.threatmetrix.com
+
+		Timeout was reached:
+			 - ccc.threatmetrix.com
+			 - us-oem1.delivery.threatmetrix.com
+			 - us-oem2.delivery.threatmetrix.com
+			 - mail.threatmetrix.com
+			 - portal2-am1.threatmetrix.com
+			 - reporting-qa1.threatmetrix.com
+			 - reporting2.threatmetrix.com
+			 - smtp.threatmetrix.com
+
+		SSL peer certificate was not OK:
+			 - dataviz.threatmetrix.com
+			 - explore.threatmetrix.com
+
+		Incomplete certificate chain error:
+			 - portal2-qaperf2.threatmetrix.com
+
+		4xx client error:
+			 - cas.threatmetrix.com
+			 - demonstration.threatmetrix.com
+			 - reporting-qa2.threatmetrix.com
+			 - sso-qa1.threatmetrix.com
+			 - sso-qaperf2.threatmetrix.com
+			 - tdmobile.threatmetrix.com
+-->
+<ruleset name="Threat Metrix.com (partial)">
+	<target host="threatmetrix.com" />
+	<target host="www.threatmetrix.com" />
+	<target host="ask.threatmetrix.com" />
+	<target host="info.threatmetrix.com" />
+	<target host="jasper-qa1.threatmetrix.com" />
+	<target host="kb.threatmetrix.com" />
+	<target host="portal.threatmetrix.com" />
+	<target host="portal-qa1.threatmetrix.com" />
+	<target host="portal2.threatmetrix.com" />
+	<target host="portal2-qa1.threatmetrix.com" />
+	<target host="report.threatmetrix.com" />
+	<target host="reporting.threatmetrix.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

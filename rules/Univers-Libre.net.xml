@@ -1,0 +1,12 @@
+<ruleset name="Univers-Libre.net">
+
+	<target host="univers-libre.net" />
+	<target host="www.univers-libre.net" />
+	<target host="dev.univers-libre.net" />
+	<target host="photos.univers-libre.net" />
+	<target host="recettes.univers-libre.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

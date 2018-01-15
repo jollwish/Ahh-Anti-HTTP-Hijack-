@@ -1,0 +1,8 @@
+<ruleset name="UPenn.edu (mismatches)" default_off="mismatched">
+
+	<!--	bepress.com	-->
+	<target host="repository.upenn.edu"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

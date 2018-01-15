@@ -1,0 +1,31 @@
+<!--
+	Time out:
+		about.greatnonprofits.org
+		toprated.greatnonprofits.org
+
+	Redirect to http:
+		www.about.greatnonprofits.org
+		www.toprated.greatnonprofits.org
+
+	Broken certificate chain:
+		blog.greatnonprofits.org
+
+-->
+<ruleset name="Greatnonprofits.org">
+
+	<target host="greatnonprofits.org" />
+	<target host="www.greatnonprofits.org" />
+	<target host="api.greatnonprofits.org" />
+	<target host="cdn.greatnonprofits.org" />
+		<test url="http://cdn.greatnonprofits.org/img/gnp-facebook-share-lg.png" />
+	<target host="stage.greatnonprofits.org" />
+	<target host="stagecdn.greatnonprofits.org" />
+	<target host="static.greatnonprofits.org" />
+		<test url="http://static.greatnonprofits.org/favicon.ico" />
+
+	<securecookie host="^greatnonprofits\.org$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

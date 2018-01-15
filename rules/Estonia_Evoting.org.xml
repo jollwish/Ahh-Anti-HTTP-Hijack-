@@ -1,0 +1,9 @@
+<ruleset name="Estonia Evoting.org">
+
+	<target host="estoniaevoting.org" />
+	<target host="www.estoniaevoting.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

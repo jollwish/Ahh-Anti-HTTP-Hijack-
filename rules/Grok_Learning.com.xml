@@ -1,0 +1,12 @@
+<!--
+	www.groklearning-cdn.com doesn't exist.
+
+-->
+<ruleset name="Grok Learning.com">
+
+	<target host="groklearning-cdn.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

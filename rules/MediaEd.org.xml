@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.mediaed.org/ => https://www.mediaed.org/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://mediaed.org/ => https://www.mediaed.org/: (60, 'SSL certificate problem: certificate has expired')
+
+	^mediaed.org: Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.mediaed.org
+
+
+	Mixed content:
+
+		- Image from ^mediaed.org *
+
+	* Secured by us
+
+-->
+<ruleset name="MediaEd.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.mediaed.org" />
+
+	<!--	Complications:
+				-->
+	<target host="mediaed.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.mediaed\.org$" name="^pdgcomm-babble$" /-->
+
+	<securecookie host="^www\.mediaed\.org$" name=".+" />
+
+
+	<rule from="^http://mediaed\.org/"
+		to="https://www.mediaed.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,48 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://f1.support.mindtouch.com/ => https://f1.support.mindtouch.com/: (51, "SSL: no alternative certificate subject name matches target host name 'f1.support.mindtouch.com'")
+
+	Other MindTouch rulesets:
+
+		- MindTouch.us.xml
+		- Mtstatic.com.xml
+
+
+	Fully covered hosts:
+
+		- (www.)?
+		- success
+		- f1.success
+		- support
+		- f1.support
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .mindtouch.com
+
+-->
+<ruleset name="MindTouch.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="mindtouch.com" />
+	<target host="success.mindtouch.com" />
+	<target host="f1.success.mindtouch.com" />
+	<target host="support.mindtouch.com" />
+	<target host="f1.support.mindtouch.com" />
+	<target host="www.mindtouch.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.mindtouch\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.mindtouch\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

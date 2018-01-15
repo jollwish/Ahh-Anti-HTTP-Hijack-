@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mrcote.info/ => https://mrcote.info/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.mrcote.info/ => https://www.mrcote.info/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+		- Image from i.imgur.com *
+
+	* Secured by us
+
+-->
+<ruleset name="mr cote.info" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="mrcote.info" />
+	<target host="www.mrcote.info" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

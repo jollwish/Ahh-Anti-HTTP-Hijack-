@@ -1,0 +1,13 @@
+<ruleset name="Grupo Avante.org">
+
+	<target host="grupoavante.org" />
+	<target host="www.grupoavante.org" />
+
+
+	<securecookie host="^www\.grupoavante\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

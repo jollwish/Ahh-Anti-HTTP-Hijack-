@@ -1,0 +1,14 @@
+<ruleset name="BrickLink">
+
+	<target host="bricklink.com" />
+	<target host="www.bricklink.com" />
+
+
+	<securecookie host="^www\.bricklink\.com$" name=".+" />
+
+
+	<!--	!www: reset
+				-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

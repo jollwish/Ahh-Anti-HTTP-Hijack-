@@ -1,0 +1,6 @@
+<ruleset name="Jaymart.co.th">
+  <target host="jaymart.co.th" />
+  <target host="www.jaymart.co.th" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

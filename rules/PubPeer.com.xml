@@ -1,0 +1,27 @@
+<!--
+	Invalid certificate:
+		blog.pubpeer.com
+
+	No working URL known:
+		dev.pubpeer.com (401)
+
+	Insecure cookies are set for these hosts:
+		pubpeer.com
+		www.pubpeer.com
+
+-->
+<ruleset name="PubPeer.com">
+
+	<target host="pubpeer.com" />
+	<target host="www.pubpeer.com" />
+	<target host="beta.pubpeer.com" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?pubpeer\.com$" name="^(PHPSESSID|rgisanonymous|rguserid|rguuid)$" /-->
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,13 @@
+<!--
+	Cert only matches www.
+
+-->
+<ruleset name="MathWorks.com">
+
+	<target host="mathworks.com" />
+	<target host="www.mathworks.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

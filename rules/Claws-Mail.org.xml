@@ -1,0 +1,24 @@
+<!--
+	CN: www.colino.net
+
+
+	Mixed content:
+
+		- Image on (www.) from www *
+
+	* Secured by us
+
+-->
+<ruleset name="Claws-Mail.org" default_off="mismatched">
+
+	<target host="claws-mail.org" />
+	<target host="www.claws-mail.org" />
+	<target host="git.claws-mail.org" />
+	<target host="lists.claws-mail.org" />
+	<target host="planet.claws-mail.org" />
+	<target host="svn.claws-mail.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mobile.southdevon.ac.uk/ => https://mobile.southdevon.ac.uk/: (6, 'Could not resolve host: mobile.southdevon.ac.uk')
+
+	South Devon College
+
+
+	Nonfunctional hosts in *southdevon.ac.uk:
+
+		- (www.)? *
+		- iwanttobe *
+
+	* Refused
+
+
+	Problematic hosts in *southdevon.ac.uk:
+
+		- staff *
+		
+	* Expired
+
+-->
+<ruleset name="South Devon.ac.uk (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="leap.southdevon.ac.uk" />
+	<target host="shib.southdevon.ac.uk" />
+	<target host="mobile.southdevon.ac.uk" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="Triumph-Adler.de">
+
+	<target host="triumph-adler.de" />
+	<target host="www.triumph-adler.de" />
+
+
+	<!--	^ works, but redirects to www over
+		http => emulate that behavior:
+						-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

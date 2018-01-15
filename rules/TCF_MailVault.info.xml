@@ -1,0 +1,9 @@
+<ruleset name="TCF MailVault.info">
+
+	<target host="tcfmailvault.info" />
+	<target host="www.tcfmailvault.info" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

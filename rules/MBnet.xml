@@ -1,0 +1,61 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mbi.mbnet.fi/ => https://mbi.mbnet.fi/: (7, 'Failed to connect to mbi.mbnet.fi port 443: Connection refused')
+Fetch error: http://webmail.mbnet.fi/ => https://webmail.mbnet.fi/: (7, 'Failed to connect to webmail.mbnet.fi port 443: Connection refused')
+
+	^mbnet.fi: Refused
+
+
+	Insecure cookies are set for these hosts:
+
+		- mbi.mbnet.fi
+		- webmail.mbnet.fi
+
+-->
+<ruleset name="MBnet.fi (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="mbi.mbnet.fi" />
+	<target host="webmail.mbnet.fi" />
+	<target host="www.mbnet.fi" />
+
+	<!--	Complications:
+				-->
+	<target host="mbnet.fi" />
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://www\.mbnet\.fi/$" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://www\.mbnet\.fi/+(?!images/)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://www.mbnet.fi/hintaseuranta" />
+			<test url="http://www.mbnet.fi/mbinternet" />
+			<test url="http://www.mbnet.fi/selainpelit/category/all/order/most-played" />
+
+			<!--	-ve:
+					-->
+			<test url="http://www.mbnet.fi/images/home.png" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^mbi\.mbnet\.fi$" name="^ASPSESSIONID[A-Z]{8}$" /-->
+	<!--securecookie host="^webmail\.mbnet\.fi$" name="^SQMSESSID$" /-->
+
+	<securecookie host="^(?:mbi|webmail)\.mbnet\.fi$" name=".+" />
+
+
+	<rule from="^http://mbnet\.fi/"
+		to="https://www.mbnet.fi/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

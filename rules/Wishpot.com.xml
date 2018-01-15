@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://wishpot.com/ => https://www.wishpot.com/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+
+	CDN buckets:
+
+		- wishpot.s3.amazonaws.com
+
+
+	^: 404
+
+-->
+<ruleset name="Wishpot.com" default_off='failed ruleset test'>
+
+	<target host="wishpot.com" />
+	<target host="*.wishpot.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.wishpot\.com$" name="^(WP_SessionId_wishpot\.com|lcntry)$" /-->
+	<!--securecookie host="^(it|uk|www)\.wishpot\.com$" name="^(cuid|vid2)$" /-->
+
+	<securecookie host="^(?:it|uk|www)?\.wishpot\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?wishpot\.com/"
+		to="https://www.wishpot.com/" />
+
+	<rule from="^http://(it|uk)\.wishpot\.com/"
+		to="https://$1.wishpot.com/" />
+
+</ruleset>

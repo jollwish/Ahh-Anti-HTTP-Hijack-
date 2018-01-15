@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cryptsy.com/ => https://cryptsy.com/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.cryptsy.com/ => https://www.cryptsy.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Nonfunctional subdomains:
+
+		- blog *
+
+	* Tumblr
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .cryptsy.com
+		- www.cryptsy.com
+
+-->
+<ruleset name="Cryptsy.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cryptsy.com" />
+	<target host="www.cryptsy.com" />
+
+
+	<!--	Incapsula cookies
+					-->
+	<!--securecookie host="^\.cryptsy\.com$" name="^(?:incap_ses_\d+|nlbi_visid_incap)_\d+$" /-->
+	<!--securecookie host="^www\.cryptsy\.com$" name="^___utm[abm]\w+$" /-->
+
+	<securecookie host="^(?:\.|www\.)?cryptsy\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

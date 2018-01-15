@@ -1,0 +1,19 @@
+<!--
+	For other BlogTalkRadio coverage, see BlogTalkRadio.xml.
+
+
+	Fully covered subdomains:
+
+		- cdn[1-3]
+
+-->
+<ruleset name="BTR static.com">
+
+	<target host="cdn1.btrstatic.com" />
+	<target host="cdn2.btrstatic.com" />
+	<target host="cdn3.btrstatic.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

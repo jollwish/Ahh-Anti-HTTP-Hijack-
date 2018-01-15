@@ -1,0 +1,22 @@
+<!--
+	BioInfoBank.com related ruleset:
+		 - BioInfo.pl.xml
+		 - PicoStocks.com.xml
+
+	Non-functional hosts
+		Timeout was reached:
+			 - dns2.bioinfobank.com
+
+		SSL peer certificate was not OK:
+			 - dns1.bioinfobank.com
+			 - dns3.bioinfobank.com
+			 - mail.bioinfobank.com
+-->
+<ruleset name="BioInfoBank.com (partial)">
+	<target host="bioinfobank.com" />
+	<target host="www.bioinfobank.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

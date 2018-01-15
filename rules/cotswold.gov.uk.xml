@@ -1,0 +1,21 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Timeout:
+	- cmis.cotswold.gov.uk
+	- www.cmis.cotswold.gov.uk
+	- my.cotswold.gov.uk
+
+	SSL connect error:
+	- forms.cotswold.gov.uk
+	- publicaccess.cotswold.gov.uk
+
+	Certificate mismatched:
+	- cotswold.gov.uk
+	- consult.cotswold.gov.uk
+-->
+<ruleset name="cotswold.gov.uk (partial)">
+	<target host="www.cotswold.gov.uk" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

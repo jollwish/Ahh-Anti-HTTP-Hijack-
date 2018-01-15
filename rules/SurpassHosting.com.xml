@@ -1,0 +1,45 @@
+<!--
+	Nonfunctional subdomains;
+
+		- (www.) *
+		- blog *
+
+	* http reply
+
+
+	Fully covered subdomains:
+
+		- chat
+		- core
+		- sh151
+
+
+	These altnames don't exist:
+
+		- www.chat.surpasshosting.com
+		- www.core.surpasshosting.com
+		- www.sh151.surpasshosting.com
+
+
+	Observed cookie domains:
+
+		- core *
+
+	* Secured by us <= not secured by server
+
+-->
+<ruleset name="SurpassHosting.com (partial)">
+
+	<target host="chat.surpasshosting.com" />
+	<target host="core.surpasshosting.com" />
+	<target host="sh151.surpasshosting.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^core\.surpasshosting\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://us.wa.ui-portal.de/ => https://us.wa.ui-portal.de/: (6, 'Could not resolve host: us.wa.ui-portal.de')
+
+	For other United Internet coverage, see United-Internet.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="UI-Portal.de (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="img.ui-portal.de" />
+	<target host="js.ui-portal.de" />
+	<target host="logo.ui-portal.de" />
+	<target host="wa.ui-portal.de" />
+	<target host="us.wa.ui-portal.de" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

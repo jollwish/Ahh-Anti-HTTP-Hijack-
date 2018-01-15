@@ -1,0 +1,14 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="GfK Etilize (partial)">
+
+	<target host="content.etilize.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

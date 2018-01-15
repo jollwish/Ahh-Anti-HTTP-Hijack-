@@ -1,0 +1,13 @@
+<!--
+	^: cert only matches www
+
+-->
+<ruleset name="ERA.int">
+
+	<target host="era.int" />
+	<target host="www.era.int" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

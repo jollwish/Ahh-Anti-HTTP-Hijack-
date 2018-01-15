@@ -1,0 +1,15 @@
+<!--
+	www doesn't exist.
+
+-->
+<ruleset name="JoeyH.name">
+
+	<target host="joeyh.name" />
+
+
+	<securecookie host="^joeyh\.name$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

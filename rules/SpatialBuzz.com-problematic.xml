@@ -1,0 +1,20 @@
+<!--
+	For rules that are on by default, see SpatialBuzz.com.xml.
+
+-->
+<ruleset name="SpatialBuzz.com (problematic)" default_off="expired, self-signed">
+
+	<target host="ftp.spatialbuzz.com" />
+	<target host="git.spatialbuzz.com" />
+	<target host="logs.spatialbuzz.com" />
+	<target host="monitor.spatialbuzz.com" />
+	<target host="sbfs.spatialbuzz.com" />
+	<target host="www.spatialbuzz.com" />
+
+
+	<securecookie host="^www\.spatialbuzz\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

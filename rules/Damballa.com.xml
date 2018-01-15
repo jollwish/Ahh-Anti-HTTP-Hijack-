@@ -1,0 +1,37 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://damballa.com/ => https://damballa.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.damballa.com/ => https://www.damballa.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic hosts:
+
+		- partner *
+
+	* Mismatched
+
+
+	Insecure cookies are set for these 
+
+		- .damballa.com
+
+-->
+<ruleset name="Damballa.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="damballa.com" />
+	<target host="www.damballa.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.damballa\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.damballa\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

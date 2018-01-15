@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://sexkompas.net/ => https://sexkompas.net/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.sexkompas.net/ => https://www.sexkompas.net/: (60, 'SSL certificate problem: certificate has expired')
+
+	Insecure cookies are set for these hosts:
+
+		- www.sexkompas.net
+
+-->
+<ruleset name="Sexkompas.net" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="sexkompas.net" />
+	<target host="www.sexkompas.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.sexkompas\.net$" name="^(PHPSESSID|lang|rand|selectedCity|selectedCityCode)$" /-->
+
+	<securecookie host="^www\.sexkompas\.net$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

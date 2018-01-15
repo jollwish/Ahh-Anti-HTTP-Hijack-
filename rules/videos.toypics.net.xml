@@ -1,0 +1,5 @@
+<ruleset name="Toypics" platform="mixedcontent">
+  <target host="videos.toypics.net" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

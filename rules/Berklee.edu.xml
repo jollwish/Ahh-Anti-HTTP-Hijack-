@@ -1,0 +1,5 @@
+<ruleset name="Berklee College of Music">
+  <target host="apply.berklee.edu" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

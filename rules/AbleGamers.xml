@@ -1,0 +1,12 @@
+<ruleset name="AbleGamers">
+
+	<target host="ablegamers.com" />
+	<target host="www.ablegamers.com" />
+
+
+	<securecookie host="^www\.ablegamers\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

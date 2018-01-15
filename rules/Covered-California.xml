@@ -1,0 +1,54 @@
+<!--
+
+	Problematic hosts in *coveredca.com:
+
+		- ^ (timeout over https)
+		- www (redirects to http using javascript)
+		- board (mismatched)
+		- digitaltoolbox (TLS error)
+		- hbex (mismatch)
+		- itslifecare (mismatch)
+		- news (TLS error)
+
+	Problematic hosts in *coveredca.org:
+
+		- ^ (timeout over https)
+		- www (timeout over https)
+
+	Problematic hosts in *coveredcacertifiedpartners.com:
+
+		- ^ (timeout over https)
+		- www (timeout over https)
+
+-->
+<ruleset name="Covered California (partial)">
+	<target host="coveredca.com" />
+	<target host="1095.coveredca.com" />
+	<target host="anyconnect.coveredca.com" />
+	<target host="apply.coveredca.com" />
+	<target host="eadfs.coveredca.com" />
+	<target host="events.coveredca.com" />
+	<target host="intranet.coveredca.com" />
+	<target host="jobs.coveredca.com" />
+	<target host="learning.coveredca.com" />
+	<target host="planmanagement.coveredca.com" />
+	<target host="reset.coveredca.com" />
+	<target host="storefronts.coveredca.com" />
+	<target host="coveredca.org" />
+	<target host="www.coveredca.org" />
+	<target host="coveredcacertifiedpartners.com" />
+	<target host="www.coveredcacertifiedpartners.com" />
+	<target host="v.calheers.ca.gov" />
+
+	<rule from="^http://coveredca\.com/"
+		to="https://www.coveredca.com/" />
+
+	<rule from="^http://(www\.)?coveredca\.org/"
+		to="https://www.coveredca.com/" />
+
+	<rule from="^http://(www\.)?coveredcacertifiedpartners\.com/$"
+		to="https://coveredca.force.com/Certification/s/certified-partners-verification" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="ChangeIP.com">
+  <target host="changeip.com" />
+  <target host="www.changeip.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

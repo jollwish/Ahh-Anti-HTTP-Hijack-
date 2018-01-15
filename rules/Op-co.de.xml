@@ -1,0 +1,9 @@
+<ruleset name="Op-co.de">
+	<target host="op-co.de" />
+	<target host="www.op-co.de" />
+	<target host="gallery.op-co.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

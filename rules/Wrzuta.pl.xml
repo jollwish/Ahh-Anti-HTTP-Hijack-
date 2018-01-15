@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://wrzuta.pl/static/opensearch/search.xml => https://ssl.wrzuta.pl/static/opensearch/search.xml: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.wrzuta.pl/static/opensearch/search.xml => https://ssl.wrzuta.pl/static/opensearch/search.xml: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://ssl.wrzuta.pl/static/opensearch/search.xml => https://ssl.wrzuta.pl/static/opensearch/search.xml: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional subdomains:
+
+		- c	(dropped)
+
+
+	Problematic subdomains:
+
+		- (www.)	(mismatched, CN: ssl.wrzuta.pl)
+
+-->
+<ruleset name="Wrzuta.pl (partial)" default_off='failed ruleset test'>
+
+	<target host="wrzuta.pl" />
+	<target host="*.wrzuta.pl" />
+		<exclusion pattern="^http://(?:www\.)?wrzuta\.pl/(?!static/)" />
+
+
+	<rule from="^http://(?:ssl\.|www\.)?wrzuta\.pl/"
+		to="https://ssl.wrzuta.pl/" />
+
+	<test url="http://wrzuta.pl/static/opensearch/search.xml" />
+	<test url="http://www.wrzuta.pl/static/opensearch/search.xml" />
+	<test url="http://ssl.wrzuta.pl/static/opensearch/search.xml" />
+
+</ruleset>

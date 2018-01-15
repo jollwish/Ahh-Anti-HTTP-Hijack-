@@ -1,0 +1,6 @@
+<ruleset name="Jodel-app.com">
+	<target host="jodel-app.com" />
+	<target host="www.jodel-app.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,29 @@
+<!--
+	Login required:
+		demosentinel.kaazing.com
+		legacy-support.kaazing.com
+		sentinel.kaazing.com
+
+	Different content http/https:
+		developer.kaazing.com
+		tech.kaazing.com
+
+	Time out:
+		go.kaazing.com
+		installer.kaazing.com
+		tutorial.kaazing.com
+
+-->
+<ruleset name="Kaazing.com">
+
+	<target host="kaazing.com" />
+	<target host="www.kaazing.com" />
+	<target host="blog.kaazing.com" />
+	<target host="cdn.kaazing.com" />
+	<target host="download.kaazing.com" />
+	<target host="support.kaazing.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

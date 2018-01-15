@@ -1,0 +1,8 @@
+<ruleset name="pandasoph.de">
+	<target host="pandasoph.de" />
+	<target host="www.pandasoph.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,46 @@
+<!--
+	Other Calameo.com related ruleset:
+		 - Calameoassets.com.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - static1.calameo.com
+
+		Timeout was reached:
+			 - mail2.calameo.com
+
+		SSL peer certificate was not OK:
+			 - blog.calameo.com
+			 - help.calameo.com
+			 - mail1.calameo.com
+
+		4xx client error:
+			 - data.calameo.com
+			 - sk.calameo.com
+			 - static.calameo.com
+			 - tracker.calameo.com
+-->
+<ruleset name="Calameo.com (partial)">
+	<target host="calameo.com" />
+	<target host="www.calameo.com" />
+	<target host="cn.calameo.com" />
+	<target host="d.calameo.com" />
+		<test url="http://d.calameo.com/pinwheel/public/stream/book/get?dialect=en&amp;output=jsonp" />
+	<target host="de.calameo.com" />
+	<target host="en.calameo.com" />
+	<target host="es.calameo.com" />
+	<target host="fr.calameo.com" />
+	<target host="it.calameo.com" />
+	<target host="ita.calameo.com" />
+	<target host="jp.calameo.com" />
+	<target host="pt.calameo.com" />
+	<target host="ru.calameo.com" />
+	<target host="support.calameo.com" />
+	<target host="upload.calameo.com" />
+	<target host="upload2.calameo.com" />
+	<target host="v.calameo.com" />
+	<target host="viewer.calameo.com" />
+	<target host="widget.calameo.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

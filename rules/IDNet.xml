@@ -1,0 +1,8 @@
+<ruleset name="IDNet">
+
+  <target host="idnet.net" />
+  <target host="www.idnet.net" />
+
+  <rule from="^http:" to="https:" />
+
+</ruleset>

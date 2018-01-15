@@ -1,0 +1,8 @@
+<ruleset name="CoinDL.com">
+	<target host="coindl.com" />
+	<target host="www.coindl.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

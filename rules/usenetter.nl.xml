@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.usenetter.nl/ => https://www.usenetter.nl/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://usenetter.nl/ => https://www.usenetter.nl/: (60, 'SSL certificate problem: certificate has expired')
+
+	^usenetter.nl: Mismatched
+
+-->
+<ruleset name="Usenetter.nl" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.usenetter.nl" />
+
+	<!--	Complications:
+				-->
+	<target host="usenetter.nl" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://usenetter\.nl/"
+		to="https://www.usenetter.nl/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

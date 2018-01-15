@@ -1,0 +1,7 @@
+<ruleset name="Jotform.us">
+	<target host="secure.jotform.us" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

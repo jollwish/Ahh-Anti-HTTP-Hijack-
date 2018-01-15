@@ -1,0 +1,7 @@
+<ruleset name="Lfrs.sl">
+	<target host="cdn.lfrs.sl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

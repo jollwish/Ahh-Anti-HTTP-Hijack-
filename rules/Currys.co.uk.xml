@@ -1,0 +1,8 @@
+<ruleset name="Currys.co.uk (partial)">
+
+	<target host="secure.currys.co.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

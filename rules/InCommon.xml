@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://incommonfederation.org/ => https://incommonfederation.org/: (51, "SSL: no alternative certificate subject name matches target host name 'incommonfederation.org'")
+
+	Problematic domains:
+
+		- www.incommonfederation.org	(mismatched, CN: www.internet2.edu)
+		- wayf2.incommonfederation.org	(mismatched, CN: wayf.incommonfederation.org)
+
+-->
+<ruleset name="InCommon" default_off='failed ruleset test'>
+
+	<target host="incommon.org" />
+	<target host="www.incommon.org" />
+	<target host="incommonfederation.org" />
+	<target host="*.incommonfederation.org" />
+
+
+	<securecookie host="^\.incommonfederation\.org$" name=".+" />
+
+
+	<rule from="^http://(www\.)?incommon\.org/"
+		to="https://$1incommon.org/" />
+
+	<rule from="^http://(?:www\.)?incommonfederation\.org/"
+		to="https://incommonfederation.org/" />
+
+	<rule from="^http://wayf2?\.incommonfederation\.org/"
+		to="https://wayf.incommonfederation.org/" />
+
+</ruleset>

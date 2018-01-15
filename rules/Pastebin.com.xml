@@ -1,0 +1,10 @@
+<ruleset name="Pastebin.com">
+
+	<target host="pastebin.com" />
+	<target host="www.pastebin.com" />
+	<target host="deals.pastebin.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="XR LLC.com">
+
+	<target host="marketing.xrllc.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

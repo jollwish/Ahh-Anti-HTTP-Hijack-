@@ -1,0 +1,39 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - owa.buffalostate.edu
+			 - rf.buffalostate.edu
+
+		SSL connect error:
+			 - email.buffalostate.edu
+
+		SSL peer certificate was not OK:
+			 - library.buffalostate.edu
+			 - www.rf.buffalostate.edu
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - search.buffalostate.edu
+
+		Status code mismatch:
+			 - sharepoint.buffalostate.edu
+
+		Mixed content blocking (MCB) tiggered:
+			 - newsandevents.buffalostate.edu
+			 - wwwprod.buffalostate.edu
+-->
+<ruleset name="Buffalo State College (partial)">
+	<target host="buffalostate.edu" />
+	<target host="www.buffalostate.edu" />
+	<target host="alumni.buffalostate.edu" />
+	<target host="bscintra.buffalostate.edu" />
+	<target host="bsclib01.buffalostate.edu" />
+	<target host="catalog.buffalostate.edu" />
+	<target host="chngpwd.buffalostate.edu" />
+	<target host="giving.buffalostate.edu" />
+	<target host="president.buffalostate.edu" />
+
+	<securecookie host="^chngpwd\.buffalostate\.edu$" name=".+" />
+	<securecookie host="^giving\.buffalostate\.edu$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

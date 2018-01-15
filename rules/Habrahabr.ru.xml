@@ -1,0 +1,46 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://auth.habrahabr.ru/ => https://auth.habrahabr.ru/: (51, "SSL: no alternative certificate subject name matches target host name 'auth.habrahabr.ru'")
+
+	For other TM coverage, see TMtm.ru.xml.
+
+
+	Nonfunctional hosts in *habrahabr.ru:
+
+		- api ¹
+
+	¹ 503, valid cert
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- ^ from www.viva64.com ʳ
+			- special from habrastorage.org *
+
+	* Secured by us
+	ʳ Unsecurable <= refused
+
+-->
+<ruleset name="Habrahabr.ru (partial)" default_off='failed ruleset test'>
+
+	<target host="habrahabr.ru" />
+	<target host="auth.habrahabr.ru" />
+	<target host="m.habrahabr.ru" />
+	<target host="special.habrahabr.ru" />
+	<target host="www.habrahabr.ru" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^special\.habrahabr\.ru$" name="^captcha$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

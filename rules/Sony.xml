@@ -1,0 +1,51 @@
+<!--
+	Other Sony rulesets:
+
+		- lbp.me.xml
+		- PlayStation.xml
+		- PlayStation.net.xml
+		- PlayStation_Network.com.xml
+		- SCEA.com.xml
+		- Sony.co.uk.xml
+		- Sony.com.au.xml
+		- Sony.com.hk.xml
+		- Sony.com.mx.xml
+		- Sony.eu.xml
+		- Sony.se.xml
+		- Sony_Computer_Science_Laboratories.xml
+		- Sony_Entertainment_Network.xml
+		- Sony-europe.com.xml
+		- SonyMobile.xml
+		- SonyMusic.xml
+		- Sony_Pictures_UK.xml
+		- Xperia_Studio.xml
+
+	Non-functional hosts in *.sony.com
+		SSL read error:
+			 - www.docs.sony.com
+
+		SSL peer certificate was not OK:
+			 - content.esupport.sony.com
+			 - subscribe.sel.sony.com
+			 - store.sony.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - eservice.sony.com
+
+		Incomplete certificate chain error:
+			 - blog.sony.com
+-->
+<ruleset name="Sony.com (partial)">
+	<target host="sony.com" />
+	<target host="www.sony.com" />
+	<target host="community.sony.com" />
+	<target host="docs.sony.com" />
+	<target host="esupport.sony.com" />
+	<target host="us.en.kb.sony.com" />
+	<target host="productregistration.sony.com" />
+	<target host="products.sel.sony.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

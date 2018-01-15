@@ -1,0 +1,8 @@
+<ruleset name="iDownloadBlog (partial)">
+
+	<target host="media.idownloadblog.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

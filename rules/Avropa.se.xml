@@ -1,0 +1,6 @@
+<ruleset name="Avropa.se">
+	<target host="avropa.se" />
+	<target host="www.avropa.se" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

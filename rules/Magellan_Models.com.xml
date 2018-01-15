@@ -1,0 +1,11 @@
+<ruleset name="Magellan Models.com">
+
+	<target host="magellanmodels.com" />
+	<target host="www.magellanmodels.com" />
+	<target host="blog.magellanmodels.com" />
+
+	<securecookie host="^(www)?\.magellanmodels\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

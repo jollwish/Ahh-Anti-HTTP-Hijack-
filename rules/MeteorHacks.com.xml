@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://meteorhacks.com/ => https://meteorhacks.com/: (51, "SSL: no alternative certificate subject name matches target host name 'meteorhacks.com'")
+Fetch error: http://www.meteorhacks.com/ => https://www.meteorhacks.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.meteorhacks.com'")
+
+	Insecure cookies are set for these 
+
+		- .meteorhacks.com
+
+-->
+<ruleset name="MeteorHacks.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="meteorhacks.com" />
+	<target host="www.meteorhacks.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.meteorhacks\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.meteorhacks\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

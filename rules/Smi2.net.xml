@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.smi2.net/ => https://www.smi2.net/: (6, 'Could not resolve host: www.smi2.net')
+
+	Insecure cookies are set for these hosts:
+
+		- smi2.net
+
+-->
+<ruleset name="SMI2.net" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="smi2.net" />
+	<target host="static.smi2.net" />
+	<target host="target.smi2.net" />
+	<target host="www.smi2.net" />
+
+		<test url="http://static.smi2.net/static/aggregator_v2/css/style.css" />
+		<test url="http://target.smi2.net/client/target.js" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^smi2\.net$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^smi2\.net$" name="" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

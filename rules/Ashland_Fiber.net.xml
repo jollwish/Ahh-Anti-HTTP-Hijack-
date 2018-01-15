@@ -1,0 +1,17 @@
+<!--
+
+
+	Nonfunctional subdomains:
+
+		- static	(dropped)
+
+-->
+<ruleset name="Ashland Fiber.net (partial)">
+
+	<target host="ashlandfiber.net" />
+	<target host="www.ashlandfiber.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

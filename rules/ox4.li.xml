@@ -1,0 +1,12 @@
+<ruleset name="OX4.li">
+
+	<target host="ox4.li" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

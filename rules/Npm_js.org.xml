@@ -1,0 +1,27 @@
+<!--
+	For other Joyent coverage, see Joyent.xml.
+
+	Invalid certificate:
+		blog.npmjs.org
+		docs.npmjs.org
+
+-->
+<ruleset name="npmjs.org">
+
+	<target host="npmjs.org" />
+	<target host="www.npmjs.org" />
+	<target host="api.npmjs.org" />
+		<test url="http://api.npmjs.org/downloads/range/last-month/@types/express" />
+	<target host="docs.npmjs.org" />
+	<target host="registry.npmjs.org" />
+	<target host="status.npmjs.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://docs\.npmjs\.org/"
+		to="https://docs.npmjs.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

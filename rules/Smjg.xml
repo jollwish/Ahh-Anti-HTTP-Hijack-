@@ -1,0 +1,10 @@
+<ruleset name="SMJG">
+
+	<target host="smjg.org" />
+	<target host="forum.smjg.org" />
+	<target host="www.smjg.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

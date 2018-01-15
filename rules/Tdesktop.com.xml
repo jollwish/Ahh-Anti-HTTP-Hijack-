@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://update.tdesktop.com/ => https://update.tdesktop.com/: (51, "SSL: no alternative certificate subject name matches target host name 'update.tdesktop.com'")
+
+	For other Telegram coverage, see Telegram.org.xml.
+
+
+	These altnames don't exist:
+
+		- www.updates.tdesktop.com
+
+-->
+<ruleset name="Tdesktop.com" default_off='failed ruleset test'>
+
+	<target host="tdesktop.com" />
+	<target host="update.tdesktop.com" />
+	<target host="www.tdesktop.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

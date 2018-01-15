@@ -1,0 +1,20 @@
+<!--
+	^: refused
+
+
+	Mixed content:
+
+		- Web bugs from tns.tns-cs.net *
+
+	* Unsecurable <= refused
+
+-->
+<ruleset name="Holder de ord.no">
+
+	<target host="holderdeord.no" />
+	<target host="www.holderdeord.no" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

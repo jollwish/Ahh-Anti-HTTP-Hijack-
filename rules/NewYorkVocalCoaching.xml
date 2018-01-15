@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.theapp.voicelessonstotheworld.com/ => https://www.theapp.voicelessonstotheworld.com/: (6, 'Could not resolve host: www.theapp.voicelessonstotheworld.com')
+
+-->
+<ruleset name="NewYorkVocalCoaching" default_off='failed ruleset test'>
+
+	<target host="newyorkvocalcoaching.com" />
+	<target host="theapp.voicelessonstotheworld.com" />
+	<target host="vocalarticles.com" />
+	<target host="voicelessonstotheworld.com" />
+	<target host="voiceteachertraining.com" />
+	<target host="www.newyorkvocalcoaching.com" />
+	<target host="www.theapp.voicelessonstotheworld.com" />
+	<target host="www.vocalarticles.com" />
+	<target host="www.voicelessonstotheworld.com" />
+	<target host="www.voiceteachertraining.com" />
+
+
+	<securecookie host="^(?:www\.|\.)?newyorkvocalcoaching\.com$" name=".+" />
+	<securecookie host="^(?:www\.|\.)?voiceteachertraining\.com$" name=".+" />
+	<securecookie host="^(?:www\.|\.)?voicelessonstotheworld\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="Berlinonline.de" platform="mixedcontent">
+    <target host="www.berlinonline.de" />
+    <target host="boss.berlinonline.de" />
+    <target host="berlinonline.de" />
+
+    <rule from="^http://berlinonline\.de/"
+        to="https://www.berlinonline.de/" />
+
+	<rule from="^http:"
+		to="https:" />
+    <securecookie host="^\w" name=".+" />
+</ruleset>

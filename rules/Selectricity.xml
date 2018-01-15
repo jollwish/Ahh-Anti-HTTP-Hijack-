@@ -1,0 +1,9 @@
+<ruleset name="Selectricity">
+	<target host="selectricity.org" />
+	<target host="www.selectricity.org" />
+	<target host="blog.selectricity.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

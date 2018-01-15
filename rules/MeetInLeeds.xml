@@ -1,0 +1,13 @@
+<!--
+	!www redirects to http.
+
+-->
+<ruleset name="MeetInLeeds">
+
+	<target host="meetinleeds.co.uk" />
+	<target host="www.meetinleeds.co.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

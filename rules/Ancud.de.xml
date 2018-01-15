@@ -1,0 +1,13 @@
+<ruleset name="Ancud.de">
+
+	<target host="ancud.de" />
+	<target host="www.ancud.de" />
+
+
+	<securecookie host="^www\.ancud\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

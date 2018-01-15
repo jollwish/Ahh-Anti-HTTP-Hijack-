@@ -1,0 +1,13 @@
+<!--
+	^: cert only matches www
+
+-->
+<ruleset name="JPBerlin.de">
+
+	<target host="jpberlin.de" />
+	<target host="www.jpberlin.de" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

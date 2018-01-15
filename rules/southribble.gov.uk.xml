@@ -1,0 +1,29 @@
+<!--
+	South Ribble Borough Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- licensing.southribble.gov.uk
+
+		Timeout was reached:
+		- documents.southribble.gov.uk
+		- egenda.southribble.gov.uk
+		- mail.southribble.gov.uk
+		- mobile.southribble.gov.uk
+		- publicaccess.southribble.gov.uk
+		- smtp.southribble.gov.uk
+
+		Mixed content blocking (MCB) triggered:
+		- www.southribble.gov.uk
+-->
+<ruleset name="South Ribble.gov.uk (partial)">
+	<target host="southribble.gov.uk" />
+	<target host="ebilling.southribble.gov.uk" />
+	<target host="maps.southribble.gov.uk" />
+	<target host="remote.southribble.gov.uk" />
+	<target host="ssl.southribble.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

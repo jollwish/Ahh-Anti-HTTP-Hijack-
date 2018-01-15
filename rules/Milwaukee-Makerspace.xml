@@ -1,0 +1,13 @@
+<ruleset name="Milwaukee Makerspace">
+
+	<target host="milwaukeemakerspace.org" />
+	<target host="www.milwaukeemakerspace.org" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="WebsiteGrowers.com">
+
+	<target host="websitegrowers.com" />
+	<target host="www.websitegrowers.com" />
+
+
+	<securecookie host="^(?:www)?\.websitegrowers\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

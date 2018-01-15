@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fadmin.facebook-studio.com/ => https://fadmin.facebook-studio.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.facebook-studio.com/ => https://www.facebook-studio.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.facebook-studio.com'")
+Fetch error: http://facebook-studio.com/ => https://www.facebook-studio.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.facebook-studio.com'")
+
+	For other Facebook coverage, see Facebook.xml.
+
+
+	 ^facebook-studio.com: Cert only matches *.facebook-studio.com
+
+-->
+<ruleset name="Facebook-Studio.com" default_off='failed ruleset test'>
+
+	<target host="facebook-studio.com" />
+	<target host="*.facebook-studio.com" />
+
+		<test url="http://fadmin.facebook-studio.com/" />
+		<test url="http://www.facebook-studio.com/" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://facebook-studio\.com/"
+		to="https://www.facebook-studio.com/" />
+
+	<rule from="^http://(\w+)\.facebook-studio\.com/"
+		to="https://$1.facebook-studio.com/" />
+
+</ruleset>

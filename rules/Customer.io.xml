@@ -1,0 +1,16 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(no https)
+
+-->
+<ruleset name="Customer.io (partial)">
+
+	<target host="assets.customer.io" />
+	<target host="manage.customer.io" />
+	<target host="track.customer.io" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

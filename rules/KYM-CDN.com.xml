@@ -1,0 +1,22 @@
+<!--
+	CN: ssl4159.cloudflare.com
+
+
+	Nonfunctional subdomains:
+
+		- a *
+
+	* 503
+
+-->
+<ruleset name="KYM-CDN.com (partial)" default_off="mismatched">
+
+	<target host="i0.kym-cdn.com" />
+	<target host="i1.kym-cdn.com" />
+	<target host="i2.kym-cdn.com" />
+	<target host="i3.kym-cdn.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

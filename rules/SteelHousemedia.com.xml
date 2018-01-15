@@ -1,0 +1,32 @@
+<!--
+	Fully covered subdomains:
+
+		- cdn4s
+		- dx
+		- px
+		- ww
+
+
+	Observed cookie domains:
+
+		- .
+		- .px
+
+-->
+<ruleset name="SteelHousemedia.com (partial)">
+
+	<target host="cdn4s.steelhousemedia.com" />
+	<target host="dx.steelhousemedia.com" />
+	<target host="px.steelhousemedia.com" />
+	<target host="ww.steelhousemedia.com" />
+
+
+	<!--	Tracking cookies:
+					-->
+	<securecookie host="^\.steelhousemedia\.com$" name="^(?:guid|rt)$" />
+	<securecookie host="^\.px\.steelhousemedia\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

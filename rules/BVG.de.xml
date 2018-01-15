@@ -1,0 +1,28 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ssltor.bvg.de/ => https://ssltor.bvg.de/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://track.bvg.de/ => https://track.bvg.de/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic subdomains:
+		- mobil.bvg.de (different page on https)
+		- owa.bvg.de (not working)
+		- unternehmen.prelive.bvg.de (cert mismatch)
+-->
+<ruleset name="BVG.de" default_off='failed ruleset test'>
+	<target host="bvg.de" />
+	<target host="ap2.bvg.de" />
+	<target host="bewerbungen.bvg.de" />
+	<target host="fahrinfo.bvg.de" />
+	<target host="lp.bvg.de" />
+	<target host="monitor.bvg.de" />
+	<target host="prelive.bvg.de" />
+	<target host="shop.bvg.de" />
+	<target host="ssltor.bvg.de" />
+	<target host="test.bvg.de" />
+	<target host="track.bvg.de" />
+	<target host="unternehmen.bvg.de" />
+	<target host="www.bvg.de" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

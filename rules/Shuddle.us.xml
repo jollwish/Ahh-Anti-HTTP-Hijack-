@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://shuddle.us/ => https://shuddle.us/: (28, 'Connection timed out after 20001 milliseconds')
+
+	www: refused
+
+-->
+<ruleset name="Shuddle.us" default_off='failed ruleset test'>
+
+	<target host="shuddle.us" />
+	<target host="*.shuddle.us" />
+
+
+	<rule from="^http://(?:((?:blog|california|support)\.)|www\.)?shuddle\.us/"
+		to="https://$1shuddle.us/" />
+
+</ruleset>

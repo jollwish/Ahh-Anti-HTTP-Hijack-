@@ -1,0 +1,27 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- forums *
+		- ipv6 *
+
+	* Refused
+
+
+	Fully covered subdomains:
+
+		- acc
+		- activesync
+		- webmail
+
+-->
+<ruleset name="Roller Net.us (partial)">
+
+	<target host="acc.rollernet.us" />
+	<target host="activesync.rollernet.us" />
+	<target host="webmail.rollernet.us" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

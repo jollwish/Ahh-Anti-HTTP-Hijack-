@@ -1,0 +1,12 @@
+<!--
+	www doesn't exist.
+
+-->
+<ruleset name="My Cliplister.com">
+
+	<target host="mycliplister.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

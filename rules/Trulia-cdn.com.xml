@@ -1,0 +1,14 @@
+<!--
+	CDN buckets:
+		- dsd-static.trulia-cdn.com.edgesuite.net
+			- a176.g.akamai.net
+-->
+<ruleset name="Trulia-cdn.com">
+	<target host="css.trulia-cdn.com" />
+	<target host="js.trulia-cdn.com" />
+	<target host="logos.trulia-cdn.com" />
+	<target host="static.trulia-cdn.com" />
+	<target host="thumbs.trulia-cdn.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

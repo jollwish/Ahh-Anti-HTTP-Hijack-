@@ -1,0 +1,20 @@
+<!--
+	www: Cert only matches ^evermap.com
+
+-->
+<ruleset name="EverMap.com">
+
+	<target host="evermap.com" />
+	<target host="www.evermap.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?evermap\.com$" name="^ASPSESSIONID[A-Z]{8}$" /-->
+
+	<securecookie host="^(?:www\.)?evermap\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

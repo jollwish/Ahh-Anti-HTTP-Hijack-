@@ -1,0 +1,25 @@
+<!--
+	Nonfunctional subdomains:
+
+		- dev	(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- edu
+
+-->
+<ruleset name="simplebooklet.com (partial)">
+
+	<target host="simplebooklet.com" />
+	<target host="edu.simplebooklet.com" />
+	<target host="www.simplebooklet.com" />
+
+
+	<securecookie host="^(?:edu\.)?simplebooklet\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

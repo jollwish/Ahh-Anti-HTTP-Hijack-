@@ -1,0 +1,19 @@
+<!--
+	For other IndieMerch coverage, see IndieMerch.xml.
+
+
+	!www: cert only matches www
+
+-->
+<ruleset name="IndieMerchstore">
+
+	<target host="indiemerchstore.com" />
+	<target host="www.indiemerchstore.com" />
+
+
+	<securecookie host="^www\.indiemerchstore\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

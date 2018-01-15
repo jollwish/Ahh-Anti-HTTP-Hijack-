@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://trustkeeper.net/ => https://trustkeeper.net/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.trustkeeper.net/ => https://www.trustkeeper.net/: (28, 'Connection timed out after 20001 milliseconds')
+
+	For other Trustwave coverage, see Trustwave.xml.
+
+
+	Insecure cookies are set for these hosts:
+
+		- trustkeeper.net
+		- www.trustkeeper.net
+
+-->
+<ruleset name="TrustKeeper.net" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="trustkeeper.net" />
+	<target host="sealserver.trustkeeper.net" />
+	<target host="www.trustkeeper.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?trustkeeper\.net$" name="^(?:TKSESSION|i18nloc|sponsorId)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

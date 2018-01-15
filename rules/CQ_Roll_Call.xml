@@ -1,0 +1,33 @@
+<!--
+	Other CQ Roll Call rulesets:
+
+		- Capwiz.com.xml
+
+	Expired hosts in *cqrollcall.com:
+
+		- ae 
+		- connectivity
+		- insightnews
+	
+	Mismatched hosts in *cqrollcall.com:
+
+		- info
+		- link
+
+-->
+<ruleset name="CQ Roll Call" platform="mixedcontent">
+
+        <target host="cqrollcall.com" />
+        <target host="www.cqrollcall.com" />
+        <target host="corporate.cqrollcall.com" />
+        <target host="emergency.cqrollcall.com" />
+        <target host="newsphotos.cqrollcall.com" />
+        <target host="publishing.cqrollcall.com" />
+        <target host="wp.cqrollcall.com" />
+
+
+        <rule from="^http:"
+                to="https:" />
+
+</ruleset>
+

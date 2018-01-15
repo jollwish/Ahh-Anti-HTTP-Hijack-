@@ -1,0 +1,50 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.mousejack.com/ => https://www.mousejack.com/: Too many redirects while fetching 'https://www.mousejack.com/'
+Fetch error: http://mousejack.com/ => https://www.mousejack.com/: Too many redirects while fetching 'https://www.mousejack.com/'
+
+	^mousejack.com: Mismatched
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- www.mousejack.com
+		- .www.mousejack.com
+
+
+	Mixed content:
+
+		- css from fonts.googleapis.com ˢ
+
+	ˢ Secured by us
+
+-->
+<ruleset name="MouseJack.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.mousejack.com" />
+
+	<!--	Complications:
+				-->
+	<target host="mousejack.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.mousejack\.com$" name="^langauge$" /-->
+	<!--securecookie host="^\.www\.mousejack\.com$" name="^is_mobile$" /-->
+
+	<securecookie host="^\." name="^__qca$" />
+	<securecookie host="^\w" name=".+" />
+	<securecookie host="^\.www\." name=".+" />
+
+
+	<rule from="^http://mousejack\.com/"
+		to="https://www.mousejack.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

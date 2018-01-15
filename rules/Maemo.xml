@@ -1,0 +1,65 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.maemo.org/midcom-static/midcom.helper.datamanager2/legacy.css => https://maemo.org/midcom-static/midcom.helper.datamanager2/legacy.css: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://garage.maemo.org/ => https://garage.maemo.org/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://static.maemo.org/ => https://maemo.org/midcom-static/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Partially covered subdomains:
+
+		- (www.)	(pages & downloads 403)
+
+
+	Nonfunctional subdomains:
+
+		- static	(data are also on www)
+		- talk		(refused)
+
+
+	Problematic subdomains:
+
+		- wiki *
+
+	* Blocks Tor users
+
+
+	Fully covered subdomains:
+
+		- wiki
+
+-->
+<ruleset name="Maemo.org (partial)" default_off='failed ruleset test'>
+
+	<target host="maemo.org" />
+	<target host="garage.maemo.org" />
+	<target host="static.maemo.org" />
+	<target host="wiki.maemo.org" />
+	<target host="www.maemo.org" />
+
+		<exclusion pattern="^http://(?:www\.)?maemo\.org/(?!(?:midcom-)?static/)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://www.maemo.org/community/" />
+			<test url="http://www.maemo.org/development/" />
+			<test url="http://www.maemo.org/downloads/" />
+			<test url="http://www.maemo.org/intro/" />
+			<test url="http://www.maemo.org/news/" />
+
+			<!--	-ve:
+					-->
+			<test url="http://www.maemo.org/midcom-static/midcom.helper.datamanager2/legacy.css" />
+
+
+	<!--	Cert only matches ^maemo.org.
+						-->
+	<rule from="^http://www\.maemo\.org/"
+		to="https://maemo.org/" />
+
+	<rule from="^http://static\.maemo\.org/"
+		to="https://maemo.org/midcom-static/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

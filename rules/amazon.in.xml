@@ -1,0 +1,89 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .amazon.in
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+
+	Mixed content:
+
+		- Images on blog from cdn.amazonblogs.com ˢ
+
+	ˢ Secured by us, see https://www.paulirish.com/2010/the-protocol-relative-url/
+
+-->
+<ruleset name="Amazon.in (partial)">
+
+	<target host="amazon.in" />
+	<target host="blog.amazon.in" />
+	<target host="fls-eu.amazon.in" />
+	<target host="paywithamazon.amazon.in" />
+	<target host="read.amazon.in" />
+	<target host="sellercentral.amazon.in" />
+	<target host="services.amazon.in" />
+	<target host="www.amazon.in" />
+
+		<!--	Redirects to http:
+						-->
+		<exclusion pattern="^http://(www\.)?amazon\.in/+(.+/)?(b|dp|e|s)($|[?/])" />
+
+			<!--	+ve:
+					-->
+			<test url="http://www.amazon.in/Gillian-Flynn/e/B001JP3W46" />
+			<test url="http://www.amazon.in/Harper-Lee/e/B00456LE3M" />
+			<test url="http://www.amazon.in/John-Green/e/B001I9OQNE" />
+			<test url="http://www.amazon.in/Jojo-Moyes/e/B001HMNFPM" />
+			<test url="http://www.amazon.in/Nicholas-Sparks/e/B000APGF36" />
+			<test url="http://www.amazon.in/PIGLOO-Colourful-Decorative-Adhesive-Glitter/dp/B01C3X2DGU/" />
+			<test url="http://www.amazon.in/Sandra-Brown/e/B000AQ0XWO" />
+			<test url="http://www.amazon.in/Zest-Toyz-Kitchen-Pretend-Lights/dp/B01GK1EWC4" />
+			<test url="http://www.amazon.in/b/?node=13713623031" />
+			<test url="http://www.amazon.in/s/?field-keywords=Raspberry+Pi" />
+
+		<test url="http://www.amazon.in/Gabriel-Rear-Dicky-Struts-2-Hyundai/forum/-/-/1/?asin=B01EOPLX7K" />
+		<test url="http://www.amazon.in/SG-Musical-SGM696-Dholak-Screw/gp/product/B00RCNO1OO" />
+		<test url="http://www.amazon.in/Shoes-40-off-or-more-Handbags/s?ie=UTF8&amp;page=1&amp;rh=n%3A1983396031%2Cp_8%3A40-" />
+		<test url="http://www.amazon.in/b?node=2762140031" />
+		<test url="http://www.amazon.in/review/top-reviewers" />
+
+		<!-- CORS issues with AJAX requests,
+		see also:
+			* https://github.com/EFForg/https-everywhere/issues/6157
+			* https://github.com/EFForg/https-everywhere/issues/10515
+		-->
+		<exclusion pattern="^http://(www\.)?amazon\.in/(cross-app-features|gp|xa)/" />
+			<!-- 405 on GET requests with curl, API only responses on specific POST requests -->
+			<test url="http://amazon.in/cross-app-features/ags-best-deal-widget/handler/get-best-deals.html" />
+			<test url="http://www.amazon.in/cross-app-features/ags-best-deal-widget/handler/get-best-deals.html" />
+			<test url="http://amazon.in/gp/delivery/ajax/address-change.html" />
+			<test url="http://www.amazon.in/gp/delivery/ajax/address-change.html" />
+			<test url="http://amazon.in/gp/goldbox" />
+			<test url="http://www.amazon.in/gp/goldbox" />
+			<test url="http://amazon.in/gp/search-inside/js" />
+			<test url="http://www.amazon.in/gp/search-inside/js" />
+			<!-- 404 on GET requests, API only responses on specific POST requests -->
+			<test url="http://amazon.in/xa/dealcontent/v2/GetDealStatus" />
+			<test url="http://www.amazon.in/xa/dealcontent/v2/GetDealStatus" />
+			<test url="http://amazon.in/xa/dealcontent/v2/GetDeals" />
+			<test url="http://www.amazon.in/xa/dealcontent/v2/GetDeals" />
+			<test url="http://amazon.in/xa/dealcontent/v2/SelectDeals" />
+			<test url="http://www.amazon.in/xa/dealcontent/v2/SelectDeals" />
+			<test url="http://amazon.in/xa/dealcontent/v2/GetDealMetadata" />
+			<test url="http://www.amazon.in/xa/dealcontent/v2/GetDealMetadata" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.amazon\.in$" name="^(?:cpa-blogs-session-id|cpa-blogs-session-id-time|cpa-blogs-session-token|cpa-blogs-ubid-main|session-id|session-id-time|ubid-acbin|x-wl-uid)$" /-->
+
+	<securecookie host=".+" name="^(?:aps-trtmnt$|cpa-blogs-|s_v)" />
+	<securecookie host="^[^.w]" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	^palantir.com doesn't exist.
+
+-->
+<ruleset name="Palantir.com">
+
+	<target host="www.palantir.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,13 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pkr.com/ => https://pkr.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.pkr.com/ => https://www.pkr.com/: (7, 'Failed to connect to www.pkr.com port 443: Connection refused')
+
+-->
+<ruleset name="Pkr.com" default_off='failed ruleset test'>
+  <target host="pkr.com" />
+  <target host="www.pkr.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

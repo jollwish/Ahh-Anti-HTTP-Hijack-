@@ -1,0 +1,13 @@
+<!--
+	For rules that are on by default, see U-Tokyo.ac.jp.xml.
+
+-->
+<ruleset name="U-Tokyo.ac.jp (problematic)" default_off="expired">
+
+	<target host="user.ecc.u-tokyo.ac.jp" />
+	<target host="www.itc.u-tokyo.ac.jp" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

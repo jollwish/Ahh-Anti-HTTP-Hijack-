@@ -1,0 +1,7 @@
+<!-- av vendor -->
+<ruleset name="Ahnlab" platform="mixedcontent">
+	<target host="image.ahnlab.com" />
+	<target host="global.ahnlab.com" />
+	<rule from="^http:" to="https:" />
+</ruleset>
+

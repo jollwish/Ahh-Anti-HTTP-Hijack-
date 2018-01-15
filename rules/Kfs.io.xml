@@ -1,0 +1,15 @@
+<!--
+	For other KKBOX coverage, see KKBOX.com.xml.
+
+
+	(www.) doesn't exist.
+
+-->
+<ruleset name="kfs.io">
+
+	<target host="i.kfs.io" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

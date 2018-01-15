@@ -1,0 +1,66 @@
+<!--
+	Other Red Bull rulesets:
+		+ Kart_Fighter.com.xml
+		+ Red_Bull_Content_Pool.xml
+		+ Red_Bull_Media_House.xml
+		+ Red_Bull_Mobile.xml
+		+ Red_Bull_TV.xml
+		+ Wiiings.com.xml
+
+	Non-functional hosts
+		Timeout was reached:
+		- flugtagglasaj.redbull.com
+
+		SSL peer certificate was not OK:
+		- creativearchive-staging.redbull.com
+		- energydrink-at.redbull.com
+		- energydrink-de.redbull.com
+		- energydrink-fr.redbull.com
+		- energydrink-it.redbull.com
+		- energydrink-uk.redbull.com
+		- energydrink-us.redbull.com
+		- enterdannysmind.redbull.com
+		- forage.redbull.com
+		- games.redbull.com
+		- soapbox.redbull.com
+		- stage-energydrink.redbull.com
+
+		4xx client error:
+		- create.redbull.com
+		- creativearchive-test.redbull.com
+
+		5xx server error:
+		- editorial.redbull.com
+
+		Mixed content blocking (MCB) triggered:
+		- balconyshot-game.redbull.com
+		- energydrink.redbull.com
+		- gigya.redbull.com
+		- rbx00185.microsites.redbull.com
+		- streetstyle-game.redbull.com
+		- trickshot-game.redbull.com
+-->
+<ruleset name="Red Bull.com (partial)">
+	<target host="redbull.com" />
+	<target host="api.redbull.com" />
+	<target host="athletewidget.redbull.com" />
+	<target host="connect.redbull.com" />
+	<target host="creativearchive.redbull.com" />
+	<target host="eventwidget.redbull.com" />
+	<target host="gigya-tests.redbull.com" />
+	<target host="image.redbull.com" />
+	<target host="image1.redbull.com" />
+	<target host="image2.redbull.com" />
+	<target host="image3.redbull.com" />
+	<target host="infonet.redbull.com" />
+	<target host="infonet2.redbull.com" />
+	<target host="rbx00412.microsites.redbull.com" />
+	<target host="mobile-ads.redbull.com" />
+	<target host="stage-api.redbull.com" />
+	<target host="stage-connect.redbull.com" />
+	<target host="tools.redbull.com" />
+	<target host="workbench.redbull.com" />
+	<target host="www.redbull.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		lists.roundcube.net
+		trac.roundcube.net
+
+-->
+<ruleset name="RoundCube.net">
+
+	<target host="roundcube.net" />
+	<target host="www.roundcube.net" />
+	<target host="docs.roundcube.net" />
+	<target host="plugins.roundcube.net" />
+	<target host="spell.roundcube.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

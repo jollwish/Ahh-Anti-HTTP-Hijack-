@@ -1,0 +1,18 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://b.ngx.cc/ => https://b.ngx.cc/: (6, 'Could not resolve host: b.ngx.cc')
+
+-->
+<ruleset name="Ngx.cc" default_off='failed ruleset test'>
+	<target host="ngx.cc" />
+	<target host="b.ngx.cc" />
+	<target host="bot.ngx.cc" />
+	<target host="i.ngx.cc" />
+	<target host="ip.ngx.cc" />
+	<target host="p.ngx.cc" />
+	<target host="paste.ngx.cc" />
+	<target host="www.ngx.cc" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

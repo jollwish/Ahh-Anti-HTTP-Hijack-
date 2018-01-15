@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blog.zencoder.com/ => https://blog.zencoder.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other Brightcove coverage, see Brightcove.xml.
+
+
+	Problematic hosts in *zencoder.com:
+
+		- help ʳ
+		- status ʳ
+
+	ʳ Refused
+
+
+	Mixed content:
+
+		- Images from photos\d.meetupstatic.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Zencoder.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="zencoder.com" />
+	<target host="app.zencoder.com" />
+	<target host="blog.zencoder.com" />
+	<target host="www.zencoder.com" />
+
+	<!--	Complications:
+				-->
+	<target host="help.zencoder.com" />
+	<!--target host="status.zencoder.com" /-->
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<!--	Redirect keeps path, args,
+		and forward slash:
+					-->
+	<rule from="^http://help\.zencoder\.com/"
+		to="https://app.zencoder.com/docs/" />
+
+	<!--rule from="^http://status\.zencoder\.com/"
+		to="https://status.brightcove.com/" /-->
+
+	<rule from="^http:"
+		to="https:"/>
+
+</ruleset>

@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional subdomains:
+
+		- snapon.lab	(refused)
+
+-->
+<ruleset name="Bufferbloat.net">
+
+	<target host="bufferbloat.net" />
+	<target host="lists.bufferbloat.net" />
+	<target host="www.bufferbloat.net" />
+
+
+	<securecookie host="^www\.bufferbloat\.net$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

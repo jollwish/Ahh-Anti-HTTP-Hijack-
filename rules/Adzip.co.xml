@@ -1,0 +1,8 @@
+<ruleset name="adzip.co">
+
+	<target host="metrics.adzip.co" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://images.excaliburfilms.com/ => https://images.excaliburfilms.com/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="Excaliburfilms (partial)" default_off='failed ruleset test'>
+
+	<!-- target host="excaliburfilms.com" - no content -->
+	<target host="images.excaliburfilms.com" />
+	<target host="secure.excaliburfilms.com" />
+	<!-- target host="www.excaliburfilms.com" - no content -->
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

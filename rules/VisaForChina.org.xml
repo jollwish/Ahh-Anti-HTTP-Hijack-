@@ -1,0 +1,21 @@
+<!--
+
+	Problematic hosts in *visaforchina.org:
+
+		- mail (no https)
+		- mailhk (no https)
+		- meta (no https)
+		- new (mismatched)
+		- win (mismatched)
+
+-->
+<ruleset name="VisaForChina.org">
+
+	<target host="visaforchina.org" />
+	<target host="www.visaforchina.org" />
+	<target host="bio.visaforchina.org" />
+
+	<rule from="^http:"
+		to="https:"/>
+
+</ruleset>

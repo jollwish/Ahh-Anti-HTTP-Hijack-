@@ -1,0 +1,13 @@
+<ruleset name="Sunglass Warehouse">
+
+	<target host="sunglasswarehouse.com" />
+	<target host="cdn.sunglasswarehouse.com" />
+	<target host="www.sunglasswarehouse.com" />
+
+
+	<securecookie host="^\.?www\.sunglasswarehouse\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

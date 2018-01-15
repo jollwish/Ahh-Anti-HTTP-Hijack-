@@ -1,0 +1,10 @@
+<ruleset name="srdrvp.com">
+
+	<target host="srdrvp.com" />
+	<target host="www.srdrvp.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

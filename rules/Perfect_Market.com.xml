@@ -1,0 +1,24 @@
+<!--
+	For problematic rules, see Perfect_Market.com-problematic.xml.
+
+
+	Problematic subdomains:
+
+		- (www.)perfectmarket.com	(works; mismatched, CN: *.gridserver.com)
+
+
+	Fully covered subdomains:
+
+		- vault
+		- widget
+
+-->
+<ruleset name="Perfect Market.com (partial)">
+
+	<target host="vault.perfectmarket.com" />
+	<target host="widget.perfectmarket.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- forums *
+
+	* 503
+
+-->
+<ruleset name="EOReality.net (partial)">
+
+	<target host="billing.eoreality.net" />
+
+
+	<securecookie host="^billing\.eoreality\.net$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

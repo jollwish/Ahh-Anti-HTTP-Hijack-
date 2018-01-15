@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bugs.siedler25.org/ => https://bugs.siedler25.org/: (6, 'Could not resolve host: bugs.siedler25.org')
+Fetch error: http://packages.siedler25.org/ => https://packages.siedler25.org/: (6, 'Could not resolve host: packages.siedler25.org')
+
+	Insecure cookies are set for these hosts:
+
+		- siedler25.org
+		- debug.siedler25.org
+		- www.siedler25.org
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- (www.)?, debug from picload.org ˢ
+			- (www.)?, debug from img[12].picload.org ˢ
+
+	ˢ Secured by us
+
+-->
+<ruleset name="Siedler 25.org" default_off='failed ruleset test'>
+
+	<target host="siedler25.org" />
+	<target host="bugs.siedler25.org" />
+	<target host="debug.siedler25.org" />
+	<target host="forum.siedler25.org" />
+	<target host="packages.siedler25.org" />
+	<target host="svn.siedler25.org" />
+	<target host="www.siedler25.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:debug\.|www\.)?siedler25\.org$" name="^(?:PHPSESSID|lang)$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

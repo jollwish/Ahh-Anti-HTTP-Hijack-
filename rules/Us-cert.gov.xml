@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://preview.buildsecurityin.us-cert.gov/ => https://preview.buildsecurityin.us-cert.gov/: (6, 'Could not resolve host: preview.buildsecurityin.us-cert.gov')
+
+
+-->
+<ruleset name="US-Cert.gov" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="us-cert.gov" />
+	<target host="buildsecurityin.us-cert.gov" />
+	<target host="preview.buildsecurityin.us-cert.gov" />
+	<target host="www.buildsecurityin.us-cert.gov" />
+	<target host="ics-cert.us-cert.gov" />
+	<target host="www.us-cert.gov" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

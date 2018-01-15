@@ -1,0 +1,13 @@
+<!--
+	Cert only matches ^finmozg.ru.
+
+-->
+<ruleset name="finmozg.ru">
+
+	<target host="finmozg.ru" />
+	<target host="www.finmozg.ru" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

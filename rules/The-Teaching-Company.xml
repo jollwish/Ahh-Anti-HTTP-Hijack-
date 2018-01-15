@@ -1,0 +1,8 @@
+<ruleset name="The Teaching Company (partial)">
+
+	<target host="secureimages.teach12.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

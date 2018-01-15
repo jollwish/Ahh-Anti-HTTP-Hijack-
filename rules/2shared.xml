@@ -1,0 +1,11 @@
+<ruleset name="2shared.com">
+
+	<target host="2shared.com" />
+	<target host="www.2shared.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

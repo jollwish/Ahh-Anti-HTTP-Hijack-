@@ -1,0 +1,17 @@
+<!--
+
+	Refused hosts in *cuttlefish.com:
+
+		- static
+
+-->
+<ruleset name="Cuttlefish.com">
+
+	<target host="cuttlefish.com" />
+	<target host="www.cuttlefish.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

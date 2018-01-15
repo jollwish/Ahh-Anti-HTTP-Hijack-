@@ -1,0 +1,10 @@
+<ruleset name="HashTalk.org">
+
+	<target host="hashtalk.org" />
+	<target host="www.hashtalk.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+<ruleset name="RDot.org">
+	<target host="rdot.org" />
+	<target host="www.rdot.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

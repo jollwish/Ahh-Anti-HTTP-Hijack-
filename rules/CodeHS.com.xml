@@ -1,0 +1,28 @@
+<!--
+	Invalid certificate:
+		blog.codehs.com
+		help.codehs.com
+		hoc.codehs.com
+		hourofcode.codehs.com
+
+	Refused:
+		forum.codehs.com
+
+	Time out:
+		lite.codehs.com
+
+-->
+<ruleset name="CodeHS.com">
+
+	<target host="codehs.com" />
+	<target host="www.codehs.com" />
+	<target host="static.codehs.com" />
+	<target host="static1.codehs.com" />
+	<target host="static2.codehs.com" />
+	<target host="static3.codehs.com" />
+	<target host="static4.codehs.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

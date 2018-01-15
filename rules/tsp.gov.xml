@@ -1,0 +1,18 @@
+<!--
+	Federal Retirement Thrift Investment Board
+
+
+-->
+<ruleset name="TSP.gov">
+
+	<target host="tsp.gov" />
+	<target host="www.tsp.gov" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

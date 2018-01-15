@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://st-1.1fichier.com/ => https://st-1.1fichier.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	All non-1fichier.com URLs are mirrors of https://1fichier.com/ .
+	
+	Mismatch:
+	- dfichiers.com
+-->
+
+<ruleset name="1fichier" default_off='failed ruleset test'>
+
+	<target host="1fichier.com" />
+	<target host="*.1fichier.com" />
+	<target host="alterupload.com" />
+	<target host="cjoint.net" />
+	<target host="desfichiers.com" />
+	<target host="megadl.fr" />
+	<target host="mesfichiers.org" />
+	<target host="piecejointe.net" />
+	<target host="pjointe.com" />
+	<target host="tenvoi.com" />
+	<target host="dl4free.com" />
+
+    	<test url="http://www.1fichier.com/" />
+    	<test url="http://img.1fichier.com/" />
+    	<test url="http://st-1.1fichier.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

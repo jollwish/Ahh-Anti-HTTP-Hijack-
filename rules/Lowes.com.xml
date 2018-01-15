@@ -1,0 +1,32 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - www7.lowes.com
+
+		Timeout was reached:
+			 - deploy.lowes.com
+			 - dpmbapps.lowes.com
+			 - dpmbappsqa.lowes.com
+			 - mobileapps.lowes.com
+			 - sadclwscom.lowes.com
+
+		SSL peer certificate was not OK:
+			 - metrics.lowes.com
+-->
+<ruleset name="Lowes.com (partial)">
+	<target host="lowes.com" />
+	<target host="www.lowes.com" />
+	<target host="images.lowes.com" />
+	<target host="lda.lowes.com" />
+	<target host="lwscomdtq8.lowes.com" />
+	<target host="lwssvcs.lowes.com" />
+	<target host="m.lowes.com" />
+	<target host="mobileimages.lowes.com" />
+	<target host="ppmobileimages.lowes.com" />
+	<target host="www1.lowes.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

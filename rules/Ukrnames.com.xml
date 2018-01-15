@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://s.ukrnames.com/ => https://s.ukrnames.com/: (28, 'Connection timed out after 20006 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- support.ukrnames.com
+
+-->
+<ruleset name="Ukrnames.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ukrnames.com" />
+	<target host="blog.ukrnames.com" />
+	<target host="s.ukrnames.com" />
+	<target host="support.ukrnames.com" />
+	<target host="www.ukrnames.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^support\.ukrnames\.com$" name="^SWIFT_sessionid40$" /-->
+
+	<securecookie host="^support\.ukrnames\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

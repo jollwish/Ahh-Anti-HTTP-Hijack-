@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see NetworkWorld.xml.
+
+-->
+<ruleset name="NetworkWorld (mismatches)" default_off="mismatched" platform="mixedcontent">
+
+	<target host="events.networkworld.com" />
+
+
+	<!--	Cookies are handled in the main ruleset.	-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

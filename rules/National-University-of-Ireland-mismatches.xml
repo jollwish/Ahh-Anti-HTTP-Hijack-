@@ -1,0 +1,7 @@
+<ruleset name="National University of Ireland (mismatches)" default_off="self-signed">
+
+	<target host="www.library.nuigalway.ie"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

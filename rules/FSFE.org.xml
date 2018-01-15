@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://crm.fsfe.org/ => https://crm.fsfe.org/: (51, "SSL: no alternative certificate subject name matches target host name 'crm.fsfe.org'")
+Fetch error: http://vote.fsfe.org/ => https://vote.fsfe.org/: (60, 'SSL certificate problem: certificate has expired')
+
+	Other FSFE rulesets:
+
+		- DRM.info.xml
+		- Document_Freedom_Day.xml
+		- FSFEurope.org.xml
+		- Free_Your_Android.org.xml
+
+
+	Nonfunctional hosts in *fsfe.org:
+
+		- download *
+		- piwik ²
+		- planet ³
+
+	* Redirects to ^fsfe.org
+	² Shows registration.fsfe.org
+	³ Redirects to blogs.fsfe.org
+
+
+	Mixed content:
+
+		- Image on blogs from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="FSFE.org (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="fsfe.org" />
+	<target host="blogs.fsfe.org" />
+	<target host="crm.fsfe.org" />
+	<target host="fellowship.fsfe.org" />
+	<target host="l.fsfe.org" />
+	<target host="registration.fsfe.org" />
+	<target host="vote.fsfe.org" />
+	<target host="wiki.fsfe.org" />
+	<target host="www.fsfe.org" />
+
+
+	<securecookie host="^(?:fellowship|vote)\.fsfe\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

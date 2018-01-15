@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://secure.zt03.net/ => https://secure.zt03.net/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	(www.): shows secure
+
+
+	These altnames don't exist:
+
+		- www.secure.zt03.net
+
+-->
+<ruleset name="zt03.net (partial)" default_off='failed ruleset test'>
+
+	<target host="secure.zt03.net" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

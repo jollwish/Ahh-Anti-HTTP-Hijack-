@@ -1,0 +1,60 @@
+<!--
+	Other Elsevier rulesets:
+
+		- Els-CDN.com.xml
+		- Elsevier.ca.xml
+		- Elsevier_Health.com.xml
+		- Elsevier_Health.com.au.xml
+		- Journal_of_Affective_Disorders.xml
+		- Journal-of-Bodywork-and-Movement-Therapies.xml
+		- Scopus.xml
+
+
+	CDN buckets:
+
+		- elseviercdn.squizltd.netdna-cdn.com
+		- cdn.elsevier.com
+
+
+	Invalid certificate:
+		www.ethics.elservier.com
+		res.journals.elsevier.com
+		cdn.elservier.com
+		developers.elsevier.com
+		www.ees.elsevier.com
+
+	Refused:
+		reprints.elsevier.com
+
+-->
+<ruleset name="Elsevier.com (partial)">
+
+	<target host="elsevier.com" />
+	<target host="www.elsevier.com" />
+	<target host="acw.elsevier.com" />
+	<target host="api.elsevier.com" />
+	<target host="auth.elsevier.com" />
+	<target host="covers.elsevier.com" />
+	<target host="dev.elsevier.com" />
+	<target host="developers.elsevier.com" />
+	<target host="www.developers.elsevier.com" />
+	<target host="ees.elsevier.com" />
+	<target host="www.ees.elsevier.com" />
+	<target host="evolve.elsevier.com" />
+	<target host="help.elsevier.com" />
+	<target host="linkinghub.elsevier.com" />
+	<target host="pa.elsevier.com" />
+	<target host="support.elsevier.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://developers\.elsevier\.com/"
+		to="https://www.developers.elsevier.com/" />
+
+	<rule from="^http://www\.ees\.elsevier\.com/"
+		to="https://ees.elsevier.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

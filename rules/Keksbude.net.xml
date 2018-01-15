@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://keksbude.net/ => https://keksbude.net/: (6, 'Could not resolve host: keksbude.net')
+Fetch error: http://svn.keksbude.net/ => https://svn.keksbude.net/: (6, 'Could not resolve host: svn.keksbude.net')
+Fetch error: http://www.keksbude.net/ => https://www.keksbude.net/: (6, 'Could not resolve host: www.keksbude.net')
+
+	Problematic subdomains:
+
+		- files *
+
+	* Mismatched
+
+-->
+<ruleset name="keksbude.net (partial)" default_off='failed ruleset test'>
+
+	<target host="keksbude.net" />
+	<target host="svn.keksbude.net" />
+	<target host="www.keksbude.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mercurial.selenic.com/ => https://mercurial.selenic.com/: (6, 'Could not resolve host: mercurial.selenic.com')
+
+-->
+<ruleset name="Mercurial SCM" default_off='failed ruleset test'>
+  <target host="mercurial-scm.org" />
+  <target host="www.mercurial-scm.org" />
+  <target host="bz.mercurial-scm.org" />
+
+  <target host="www.selenic.com" />
+  <target host="selenic.com" />
+  <target host="mercurial.selenic.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

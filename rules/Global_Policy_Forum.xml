@@ -1,0 +1,18 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(mismatched, CN: *.zaehlwerk.net)
+
+-->
+<ruleset name="Global Policy Forum">
+
+	<target host="globalpolicy.org" />
+	<target host="www.globalpolicy.org" />
+
+
+	<securecookie host="^www\.globalpolicy\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

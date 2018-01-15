@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cryptbin.com/ => https://cryptbin.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.cryptbin.com/ => https://www.cryptbin.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Insecure cookies are set for these hosts:
+
+		- cryptbin.com
+
+-->
+<ruleset name="Cryptbin.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cryptbin.com" />
+	<target host="www.cryptbin.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^cryptbin\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^cryptbin\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

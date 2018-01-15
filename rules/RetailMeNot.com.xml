@@ -1,0 +1,21 @@
+<!--
+	Note: This site blocks Tor users.
+
+	CDN buckets:
+	- rmncdn.com.edgesuite.net
+		- o.rmncdn.com
+
+	Problematic subdomains:
+	- help.retailmenot.com      mismatched
+	- investor.retailmenot.com  refused
+	- o                         valid HTTPS, Whitelabel Error Page.
+-->
+
+<ruleset name="RetailMeNot.com">
+	<target host="retailmenot.com" />
+	<target host="www.retailmenot.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

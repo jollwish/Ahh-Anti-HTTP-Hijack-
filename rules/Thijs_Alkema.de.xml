@@ -1,0 +1,11 @@
+<ruleset name="Thijs Alkema.de">
+
+	<target host="thijsalkema.de" />
+	<target host="blog.thijsalkema.de" />
+	<target host="www.thijsalkema.de" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

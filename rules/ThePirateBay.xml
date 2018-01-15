@@ -1,0 +1,33 @@
+<!--
+	Other The Pirate Bay rulesets:
+		+ thepiratebay-legacy.xml
+		+ thephoenixbay.com.xml
+		+ proxyportal.org.xml
+		+ tpblist.xyz.xml
+		+ proxybay.pl.xml
+
+	Non-functional hosts
+		Timeout was reached:
+			 - kanyebay.com
+			 - www.kanyebay.com
+			 - oldpiratebay.org
+			 - www.oldpiratebay.org
+			 - pirates-forum.org
+			 - www.pirates-forum.org
+-->
+<ruleset name="The Pirate Bay">
+	<target host="proxybay.la" />
+	<target host="www.proxybay.la" />
+	<target host="thepiratebay.org" />
+	<target host="www.thepiratebay.org" />
+	<target host="thepiratebay-proxylist.org" />
+	<target host="www.thepiratebay-proxylist.org" />
+	<target host="tpb.run" />
+	<target host="www.tpb.run" />
+	<target host="thepiratebay.se" />
+	<target host="www.thepiratebay.se" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

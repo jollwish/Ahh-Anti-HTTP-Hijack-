@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.zapchain.com/ => https://www.zapchain.com/: (6, 'Could not resolve host: www.zapchain.com')
+Fetch error: http://zapchain.com/ => https://www.zapchain.com/: (6, 'Could not resolve host: www.zapchain.com')
+
+	^zapchain.com: Dropped
+
+
+	Mixed content:
+
+		- Image from files.parsetfss.com *
+		- Image from www.rbs-businesssense.co.uk *
+
+	* Not secured by us <= mismatched
+
+-->
+<ruleset name="ZapChain.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.zapchain.com" />
+
+	<!--	Complications:
+				-->
+	<target host="zapchain.com" />
+
+
+	<rule from="^http://zapchain\.com/"
+		to="https://www.zapchain.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	For rules that are on by default, see CERN.xml.
+
+-->
+<ruleset name="CERN.ch (problematic)" default_off="cert-chain, mismatched, self-signed">
+
+	<target host="aliceinfo.cern.ch" />
+	<target host="atlasop.cern.ch" />
+	<target host="cmsdoc.cern.ch" />
+	<target host="hie-isolde.web.cern.ch" />
+	<target host="hypernews.cern.ch" />
+	<target host="invenio-demo.cern.ch" />
+	<target host="osscvs.cern.ch" />
+	<target host="vocms0153.cern.ch" />
+	<target host="webregister.web.cern.ch" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

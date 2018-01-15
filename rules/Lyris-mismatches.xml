@@ -1,0 +1,7 @@
+<ruleset name="Lyris (mismatches)" default_off="mismatched">
+
+	<target host="landing.lyris.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

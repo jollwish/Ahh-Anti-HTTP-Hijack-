@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://web2.securitymetrics.com/ => https://web2.securitymetrics.com/: (6, 'Could not resolve host: web2.securitymetrics.com')
+
+	Refused:
+		- blog
+-->
+<ruleset name="SecurityMetrics.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="securitymetrics.com" />
+	<target host="web2.securitymetrics.com" />
+	<target host="www.securitymetrics.com" />
+
+	<securecookie host="^(?:web2\.|www\.)?securitymetrics\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

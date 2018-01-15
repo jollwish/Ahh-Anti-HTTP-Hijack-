@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://choon.net/ => https://choon.net/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.choon.net/ => https://www.choon.net/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional hosts in *choon.net:
+
+		- qmail.mirror *
+
+	* Refused
+
+-->
+<ruleset name="Choon.net (partial)" default_off='failed ruleset test'>
+
+	<target host="choon.net" />
+	<target host="www.choon.net" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

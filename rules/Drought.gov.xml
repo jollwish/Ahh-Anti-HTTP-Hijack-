@@ -1,0 +1,16 @@
+<!--
+
+-->
+<ruleset name="Drought.gov">
+
+	<target host="drought.gov" />
+	<target host="www.drought.gov" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	www 403s over http
+
+-->
+<ruleset name="thehabbos.org">
+
+	<target host="thehabbos.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

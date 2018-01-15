@@ -1,0 +1,68 @@
+<!--
+	Other rulesets:
+		Qiyi.com.xml
+		Qiyipic.com.xml
+		reference: https://github.com/EFForg/https-everywhere/pull/4801#issuecomment-219402538
+
+	Nonfunctional hosts in *iqiyi.com:
+		- ad ᵇ
+		- app ʳ
+		- auto ᵇ
+		- baby ᵇ
+		- bbs ᵈ
+		- business ᵇ
+		- datou ᵇ
+		- dv ᵇ
+		- edu ᵇ
+		- g ᵇ
+		- game ʳ
+		- gamebbs ʳ
+		- huaqiangu ᵇ
+		- labs ᵇ
+		- static.lego ʳ
+		- ly ᵇ
+		- mall ᵇ
+		- mil ᵇ
+		- music ᵇ
+		- news ᵇ
+		- open ᵇ
+		- sogou ᵇ
+		- sports ᵇ
+		- store ᵈ
+		- talkshow ᵇ
+		- tech ᵇ
+		- cdn.data.video ᵇ
+		- vip ᵇ
+		- yule ᵇ
+		- zhaopin ᵇ
+		- zuozhe ᵈ
+	ᵇ Shows default page
+	ᵈ Dropped
+	ʳ Refused
+
+	MCB:
+		www.iqiyi.com
+		passport.iqiyi.com
+
+	Mismatched:
+		^
+		nl.notice.iqiyi.com
+
+	SSL_ERROR_INTERNAL_ERROR_ALERT:
+		qiyipic.iqiyi.com	http://qiyipic.iqiyi.com/common/fix/public_images/logoCommon.png
+		security.iqiyi.com	http://security.iqiyi.com/static/cook/v1/cooksdk.js
+		static.iqiyi.com	http://static.iqiyi.com/js/pingback/qa.js
+
+	Insecure cookies are set for these domains and hosts:
+		- .iqiyi.com
+		- passport.iqiyi.com
+-->
+<ruleset name="iQiyi.com (partial)">
+	<target host="mbdapp.iqiyi.com" />
+	<target host="nlwl.iqiyi.com" />
+		<test url="http://nlwl.iqiyi.com/apis/urc/getqd" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

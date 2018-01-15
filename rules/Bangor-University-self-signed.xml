@@ -1,0 +1,13 @@
+<!--
+	For rules that are on by default, see Bangor-University.xml.
+
+-->
+<ruleset name="Bangor University (self-signed)" default_off="self-signed">
+
+	<target host="www.undeb.bangor.ac.uk" />
+
+
+	<!--	!www doesn't exist.	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

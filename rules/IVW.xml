@@ -1,0 +1,23 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^ *		(shows heft)
+		- daten *	(redirects to http)
+		- www		(shows heft)
+
+	* Mismatched, CN: heft.ivw.eu
+	
+
+
+-->
+<ruleset name="IVW (partial)">
+
+	<target host="heft.ivw.eu" />
+
+
+	<securecookie host="^heft\.ivw\.eu$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

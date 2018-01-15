@@ -1,0 +1,69 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blog.kldp.org/ => https://blog.kldp.org/: (51, "SSL: no alternative certificate subject name matches target host name 'blog.kldp.org'")
+Fetch error: http://cert.kldp.org/ => https://cert.kldp.org/: (51, "SSL: no alternative certificate subject name matches target host name 'cert.kldp.org'")
+Fetch error: http://weblog.kldp.org/ => https://weblog.kldp.org/: (51, "SSL: no alternative certificate subject name matches target host name 'weblog.kldp.org'")
+
+	Other KLDP rulesets:
+
+		- KLDP.net.xml
+
+
+	Fully covered domains:
+
+		- kldp.org
+
+		- [\w-]+.kldp.org:
+
+			- bbs
+			- blog
+			- cert
+			- css-validator
+			- feedvalidator
+			- gallery
+			- geekforum
+			- img
+			- open
+			- people
+			- weblog
+			- wiki
+			- www
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- css-validator from www.w3.org ²
+			- validator from $self ¹
+			- validator from validator.w3.org ²
+
+	¹ Secured by us
+	² Unsecurable			- 
+
+-->
+<ruleset name="KLDP.org" default_off='failed ruleset test'>
+
+	<target host="kldp.org" />
+	<target host="*.kldp.org" />
+
+		<test url="http://bbs.kldp.org/" />
+		<test url="http://blog.kldp.org/" />
+		<test url="http://cert.kldp.org/" />
+		<test url="http://css-validator.kldp.org/" />
+		<test url="http://feedvalidator.kldp.org/" />
+		<test url="http://gallery.kldp.org/" />
+		<test url="http://geekforum.kldp.org/" />
+		<test url="http://img.kldp.org/" />
+		<test url="http://open.kldp.org/" />
+		<test url="http://people.kldp.org/" />
+		<test url="http://weblog.kldp.org/" />
+		<test url="http://wiki.kldp.org/" />
+		<test url="http://www.kldp.org/" />
+
+
+	<rule from="^http://([\w-]+\.)?kldp\.org/"
+		to="https://$1kldp.org/" />
+
+</ruleset>

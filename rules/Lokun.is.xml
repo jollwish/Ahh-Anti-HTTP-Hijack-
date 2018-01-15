@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://lokun.is/ => https://lokun.is/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.lokun.is/ => https://www.lokun.is/: (60, 'SSL certificate problem: certificate has expired')
+
+	Insecure cookies are set for these hosts:
+
+		- lokun.is
+		- www.lokun.is
+
+-->
+<ruleset name="Lokun.is" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="lokun.is" />
+	<target host="www.lokun.is" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?lokun\.is$" name="^beaker\.session\.id$" /-->
+
+	<securecookie host="^(?:www\.)?lokun\.is$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

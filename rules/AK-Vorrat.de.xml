@@ -1,0 +1,30 @@
+<!--
+	Invalid certificate:
+		tiki.vorratsdatenspeicherung.de
+		badkreuznach.vorratsdatenspeicherung.de
+		berlin.vorratsdatenspeicherung.de
+		blogi.vorratsdatenspeicherung.de
+		duesseldorf.vorratsdatenspeicherung.de
+		erklaerung.vorratsdatenspeicherung.de
+		erklarung.vorratsdatenspeicherung.de
+		frankfurt.vorratsdatenspeicherung.de
+		leipzig.vorratsdatenspeicherung.de
+		mainz.vorratsdatenspeicherung.de
+		muenchen.vorratsdatenspeicherung.de
+		nuernberg.vorratsdatenspeicherung.de
+		tuebingen.vorratsdatenspeicherung.de
+
+-->
+<ruleset name="Vorratsdatenspeicherung.de" default_off="missing certificate chain">
+
+	<target host="vorratsdatenspeicherung.de" />
+	<target host="www.vorratsdatenspeicherung.de" />
+	<target host="blog.vorratsdatenspeicherung.de" />
+	<target host="wiki.vorratsdatenspeicherung.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	Mixed content:
+		mail.de-centralize.com
+
+-->
+<ruleset name="De-Centralize.com">
+
+	<target host="de-centralize.com" />
+	<target host="www.de-centralize.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

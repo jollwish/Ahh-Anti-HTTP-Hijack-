@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(http reply)
+		- console	(redirects to www.slifter.com)
+
+-->
+<ruleset name="GPShopper.com (partial)">
+
+	<target host="analytics.gpshopper.com" />
+	<target host="cdn.gpshopper.com" />
+	<target host="static.gpshopper.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

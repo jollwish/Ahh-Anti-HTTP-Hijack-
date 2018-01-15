@@ -1,0 +1,13 @@
+<!--
+	www: dropped
+
+-->
+<ruleset name="Tigr.net">
+
+	<target host="tigr.net" />
+	<target host="www.tigr.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

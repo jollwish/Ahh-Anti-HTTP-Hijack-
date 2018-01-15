@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://norman.com/ => https://norman.com/: (7, 'Failed to connect to norman.com port 443: Connection refused')
+Fetch error: http://www.norman.com/ => https://www.norman.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.norman.com'")
+
+	For problematic rules, see Norman.com-problematic.xml.
+
+
+	Problematic subdomains:
+
+		- blogs *
+
+	* Works; mismatched, CN: blogs.norman.com
+
+
+	Mixed content:
+
+		- Images on blogs from blogs ¹
+		- Bug on www from bstn-14-ma.com *
+
+	¹ Rule disabled by default
+	* Unsecurable <= refused
+
+-->
+<ruleset name="Norman.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="norman.com" />
+	<!--target host="blog.norman.com" /-->
+	<target host="www.norman.com" />
+
+
+	<securecookie host="^(?:www\.)?norman\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>
+

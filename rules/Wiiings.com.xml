@@ -1,0 +1,55 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://dms.wiiings.com/ => https://dms.wiiings.com/: (51, "SSL: no alternative certificate subject name matches target host name 'dms.wiiings.com'")
+Fetch error: http://dms-d.wiiings.com/ => https://dms-d.wiiings.com/: (51, "SSL: no alternative certificate subject name matches target host name 'dms-d.wiiings.com'")
+Fetch error: http://dms-q.wiiings.com/ => https://dms-q.wiiings.com/: (51, "SSL: no alternative certificate subject name matches target host name 'dms-q.wiiings.com'")
+Fetch error: http://www.wiiings.com/ => https://www.wiiings.com/: invalid group reference at position 13 ^http://(?:launchpad|twtvsl)\.redbullusa\.com/
+Fetch error: http://wiiings.com/ => https://www.wiiings.com/: invalid group reference at position 13 ^http://(?:launchpad|twtvsl)\.redbullusa\.com/
+
+	For other Red Bull coverage, see Red_Bull.xml.
+
+
+	Problematic subdomains:
+
+		- ^	(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- dms
+		- dms-d
+		- dms-q
+		- mas
+		- int-mas
+		- stage-mas
+
+-->
+<ruleset name="Wiiings.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="dms.wiiings.com" />
+	<target host="dms-d.wiiings.com" />
+	<target host="dms-q.wiiings.com" />
+	<target host="int-mas.wiiings.com" />
+	<target host="mas.wiiings.com" />
+	<target host="stage-mas.wiiings.com" />
+	<target host="www.wiiings.com" />
+
+	<!--	Complications:
+				-->
+	<target host="wiiings.com" />
+
+
+	<securecookie host="^(?:dms|dms-[dq]|int-mas|mas|stage-mas|www)\.wiiings\.com$" name=".+" />
+
+
+	<rule from="^http://wiiings\.com/"
+		to="https://www.wiiings.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

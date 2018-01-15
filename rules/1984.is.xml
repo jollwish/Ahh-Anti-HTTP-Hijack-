@@ -1,0 +1,13 @@
+<!--
+	For other 1984 Hosting coverage, see 1984_Hosting.com.xml.
+-->
+
+<ruleset name="1984.is">
+  <target host="1984.is" />
+  <target host="www.1984.is" />
+  <target host="kb.1984.is" />
+
+  <securecookie host=".+" name=".+" />
+
+  <rule from="^http:" to="https:"/>
+</ruleset>

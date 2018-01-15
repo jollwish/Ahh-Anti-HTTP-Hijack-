@@ -1,0 +1,41 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pagodabox.com/ => https://pagodabox.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	CDN buckets:
+
+		- pagodabox-assets.s3.amazonaws.com
+		- pagoda.desk.com
+
+
+	Nonfunctional domains:
+
+		- (www.)?godl.co *
+
+	* Refused
+
+	Nonfunctional subdomains:
+
+		- help		(redirects to http; mismatched, CN: *.assistly.com)
+
+-->
+<ruleset name="Pagoda Box" default_off='failed ruleset test'>
+
+	<!--target host="godl.co" /-->
+	<!--target host="*.godl.co" /-->
+	<target host="pagodabox.com" />
+	<target host="*.pagodabox.com" />
+
+
+	<!--securecookie host="^\.godl.co$" name=".+" /-->
+	<securecookie host="^(?:dashboard\.)?pagodabox\.com$" name=".+" />
+
+
+	<!--rule from="^http://(?:www\.)?godl\.co/"
+		to="https://www.godl.co/" /-->
+
+	<rule from="^http://((?:assistly-assets|blog|dashboard|www)\.)?pagodabox\.com/"
+		to="https://$1pagodabox.com/" />
+
+</ruleset>

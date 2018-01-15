@@ -1,0 +1,29 @@
+<!--
+	For other Monotype Imaging coverage, see Monotype-Imaging.xml.
+
+	Time out:
+		fast10.fonts.com
+		webfonts.fonts.com
+		www.webfonts.fonts.com
+
+	Invalid certficate:
+		blog.fonts.com
+		www0\d.fonts.com
+
+-->
+<ruleset name="Fonts.com (partial)">
+
+	<target host="fonts.com" />
+	<target host="www.fonts.com" />
+	<target host="fast.fonts.com" />
+		<test url="http://fast.fonts.com/FontsCom/Live/static/2.15.134.0/img/apple-touch-icon-57x57.png" /> 
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.blog\.fonts\.com$" name="^ARRAffinity$" /-->
+	<!--securecookie host="^www\.fonts\.com$" name="^ProfileTicket$" /-->
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

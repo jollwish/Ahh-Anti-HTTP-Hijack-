@@ -1,0 +1,31 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - bumblebee.ubuntu-nl.org
+			 - caterpillar.ubuntu-nl.org
+			 - dragonfly.ubuntu-nl.org
+
+		SSL peer certificate was not OK:
+			 - blogs.ubuntu-nl.org
+			 - planet.ubuntu-nl.org
+
+		Problem with the SSL CA cert (path? access rights?):
+			 - chat.ubuntu-nl.org
+
+		Status code mismatch:
+			 - stats.ubuntu-nl.org
+-->
+<ruleset name="Ubuntu-NL.org">
+	<target host="ubuntu-nl.org" />
+	<target host="www.ubuntu-nl.org" />
+	<target host="beta.ubuntu-nl.org" />
+	<target host="forum.ubuntu-nl.org" />
+	<target host="kaart.ubuntu-nl.org" />
+	<target host="lists.ubuntu-nl.org" />
+	<target host="mail.ubuntu-nl.org" />
+	<target host="wiki.ubuntu-nl.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

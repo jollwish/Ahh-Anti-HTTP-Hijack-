@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://holidayextras.co.uk/ => https://holidayextras.co.uk/: Too many redirects while fetching 'https://holidayextras.co.uk/'
+Fetch error: http://secure.holidayextras.co.uk/ => https://secure.holidayextras.co.uk/: Too many redirects while fetching 'https://secure.holidayextras.co.uk/'
+Fetch error: http://www.holidayextras.co.uk/ => https://www.holidayextras.co.uk/: Too many redirects while fetching 'https://www.holidayextras.co.uk/'
+Fetch error: http://holidayextras.com/ => https://www.holidayextras.com/: Too many redirects while fetching 'https://www.holidayextras.com/'
+Fetch error: http://www.holidayextras.com/ => https://www.holidayextras.com/: Too many redirects while fetching 'https://www.holidayextras.com/'
+
+	Problematic subdomain:
+		- holidayextras.com		(¹, CN: www.hxtrack.com)
+			- brand			(timeout)
+
+		- holidayextras.co.uk
+			- docs			(¹, CN: *.pagely.com, pagely.com)
+			- join			(¹, CN: *.pagely.com, pagely.com)
+			- mobile		(¹, CN: *.herokuapp.com)
+			- press-office		(¹, CN: *.pagely.com, pagely.com)
+
+		¹ hostname mismatch
+-->
+<ruleset name="HolidayExtras.com" default_off='failed ruleset test'>
+	<target host="holidayextras.co.uk" />
+	<target host="app.holidayextras.co.uk" />
+	<target host="hungrygeek.holidayextras.co.uk" />
+	<target host="hxtrack.holidayextras.co.uk" />
+	<target host="secure.holidayextras.co.uk" />
+	<target host="v2.holidayextras.co.uk" />
+	<target host="www.holidayextras.co.uk" />
+	<target host="holidayextras.com" />
+	<target host="www.holidayextras.com" />
+	<target host="static1.holidayextras.com" />
+	<target host="static2.holidayextras.com" />
+	<target host="static4.holidayextras.com" />
+	<target host="open-source.holidayextras.com" />
+
+	<!-- Cert mismatch: -->
+	<rule from="^http://holidayextras\.com/"
+		to="https://www.holidayextras.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

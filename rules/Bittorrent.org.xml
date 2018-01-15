@@ -1,0 +1,8 @@
+<ruleset name="BitTorrent.org" default_off="expired, mismatched">
+
+	<target host="bittorrent.org" />
+	<target host="www.bittorrent.org" />
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

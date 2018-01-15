@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="HighWire (partial)">
+
+	<target host="shibboleth.highwire.org" />
+
+
+	<securecookie host="^shibboleth\.highwire\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

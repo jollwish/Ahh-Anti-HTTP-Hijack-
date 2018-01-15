@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- imgserver *
+
+	* Shows track, CN: track
+
+-->
+<ruleset name="ADCocktail (partial)">
+
+	<target host="track.adcocktail.com" />
+
+
+	<securecookie host="^track\.adcocktail\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

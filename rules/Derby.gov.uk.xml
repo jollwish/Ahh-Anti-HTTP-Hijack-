@@ -1,0 +1,35 @@
+<!--
+	Derby City Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		SSL connect error:
+		- childroadsafety.derby.gov.uk
+
+		4xx client error:
+		- testweb.derby.gov.uk
+
+		Secure connection redirects to plaintext:
+		- carehomes.derby.gov.uk
+		- cmis.derby.gov.uk
+		- maps.derby.gov.uk
+		- www.derby.gov.uk
+-->
+<ruleset name="Derby.gov.uk">
+	<target host="derby.gov.uk" />
+	<target host="booklibrarycomputer.derby.gov.uk" />
+	<target host="directtoyou.derby.gov.uk" />
+	<target host="docs.derby.gov.uk" />
+	<target host="eplanning.derby.gov.uk" />
+		<test url="http://eplanning.derby.gov.uk/online-applications/" />
+	<target host="hi4em.derby.gov.uk" />
+	<target host="info4derby.derby.gov.uk" />
+	<target host="leisurecourses.derby.gov.uk" />
+	<target host="remote.derby.gov.uk" />
+	<target host="secure.derby.gov.uk" />
+		<test url="http://secure.derby.gov.uk/parking/pages/home.aspx" />
+	<target host="sip.derby.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

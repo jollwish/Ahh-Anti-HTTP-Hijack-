@@ -1,0 +1,14 @@
+<!--
+	cloudfront, unknown bucket(s).
+
+-->
+<ruleset name="Walk.sc" default_off="mismatched">
+
+	<target host="pp.walk.sc" />
+	<target host="pp2.walk.sc" />
+	<target host="pp3.walk.sc" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

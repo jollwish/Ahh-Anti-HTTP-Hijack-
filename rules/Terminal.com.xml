@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://terminal.com/ => https://terminal.com/: (7, 'Failed to connect to terminal.com port 443: Connection refused')
+Fetch error: http://blog.terminal.com/ => https://blog.terminal.com/: (7, 'Failed to connect to blog.terminal.com port 443: Connection refused')
+Fetch error: http://www.terminal.com/ => https://www.terminal.com/: (7, 'Failed to connect to www.terminal.com port 443: Connection refused')
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- blog
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.terminal.com
+
+-->
+<ruleset name="Terminal.com" default_off='failed ruleset test'>
+
+	<target host="terminal.com" />
+	<target host="blog.terminal.com" />
+	<target host="www.terminal.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.terminal\.com$" name="^connect\.sid$" /-->
+
+	<securecookie host="^www\.terminal\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,22 @@
+
+<!--
+
+	Brookings Institution
+
+	Problematic hosts in *brookings.edu:
+
+		Invalid Certificate:
+			- connect
+			- webfeeds
+			- skills
+
+-->
+<ruleset name="Brookings.edu (partial)" >
+	<target host="brookings.edu" />
+	<target host="www.brookings.edu" />
+	<target host="support.brookings.edu" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

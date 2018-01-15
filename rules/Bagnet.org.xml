@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.bagnet.org/skin/v2/css/reset.css => https://www.bagnet.org/skin/v2/css/reset.css: (7, 'Failed to connect to www.bagnet.org port 443: Connection refused')
+Fetch error: http://bagnet.org/ => https://bagnet.org/: (7, 'Failed to connect to bagnet.org port 443: Connection refused')
+
+	Nonfunctional subdomains:
+
+		- cdn *
+
+	* Shows www
+
+-->
+<ruleset name="Bagnet.org (partial)" default_off='failed ruleset test'>
+
+	<target host="bagnet.org" />
+	<target host="www.bagnet.org" />
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://www\.bagnet\.org/($|login$|news/\w+/\d+$|register$|remind$)" /-->
+		<!--
+			404:
+				-->
+		<!--exclusion pattern="^http://www\.bagnet\.org/favicon\.ico" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://www\.bagnet\.org/(?!skin/|vendor/)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://www.bagnet.org/favicon.ico" />
+			<test url="http://www.bagnet.org/login" />
+			<test url="http://www.bagnet.org/register" />
+
+			<!--	-ve:
+					-->
+			<test url="http://www.bagnet.org/skin/v2/css/reset.css" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

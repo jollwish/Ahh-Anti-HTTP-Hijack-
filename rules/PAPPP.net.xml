@@ -1,0 +1,16 @@
+<!--
+	Refused:
+		www.pappp.net
+
+-->
+<ruleset name="PAPPP.net">
+
+	<target host="pappp.net" />
+	<target host="www.pappp.net" />
+
+	<rule from="^http://www\.pappp\.net/"
+		to="https://pappp.net/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

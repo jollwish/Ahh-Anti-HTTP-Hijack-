@@ -1,0 +1,23 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - ns1.elearnsecurity.com
+
+		SSL peer certificate was not OK:
+			 - ns.elearnsecurity.com
+
+		4xx client error:
+			 - try.elearnsecurity.com
+-->
+<ruleset name="eLearnSecurity.com">
+	<target host="elearnsecurity.com" />
+	<target host="www.elearnsecurity.com" />
+	<target host="blog.elearnsecurity.com" />
+	<target host="community.elearnsecurity.com" />
+	<target host="members.elearnsecurity.com" />
+	<target host="supervisor.elearnsecurity.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

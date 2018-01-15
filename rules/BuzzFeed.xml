@@ -1,0 +1,31 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+			 - get.buzzfeed.com
+			 - insights.buzzfeed.com
+
+		SSL peer certificate was not OK:
+			 - buzzfed.com
+-->
+<ruleset name="BuzzFeed (partial)">
+	<!-- *buzzfeed.com -->
+	<target host="buzzfeed.com" />
+	<target host="www.buzzfeed.com" />
+	<target host="abeagle.buzzfeed.com" />
+	<target host="blog.buzzfeed.com" />
+	<target host="documents.buzzfeed.com" />
+	<target host="img.buzzfeed.com" />
+	<target host="s.buzzfeed.com" />
+	<target host="s3-ak.buzzfeed.com" />
+	<target host="shop.buzzfeed.com" />
+	<target host="webappstatic.buzzfeed.com" />
+
+	<!-- *buzzfed.com -->
+	<target host="buzzfed.com" />
+	<target host="s3-ak.buzzfed.com" />
+
+	<rule from="^http://buzzfed\.com/" 
+			to="https://www.buzzfeed.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

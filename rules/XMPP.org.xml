@@ -1,0 +1,32 @@
+<!--
+	Invalid certificate:
+		blog.xmpp.org
+		howto.xmpp.org
+		gsoc.xmpp.org
+		new.xmpp.org
+		tracker.xmpp.org
+
+	No working URL known:
+		wiki.xmpp.org (503)
+
+-->
+<ruleset name="XMPP.org (partial)">
+
+	<target host="xmpp.org" />
+	<target host="www.xmpp.org" />
+	<target host="blog.xmpp.org" />
+	<target host="muc.xmpp.org" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^xmpp\.org$" name="^wordpress_test_cookie$" /-->
+
+	<securecookie host="^xmpp\.org$" name=".+" />
+
+	<rule from="^http://blog\.xmpp\.org/"
+		to="https://xmpp.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,52 @@
+<!--
+	Other Robert Bosch rulesets:
+
+		- Bosch-Sensortec.com.xml
+
+
+	Nonfunctional subdomains:
+
+		- ^ ¹
+		- www ²
+
+	¹ Dropped
+	² Redirects to http, Akamai
+
+
+	Problematic subdomains:
+
+		- sustainabilityblog *
+
+	* Self-signed, CN: fe0wap153
+
+
+	Fully covered subdomains:
+
+		- appcenter
+		- crisis
+		- ebike
+		- idea
+
+		- ae-bst.resource
+		- beat-emea.resource
+		- boschshared-bosch-de.resource
+		- c-design-bosch-de.resource
+		- rb-master.resource
+
+-->
+<ruleset name="Bosch.com (partial)">
+
+	<target host="appcenter.bosch.com" />
+	<target host="crisis.bosch.com" />
+	<target host="ebike.bosch.com" />
+	<target host="idea.bosch.com" />
+	<target host="ae-bst.resource.bosch.com" />
+	<target host="beat-emea.resource.bosch.com" />
+	<target host="boschshared-bosch-de.resource.bosch.com" />
+	<target host="c-design-bosch-de.resource.bosch.com" />
+	<target host="rb-master.resource.bosch.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

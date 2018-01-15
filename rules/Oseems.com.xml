@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://oseems.com/ => https://oseems.com/: Too many redirects while fetching 'https://oseems.com/'
+Fetch error: http://apps.oseems.com/ => https://apps.oseems.com/: Too many redirects while fetching 'https://apps.oseems.com/'
+
+-->
+<ruleset name="Oseems.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="oseems.com" />
+	<target host="apps.oseems.com" />
+	<target host="cdn.oseems.com" />
+	<target host="docs.oseems.com" />
+	<target host="www.oseems.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

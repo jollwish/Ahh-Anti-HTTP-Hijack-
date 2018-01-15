@@ -1,0 +1,22 @@
+<!--
+	The American Spectator
+
+
+	Nonfunctional subdomains:
+
+		- news		(shows www)
+
+-->
+<ruleset name="Spectator.org (partial)">
+
+	<target host="spectator.org" />
+	<target host="www.spectator.org" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

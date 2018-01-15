@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://static.goexplore.net/ => https://static.goexplore.net/: (60, 'SSL certificate problem: certificate has expired')
+
+	Other ESET rulesets:
+		- Eset.xml
+		- ESET.at.xml
+		- ESET.co.uk.xml
+		- ESET.de.xml
+		- ESET_NOD32.xml
+		- ESET_static.com.xml
+		- Sicontact.at.xml
+-->
+<ruleset name="GoExplore.net" default_off='failed ruleset test'>
+	<target host=       "goexplore.net" />
+	<target host=   "www.goexplore.net" />
+	<target host="static.goexplore.net" />
+	
+	<!--
+	Exclusion for buggy URL (which sometimes redirects to HTTP), more information: https://github.com/EFForg/https-everywhere/pull/3083
+	https://regex101.com/r/vC6jX8/1
+	-->
+	<exclusion pattern="^http:\/\/www\.goexplore\.net\/they-did-what\/payments-evolution-sheep-to-smartphones" />
+	<test url="http://www.goexplore.net/they-did-what/payments-evolution-sheep-to-smartphones" />
+
+  	<securecookie host="^www\.goexplore\.net$" name=".+" />
+
+	<!-- cert only matches www -->
+	<rule from="^http://goexplore\.net/"
+		to="https://www.goexplore.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

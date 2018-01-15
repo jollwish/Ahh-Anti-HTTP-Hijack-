@@ -1,0 +1,10 @@
+<ruleset name="IWM Network.com">
+
+	<target host="iwmnetwork.com" />
+	<target host="www.iwmnetwork.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

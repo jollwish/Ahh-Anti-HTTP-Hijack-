@@ -1,0 +1,26 @@
+<!--
+
+
+	Nonfunctional subdomains:
+
+		- blog ¹
+		- mirrors ²
+		- www ³
+
+	¹ Shows www
+	² Refused
+	³ Redirects to http
+
+-->
+<ruleset name="xServers (partial)">
+
+	<target host="xservers.ro" />
+	<!--target host="www.xservers.ro" /-->
+		<!--
+			Redirects to http:
+						-->
+		<!--exclusion pattern="^http://www\.xservers\.ro/($|css/|favicon\.ico|hosting/|img/|servere-dedicate/|vps-servere-virtuale/)" /-->
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

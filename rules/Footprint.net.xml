@@ -1,0 +1,8 @@
+<ruleset name="footprint.net (partial)">
+
+	<target host="secure.footprint.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

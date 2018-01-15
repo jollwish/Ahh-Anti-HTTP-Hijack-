@@ -1,0 +1,21 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://static.internet.org.nz/ (200) => https://static.internet.org.nz/ (403)
+
+	Internet Party
+
+-->
+<ruleset name="Internet.org.nz" default_off='failed ruleset test'>
+
+	<target host="internet.org.nz" />
+	<target host="static.internet.org.nz" />
+	<target host="www.internet.org.nz" />
+
+
+	<securecookie host="^\.internet\.org\.nz$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

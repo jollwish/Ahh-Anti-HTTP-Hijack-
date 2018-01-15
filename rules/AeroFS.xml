@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blog.aerofs.com/ => https://blog.aerofs.com/: (52, 'Empty reply from server')
+Fetch error: http://my.aerofs.com/ => https://my.aerofs.com/: (6, 'Could not resolve host: my.aerofs.com')
+
+	CDN buckets:
+
+		- d2w483fi6el07z.cloudfront.net
+
+	aerofs.uservoice.com
+
+
+	Fully covered hosts in *aerofs.com:
+
+		- (www.)?
+		- blog
+		- my
+		- support
+
+-->
+<ruleset name="AeroFS.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="aerofs.com" />
+	<target host="blog.aerofs.com" />
+	<target host="my.aerofs.com" />
+	<target host="support.aerofs.com" />
+	<target host="www.aerofs.com" />
+
+
+	<securecookie host=".+\.aerofs\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

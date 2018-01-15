@@ -1,0 +1,42 @@
+
+<!--
+	Invalid certificate:
+		directbox.(!com)
+		www.directbox.(!com)
+		neu.directbox.com
+
+-->
+<ruleset name="Directbox">
+
+	<target host="directbox.com" />
+	<target host="www.directbox.com" />
+
+	<target host="directbox.at" />
+	<target host="www.directbox.at" />
+
+	<target host="directbox.biz" />
+	<target host="www.directbox.biz" />
+
+	<target host="directbox.ch" />
+	<target host="www.directbox.ch" />
+
+	<target host="directbox.de" />
+	<target host="www.directbox.de" />
+
+	<target host="directbox.eu" />
+	<target host="www.directbox.eu" />
+
+	<target host="directbox.info" />
+	<target host="www.directbox.info" />
+
+	<target host="directbox.net" />
+	<target host="www.directbox.net" />
+
+	<target host="directbox.tv" />
+	<target host="www.directbox.tv" />
+
+	<rule from="^http://(www\.)?directbox\.(at|biz|ch|de|eu|info|net|tv)/" to="https://www.directbox.com/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset> 

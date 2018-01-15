@@ -1,0 +1,83 @@
+<!--
+	Remark: 
+		+ *.start.me and *.favicons.start.me have a wildcard DNS record.
+		+ *.favicons.start.me with incomplete certificate chain error are omitted.
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - d0efc7be.start.me
+			 - email.start.me
+
+		Incomplete certificate chain error:
+			 - about.start.me
+			 - assets.start.me
+			 - campuscolumbus.start.me
+			 - canadaschool.start.me
+			 - debongerd.start.me
+			 - dehuet.start.me
+			 - deklimtoren.start.me
+			 - irospiegel.den.start.me
+			 - deplattenburg.start.me
+			 - dewetelaar.start.me
+			 - dewoordhof.start.me
+			 - dorpsschool.start.me
+			 - explore.start.me
+			 - favicon-0.start.me
+			 - favicon-1.start.me
+			 - favicon-2.start.me
+			 - favicon-3.start.me
+			 - favicons.start.me
+			 - favicons-0.start.me
+			 - favicons-1.start.me
+			 - favicons-2.start.me
+			 - favicons-3.start.me
+			 - fec.start.me
+			 - gobobison.start.me
+			 - hagen.start.me
+			 - hetdok.start.me
+			 - hogenkamp.start.me
+			 - horizon.start.me
+			 - hsbab.start.me
+			 - iesfrayluisdegranada.start.me
+			 - issiena.start.me
+			 - iteach.start.me
+			 - janligthart.start.me
+			 - jetech.start.me
+			 - laclassedalain.start.me
+			 - mozaiek.start.me
+			 - mrbeebe.start.me
+			 - overstegen.start.me
+			 - proxy.start.me
+			 - randy-maugans-i-iz-untruthful-dishonest-and-i-lackz-integrity.start.me
+			 - rjmtech.start.me
+			 - scopescholen.start.me
+			 - sullins.start.me
+			 - tpastudent.start.me
+			 - winton.start.me
+			 - wisenwierig.start.me
+
+		4xx client error:
+			 - beta.start.me
+			 - screenshots.start.me
+			 - static.start.me
+
+		5xx server error:
+			 - error.start.me
+
+		Mixed content blocking (MCB) tiggered:
+			 - pitkin.start.me
+-->
+<ruleset name="Start.me (partial)">
+	<target host="start.me" />
+	<target host="www.start.me" />
+	<target host="admin.start.me" />
+	<target host="admin-assets.start.me" />
+	<target host="blog.start.me" />
+	<target host="favicon.start.me" />
+	<target host="iron.start.me" />
+	<target host="palemoon.start.me" />
+	<target host="support.start.me" />
+	<target host="torch.start.me" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,17 @@
+<!--
+	For other Indymedia coverage, see Indymedia.xml.
+
+-->
+<ruleset name="Indymedia.nl">
+
+	<target host="indymedia.nl" />
+	<target host="www.indymedia.nl" />
+	<target host="irc.indymedia.nl" />
+	<target host="lists.indymedia.nl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	(www.)?: 503, Akamai
+
+-->
+<ruleset name="Find.ly (partial)">
+
+	<target host="connectssl.find.ly" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

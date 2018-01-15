@@ -1,0 +1,13 @@
+<!--
+	^grid5000.fr doesn't exist.
+
+-->
+<ruleset name="Grid5000.fr">
+
+	<target host="api.grid5000.fr" />
+	<target host="www.grid5000.fr" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

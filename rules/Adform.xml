@@ -1,0 +1,28 @@
+<!--
+	Other Adform.com related ruleset:
+	+ Adform.net.xml
+	+ Adformdsp.net.xml
+-->
+<ruleset name="Adform.com">
+	<target host="adform.com" />
+	<target host="www.adform.com" />
+	<target host="academy.adform.com" />
+	<target host="blog.adform.com" />
+	<target host="brandsolutions.adform.com" />
+	<target host="creative.adform.com" />
+	<target host="engineering.adform.com" />
+	<target host="events.adform.com" />
+	<target host="getcertified.adform.com" />
+	<target host="join.adform.com" />
+	<target host="pr-old.adform.com" />
+		<test url="http://pr-old.adform.com/torifi-production-guides/advertising-formats/" />
+	<target host="showroom.adform.com" />
+	<target host="site.adform.com" />
+	<target host="studio.adform.com" />
+	<target host="support.adform.com" />
+	<target host="tools-tracking.adform.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

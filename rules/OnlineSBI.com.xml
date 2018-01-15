@@ -1,0 +1,36 @@
+<!--
+	Other SBI (State Bank of India) rulesets:
+		- SBI.xml
+
+	Problematic hosts:
+		- ^ (mismatched)
+		- www (insecure renegotiation)
+		- cmp (dropped)
+		- sbi (self-signed)
+-->
+
+<ruleset name="OnlineSBI.com">
+	<target host="onlinesbi.com" />
+	<target host="www.onlinesbi.com" />
+	<target host="acs.onlinesbi.com" />
+	<target host="cms.onlinesbi.com" />
+	<target host="corp.onlinesbi.com" />
+	<target host="etradesbi.onlinesbi.com" />
+	<target host="hrms.onlinesbi.com" />
+	<target host="kiosk.onlinesbi.com" />
+	<target host="m.onlinesbi.com" />
+	<target host="merchant.onlinesbi.com" />
+	<target host="mobile.onlinesbi.com" />
+	<target host="mpi.onlinesbi.com" />
+	<target host="oaa.onlinesbi.com" />
+	<target host="pg.onlinesbi.com" />
+	<target host="prepaid.onlinesbi.com" />
+	<target host="remit.onlinesbi.com" />
+	<target host="retail.onlinesbi.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://onlinesbi\.com/" to="https://www.onlinesbi.com/" />
+
+	<rule from="^http:"	to="https:" />
+</ruleset>

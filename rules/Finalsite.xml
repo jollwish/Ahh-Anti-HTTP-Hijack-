@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://finalsite.com/ => https://finalsite.com/: (51, "SSL: no alternative certificate subject name matches target host name 'finalsite.com'")
+
+	Nonfunctional subdomains:
+
+		- info	(503, akamai)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- demo
+		- securecss
+		- securedata
+		- secureimages
+		- securejs
+		- secureprivate
+
+-->
+<ruleset name="finalsite (partial)" default_off='failed ruleset test'>
+
+	<target host="finalsite.com" />
+	<target host="*.finalsite.com" />
+
+
+	<securecookie host="^(?:www)?\.finalsite\.com$" name=".+" />
+
+
+	<rule from="^http://((?:demo|secure(?:css|data|images|js|private)|www)\.)?finalsite\.com/"
+		to="https://$1finalsite.com/" />
+
+</ruleset>

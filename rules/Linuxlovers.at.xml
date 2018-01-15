@@ -1,0 +1,37 @@
+<!--
+	Mixed content (secured in Linuxlovers.at-mixedcontent.xml):
+		linuxlovers.at
+		tools.linuxlovers.at
+
+	Invalid certificate:
+		www.linuxlovers.at
+		jabber.linuxlovers.at (broken chain)
+		www.js.linuxlovers.at
+		mb.linuxlovers.at
+		muclog.linuxlovers.at
+		www.tools.linuxlovers.at
+
+	Different content http/https:
+		ahrjnmojn0ra.linuxlovers.at
+
+	Login required:
+		jw-chat.linuxlovers.at
+		mattermost.linuxlovers.at
+		ttrss.linuxlovers.at
+
+	This website has a wildcard DNS.
+
+-->
+<ruleset name="Linuxlovers.at (partial)">
+
+	<target host="chat.linuxlovers.at" />
+	<target host="git.linuxlovers.at" />
+	<target host="js.linuxlovers.at" />
+	<target host="wiki.linuxlovers.at" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

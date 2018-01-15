@@ -1,0 +1,22 @@
+<!--
+	Mismatch:
+		- meetings
+-->
+<ruleset name="LEDE-project.org">
+
+	<target host="lede-project.org" />
+	<target host="www.lede-project.org" />
+	<target host="bugs.lede-project.org" />
+	<target host="downloads.lede-project.org" />
+	<target host="forum.lede-project.org" />
+	<target host="git.lede-project.org" />
+	<target host="sources.lede-project.org" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,49 @@
+<!--
+	Technische Universitaet Hamburg-Harburg
+
+
+	Nonfunctional domains:
+
+		- asta.tu-harburg.de ¹
+
+		- pdf.v.tuhh.de ²
+
+	¹ Refused
+	² http reply
+
+
+	Fully covered domains:
+
+		- www.tu-hamburg.de
+
+		- intranet.tu-harburg.de
+		- intranet.v.tu-harburg.de
+		- www.tu-harburg.de
+
+		- intranet.tuhh.de
+		- intranet.v.tuhh.de
+		- www.tuhh.de
+
+
+	^tu-hamburg.de doesn't exist.
+	^tu-harburg.de doesn't exist.
+	^tuhh.de doesn't exist.
+
+-->
+<ruleset name="TUHH.de (partial)">
+
+	<target host="www.tu-hamburg.de" />
+	<target host="intranet.tu-harburg.de" />
+	<target host="intranet.v.tu-harburg.de" />
+	<target host="www.tu-harburg.de" />
+	<target host="intranet.tuhh.de" />
+	<target host="intranet.v.tuhh.de" />
+	<target host="www.tuhh.de" />
+		<!--exclusion pattern="^http://asta\.tu-harburg\.de/" /-->
+	
+		<!--exclusion pattern="^http://pdf\.v\.tuhh\.de/" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

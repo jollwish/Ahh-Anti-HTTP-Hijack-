@@ -1,0 +1,16 @@
+<!--
+	Non-functional hosts
+		4xx client error:
+			 - stats.toofishes.net (require auth)
+-->
+<ruleset name="Toofishes.net">
+	<target host="toofishes.net" />
+	<target host="www.toofishes.net" />
+	<target host="abroad.toofishes.net" />
+	<target host="blog.toofishes.net" />
+	<target host="code.toofishes.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

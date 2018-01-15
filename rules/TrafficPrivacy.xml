@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://trafficprivacy.com/ => https://trafficprivacy.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.trafficprivacy.com/ => https://trafficprivacy.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	www.trafficprivacy.com: cert only matches ^trafficprivacy.com
+
+
+	Insecure cookies are set for these hosts:
+
+		- trafficprivacy.com
+
+-->
+<ruleset name="TrafficPrivacy.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="trafficprivacy.com" />
+
+	<!--	Complications:
+				-->
+	<target host="www.trafficprivacy.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^trafficprivacy\.com$" name="^(?:PHPSESSID|uniq2)$" /-->
+
+	<securecookie host="^trafficprivacy\.com$" name=".+" />
+
+
+	<rule from="^http://www\.trafficprivacy\.com/"
+		to="https://trafficprivacy.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,7 @@
+<ruleset name="University of York">
+
+  <target host="www.york.ac.uk" />
+
+  <rule from="^http:" to="https:" />
+
+</ruleset>

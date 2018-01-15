@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cavirtex.com/ => https://cavirtex.com/: (7, 'Failed to connect to cavirtex.com port 443: Connection refused')
+Fetch error: http://www.cavirtex.com/ => https://www.cavirtex.com/: (7, 'Failed to connect to www.cavirtex.com port 443: Connection refused')
+
+	Nonfunctional subdomains:
+
+		- affiliates *
+		- blog *
+
+	* Shows default page
+
+-->
+<ruleset name="Cavirtex.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cavirtex.com" />
+	<target host="www.cavirtex.com" />
+
+
+	<!--	Cloudflare cookies:
+					-->
+	<!--securecookie host="^\.cavirtex\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.cavirtex\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

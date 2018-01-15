@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(dropped)
+
+-->
+<ruleset name="Aculab.com (partial)">
+
+	<target host="cloud.aculab.com" />
+
+
+	<securecookie host="^cloud\.aculab\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

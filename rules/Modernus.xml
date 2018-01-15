@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional domains:
+
+		- (www.)modernus.is *
+		- (www.)teljari.is *
+
+	* Shows login.modernus.is, CN: login.modernus.is
+
+-->
+<ruleset name="Modernus">
+
+	<target host="login.modernus.is" />
+	<target host="secure.teljari.is" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

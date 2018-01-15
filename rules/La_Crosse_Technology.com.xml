@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://store.lacrossetechnology.com/ => https://store.lacrossetechnology.com/: (6, 'Could not resolve host: www.store.lacrossetechnology.com')
+
+	Other La Crosse Technology rulesets:
+
+		- La_Crosse_Alerts.com.xml
+
+-->
+<ruleset name="La Crosse Technology.com" default_off='failed ruleset test'>
+
+	<target host="lacrossetechnology.com" />
+	<target host="store.lacrossetechnology.com" />
+	<target host="www.lacrossetechnology.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.store\.lacrossetechnology\.com$" name="^frontend$" /-->
+
+	<securecookie host="^\.store\.lacrossetechnology\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

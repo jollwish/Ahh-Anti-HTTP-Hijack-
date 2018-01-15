@@ -1,0 +1,8 @@
+<ruleset name="Tarsnap">
+
+  <target host="tarsnap.com" />
+  <target host="www.tarsnap.com" />
+
+  <rule from="^http:" to="https:" />
+
+</ruleset>

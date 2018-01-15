@@ -1,0 +1,8 @@
+<ruleset name="BufferedIO" default_off="mismatched">
+	<target host="buffered.io" />
+	<target host="www.buffered.io" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

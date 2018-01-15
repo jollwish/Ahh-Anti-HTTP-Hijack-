@@ -1,0 +1,19 @@
+<!--
+	Invalid certificate:
+		banshee.hiawatha-webserver.org
+		wiki.hiawatha-webserver.org
+
+	Login required:
+		monitor.hiawatha-webserver.org
+		sqli.hiawatha-webserver.org
+
+-->
+<ruleset name="Hiawatha-webserver.org">
+
+	<target host="hiawatha-webserver.org" />
+	<target host="www.hiawatha-webserver.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

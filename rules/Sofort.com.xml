@@ -1,0 +1,12 @@
+<ruleset name="Sofort.com">
+
+	<target host="sofort.com" />
+	<target host="api.sofort.com" />
+	<target host="images.sofort.com" />
+	<target host="www.sofort.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

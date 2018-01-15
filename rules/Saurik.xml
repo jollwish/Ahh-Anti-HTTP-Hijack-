@@ -1,0 +1,20 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+
+	Fully covered subdomains:
+
+		- cache
+
+-->
+<ruleset name="saurik (partial)">
+
+	<target host="cache.saurik.com" />
+	<target host="cydia.saurik.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

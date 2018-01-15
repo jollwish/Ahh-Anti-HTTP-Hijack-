@@ -1,0 +1,44 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.saucytime.com/ => https://www.saucytime.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://saucytime.com/ => https://www.saucytime.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Problematic subdomains:
+
+		- ^ *
+		- staging *
+
+	* Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.saucytime.com
+
+-->
+<ruleset name="SaucyTime.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.saucytime.com" />
+
+	<!--	Complications:
+				-->
+	<target host="saucytime.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.saucytime\.com$" name="^(Currency|PHPSESSID)$" /-->
+
+	<securecookie host="^www\.saucytime\.com$" name=".+" />
+
+
+	<rule from="^http://saucytime\.com/"
+		to="https://www.saucytime.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

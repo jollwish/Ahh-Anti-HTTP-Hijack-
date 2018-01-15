@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://beautifuldecay.com/ => https://beautifuldecay.com/: (60, 'SSL certificate problem: self signed certificate')
+Fetch error: http://www.beautifuldecay.com/ => https://www.beautifuldecay.com/: (60, 'SSL certificate problem: self signed certificate')
+
+	Nonfunctional subdomains:
+
+		- shop *
+
+	* Redirects to http
+
+
+	Mixed content:
+
+		- css, from:
+
+			- fonts.googleapis.com *
+
+		- Ads/web bugs, from:
+
+			- widgets.outbrain.com *
+			- platform.tumblr.com *
+
+	* Secured by us
+
+-->
+<ruleset name="BeautifulDecay.com (partial)" default_off='failed ruleset test'>
+
+	<target host="beautifuldecay.com" />
+	<target host="www.beautifuldecay.com" />
+
+
+	<securecookie host="^\.beautifuldecay\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

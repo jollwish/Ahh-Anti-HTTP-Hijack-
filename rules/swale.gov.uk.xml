@@ -1,0 +1,35 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- connect.swale.gov.uk
+		- mapping.swale.gov.uk
+		- mobile.swale.gov.uk
+
+		SSL connect error:
+		- maps.swale.gov.uk
+		- selfserve.swale.gov.uk
+		- tourism.swale.gov.uk
+		- www2.swale.gov.uk
+
+		SSL peer certificate was not OK:
+		- beta.swale.gov.uk
+		- mail.swale.gov.uk
+		- vacancies.swale.gov.uk
+
+		4XX client error:
+		- jobs.swale.gov.uk
+		- visit.swale.gov.uk
+-->
+<ruleset name="Swale.gov.uk">
+	<target host="swale.gov.uk" />
+	<target host="www.swale.gov.uk" />
+	<target host="api.swale.gov.uk" />
+	<target host="accessedge.swale.gov.uk" />
+	<target host="archive.swale.gov.uk" />
+	<target host="meet.swale.gov.uk" />
+	<target host="services.swale.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

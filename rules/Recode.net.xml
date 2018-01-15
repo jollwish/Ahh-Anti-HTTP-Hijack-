@@ -1,0 +1,21 @@
+<!--
+	For other Vox Media coverage, see Vox.com.xml.
+
+	on.recode.net is covered in Bitly_branded_short_domains.xml
+
+	Mismatch:
+		- photos.recode.net
+-->
+<ruleset name="Recode.net">
+
+	<target host="recode.net" />
+	<target host="www.recode.net" />
+	<target host="events.recode.net" />
+	<target host="live.recode.net" />
+
+	<securecookie host="^www\.recode\.net$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

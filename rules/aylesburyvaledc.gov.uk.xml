@@ -1,0 +1,28 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- epayments.aylesburyvaledc.gov.uk
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- propertysearch.aylesburyvaledc.gov.uk
+
+		Incomplete certificate chain error:
+		- democracy.aylesburyvaledc.gov.uk
+		- payments.aylesburyvaledc.gov.uk
+-->
+<ruleset name="Aylesbury Vale DC.gov.uk (partial)">
+	<target host="aylesburyvaledc.gov.uk" />
+	<target host="www.aylesburyvaledc.gov.uk" />
+	<target host="account.aylesburyvaledc.gov.uk" />
+		<exclusion pattern="http://account\.aylesburyvaledc\.gov\.uk/$" />
+		<test url="http://account.aylesburyvaledc.gov.uk/business/Login" />
+	<target host="llportal.aylesburyvaledc.gov.uk" />
+	<target host="eforms.aylesburyvaledc.gov.uk" />
+	<target host="jobs.aylesburyvaledc.gov.uk" />
+	<target host="publicaccess.aylesburyvaledc.gov.uk" />
+	<target host="wam.aylesburyvaledc.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

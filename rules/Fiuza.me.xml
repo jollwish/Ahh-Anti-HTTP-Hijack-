@@ -1,0 +1,16 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fiuza.me/ => https://fiuza.me/: (7, 'Failed to connect to fiuza.me port 443: Connection refused')
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://fiuza.me/ => https://fiuza.me/: (60, 'SSL certificate problem: self signed certificate')
+-->
+<ruleset name="fiuza.me" default_off='failed ruleset test'>
+
+	<target host="fiuza.me" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

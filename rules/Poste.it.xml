@@ -1,0 +1,77 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://poste.it/ => https://poste.it/: (51, "SSL: no alternative certificate subject name matches target host name 'poste.it'")
+Fetch error: http://myposte.poste.it/ => https://myposte.poste.it/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://myposteimpresa.poste.it/ => https://myposteimpresa.poste.it/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Poste Italiane
+
+	Other Poste Italiane rulesets:
+
+		- Kipoint.it.xml
+		- PI_CERT.it.xml
+		- Posta-Online.it.xml
+		- Poste-Impresa.it.xml
+		- PosteShop.it.xml
+		- Postel.it.xml
+		- Risparmio_Postale.it.xml
+		- SDA.it.xml
+
+
+	Nonfunctional hosts in *poste.it:
+
+		- www.cartaroma *
+		- risposte *
+
+	* Dropped
+
+
+	Problematic hosts in *poste.it:
+
+		- antiphishing *
+
+	* Mismatched
+
+
+	Mixed content:
+
+		- css on risparmiopostaleonline, www from fonts.googleapis.com *
+		- Bug on bancopostaclick, postecert, postepay from statse.webtrendslive.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Poste.it (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="poste.it" />
+	<target host="bancopostaclick.poste.it" />
+	<target host="bancopostaonline.poste.it" />
+	<target host="securelogin.bp.poste.it" />
+	<target host="bollettino.poste.it" />
+	<target host="e-filatelia.poste.it" />
+	<target host="myposte.poste.it" />
+	<target host="myposteimpresa.poste.it" />
+	<target host="paccoweb.poste.it" />
+	<target host="posta-online.poste.it" />
+	<target host="postecert.poste.it" />
+	<target host="updates.postecert.poste.it" />
+	<target host="postepay.poste.it" />
+	<target host="profilocommercialeprivati.poste.it" />
+	<target host="risparmiopostaleonline.poste.it" />
+	<target host="securelogin.poste.it" />
+	<target host="www.poste.it" />
+
+		<test url="http://www.poste.it/online/cercacap/" />
+		<test url="http://www.poste.it/online/dovequando/" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

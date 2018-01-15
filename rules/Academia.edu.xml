@@ -1,0 +1,42 @@
+<!--
+	Other Academia.edu rulesets:
+
+		- Academia-assets.com.xml
+
+
+	There's a bucket at s3.amazonaws.com/academia/
+
+	s3.amazonaws.com/academia.edu.(assets|images)/
+
+	!functional:
+		assets[012].academia\.edu
+
+
+	Nearly all subdomains (with two exceptions) are covered using a wildcard:
+	The Academia.edu website has SSL enabled for subdomains www and of the form
+ 	<university name>.academia.edu.
+
+
+	Exceptions:
+
+		- mail
+		- support
+
+-->
+<ruleset name="Academia.edu (partial)">
+	<target host="academia.edu" />
+	<target host="*.academia.edu"/>
+	
+	<test url="http://princeton.academia.edu/" />
+	<test url="http://columbia.academia.edu/" />
+	<test url="http://oxford.academia.edu/" />
+	<test url="http://mail.academia.edu/" />
+	<test url="http://support.academia.edu/" />
+	
+	<exclusion pattern="^http://support\.academia\.edu/"/>
+	<exclusion pattern="^http://mail\.academia\.edu/"/>
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

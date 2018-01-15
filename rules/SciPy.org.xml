@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://scipy.org/ => https://scipy.org/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://conference.scipy.org/ => https://conference.scipy.org/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Nonfunctional subdomains:
+
+		- new ³
+		- numeric ³
+		- planet ¹
+		- projects ¹²
+		- travis-dev-wheels ⁴
+		- wiki ¹
+
+	¹: Unable to get local issuer certificate
+	²: Cert expired
+	³: Serves different content on http/https
+	⁴: Mismatch
+
+-->
+<ruleset name="SciPy.org" default_off='failed ruleset test'>
+
+	<target host="scipy.org" />
+	<target host="www.scipy.org" />
+
+	<target host="conference.scipy.org" />
+	<target host="docs.scipy.org" />
+	<target host="mail.scipy.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

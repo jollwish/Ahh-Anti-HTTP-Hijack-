@@ -1,0 +1,28 @@
+<!--
+	For other Sony coverage, see Sony.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - sonyentertainmentnetwork.com
+
+		SSL peer certificate was not OK:
+			 - music.sonyentertainmentnetwork.com
+
+		Status code mismatch:
+			 - auth.api.sonyentertainmentnetwork.com
+-->
+<ruleset name="Sony Entertainment Network (partial)">
+	<target host="sonyentertainmentnetwork.com" />
+	<target host="www.sonyentertainmentnetwork.com" />
+	<target host="account.sonyentertainmentnetwork.com" />
+		<test url="http://account.sonyentertainmentnetwork.com/login.action" />
+	<target host="cdn.sonyentertainmentnetwork.com" />
+	<target host="friendme.sonyentertainmentnetwork.com" />
+	<target host="store.sonyentertainmentnetwork.com" />
+
+	<rule from="^http://sonyentertainmentnetwork\.com/"
+			to="https://www.sonyentertainmentnetwork.com/" />
+
+	<rule from="^http:"
+			to="https:" />
+</ruleset>

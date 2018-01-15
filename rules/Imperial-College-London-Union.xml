@@ -1,0 +1,12 @@
+<!--
+	For other Imperial College London coverage, see 
+		Imperial-College-London.xml
+-->
+<ruleset name="Imperial College London Union">
+	<target host="imperialcollegeunion.org" />
+	<target host="www.imperialcollegeunion.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

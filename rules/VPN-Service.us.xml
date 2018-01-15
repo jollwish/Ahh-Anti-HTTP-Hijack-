@@ -1,0 +1,13 @@
+<!--
+	Invalid Certificate:
+		ns1.vpn-service.us
+-->
+<ruleset name="VPN-Service.us">
+	<target host="vpn-service.us" />
+	<target host="www.vpn-service.us" />
+	<target host="mail.vpn-service.us" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

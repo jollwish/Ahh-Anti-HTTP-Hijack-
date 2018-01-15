@@ -1,0 +1,39 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://doctortrusted.org/ => https://doctortrusted.org/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://www.doctortrusted.org/ => https://doctortrusted.org/: (28, 'Connection timed out after 20000 milliseconds')
+
+	www.doctortrusted.org: Mismatched
+
+
+	Insecure cookies are set for these hosts:
+
+		- doctortrusted.org
+
+-->
+<ruleset name="Doctor Trusted.org" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="doctortrusted.org" />
+
+	<!--	Complications:
+				-->
+	<target host="www.doctortrusted.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^doctortrusted\.org$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host="^doctortrusted\.org$" name=".+" />
+
+
+	<rule from="^http://www\.doctortrusted\.org/"
+		to="https://doctortrusted.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

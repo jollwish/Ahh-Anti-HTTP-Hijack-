@@ -1,0 +1,20 @@
+<!--
+
+	Problematic hosts in *aulo.in:
+
+		- bigfatlanyards ᵛ
+		- ulminfo ᵛ
+
+	ᵛ Revoked
+
+-->
+<ruleset name="Aulo.in">
+
+	<target host="aulo.in" />
+	<target host="pns.aulo.in" />
+	<target host="www.aulo.in" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

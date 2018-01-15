@@ -1,0 +1,21 @@
+<!--
+	Secure connection failed:
+		www.blog.jolexa.net
+		libertas.jolexa.net
+
+	Invalid certificate:
+		luna.jolexa.net
+
+-->
+<ruleset name="jolexa.net">
+
+	<target host="jolexa.net" />
+	<target host="www.jolexa.net" />
+	<target host="blog.jolexa.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

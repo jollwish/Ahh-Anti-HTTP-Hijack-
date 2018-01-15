@@ -1,0 +1,20 @@
+<!--
+	Secure connection failed:
+		newsletter.findlegalforms.com
+
+-->
+<ruleset name="FindLegalForms.com">
+
+	<target host="findlegalforms.com" />
+	<target host="www.findlegalforms.com" />
+	<target host="au.findlegalforms.com" />
+	<target host="canada.findlegalforms.com" />
+	<target host="india.findlegalforms.com" />
+	<target host="test.findlegalforms.com" />
+	<target host="uk.findlegalforms.com" />
+	<target host="www2.findlegalforms.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

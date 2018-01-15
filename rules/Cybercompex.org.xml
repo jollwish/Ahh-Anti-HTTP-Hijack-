@@ -1,0 +1,18 @@
+<!--
+	Private subdomain:
+		admin.cybercompex.org
+		hiring.cybercompex.org
+		jobs.cybercompex.org
+
+	Time out:
+		sans.cybercompex.org
+
+-->
+<ruleset name="Cybercompex.org">
+
+	<target host="cybercompex.org" />
+	<target host="www.cybercompex.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,13 @@
+<!--
+	For other Nestlé coverage, see Nestle.xml.
+-->
+<ruleset name="PetFinder.com (partial)">
+	<target host="petfinder.com" />
+	<target host="www.petfinder.com" />
+	<target host="profiles.petfinder.com" />
+	<target host="video.petfinder.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

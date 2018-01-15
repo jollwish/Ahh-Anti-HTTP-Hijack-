@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://bitinvest.com.br/ => https://bitinvest.com.br/: (35, 'error:14077438:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert internal error')
+Fetch error: http://developers.bitinvest.com.br/ => https://developers.bitinvest.com.br/: (60, 'SSL certificate problem: certificate has expired')
+
+	Nonfunctional hosts in *bitinvest.com.br:
+
+		- help ¹
+		- news ²
+		- newsbr ²
+		- press ²
+
+	¹ Zendesk
+	² Redirects to http
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.bitinvest.com.br
+
+-->
+<ruleset name="Bitinvest.com.br (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="bitinvest.com.br" />
+	<target host="developers.bitinvest.com.br" />
+	<target host="www.bitinvest.com.br" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.bitinvest\.com\.br$" name="^(?:__RequestVerificationToken|ASP\.NET_SessionId)$" /-->
+
+	<securecookie host="^www\.bitinvest\.com\.br$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

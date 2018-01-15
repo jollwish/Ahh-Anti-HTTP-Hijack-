@@ -1,0 +1,14 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(http reply)
+
+-->
+<ruleset name="Contact At Once.com (partial)">
+
+	<target host="applications.contactatonce.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

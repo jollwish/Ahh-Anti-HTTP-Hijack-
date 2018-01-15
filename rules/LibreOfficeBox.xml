@@ -1,0 +1,5 @@
+<ruleset name="LibreOffice-Box">
+<target host="libreofficebox.org" />
+<target host="www.libreofficebox.org" />
+<rule from="^http:" to="https:" />
+</ruleset>

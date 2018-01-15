@@ -1,0 +1,30 @@
+<!--
+
+	Nanyang Technological University
+
+
+	Nonfunctional subdomains:
+
+		- (www.)? ¹
+		- blogs ¹
+		- sdc
+
+	¹ Dropped
+
+
+	Fully covered hosts in *ntu.edu.sg:
+
+		- wis
+
+-->
+<ruleset name="NTU.edu.sg (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="wis.ntu.edu.sg" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

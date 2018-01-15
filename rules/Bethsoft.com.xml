@@ -1,0 +1,75 @@
+<!--
+	Bethesda Softworks
+
+	For other ZeniMax media coverage, see ZeniMax-Media.xml.
+
+	Mixed content:
+
+		- Scripts, on:
+
+			- forums from static.zenimax.com *
+
+		- Images, on:
+
+			- forums from cdnstatic *
+			- forums from static.zenimax.com *
+
+
+	* Secured by us 
+
+	Mixed content (secured in Bethsoft.com-falsemixed.xml):
+		adam.bethsoft.com
+		be3showcase.bethsoft.com
+		doom.bethsoft.com
+		eulas.bethsoft.com
+		forums.bethsoft.com
+		manuals.bethsoft.com
+		patches.bethsoft.com
+		wolfforums.bethsoft.com
+
+	Invalid certificate:
+		aide.bethsoft.com
+		aiuto.bethsoft.com
+		ayuda.bethsoft.com
+		download.bethsoft.com
+		help.bethsoft.com
+		hilfe.bethsoft.com
+		ihra.bethsoft.com
+		jobs.bethsoft.com
+		rage.bethsoft.com
+		static.bethsoft.com
+		support.bethsoft.com
+		wet.bethsoft.com
+		wolfenstein.bethsoft.com
+
+	Refused:
+		anzbe3showcase.bethsoft.com
+
+	No working URL known:
+		content.bethsoft.com
+		facebook.bethsoft.com
+		meet.bethsoft.com
+
+-->
+<ruleset name="Bethsoft.com">
+
+	<target host="bethsoft.com" />
+	<target host="www.bethsoft.com" />
+	<target host="bgs.bethsoft.com" />
+	<target host="cdn.bethsoft.com" />
+		<test url="http://cdn.bethsoft.com/quake/dopa.rar" />
+	<target host="cdnstatic.bethsoft.com" />
+		<test url="http://cdnstatic.bethsoft.com/bethblog.com/wp-content/uploads/2013/02/Rage%20Tool%20Kit%20FAQ.pdf" />
+	<target host="fallout.bethsoft.com" />
+	<target host="geck.bethsoft.com" />
+	<target host="insiders.bethsoft.com" />
+	<target host="playtest.bethsoft.com" />
+	<target host="press.bethsoft.com" />
+	<target host="store.bethsoft.com" />
+		
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

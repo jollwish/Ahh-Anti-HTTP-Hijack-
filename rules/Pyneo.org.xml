@@ -1,0 +1,11 @@
+<ruleset name="pyneo.org" default_off="mismatched">
+
+	<target host="pyneo.org" />
+	<target host="www.pyneo.org" />
+
+	<securecookie host="^pyneo\.org$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

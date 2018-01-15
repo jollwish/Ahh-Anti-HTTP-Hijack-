@@ -1,0 +1,14 @@
+<!--
+	Fully covered subdomains:
+
+		- php
+
+-->
+<ruleset name="Radford.edu (partial)">
+
+	<target host="php.radford.edu" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Sync.com">
+  <target host="sync.com" />
+  <target host="www.sync.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

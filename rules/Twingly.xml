@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)twingly.com		(503, valid cert)
+
+-->
+<ruleset name="Twingly (partial)">
+
+	<target host="api.twingly.com" />
+
+
+	<securecookie host="^api\.twingly\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

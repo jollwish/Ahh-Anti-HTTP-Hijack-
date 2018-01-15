@@ -1,0 +1,11 @@
+<ruleset name="httpbin">
+
+	<target host="httpbin.org" />
+	<target host="www.httpbin.org" />
+	<target host="eu.httpbin.org" />
+	<target host="now.httpbin.org" />
+	<target host="staging.httpbin.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

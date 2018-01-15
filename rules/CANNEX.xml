@@ -1,0 +1,13 @@
+<!--
+	Cert only matches www.
+
+-->
+<ruleset name="CANNEX">
+
+	<target host="cannex.com" />
+	<target host="www.cannex.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

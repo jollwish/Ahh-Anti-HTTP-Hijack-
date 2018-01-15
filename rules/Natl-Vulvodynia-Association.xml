@@ -1,0 +1,6 @@
+<ruleset name="National Vulvodynia Association">
+	<target host="nva.org" />
+	<target host="www.nva.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

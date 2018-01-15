@@ -1,0 +1,24 @@
+
+<!--
+	Login required:
+		email.discoveryplace.org
+
+	Invalid certificate:
+		online.discoveryplace.org
+		www.science.discoveryplace.org
+		*.discoveryplacekids.org
+
+-->
+<ruleset name="Discovery Place">
+
+	<target host="discoveryplace.org" />
+	<target host="www.discoveryplace.org" />
+	<target host="admin.discoveryplace.org" />
+		<test url="http://admin.discoveryplace.org/blog" />
+	<target host="kids.discoveryplace.org" />
+	<target host="nature.discoveryplace.org" />
+	<target host="science.discoveryplace.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

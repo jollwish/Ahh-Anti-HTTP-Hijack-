@@ -1,0 +1,77 @@
+<!--
+	Other OpenX.com related rulesets:
+		+ Advertisers-OpenX.com.xml
+		+ Fhserve.com.xml
+		+ JumpTime.com.xml
+		+ Liftdna.com.xml
+		+ OpenX.net.xml
+		+ OpenX.org.xml
+		+ OpenX_Enterprise.com.xml
+		+ OpenX_ad_exchange.com.xml
+		+ Served_by_OpenX.com.xml
+		+ openxmarket.asia.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- de.openx.com
+		- go.openx.com
+		- uk.openx.com
+
+		Timeout was reached:
+		- openx.com
+		- uk-ac.openx.com
+
+		SSL peer certificate was not OK:
+		- i.cdn.openx.com
+		- optimizedby.openx.com
+		- prod-d.openx.com
+		- i.psa-ads.openx.com
+		- psa-d.openx.com
+		- psa-i.openx.com
+		- tracking.openx.com
+		- uk-market.openx.com
+		- us-market.openx.com
+		- welcome.openx.com
+		- i.xx.openx.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- stats.openx.com
+		- support.openx.com
+
+		Incomplete certificate chain error:
+		- community.openx.com
+		- www.community.openx.com
+		- orange-ac.openx.com
+		- peeps.openx.com
+		- staging.openx.com
+		- xfer.openx.com
+
+		Self-signed certificate chain error:
+		- currency-service.openx.com
+
+		Status code mismatch:
+		- cdn.platform.dev.openx.com
+		- cdn.platform.qa.openx.com
+-->
+<ruleset name="OpenX.com">
+	<target host="openx.com" />
+	<target host="www.openx.com" />
+	<target host="cci-graphs.openx.com" />
+	<target host="ssl-i.cdn.openx.com" />
+	<target host="docs.openx.com" />
+	<target host="i-cdn.openx.com" />
+	<target host="m-sso.openx.com" />
+	<target host="origin-cdn.openx.com" />
+	<target host="cdn.platform.openx.com" />
+	<target host="selfservice.openx.com" />
+	<target host="sso.openx.com" />
+	<target host="post.update.openx.com" />
+	<target host="s.update.openx.com" />
+	<target host="ssl-i.xx.openx.com" />
+
+	<rule from="^http://openx\.com/" 
+			to="https://www.openx.com/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

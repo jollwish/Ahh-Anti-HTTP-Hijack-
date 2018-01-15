@@ -1,0 +1,9 @@
+<ruleset name="W3Counter.com">
+	<target host="w3counter.com" />
+	<target host="www.w3counter.com" />
+	<target host="pulse.w3counter.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

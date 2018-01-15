@@ -1,0 +1,16 @@
+<ruleset name="GoEmerchant.com">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="goemerchant.com" />
+	<target host="secure.goemerchant.com" />
+	<target host="www.goemerchant.com" />
+
+
+	<securecookie host="^(?:secure)\.gomerchant\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

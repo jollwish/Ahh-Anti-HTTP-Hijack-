@@ -1,0 +1,13 @@
+<ruleset name="Jeja.pl">
+
+	<target host="jeja.pl" />
+	<target host="www.jeja.pl" />
+	<target host="pobierak.jeja.pl" />
+
+
+	<securecookie host="^\.jeja\.pl$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

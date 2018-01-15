@@ -1,0 +1,13 @@
+<!--
+	Timeout:
+		cracker.offensive-security.com
+-->
+<ruleset name="Offensive-Security.com" >
+	<target host="offensive-security.com" />
+	<target host="www.offensive-security.com" />
+	<target host="forums.offensive-security.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

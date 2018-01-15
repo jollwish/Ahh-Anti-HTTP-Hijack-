@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- client *
+
+	* http reply
+
+-->
+<ruleset name="UnlimitedHost (partial)">
+
+	<target host="apollo.unlimitedhost.asia" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

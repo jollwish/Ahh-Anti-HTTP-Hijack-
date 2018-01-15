@@ -1,0 +1,4 @@
+<ruleset name="Jobware.de">
+<target host="www.jobware.de" />
+<rule from="^http:" to="https:" />
+</ruleset>

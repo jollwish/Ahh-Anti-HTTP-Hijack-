@@ -1,0 +1,25 @@
+<!--
+	Refused:
+		smithsonianmag.com
+		www.smithsonianmag.com
+
+-->
+<ruleset name="Smithsonianmag.com (partial)">
+
+	<target host="public.media.smithsonianmag.com" />
+		<test url="http://public.media.smithsonianmag.com/filer/e1/85/e1853b98-e2b8-4b66-9456-a0e0f646f97e/geico.jpg" />
+	<target host="static.media.smithsonianmag.com" /><!-- Needs test url -->
+	<target host="thumbs.media.smithsonianmag.com" /><!-- Needs test url -->
+	<target host="static-media.smithsonianmag.com" />
+		<test url="http://static-media.smithsonianmag.com/img/smithsonian-institute-logo.png" />
+	<target host="subscribe.smithsonianmag.com" />
+
+	<target host="thumbs-prod.si-cdn.com" />
+		<test url="http://thumbs-prod.si-cdn.com/t1WP_hEji9_M--zrw1nX80UJLx4=/220x130/https://public-media.smithsonianmag.com/filer/0b/de/0bdee1e3-b6c7-4e6f-9225-b11abf27c22c/4864714198_a581043b00_b.jpg" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

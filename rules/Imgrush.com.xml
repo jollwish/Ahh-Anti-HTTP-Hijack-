@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://imgrush.com/ => https://imgrush.com/: (7, 'Failed to connect to imgrush.com port 443: Connection refused')
+Fetch error: http://www.imgrush.com/ => https://www.imgrush.com/: (7, 'Failed to connect to www.imgrush.com port 443: Connection refused')
+
+	Insecure cookies are set for these domains:
+
+		- .imgrush.com
+
+-->
+<ruleset name="Imgrush.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="imgrush.com" />
+	<target host="www.imgrush.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.imgrush\.com$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.imgrush\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

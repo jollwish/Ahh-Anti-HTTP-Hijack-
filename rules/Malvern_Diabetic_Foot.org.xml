@@ -1,0 +1,19 @@
+<!--
+	^malverndiabeticfoot.org doesn't exist.
+
+-->
+<ruleset name="Malvern Diabetic Foot.org">
+
+	<target host="www.malverndiabeticfoot.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.malverndiabeticfoot\.org$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^www\.malverndiabeticfoot\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

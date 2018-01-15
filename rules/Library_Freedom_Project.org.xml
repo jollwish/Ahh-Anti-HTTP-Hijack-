@@ -1,0 +1,13 @@
+<!--
+	Invalid Certificate:
+		analytics.libraryfreedomproject.org
+		mail.libraryfreedomproject.org
+-->
+<ruleset name="Library Freedom Project.org" >
+	<target host="libraryfreedomproject.org" />
+	<target host="www.libraryfreedomproject.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

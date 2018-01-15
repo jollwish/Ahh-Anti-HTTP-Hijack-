@@ -1,0 +1,9 @@
+<ruleset name="Orange Static.com">
+
+	<target host="orangestatic.com" />
+	<target host="www.orangestatic.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

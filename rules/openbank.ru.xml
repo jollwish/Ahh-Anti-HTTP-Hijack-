@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mobile.openbank.ru/ => https://mobile.openbank.ru/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://m.openbank.ru/ => https://m.openbank.ru/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://spartak.openbank.ru/ => https://spartak.openbank.ru/: (6, 'Could not resolve host: spartak.openbank.ru')
+
+app.openbank.ru ¹
+talent.openbank.ru ⁶
+open.openbank.ru ¹
+promo.openbank.ru ⁶
+ic.openbank.ru different content
+otvet.openbank.ru ¹
+
+
+¹ mismatch
+⁶ redirect
+-->
+<ruleset name="openbank.ru" default_off='failed ruleset test'>
+	<target host="openbank.ru" />
+	<target host="www.openbank.ru" />
+	<target host="mobile.openbank.ru" />
+	<target host="online.openbank.ru" />
+	<target host="peremena.openbank.ru" />
+	<target host="services.openbank.ru" />
+	<target host="lite.openbank.ru" />
+	<target host="travel.openbank.ru" />
+	<target host="stat.openbank.ru" />
+	<target host="m.openbank.ru" />
+	<target host="spartak.openbank.ru" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,130 @@
+<!--
+	For other Yandex coverage, see Yandex.xml.
+
+	Yandex.com has a wildcard DNS record, so any subdomain resolves, but doesn't neccessarily work.
+
+	Nonfunctional subdomains:
+		- an ¹
+		- bs ¹
+		- bs-meta ¹
+		- contact ¹
+		- contact2 ¹
+		- gazeta ¹
+		- informer ¹
+		- interactive-answers ²
+		- m.internet ¹
+		- islands ³
+		- ir ¹
+		- mc ¹
+		- news ¹
+		- m.news ¹
+		- pda.news ¹
+		- shad ³
+		- store ¹
+		- www.store ¹
+		- wdgt ⁴
+		- xmlsearch ³
+		- yabs ¹
+
+	¹ Dropped
+	² 404
+	³ Redirects to http
+	⁴ 403
+
+	Problematic subdomains:
+		- www.browser ¹
+		- downloader.disk ²
+		- www.constructor.maps ³
+		- api.rasp ³
+		- site ³
+		- www.video ³
+
+	¹ 404
+	² Mixed css
+	³ Mismatched
+-->
+
+<ruleset name="Yandex.com (partial)">
+	<target host="yandex.com" />
+	<target host="www.yandex.com" />
+	<target host="advertising.yandex.com" />
+	<target host="advq.yandex.com" />
+	<target host="analytics.yandex.com" />
+	<target host="api.yandex.com" />
+	<target host="autoconfig.yandex.com" />
+	<target host="autodiscover.yandex.com" />
+	<target host="b.yandex.com" />
+	<target host="ba.yandex.com" />
+	<target host="browser.yandex.com" />
+	<target host="city.yandex.com" />
+	<target host="clck.yandex.com" />
+	<target host="clocks.yandex.com" />
+	<target host="company.yandex.com" />
+	<target host="contest.yandex.com" />
+	<target host="algorithm.contest.yandex.com" />
+	<target host="intern.contest.yandex.com" />
+	<target host="official.contest.yandex.com" />
+	<target host="shad.contest.yandex.com" />
+	<target host="direct.yandex.com" />
+	<target host="disc.yandex.com" />
+	<target host="disk.yandex.com" />
+	<target host="beta.disk.yandex.com" />
+	<target host="1.downloader.disk.yandex.com" />
+	<target host="element.yandex.com" />
+	<target host="elements.yandex.com" />
+	<target host="expert.yandex.com" />
+	<target host="export.yandex.com" />
+	<target host="feedback.yandex.com" />
+	<target host="m.feedback.yandex.com" />
+	<target host="feedback2.yandex.com" />
+	<target host="files.yandex.com" />
+	<target host="gorod.yandex.com" />
+	<target host="help.yandex.com" />
+	<target host="images.yandex.com" />
+	<target host="internet.yandex.com" />
+	<target host="kiks.yandex.com" />
+	<target host="legal.yandex.com" />
+	<target host="m.legal.yandex.com" />
+	<target host="mail.yandex.com" />
+	<target host="maps.yandex.com" />
+	<target host="www.maps.yandex.com" />
+	<target host="constructor.maps.yandex.com" />
+	<target host="router-quality.maps.yandex.com" />
+	<target host="partner.market.yandex.com" />
+	<target host="metric.yandex.com" />
+	<target host="metrica.yandex.com" />
+	<target host="metrika.yandex.com" />
+	<target host="myfiles.yandex.com" />
+	<target host="partner.yandex.com" />
+	<target host="partners.yandex.com" />
+	<target host="pass.yandex.com" />
+	<target host="pda-passport.yandex.com" />
+	<target host="prefetch-maps.yandex.com" />
+	<target host="m.rasp.yandex.com" />
+	<target host="t.rasp.yandex.com" />
+	<target host="site.yandex.com" />
+	<target host="www.site.yandex.com" />
+	<target host="subs.yandex.com" />
+	<target host="support.yandex.com" />
+	<target host="taxi.yandex.com" />
+	<target host="m.taxi.yandex.com" />
+	<target host="tech.yandex.com" />
+	<target host="api.tech.yandex.com" />
+	<target host="ticket.yandex.com" />
+	<target host="time.yandex.com" />
+	<target host="translate.yandex.com" />
+	<target host="tune.yandex.com" />
+	<target host="m.tune.yandex.com" />
+	<target host="video.yandex.com" />
+	<target host="vremya.yandex.com" />
+	<target host="watch.yandex.com" />
+	<target host="webmaster.yandex.com" />
+	<target host="www.webmaster.yandex.com" />
+	<target host="widgets.yandex.com" />
+	<target host="wordstat.yandex.com" />
+	<target host="xml.yandex.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

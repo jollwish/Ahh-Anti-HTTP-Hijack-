@@ -1,0 +1,29 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- msptclive.maldon.gov.uk
+		- recruit.maldon.gov.uk
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- maldon.gov.uk
+
+		Incomplete certificate chain error:
+		- ssl2.maldon.gov.uk
+
+		4xx client error:
+		- mdcmaps.maldon.gov.uk
+-->
+<ruleset name="Maldon.gov.uk (partial)">
+	<target host="maldon.gov.uk" />
+	<target host="www.maldon.gov.uk" />
+	<target host="democracy.maldon.gov.uk" />
+	<target host="publicaccess.maldon.gov.uk" />
+	
+	<rule from="^http://maldon\.gov\.uk/" 
+		  	to="https://www.maldon.gov.uk/" />
+	
+	<rule from="^http:" 
+		  	to="https:" />
+</ruleset>

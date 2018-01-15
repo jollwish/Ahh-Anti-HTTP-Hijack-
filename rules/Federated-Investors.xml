@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://federatedinvestors.com/ => https://federatedinvestors.com/: (35, 'error:14077458:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 unrecognized name')
+Fetch error: http://www.federatedinvestors.com/ => https://www.federatedinvestors.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://federatedinvestors.com/ => https://federatedinvestors.com/: (51, "SSL: no alternative certificate subject name matches target host name 'federatedinvestors.com'")
+-->
+<ruleset name="Federated Investors (partial)" default_off='failed ruleset test'>
+
+	<target host="federatedinvestors.com" />
+	<target host="www.federatedinvestors.com" />
+
+
+	<!--	Some pages redirect to http.	-->
+	<rule from="^http://(www\.)?federatedinvestors\.com/($|FII/(?:css/|(?:daf/)?images/|login\.do|registration/|splash\.do))"
+		to="https://$1federatedinvestors.com/$2" />
+
+</ruleset>

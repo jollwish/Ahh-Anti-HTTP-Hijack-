@@ -1,0 +1,10 @@
+<ruleset name="Web Power (partial)">
+
+	<target host="webpower.nl"/>
+	<target host="www.webpower.nl"/>
+
+	<securecookie host="^www\.webpower\.nl$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

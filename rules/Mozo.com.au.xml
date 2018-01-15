@@ -1,0 +1,20 @@
+<!--
+	Doesn't exist:
+		^mozo.co
+
+	Mismatched:
+		www.mozo.co
+		resources2.news.com.au	(503, akamai)
+
+	Refused:
+		insights.mozo.com.au
+-->
+<ruleset name="Mozo.com.au">
+	<target host="mozo.com.au" />
+	<target host="www.mozo.com.au" />
+	<target host="calculators.mozo.com.au" />
+	<target host="stat.mozo.com.au" />
+	<target host="static.mozo.com.au" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

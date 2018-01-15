@@ -1,0 +1,22 @@
+<!--
+	Invalid certificate:
+		espanol.pssl.com
+		shop.pssl.com
+
+	No working URL known:
+		cdn.pssl.com
+		livechat2.pssl.com
+
+-->
+<ruleset name="PSSL.com">
+
+	<target host="pssl.com" />
+	<target host="www.pssl.com" />
+	<target host="m.pssl.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

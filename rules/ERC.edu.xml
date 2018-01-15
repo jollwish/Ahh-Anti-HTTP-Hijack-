@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://courses.erc.edu/ => https://courses.erc.edu/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://faq.erc.edu/ => https://faq.erc.edu/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- courses.erc.edu
+
+-->
+<ruleset name="ERC.edu" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="erc.edu" />
+	<target host="congress2015.erc.edu" />
+	<target host="courses.erc.edu" />
+	<target host="faq.erc.edu" />
+	<target host="www.erc.edu" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^courses\.erc\.edu$" name="^(?:cookie_id|language_cookie)$" /-->
+
+	<securecookie host="^courses\.erc\.edu$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

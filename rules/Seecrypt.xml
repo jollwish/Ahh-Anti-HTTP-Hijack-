@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.seecrypt.com/ => https://www.seecrypt.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://seecrypt.com/ => https://seecrypt.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	STS header includes includeSubDomains
+
+
+	Mixed content:
+
+		- Bug from piwik.seecrypt.net *
+
+	* Unsecurable <= dropped
+
+-->
+<ruleset name="Seecrypt.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="seecrypt.com" />
+	<target host="*.seecrypt.com" />
+
+		<test url="http://enterprise.seecrypt.com/" />
+		<test url="http://www.seecrypt.com/" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

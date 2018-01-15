@@ -1,0 +1,15 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - assets.codepen.io
+-->
+<ruleset name="CodePen.io">
+	<target host="codepen.io" />
+	<target host="www.codepen.io" />
+	<target host="blog.codepen.io" />
+	<target host="s.codepen.io" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

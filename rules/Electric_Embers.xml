@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional domains:
+
+		- (www.(electricembers.coop	(403; mismatched, CN: *.electricembers.net)
+		- (www.)electricembers.net	(403)
+
+-->
+<ruleset name="Electric Embers (partial)">
+
+	<target host="internal.electricembers.net" />
+	<target host="mail.electricembers.net" />
+
+
+	<securecookie host="^mail\.electricembers\.net$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,24 @@
+<!--
+	Website is misconfigured and many subdomains fail to load even
+	over http because of broken redirects (eg. blogs.alternet.org)
+
+	Different content http/https:
+		files.alternet.org
+			<test url="http://files.alternet.org/css/slimbox2.css" />
+			<test url="https://files.alternet.org/css/slimbox2.css" />
+			(but website sometimes links to https even though it is 
+			 broken.)
+
+-->
+<ruleset name="AlterNet.org">
+
+	<target host="alternet.org" />
+	<target host="www.alternet.org" />
+	<target host="act.alternet.org" />
+	<target host="donate.alternet.org" />
+	<target host="img.alternet.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

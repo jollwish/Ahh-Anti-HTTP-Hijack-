@@ -1,0 +1,10 @@
+<ruleset name="Waag.org">
+
+	<target host="waag.org" />
+	<target host="www.waag.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="Autotools.io">
+
+	<target host="autotools.io" />
+	<target host="www.autotools.io" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

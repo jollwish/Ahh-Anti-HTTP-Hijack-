@@ -1,0 +1,11 @@
+<ruleset name="Student Privacy Pledge.org">
+
+	<target host="studentprivacypledge.org" />
+	<target host="www.studentprivacypledge.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

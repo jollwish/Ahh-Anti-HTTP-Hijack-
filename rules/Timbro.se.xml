@@ -1,0 +1,6 @@
+<ruleset name="Timbro.se" default_off="broken">
+	<target host="timbro.se" />
+	<target host="www.timbro.se" />
+	<rule from="^http:" to="https:" />
+</ruleset>
+

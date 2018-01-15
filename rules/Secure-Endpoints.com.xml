@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://secure-endpoints.com/ (200) => https://secure-endpoints.com/ (404)
+
+	For problematic rules, see Secure-Endpoints.com-problematic.xml.
+
+
+	Problematic subdomains:
+
+		- oskt	(works; expired 2013-10-22, mismatched, CN: www.imrryr.org)
+
+
+	Mixed content:
+
+		- Images on (www.), from:
+
+			- oskt
+			- www.h5l.org
+
+-->
+<ruleset name="Secure-Endpoints.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="secure-endpoints.com" />
+	<target host="www.secure-endpoints.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

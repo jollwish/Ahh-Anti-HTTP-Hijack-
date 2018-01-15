@@ -1,0 +1,31 @@
+<!--
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .splcenter.org
+		- donate.splcenter.org
+
+	Mismatch:
+		- selma.splcenter.org
+
+-->
+<ruleset name="SPL Center.org">
+	<target host="splcenter.org" />
+	<target host="www.splcenter.org" />
+	<target host="donate.splcenter.org" />
+	<target host="edit.splcenter.org" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.splcenter\.org$" name="^(?:__cfduid|cf_clearance)$" /-->
+	<!--securecookie host="^donate\.splcenter\.org$" name="^(?:ASP\.NET_SessionId$|NSC_)" /-->
+
+	<securecookie host="^\." name="^(?:__cfduid|cf_clearance)$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

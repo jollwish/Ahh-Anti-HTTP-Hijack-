@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.securetrust.com/ => https://www.securetrust.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://securetrust.com/ => https://www.securetrust.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	For other Trustwave coverage, see Trustwave.xml.
+
+
+	^securetrust.com: Cert only matches www.securetrust.com
+
+-->
+<ruleset name="securetrust.com (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.securetrust.com" />
+
+	<!--	Complications:
+				-->
+	<target host="securetrust.com" />
+
+
+	<rule from="^http://securetrust\.com/"
+		to="https://www.securetrust.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

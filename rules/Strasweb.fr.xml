@@ -1,0 +1,6 @@
+<ruleset name="Strasweb.fr">
+  <target host="strasweb.fr" />
+  <target host="www.strasweb.fr" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

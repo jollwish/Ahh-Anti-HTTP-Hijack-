@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional domains:
+
+		- (www.)rent.ie		(refused)
+
+-->
+<ruleset name="Daft Media (partial)">
+
+	<target host="m0.dmlimg.com" />
+	<target host="m1.dmlimg.com" />
+	<target host="c0.dmstatic.com" />
+	<target host="c1.dmstatic.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,10 @@
+<ruleset name="contentdn.net">
+
+	<target host="contentdn.net" />
+
+
+	<!--	www doesn't exist.
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://mail.zaehlwerk.net/ => https://mail.zaehlwerk.net/: (51, "SSL: no alternative certificate subject name matches target host name 'mail.zaehlwerk.net'")
+
+	Other Zählwerk rulesets:
+
+		- Zwmail.de.xml
+
+-->
+<ruleset name="Zaehlwerk.net" default_off='failed ruleset test'>
+
+	<target host="zaehlwerk.net" />
+	<target host="cloud.zaehlwerk.net" />
+	<target host="lists.zaehlwerk.net" />
+	<target host="mail.zaehlwerk.net" />
+	<target host="owncloud.zaehlwerk.net" />
+	<target host="seacloud.zaehlwerk.net" />
+	<target host="stats.zaehlwerk.net" />
+	<target host="www.zaehlwerk.net" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<ruleset name="F-Droid.org">
+
+	<target host="f-droid.org" />
+	<target host="www.f-droid.org" />
+	<target host="forum.f-droid.org" />
+	<target host="test.f-droid.org" />
+	<target host="verification.f-droid.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

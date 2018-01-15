@@ -1,0 +1,15 @@
+<!--
+	Refused over both http and https:
+		vuxml.org
+
+-->
+<ruleset name="VuXML.org">
+
+	<target host="www.vuxml.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

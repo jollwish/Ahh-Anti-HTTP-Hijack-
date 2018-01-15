@@ -1,0 +1,6 @@
+<ruleset name="Balkongshoppen.se">
+  <target host="www.balkongshoppen.se" />
+  <target host="balkongshoppen.se" />
+  <rule from="^http:" to="https:" />
+</ruleset>
+

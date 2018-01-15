@@ -1,0 +1,13 @@
+<!--
+	www: cert only matches ^bespied-ons-niet.nl
+
+-->
+<ruleset name="Bespied-ons-niet.nl">
+
+	<target host="bespied-ons-niet.nl" />
+	<target host="www.bespied-ons-niet.nl" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

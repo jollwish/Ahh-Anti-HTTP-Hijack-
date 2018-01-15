@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://somevid.com/ => https://somevid.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.somevid.com/ => https://www.somevid.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- somevid.com
+		- www.somevid.com
+
+-->
+<ruleset name="Somevid.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="somevid.com" />
+	<target host="www.somevid.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?somevid\.com$" name="^sessionid$" /-->
+
+	<securecookie host="^(?:www\.)?somevid\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

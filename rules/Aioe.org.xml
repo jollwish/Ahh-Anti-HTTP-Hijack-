@@ -1,0 +1,18 @@
+<!--
+	Invalid certificate:
+		blog.aioe.org
+		web.aioe.org
+
+	Refused:
+		webmail.aioe.org
+
+-->
+<ruleset name="Aioe.org">
+
+	<target host="www.aioe.org" />
+	<target host="news.aioe.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

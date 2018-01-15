@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://socialtwist.com/ => https://socialtwist.com/: (51, "SSL: no alternative certificate subject name matches target host name 'socialtwist.com'")
+
+	cdn.socialtwist.com is hosted at s3.amazonaws.com/cdn.socialtwist.com/, but has a valid cert.
+
+-->
+<ruleset name="SocialTwist" default_off='failed ruleset test'>
+
+	<target host="socialtwist.com" />
+	<target host="*.socialtwist.com" />
+
+
+	<!--	Observed subdomains:
+
+			- blog
+			- cdn
+			- content
+			- images
+			- nospam-taf
+			- sales
+			- secure
+			- taf
+			- tellafriend
+			- www
+					-->
+	<rule from="^http://([\w\-]+\.)?socialtwist\.com/"
+		to="https://$1socialtwist.com/" />
+
+</ruleset>

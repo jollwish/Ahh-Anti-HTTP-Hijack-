@@ -1,0 +1,12 @@
+<ruleset name="Layne Publications">
+
+	<target host="laynepublications.com" />
+	<target host="www.laynepublications.com" />
+
+
+	<securecookie host="^\.www\.laynepublications\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

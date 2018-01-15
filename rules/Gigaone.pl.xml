@@ -1,0 +1,6 @@
+<ruleset name="gigaone.pl">
+  <target host="gigaone.pl" />
+  <target host="www.gigaone.pl" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

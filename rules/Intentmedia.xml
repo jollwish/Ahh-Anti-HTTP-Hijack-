@@ -1,0 +1,7 @@
+<ruleset name="intentmedia.net (partial)">
+
+	<target host="a.intentmedia.net"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

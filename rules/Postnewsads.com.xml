@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://postnewsads.com/legacy/archive.html => https://postnewsads.com/legacy/archive.html: (35, 'Unknown SSL protocol error in connection to postnewsads.com:443 ')
+Fetch error: http://postnewsads.com/ => https://postnewsads.com/: (35, 'Unknown SSL protocol error in connection to postnewsads.com:443 ')
+Fetch error: http://www.postnewsads.com/ => https://postnewsads.com/: (35, 'Unknown SSL protocol error in connection to postnewsads.com:443 ')
+
+	www.postnewsads.com: 404
+
+-->
+<ruleset name="postnewsads.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="postnewsads.com" />
+
+	<!--	Complications:
+				-->
+	<target host="www.postnewsads.com" />
+
+		<test url="http://postnewsads.com/legacy/archive.html" />
+
+
+	<rule from="^http://www\.postnewsads\.com/"
+		to="https://postnewsads.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

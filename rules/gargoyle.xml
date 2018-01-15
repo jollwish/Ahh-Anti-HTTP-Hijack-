@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://gargoyle-router.com/ => https://gargoyle-router.com/: (51, "SSL: no alternative certificate subject name matches target host name 'gargoyle-router.com'")
+
+	Gargoyle Router Firmware
+
+
+	Insecure cookies are set for these domains:
+
+		- .gargoyle-router.com
+
+-->
+<ruleset name="Gargoyle-Router.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+  <target host="gargoyle-router.com" />
+  <target host="www.gargoyle-router.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.gargoyle-router\.com$" name="^phpbb3_\w+_(k|sid|u)$" /-->
+
+	<securecookie host="^\.gargoyle-router\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

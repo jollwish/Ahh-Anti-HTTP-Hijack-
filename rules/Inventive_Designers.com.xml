@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.inventivedesigners.com/ => https://support.inventivedesigners.com/: Too many redirects while fetching 'https://support.inventivedesigners.com/'
+
+	Other Inventive Designers rulesets:
+
+		- Scriptura_Engage.com.xml
+
+
+	Fully covered hosts in *inventivedesigners.com:
+
+		- (www.)?
+		- support
+
+
+	Insecure cookies are set for these hosts:
+
+		- inventivedesigners.com
+		- www.inventivedesigners.com
+
+-->
+<ruleset name="Inventive Designers.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="inventivedesigners.com" />
+	<target host="support.inventivedesigners.com" />
+	<target host="www.inventivedesigners.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?inventivedesigners.com$" name="^AWSELB$" /-->
+
+	<securecookie host="^(?:www\.)?inventivedesigners.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

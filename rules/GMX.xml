@@ -1,0 +1,51 @@
+<!--
+
+	For other United Internet coverage, see United-Internet.xml.
+
+
+	CDN buckets:
+		- gmx.con-tech.de
+		- kino.gmx.de
+		- gmx.ivwbox.de
+
+	Nonfunctional domains:
+		- www.gmx.biz			¹
+		- (www.)gmx.ca			²
+		- www.gmx.cc			¹
+		- www.gmx.co.in			²
+		- www.gmx.com.tr		²
+
+		- kino.gmx.de			(redirects to www.govento.de; mismatched, CN: ct-cds.con-tech.de)
+		- www.gmx.info			¹
+		- www.gmx.li			¹
+		- www.gmx.lu			¹
+
+		- www.gmx.org			¹
+		- www.gmx.ph			²
+		- (www.)gmx.ru			²
+		- (www.)gmx.se			²
+		- www.gmx.sg			²
+		- www.gmx.tm			¹
+		- www.gmx.tw			²
+
+	¹ hostname mismatch, CN: *.gmx.net
+	² hostname mismatch, CN: *.mail.com
+
+-->
+<ruleset name="GMX (partial)">
+	<target host=                "gmx.biz" />
+	<target host=                "gmx.cc" />
+	<target host=                "gmx.co.in" />
+	<target host=                "gmx.com.tr" />
+	<target host=                "gmx.info" />
+	<target host=                "gmx.li" />
+	<target host=                "gmx.lu" />
+	<target host=                "gmx.org" />
+	<target host=                "gmx.ph" />
+	<target host=                "gmx.sg" />
+	<target host=                "gmx.tm" />
+	<target host=                "gmx.tw" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

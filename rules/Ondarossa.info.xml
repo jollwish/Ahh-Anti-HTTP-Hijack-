@@ -1,0 +1,33 @@
+<!--
+	Invalid certificate:
+		ondarossa.info
+		dev.ondarossa.info
+  		mail.ondarossa.info
+		player.ondarossa.info
+		techrec.ondarossa.info
+		web.ondarossa.info
+
+	Login required:
+		autogestione.ondarossa.info
+		edicola.ondarossa.info
+		megaror.ondarossa.info
+		rec.ondarossa.info
+		webmail.ondarossa.info
+		webmail2.ondarossa.info
+
+-->
+<ruleset name="OndaRossa.info">
+
+	<target host="ondarossa.info" />
+	<target host="www.ondarossa.info" />
+	<target host="40anni.ondarossa.info" />
+	<target host="old.ondarossa.info" />
+	<target host="scarceranda.ondarossa.info" />
+
+	<rule from="^http://ondarossa\.info/"
+		to="https://www.ondarossa.info/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

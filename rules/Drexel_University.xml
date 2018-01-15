@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://psal.cs.drexel.edu/ => https://psal.cs.drexel.edu/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Problematic subdomains:
+
+		- (www.)	(some paths 404)
+
+
+	Fully covered subdomains:
+
+		- (www.)cs
+		- psal.cs
+
+-->
+<ruleset name="Drexel University (partial)" default_off='failed ruleset test'>
+
+	<target host="cs.drexel.edu" />
+	<target host="psal.cs.drexel.edu" />
+	<target host="www.cs.drexel.edu" />
+
+
+	<securecookie host="^psal\.cs\.drexel\.edu$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

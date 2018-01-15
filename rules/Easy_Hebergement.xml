@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://support.easy-hebergement.fr/ => https://support.easy-hebergement.fr/: (6, 'Could not resolve host: support.easy-hebergement.fr')
+
+-->
+<ruleset name="Easy Hébergement" default_off='failed ruleset test'>
+
+	<target host="easy-hebergement.fr" />
+	<target host="clients.easy-hebergement.fr" />
+	<target host="commande.easy-hebergement.fr" />
+	<target host="support.easy-hebergement.fr" />
+	<target host="www.easy-hebergement.fr" />
+	<target host="cluster1.easy-hebergement.net" />
+	<target host="www.cluster1.easy-hebergement.net" />
+
+
+	<securecookie host="^\.easy-hebergement\.fr$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

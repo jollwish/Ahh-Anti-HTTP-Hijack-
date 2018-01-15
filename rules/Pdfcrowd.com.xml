@@ -1,0 +1,16 @@
+<!--
+	Invalid certificate:
+		status.pdfcrowd.com
+
+-->
+<ruleset name="pdfcrowd.com">
+
+	<target host="pdfcrowd.com" />
+	<target host="www.pdfcrowd.com" />
+	<target host="crowd.pdfcrowd.com" />
+	<target host="mgiles.pdfcrowd.com" />
+	<target host="sysomos.pdfcrowd.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

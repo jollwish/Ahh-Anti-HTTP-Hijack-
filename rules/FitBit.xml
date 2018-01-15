@@ -1,0 +1,62 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://android-client.fitbit.com/ => https://android-client.fitbit.com/: Too many redirects while fetching 'https://android-client.fitbit.com/'
+Fetch error: http://desktop-client.fitbit.com/ => https://desktop-client.fitbit.com/: Too many redirects while fetching 'https://desktop-client.fitbit.com/'
+Fetch error: http://iphone-client.fitbit.com/ => https://iphone-client.fitbit.com/: Too many redirects while fetching 'https://iphone-client.fitbit.com/'
+Fetch error: http://client.fitbit.com/ => https://client.fitbit.com/: Too many redirects while fetching 'https://client.fitbit.com/'
+Fetch error: http://m.fitbit.com/ => https://m.fitbit.com/: (6, 'Could not resolve host: m.fitbit.com')
+
+	Forwards to HTTP (March 2016):
+		- staticcs.fitbit.com
+		- static0.fitbit.com
+		- static1.fitbit.com
+		- static2.fitbit.com
+		- static3.fitbit.com
+		- static4.fitbit.com
+		- static5.fitbit.com
+		- static6.fitbit.com
+		- static7.fitbit.com
+		- static8.fitbit.com
+		- static9.fitbit.com
+
+	Invalid (March 2016):
+		- support.fitbit.com
+		- www.lp.fitbit.com
+		- lp.fitbit.com
+		- cache.fitbit.com (https://d6y8zfzc2qfsl.cloudfront.net/)
+-->
+<ruleset name="FitBit" default_off='failed ruleset test'>
+
+	<target host="fitbit.com" />
+	<target host="www.fitbit.com" />
+	<target host="blog.fitbit.com" />
+	<target host="help.fitbit.com" />
+	<target host="jobs.fitbit.com" />
+	<target host="community.fitbit.com" />
+	<target host="api.fitbit.com" />
+	<target host="android-api.fitbit.com" />
+	<target host="android-client.fitbit.com" />
+	<target host="desktop-api.fitbit.com" />
+	<target host="desktop-client.fitbit.com" />
+	<target host="iphone-api.fitbit.com" />
+	<target host="iphone-client.fitbit.com" />
+	<target host="client.fitbit.com" />
+	<target host="dev.fitbit.com" />
+	<target host="m.fitbit.com" />
+	<target host="wiki.fitbit.com" />
+	<target host="jira.fitbit.com" />
+	<target host="corporate.fitbit.com" />
+	<target host="fitforgood.fitbit.com" />
+	<target host="assets.fitbit.com" />
+	<target host="investor.fitbit.com" />
+	<target host="status.fitbit.com" />
+	<target host="strava.fitbit.com" />
+	<target host="contact.fitbit.com" />
+	<target host="ifttt.fitbit.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

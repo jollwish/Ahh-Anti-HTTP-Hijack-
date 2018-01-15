@@ -1,0 +1,31 @@
+<!--
+	For other United Nations coverage, see UN.org.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- unhcr.org
+		- www.unhcr.org
+		- maps.unhcr.org
+
+		Server returned nothing (no headers, no data):
+		- reporting.unhcr.org
+
+		SSL peer certificate was not OK:
+		- tracks.unhcr.org
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- data.unhcr.org
+
+		Secure connection redirects to plaintext:
+		- data2.unhcr.org
+		- popstats.unhcr.org
+-->
+<ruleset name="UNHCR.org (partial)">
+	<target host="donate.unhcr.org" />
+	<target host="emergency.unhcr.org" />
+	<target host="media.unhcr.org" />
+	<target host="partner.unhcr.org" />
+	<target host="public.msrp.unhcr.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

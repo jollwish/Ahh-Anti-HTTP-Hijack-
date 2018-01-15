@@ -1,0 +1,15 @@
+<ruleset name="Titania.com">
+
+	<target host="titania.com" />
+	<target host="www.titania.com" />
+
+
+	<securecookie host="^www\.titania\.com$" name=".+" />
+
+
+	<!--	^ redirects to www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

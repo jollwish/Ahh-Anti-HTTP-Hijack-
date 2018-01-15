@@ -1,0 +1,17 @@
+<!--
+	Mismatch:
+		- beta.nachrichtendienstgesetz.ch
+-->
+<ruleset name="Nachrichtendienstgesetz.ch">
+
+	<target host="nachrichtendienstgesetz.ch" />
+	<target host="www.nachrichtendienstgesetz.ch" />
+	<target host="check.nachrichtendienstgesetz.ch" />
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

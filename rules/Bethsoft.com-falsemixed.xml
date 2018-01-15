@@ -1,0 +1,21 @@
+<!--
+	For rules that don't cause false/broken MCB, see Bethsoft.com.xml.
+
+-->
+<ruleset name="Bethsoft.com (false MCB)" platform="mixedcontent">
+
+	<target host="adam.bethsoft.com" />
+	<target host="be3showcase.bethsoft.com" />
+	<target host="doom.bethsoft.com" />
+	<target host="eulas.bethsoft.com" />
+	<target host="forums.bethsoft.com" />
+	<target host="manuals.bethsoft.com" />
+	<target host="patches.bethsoft.com" />
+	<target host="wolfforums.bethsoft.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

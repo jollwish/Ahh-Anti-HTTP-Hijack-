@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www1.taxact.com/ => https://www1.taxact.com/: (6, 'Could not resolve host: www1.taxact.com')
+Fetch error: http://www2.taxact.com/ => https://www2.taxact.com/: (6, 'Could not resolve host: www2.taxact.com')
+Fetch error: http://www1.taxactonline.com/ => https://www1.taxactonline.com/: (6, 'Could not resolve host: www1.taxactonline.com')
+Fetch error: http://www2.taxactonline.com/ => https://www2.taxactonline.com/: (6, 'Could not resolve host: www2.taxactonline.com')
+
+	Non-functional subdomain:
+		- taxact.com
+			- bizadvance	(¹, CN: *.wpengine.com, wpengine.com)
+			- blog		(¹, CN: *.wpengine.com, wpengine.com)
+			- danica	(¹, CN: www.racetoyourrefund.com)
+			- ef		(¹, CN: www.taxact.com)
+			- m		(revoked cert)
+			- proadvance	(¹, CN: *.wpengine.com, wpengine.com)
+
+		¹ hostname mismatch
+-->
+<ruleset name="TaxAct (partial)" default_off='failed ruleset test'>
+	<target host="taxact.com" />
+	<target host="cdn.taxact.com" />
+	<target host="www.taxact.com" />
+	<target host="www1.taxact.com" />
+	<target host="www2.taxact.com" />
+	<target host="taxactonline.com" />
+	<target host="cdn.taxactonline.com" />
+	<target host="www.taxactonline.com" />
+	<target host="www1.taxactonline.com" />
+	<target host="www2.taxactonline.com" />
+
+	<securecookie host=".*\.taxact(online)?\.com$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

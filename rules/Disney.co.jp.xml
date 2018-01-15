@@ -1,0 +1,23 @@
+<!--
+	For other Disney coverage, see Disney_International.com.xml.
+
+
+	CDN buckets:
+
+		- www.disney.co.jp.edgesuite.net
+
+
+	Nonfunctional subdomains:
+
+		- ^	(refused)
+		- www	(503, akamai)
+
+-->
+<ruleset name="Disney.co.jp (partial)">
+
+	<target host="secure.disney.co.jp" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

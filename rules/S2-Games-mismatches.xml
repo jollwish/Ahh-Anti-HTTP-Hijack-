@@ -1,0 +1,9 @@
+<!--	ToDo: find edgecastcdn bucket
+-->
+<ruleset name="S2 Games (mismatches)" default_off="mismatched" platform="mixedcontent">
+
+	<target host="dl.heroesofnewerth.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

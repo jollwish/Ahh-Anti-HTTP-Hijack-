@@ -1,0 +1,4 @@
+<ruleset name="Westlotto.com">
+<target host="wlresults.westlotto.com" />
+<rule from="^http:" to="https:" />
+</ruleset>

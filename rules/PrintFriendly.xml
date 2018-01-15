@@ -1,0 +1,30 @@
+<!--
+	Refused:
+		blog.printfriendly.com
+
+	Invalid certificate:
+		cf-cdn.printfriendly.com
+
+	No working URL known:
+		key-cdn.printfriendly.com
+
+-->
+<ruleset name="PrintFriendly.com">
+
+	<target host="printfriendly.com" />
+	<target host="www.printfriendly.com" />
+	<target host="app.printfriendly.com" />
+	<target host="cdn.printfriendly.com" />
+		<test url="http://cdn.printfriendly.com/printfriendly.js" />
+	<target host="cs.printfriendly.com" />
+	<target host="ds.printfriendly.com" />
+	<target host="pdf.printfriendly.com" />
+	<target host="pf-cdn.printfriendly.com" />
+		<test url="http://pf-cdn.printfriendly.com/images/pf-print-icon.gif" />
+	<target host="pro.printfriendly.com" />
+	<target host="support.printfriendly.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

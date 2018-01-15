@@ -1,0 +1,6 @@
+<ruleset name="Gesellschaft fuer Informatik">
+    <target host="gi.de" />
+    <target host="www.gi.de" />
+
+    <rule from="^http:" to="https:" />
+</ruleset>

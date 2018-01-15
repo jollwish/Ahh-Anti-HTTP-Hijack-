@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://7elements.co.uk/ (200) => https://7elements.co.uk/ (403)
+
+	Insecure cookies are set for these hosts:
+
+		- 7elements.co.uk
+		- www.7elements.co.uk
+
+-->
+<ruleset name="7 Elements.co.uk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="7elements.co.uk" />
+	<target host="www.7elements.co.uk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?7elements\.co\.uk$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:www\.)?7elements\.co\.uk$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

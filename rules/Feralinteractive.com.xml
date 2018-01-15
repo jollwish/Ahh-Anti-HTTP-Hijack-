@@ -1,0 +1,6 @@
+<ruleset name="Feralinteractive.com">
+  <target host="feralinteractive.com" />
+  <target host="www.feralinteractive.com" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

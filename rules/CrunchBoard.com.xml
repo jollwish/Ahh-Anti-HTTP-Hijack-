@@ -1,0 +1,22 @@
+<!--
+	For other AOL coverage, see AOL.xml.
+
+	Invalid certificate:
+		crunchboard.com
+		fr.crunchboard.com
+		services.crunchboard.com
+		uk.crunchboard.com
+
+-->
+<ruleset name="CrunchBoard.com">
+
+	<target host="crunchboard.com" />
+	<target host="www.crunchboard.com" />
+
+	<rule from="^http://crunchboard\.com/"
+		to="https://www.crunchboard.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

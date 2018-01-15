@@ -1,0 +1,51 @@
+<!--
+	Other Kantar rulesets:
+		+ Kantar-Latam-Portal.xml
+		+ Kantar-Worldpanel.xml
+		+ TNS-Gallup.xml
+		+ TNS-Info.xml
+		+ TNS-Sifo.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- connectedlife.tnsglobal.com
+		- connectedlifequiz.tnsglobal.com
+
+		Timeout was reached:
+		- tnspostalplatformrmd-uat.tnsglobal.com
+
+		SSL connect error:
+		- timeline.tnsglobal.com
+
+		SSL peer certificate was not OK:
+		- blogs.tnsglobal.com
+		- go.tnsglobal.com
+		- tnscourierchallenge.tnsglobal.com
+		- tnsselfrecruitment.tnsglobal.com
+		- www2.tnsglobal.com
+
+		Incomplete certificate chain error:
+		- insightondemand.tnsglobal.com
+-->
+<ruleset name="TNS-Global">
+	<target host="tnsglobal.com" />
+	<target host="www.tnsglobal.com" />
+	<target host="gmmeocsi.tnsglobal.com" />
+	<target host="heinekenonequity.tnsglobal.com" />
+	<target host="www.idp.tnsglobal.com" />
+	<target host="mailus.tnsglobal.com" />
+	<target host="post.tnsglobal.com" />
+	<target host="rap.tnsglobal.com" />
+	<target host="rap8.tnsglobal.com" />
+	<target host="reports.tnsglobal.com" />
+	<target host="surveys.tnsglobal.com" />
+	<target host="tnspostalplatformau.tnsglobal.com" />
+	<target host="tnspostalplatformgms.tnsglobal.com" />
+	<target host="tnspostalplatformswex.tnsglobal.com" />
+	<target host="tnspostalplatformwebapi-uat.tnsglobal.com" />
+	<target host="tracker.tnsglobal.com" />
+	<target host="volvogrouprex.tnsglobal.com" />
+	<target host="webedit.tnsglobal.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

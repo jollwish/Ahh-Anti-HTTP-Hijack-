@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://lovtidende.dk/ => https://lovtidende.dk/: (56, 'SSL read: error:00000000:lib(0):func(0):reason(0), errno 104')
+
+	^lovtidende.dk: Reset
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.lovtidende.dk
+
+-->
+<ruleset name="Lovtidende.dk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.lovtidende.dk" />
+
+	<!--	Complications:
+				-->
+	<target host="lovtidende.dk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.lovtidende\.dk$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host="^www\.lovtidende\.dk$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

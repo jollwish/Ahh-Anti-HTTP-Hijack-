@@ -1,0 +1,12 @@
+<!--
+	For other DeviantArt coverage, see DeviantArt.xml.
+-->
+
+<ruleset name="Sta.sh">
+	<target host="sta.sh" />
+	<target host="www.sta.sh" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

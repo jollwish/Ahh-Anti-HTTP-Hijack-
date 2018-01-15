@@ -1,0 +1,24 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://transmode.se/ => https://www.transmode.com/: (7, 'Failed to connect to www.transmode.com port 443: Connection refused')
+
+	For other Transmode coverage, see Transmode.xml.
+
+
+	(www.): mismatched
+
+-->
+<ruleset name="Transmode.se" default_off='failed ruleset test'>
+
+	<target host="transmode.se" />
+	<target host="*.transmode.se" />
+
+
+	<rule from="^http://(?:www\.)?transmode\.se/+"
+		to="https://www.transmode.com/" />
+
+	<rule from="^http://tac\.transmode\.org/"
+		to="https://tac.transmode.org/" />
+
+</ruleset>

@@ -1,0 +1,66 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://theappendix.net/ => https://theappendix.net/: (51, "SSL: no alternative certificate subject name matches target host name 'theappendix.net'")
+Fetch error: http://images.theappendix.net/ => https://d6hat78o59yti.cloudfront.net/: (6, 'Could not resolve host: d6hat78o59yti.cloudfront.net')
+Fetch error: http://www.theappendix.net/ => https://theappendix.net/: (51, "SSL: no alternative certificate subject name matches target host name 'theappendix.net'")
+
+	CDN buckets:
+
+		- d6hat78o59yti.cloudfront.net
+
+
+	www: cert only matches ^theappendix.net
+
+
+	Nonfunctional subdomains:
+
+		- shop *
+
+	* Shopify
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- theappendix.net
+		- .theappendix.net
+
+
+	Mixed content:
+
+		- Images from images.theappendix.net *
+
+	* Secured by us
+
+-->
+<ruleset name="The Appendix.net (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="theappendix.net" />
+
+	<!--	Complications:
+				-->
+	<target host="images.theappendix.net" />
+	<target host="www.theappendix.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^theappendix\.net$" name="^_appendix_session$" /-->
+	<!--securecookie host="^\.theappendix\.net$" name="^__qca$" /-->
+
+	<securecookie host="^theappendix\.net$" name=".+" />
+	<securecookie host="^\.theappendix\.net$" name="^__qca$" />
+
+
+	<rule from="^http://images\.theappendix\.net/"
+		to="https://d6hat78o59yti.cloudfront.net/" />
+
+	<rule from="^http://www\.theappendix\.net/"
+		to="https://theappendix.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

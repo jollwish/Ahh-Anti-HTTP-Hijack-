@@ -1,0 +1,59 @@
+<!--
+	Other Time Inc rulesets:
+
+		- TIME.com.xml
+		- Customersvc.com.xml
+		- Entertainment_Weekly.xml
+		- Fortune.com.xml
+		- People.com.xml
+	
+
+	Non-functional hosts in *.timeinc.net
+
+		Couldn't connect to server:
+			 - timeinc.net
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - dev-wpcom.timeinc.net
+
+		Incomplete certificate chain error:
+			 - github.timeinc.net
+			 - jenkins.ties.timeinc.net
+
+		4xx client error:
+			 - i2.timeinc.net
+-->
+<ruleset name="Time Inc (partial)">
+	<!--  *.timeinc.net -->
+	<target host="www.timeinc.net" />
+		<test url="http://www.timeinc.net/subs/newsstand/main.html" />
+	<target host="amp.timeinc.net" />
+		<test url="http://amp.timeinc.net/time/4753419/time-100-gala-biggest-moments/?source=dam" />
+	<target host="cgi.timeinc.net" />
+	<target host="fonts.timeinc.net" />
+		<test url="http://fonts.timeinc.net/ti/fortune/webfonts.css?ver=1.0.00" />
+	<target host="git.timeinc.net" />
+	<target host="img.timeinc.net" />
+		<test url="http://img.timeinc.net/tii/omniture/h/config/time_s_code_multivideo.js" />
+	<target host="img5.timeinc.net" />
+		<test url="http://img5.timeinc.net/keynote/above_the_fold_1x1.gif" />
+	<target host="smetrics.timeinc.net" />
+	<target host="svn.timeinc.net" />
+	<target host="tia.timeinc.net" />
+		<test url="http://tia.timeinc.net/fortune/tia_tgx.min.js" />
+	<target host="tiads.timeinc.net" />
+		<test url="http://tiads.timeinc.net/ads/tii_bk-coretag.js" />
+
+
+	<!-- *.timeinc.com -->
+	<target host="timeinc.com" />
+	<target host="www.timeinc.com" />
+	<target host="invest.timeinc.com" />
+	<target host="subscription.timeinc.com" />
+	<target host="subscription-assets.timeinc.com" />
+		<test url="http://subscription-assets.timeinc.com/prod/assets/themes/magazines/SUBS/templates/velocity/site/mm-newsstand/lp.html" />
+	
+	<securecookie host="^subscription\.timeinc\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

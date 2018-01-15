@@ -1,0 +1,6 @@
+<ruleset name="Notebooks Wie Neu">
+    <target host="nbwn.de" />
+    <target host="www.nbwn.de" />
+
+    <rule from="^http:" to="https:" />
+</ruleset>

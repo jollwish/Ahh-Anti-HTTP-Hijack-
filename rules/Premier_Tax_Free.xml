@@ -1,0 +1,13 @@
+<ruleset name="Premier Tax Free">
+
+	<target host="premiertaxfree.com" />
+	<target host="www.premiertaxfree.com" />
+
+
+	<securecookie host="^premiertaxfree\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

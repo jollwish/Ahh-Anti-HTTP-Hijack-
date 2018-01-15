@@ -1,0 +1,16 @@
+<!--	
+	Invalid certificate:
+		blog.page.ly
+		cdn.page.ly
+		www.cdn.page.ly
+
+-->
+<ruleset name="Pagely">
+
+	<target host="page.ly" />
+	<target host="www.page.ly" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

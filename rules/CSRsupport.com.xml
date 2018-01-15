@@ -1,0 +1,8 @@
+<ruleset name="CSRSupport.com">
+
+	<target host="csrsupport.com" />
+	<target host="www.csrsupport.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

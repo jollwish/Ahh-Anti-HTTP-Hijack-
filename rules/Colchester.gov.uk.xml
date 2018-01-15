@@ -1,0 +1,26 @@
+<!--
+	Colchester Borough Council
+
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- colchester.gov.uk
+		- www.colchester.gov.uk
+
+		Timeout was reached:
+		- connect.colchester.gov.uk
+		- datashare.colchester.gov.uk
+		- leisureworldbookings.colchester.gov.uk
+		- leisureworldmemberships.colchester.gov.uk
+		- www.planning.colchester.gov.uk
+
+		SSL connect error:
+		- ecourier.colchester.gov.uk
+-->
+<ruleset name="Colchester.gov.uk (partial)">
+	<target host="iconnect.colchester.gov.uk" />
+	<target host="online.colchester.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

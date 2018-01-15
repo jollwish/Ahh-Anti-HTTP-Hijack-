@@ -1,0 +1,41 @@
+<!--
+
+	Nonfunctional subdomains:
+
+		- nisha *
+
+	* Dropped
+
+
+	Observed cookie domains:
+
+		- ^
+		- .
+		- www
+
+
+	Mixed content:
+
+		- Images, from:
+
+			- $self ¹
+			- nisha ²
+
+	¹ Secured by us
+	² Unsecurable
+
+-->
+<ruleset name="CERT Polska">
+
+	<target host="cert.pl" />
+	<target host="www.cert.pl" />
+	<!--	*s for cross-domain cookies.	-->
+	
+
+
+	<securecookie host="^(?:.*\.)?cert\.pl$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

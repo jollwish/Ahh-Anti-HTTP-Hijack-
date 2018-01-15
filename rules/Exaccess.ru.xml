@@ -1,0 +1,15 @@
+<!--
+	Problematic subdomains:
+
+		- (www.)	(works; mismatched, CN: www.plati.ru [identical to plati.ru])
+
+-->
+<ruleset name="exaccess.ru (partial)">
+
+	<target host="dynamic.exaccess.ru" />
+	<target host="static.exaccess.ru" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://edirectdebit.com/ => https://www.edirectdebit.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.edirectdebit.com/ => https://www.edirectdebit.com/: (28, 'Connection timed out after 20000 milliseconds')
+
+	Nonfunctional domains:
+
+		- edirect-debit.com	(no https)
+
+
+	!www: cert only matches www
+
+-->
+<ruleset name="eDirectDebit (partial)" default_off='failed ruleset test'>
+
+	<target host="edirectdebit.com" />
+	<target host="www.edirectdebit.com" />
+
+
+	<securecookie host="^www\.edirectdebit\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?edirectdebit\.com/"
+		to="https://www.edirectdebit.com/" />
+
+</ruleset>

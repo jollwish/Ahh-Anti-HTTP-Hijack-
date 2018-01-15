@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://getshine.com/ => https://www.getshine.com/: Too many redirects while fetching 'https://www.getshine.com/'
+
+-->
+<ruleset name="get Shine.com" default_off='failed ruleset test'>
+
+	<target host="getshine.com" />
+	<target host="*.getshine.com" />
+
+
+	<securecookie host="^\.getshine\.com$" name=".+" />
+
+
+	<!--	^ redirects to www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http://(?:www\.)?getshine\.com/"
+		to="https://www.getshine.com/" />
+
+</ruleset>

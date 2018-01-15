@@ -1,0 +1,28 @@
+<!--
+	Other MODX rulesets:
+
+		- MODX_Cloud.xml
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(shows pta; mismatched, CN: services.modx.com)
+		- rtfm		(times out)
+
+
+	Problematic subdomains:
+
+		- pta		(mismatched, CN: services.modx.com)
+		- services	(http & https data differ - https is identical to pta)
+
+-->
+<ruleset name="MODX (partial)" platform="mixedcontent">
+
+	<target host="pta.modx.com" />
+	<target host="services.modx.com" />
+		<exclusion pattern="^http://services\.modx\.com/(?!stylesheets/|user(?:$|\?|/))" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

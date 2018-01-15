@@ -1,0 +1,20 @@
+<!--
+	Invalid certificate:
+		blog.onbeing.org
+		kristasblog.onbeing.org
+		legacy.onbeing.org
+		ssl.onbeing.org
+
+	Refused:
+		test.onbeing.org
+
+-->
+<ruleset name="OnBeing.org">
+
+	<target host="onbeing.org" />
+	<target host="www.onbeing.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://virtualqube.com/ => https://virtualqube.com/: (28, 'Connection timed out after 20001 milliseconds')
+Fetch error: http://www.virtualqube.com/ => https://www.virtualqube.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+	Insecure cookies are set for these hosts:
+
+		- virtualqube.com
+		- www.virtualqube.com
+
+-->
+<ruleset name="VirtualQube.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="virtualqube.com" />
+	<target host="www.virtualqube.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?virtualqube\.com$" name="^(?:PHPSESSID|wfvt_\d+)$" /-->
+
+	<securecookie host="^(?:www\.)?virtualqube\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

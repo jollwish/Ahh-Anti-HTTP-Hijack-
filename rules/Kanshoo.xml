@@ -1,0 +1,10 @@
+<ruleset name="Kanshoo">
+
+	<target host="kenshoo.com" />
+	<target host="www.kenshoo.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

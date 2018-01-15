@@ -1,0 +1,29 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://andor.com/ => https://andor.com/: (51, "SSL: no alternative certificate subject name matches target host name 'andor.com'")
+
+	Mixed content:
+
+		- css from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Andor.com" default_off='failed ruleset test'>
+
+	<target host="andor.com" />
+	<target host="www.andor.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?andor\.com$" name="^\.ASPXANONYMOUS$" /-->
+	<!--securecookie host="^\.andor\.com$" name="^(AndorSID|language)$" /-->
+
+	<securecookie host="^(?:\.|www\.)?andor\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

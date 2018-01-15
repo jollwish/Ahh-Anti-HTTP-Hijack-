@@ -1,0 +1,7 @@
+<ruleset name="intelliwebservices.com">
+	<target host="merpic.intelliwebservices.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

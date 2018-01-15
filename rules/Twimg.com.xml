@@ -1,0 +1,102 @@
+<!--
+	For other Twitter coverage, see Twitter.xml.
+
+
+	CDN buckets:
+
+		- twimg0-0.akamaihd.net
+
+		- d2rdfnizen5apl.cloudfront.net
+
+			- s.twimg.com
+
+
+	Problematic hosts:
+
+		- s *
+
+	* Cloudfront
+
+
+	Fully covered hosts:
+
+		- abs
+		- amp
+		- dnt
+		- ea
+		- g
+		- g2
+		- gu
+		- hca
+		- image-proxy-origin
+		- jp
+		- ma
+		- ma[0123]
+		- o
+		- p
+		- pbs
+		- r
+		- s	(→ d2rdfnizen5apl.cloudfront.net)
+		- syndication
+		- cdn.syndication
+		- syndication-o
+		- tailfeather
+		- ton
+		- widgets
+
+
+	^twimg.com: Dropped over http & https
+
+
+	These altnames don't exist:
+
+		- i3.twimg.com
+		- p-dev.twimg.com
+		- vmtc.twimg.com
+
+-->
+<ruleset name="Twimg.com">
+
+	<!--	Direct rewrites:
+					-->
+	<target host="abs.twimg.com" />
+		<test url="http://abs.twimg.com/favicons/favicon.ico" />
+	<target host="amp.twimg.com" />
+	<target host="dnt.twimg.com" />
+	<target host="ea.twimg.com" />
+	<target host="g.twimg.com" />
+	<target host="g2.twimg.com" />
+	<target host="gu.twimg.com" />
+	<target host="hca.twimg.com" />
+	<target host="image-proxy-origin.twimg.com" />
+	<target host="jp.twimg.com" />
+	<target host="ma.twimg.com" />
+	<target host="ma0.twimg.com" />
+	<target host="ma1.twimg.com" />
+	<target host="ma2.twimg.com" />
+	<target host="ma3.twimg.com" />
+	<target host="o.twimg.com" />
+	<target host="p.twimg.com" />
+	<target host="pbs.twimg.com" />
+		<test url="http://pbs.twimg.com/profile_images/877299816228835328/BzlF5IzF_400x400.jpg" />
+	<target host="r.twimg.com" />
+	<target host="syndication.twimg.com" />
+	<target host="syndication-o.twimg.com" />
+	<target host="cdn.syndication.twimg.com" />
+	<target host="tailfeather.twimg.com" />
+	<target host="ton.twimg.com" />
+	<target host="widgets.twimg.com" />
+
+	<!--	Special cases:
+				-->
+	<target host="s.twimg.com" />
+		<test url="http://s.twimg.com/business/twitter101forbusiness.pdf" />
+
+
+	<rule from="^http://s\.twimg\.com/"
+		to="https://d2rdfnizen5apl.cloudfront.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

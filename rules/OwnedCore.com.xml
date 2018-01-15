@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ownedcore.com/ => https://ownedcore.com/: Too many redirects while fetching 'https://ownedcore.com/'
+Fetch error: http://www.ownedcore.com/ => https://www.ownedcore.com/: Too many redirects while fetching 'https://www.ownedcore.com/'
+
+	Mixed content:
+
+		- Images on www from www *
+
+	* Secured by us
+
+-->
+<ruleset name="OwnedCore.com (mixed content)" platform="mixedcontent" default_off='failed ruleset test'>
+
+	<target host="ownedcore.com" />
+	<target host="www.ownedcore.com" />
+
+
+	<securecookie host="^www\.ownedcore\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

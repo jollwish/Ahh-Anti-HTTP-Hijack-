@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://zoum.ca/ => https://zoum.ca/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.zoum.ca/ => https://www.zoum.ca/: (60, 'SSL certificate problem: certificate has expired')
+
+-->
+<ruleset name="ZOUM.ca" default_off='failed ruleset test'>
+
+	<target host="zoum.ca" />
+	<target host="www.zoum.ca" />
+
+
+	<securecookie host="^(?:www\.)?zoum\.ca$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,13 @@
+<ruleset name="Universe 2.us">
+
+	<target host="universe2.us" />
+	<target host="www.universe2.us" />
+
+
+	<securecookie host="^universe2\.us$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

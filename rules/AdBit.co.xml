@@ -1,0 +1,32 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adbit.co/ => https://adbit.co/: (35, 'error:14077438:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert internal error')
+Fetch error: http://www.adbit.co/ => https://www.adbit.co/: (35, 'error:14077438:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert internal error')
+
+	Insecure cookies are set for these domains and hosts:
+
+		- adbit.co
+		- .adbit.co
+
+-->
+<ruleset name="AdBit.co" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="adbit.co" />
+	<target host="www.adbit.co" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^adbit\.co$" name="^PHPSESSID$" /-->
+	<!--securecookie host="^\.adbit\.co$" name="^(__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.?adbit\.co$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,47 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://account.cyngn.com/ => https://account.cyngn.com/: (6, 'Could not resolve host: account.cyngn.com')
+Fetch error: http://builds.cyngn.com/ => https://d199yez36w5w8l.cloudfront.net/: (6, 'Could not resolve host: d199yez36w5w8l.cloudfront.net')
+
+	CDN buckets:
+
+		- d199yez36w5w8l.cloudfront.net
+
+			- builds
+
+
+	Problematic hosts in *cyngn.com:
+
+		- builds *
+
+	* Cloudfront
+
+
+	Fully covered hosts in *cyngn.com:
+
+		- (www.)?
+		- account
+		- builds	(→ d199yez36w5w8l.cloudfront.net)
+
+-->
+<ruleset name="Cyngn.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cyngn.com" />
+	<target host="account.cyngn.com" />
+	<target host="www.cyngn.com" />
+
+	<!--	Complications:
+				-->
+	<target host="builds.cyngn.com" />
+
+
+	<rule from="^http://builds\.cyngn\.com/"
+		to="https://d199yez36w5w8l.cloudfront.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,22 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.gnu.io/ => https://www.gnu.io/: (51, "SSL: no alternative certificate subject name matches target host name 'www.gnu.io'")
+ 
+    Notes:
+	    - $, www
+            - Cloudflare SSL
+-->
+<ruleset name="GNU.io" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="gnu.io" />
+	<target host="www.gnu.io" />
+	<target host="git.gnu.io" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

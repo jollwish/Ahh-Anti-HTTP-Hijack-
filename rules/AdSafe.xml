@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adsafecontrol.com/ => https://adsafecontrol.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.adsafecontrol.com/ => https://www.adsafecontrol.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Other AdSafe rulesets:
+
+		- AdSafe_protected.com.xml
+
+
+	Nonfunctional domains:
+
+		- (www.)?adsafemedia.com *
+
+	* Shows default page
+
+-->
+<ruleset name="AdSafe control.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="adsafecontrol.com" />
+	<target host="www.adsafecontrol.com" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

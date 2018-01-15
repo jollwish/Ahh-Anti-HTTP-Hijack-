@@ -1,0 +1,33 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://smp.specificmedia.net/ => https://smp.specificmedia.net/: (6, 'Could not resolve host: smp.specificmedia.net')
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://smp.specificmedia.net/ => https://smp.specificmedia.net/: (6, 'Could not resolve host: smp.specificmedia.net')
+	For problematic coverage, see Specific-Media-mismatches.xml.
+
+
+	Other Specific Media rulesets:
+
+		- Adviva.net.xml
+		- Specificclick.xml
+
+
+	Nonfunctional domains:
+
+		- (www.)specificmedia.com	(valid cert; prints "corpmedia")
+		- reporting.specificmedia.com
+		- (www.)specificmedia.net	(cert: mail.localsvcs.com; shows IIS7 default page)
+
+-->
+<ruleset name="Specific Media (partial)" default_off='failed ruleset test'>
+
+	<target host="cm.specificmedia.com" />
+	<target host="smp.specificmedia.com" />
+	<target host="smp.specificmedia.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)?
+		- support
+
+-->
+<ruleset name="Astrill.com">
+
+	<target host="astrill.com" />
+	<target host="support.astrill.com" />
+	<target host="www.astrill.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

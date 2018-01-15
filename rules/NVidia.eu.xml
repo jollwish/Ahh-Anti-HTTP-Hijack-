@@ -1,0 +1,31 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://nvidia.eu/ => https://nvidia.eu/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://partners.nvidia.eu/ => https://partners.nvidia.eu/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other nVidia coverage, see NVidia.xml.
+
+
+	Nonfunctional hosts in *nvidia.eu:
+
+		- support *
+
+	* Zendesk
+
+-->
+<ruleset name="nVidia.eu (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="nvidia.eu" />
+	<target host="contests.nvidia.eu" />
+	<target host="partners.nvidia.eu" />
+	<target host="services.nvidia.eu" />
+	<target host="www.nvidia.eu" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

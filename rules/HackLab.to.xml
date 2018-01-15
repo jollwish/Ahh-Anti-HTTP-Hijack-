@@ -1,0 +1,18 @@
+<!--
+	No working URL known:
+		wiki.hacklab.to
+
+-->
+<ruleset name="HackLab.to">
+
+	<target host="hacklab.to" />
+	<target host="www.hacklab.to" />
+	<target host="apply.hacklab.to" />
+	<target host="dinesafe.hacklab.to" />
+	<target host="knowledge.hacklab.to" />
+	<target host="lists.hacklab.to" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

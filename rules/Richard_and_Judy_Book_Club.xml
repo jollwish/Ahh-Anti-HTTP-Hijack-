@@ -1,0 +1,12 @@
+<!--
+	!www loops over both http & https.
+
+-->
+<ruleset name="Richard and Judy Book Club">
+
+	<target host="www.richardandjudy.co.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

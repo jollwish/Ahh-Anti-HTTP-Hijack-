@@ -1,0 +1,10 @@
+<ruleset name="OECD">
+
+	<target host="www.oecd.org" />
+
+
+	<!--	!www doesn't exist.
+					-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

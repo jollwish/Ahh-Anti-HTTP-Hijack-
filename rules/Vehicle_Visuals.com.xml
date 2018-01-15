@@ -1,0 +1,10 @@
+<ruleset name="Vehicle Visuals.com">
+
+	<target host="vehiclevisuals.com" />
+	<target host="www.vehiclevisuals.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

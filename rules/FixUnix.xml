@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://c.fixunix.com/ => https://d2yvm6gxdmpjqc.cloudfront.net/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+
+	For other InfNX coverage, see InfNX.xml.
+
+
+	CDN buckets:
+
+		- d2yvm6gxdmpjqc.cloudfront.net
+
+			- c
+
+
+	(www.)?fixunix.com: Plaintext reply
+
+-->
+<ruleset name="FixUnix.com (partial)" default_off='failed ruleset test'>
+
+	<target host="c.fixunix.com" />
+
+
+	<rule from="^http://c\.fixunix\.com/"
+		to="https://d2yvm6gxdmpjqc.cloudfront.net/" />
+
+</ruleset>

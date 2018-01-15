@@ -1,0 +1,43 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://elva.mapillary.com/ => https://elva.mapillary.com/: (6, 'Could not resolve host: elva.mapillary.com')
+
+	Problematic subdomains:
+
+		^:    Refused
+		blog: Timeout
+		edu:  Mismatch
+		
+
+
+	Mixed content:
+
+		- favicon from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="Mapillary.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.mapillary.com" />
+
+	<target host="a.mapillary.com" />
+	<target host="elva.mapillary.com" />
+	<target host="legacy.mapillary.com" />
+	<target host="forum.mapillary.com" />
+
+	<!--	Complications:
+				-->
+	<target host="mapillary.com" />
+
+
+	<rule from="^http://mapillary\.com/"
+		to="https://www.mapillary.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

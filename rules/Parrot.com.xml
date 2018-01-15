@@ -1,0 +1,61 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.recrute.parrot.com/ => https://www.recrute.parrot.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.recrute.parrot.com'")
+
+	For problematic rules, see Parrot.com-problematic.xml.
+
+
+	Nonfunctional subdomains:
+
+		- blog *
+		- certified *
+
+	* Shows recrute
+
+
+	(www.)?: Mismatched
+
+
+	Fully covered subdomains:
+
+		- download
+		- (www.)?recrute
+
+
+	These altnames don't exist:
+
+		- www.download.parrot.com
+
+
+	Insecure cookies are set for these hosts:
+
+		- www.parrot.com
+
+
+	Mixed content:
+
+		- Fonts on recrute from themes.googleusercontent.com ¹
+		- css on www from $self ²
+		- iframe on www from $self ²
+
+	¹ Secured by us
+	² Not secured by us <= mismatched
+
+-->
+<ruleset name="Parrot.com (partial)" default_off='failed ruleset test'>
+
+	<target host="download.parrot.com" />
+	<target host="recrute.parrot.com" />
+	<target host="www.recrute.parrot.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.parrot\.com$" name="^(csrftoken|django_language)$" /-->
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

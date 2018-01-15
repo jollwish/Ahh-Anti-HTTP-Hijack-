@@ -1,0 +1,6 @@
+<ruleset name="Naturvardsverket.se">
+	<target host="naturvardsverket.se" />
+	<target host="www.naturvardsverket.se" />
+	<rule from="^http:" to="https:" />
+</ruleset>
+

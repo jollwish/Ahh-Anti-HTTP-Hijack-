@@ -1,0 +1,8 @@
+<ruleset name="North Devon Theatres">
+	<target host="northdevontheatres.org.uk" />
+	<target host="www.northdevontheatres.org.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

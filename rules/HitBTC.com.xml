@@ -1,0 +1,36 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)?
+		- affiliate
+		- auth
+		- blog
+		- demo
+		- forum
+
+
+	Insecure cookies are set for these domains:
+
+		- hitbtc.com
+		- forum.hitbtc.com
+
+-->
+<ruleset name="HitBTC.com">
+
+	<target host="hitbtc.com" />
+
+	<target host="*.hitbtc.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^hitbtc\.com$" name="^ref_id$" /-->
+	<!--securecookie host="^forum\.hitbtc\.com$" name="^Vanilla" /-->
+
+	<securecookie host="^(?:\.|forum\.)?hitbtc\.com$" name=".+" />
+
+
+	<rule from="^http://((?:affiliate|auth|blog|demo|forum|www)\.)?hitbtc\.com/"
+		to="https://$1hitbtc.com/" />
+
+</ruleset>

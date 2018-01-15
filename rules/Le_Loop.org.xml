@@ -1,0 +1,45 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://leloop.org/ => https://leloop.org/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+Fetch error: http://cal.leloop.org/ => https://cal.leloop.org/: (7, 'Failed to connect to cal.leloop.org port 443: No route to host')
+Fetch error: http://git.leloop.org/ => https://git.leloop.org/: (7, 'Failed to connect to git.leloop.org port 443: No route to host')
+Fetch error: http://links.leloop.org/ => https://links.leloop.org/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+Fetch error: http://paste.leloop.org/ => https://paste.leloop.org/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+Fetch error: http://wiki.leloop.org/ => https://wiki.leloop.org/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+Fetch error: http://www.leloop.org/ => https://www.leloop.org/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+
+	www.leloop.org: Prints "Fsck !"
+
+
+	Insecure cookies are set for these hosts:
+
+		- git.leloop.org
+		- links.leloop.org
+
+-->
+<ruleset name="Le Loop.org" platform="cacert" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="leloop.org" />
+	<target host="cal.leloop.org" />
+	<target host="git.leloop.org" />
+	<target host="links.leloop.org" />
+	<target host="paste.leloop.org" />
+	<target host="wiki.leloop.org" />
+	<target host="www.leloop.org" />
+        			
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^git\.leloop\.org$" name="^request_method$" /-->
+	<!--securecookie host="^links\.leloop\.org$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:git|links)\.leloop\.org$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

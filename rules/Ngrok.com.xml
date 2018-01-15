@@ -1,0 +1,20 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://dl.ngrok.com/ => https://dl.ngrok.com/: (28, 'Connection timed out after 20001 milliseconds')
+
+-->
+<ruleset name="ngrok.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="ngrok.com" />
+	<target host="dashboard.ngrok.com" />
+	<target host="dl.ngrok.com" />
+	<target host="www.ngrok.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

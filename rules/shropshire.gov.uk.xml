@@ -1,0 +1,28 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- cpp.shropshire.gov.uk
+
+		Incomplete certificate chain error:
+		- etopia.shropshire.gov.uk
+-->
+<ruleset name="Shropshire.gov.uk (partial)">
+	<target host="shropshire.gov.uk" />
+	<target host="libraries.shropshire.gov.uk" />
+	<target host="myview.shropshire.gov.uk" />
+	<target host="new.shropshire.gov.uk" />
+	<target host="oneonline.shropshire.gov.uk" />
+	<target host="pa.shropshire.gov.uk" />
+	<target host="static.shropshire.gov.uk" />
+	<target host="css.static.shropshire.gov.uk" />
+	<target host="images.static.shropshire.gov.uk" />
+	<target host="js.static.shropshire.gov.uk" />
+	<target host="www.shropshire.gov.uk" />
+	<target host="www4.shropshire.gov.uk" />
+
+	<securecookie host=".+" name=".+" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,23 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://hizlisaat.com/ => https://hizlisaat.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://gozluk.hizlisaat.com/ => https://gozluk.hizlisaat.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://taki.hizlisaat.com/ => https://taki.hizlisaat.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.hizlisaat.com/ => https://www.hizlisaat.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+-->
+<ruleset name="Hızlı Saat" default_off='failed ruleset test'>
+
+	<target host="hizlisaat.com" />
+	<target host="gozluk.hizlisaat.com" />
+	<target host="taki.hizlisaat.com" />
+	<target host="www.hizlisaat.com" />
+
+
+	<securecookie host="^(?:.*\.)?hizlisaat\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

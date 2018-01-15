@@ -1,0 +1,12 @@
+<!--
+	For rules that are on by default, see Jussieu.fr.xml.
+
+-->
+<ruleset name="Jussieu.fr (self-signed)" default_off="self-signed">
+
+	<target host="distrib-coffee.ipsl.jussieu.fr" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

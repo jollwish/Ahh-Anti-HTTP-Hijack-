@@ -1,0 +1,10 @@
+<ruleset name="Pilgrimage Software.com">
+
+	<target host="pilgrimagesoftware.com" />
+	<target host="www.pilgrimagesoftware.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

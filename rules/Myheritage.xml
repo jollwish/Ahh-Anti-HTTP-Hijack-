@@ -1,0 +1,160 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://myheritage.br/ => https://myheritage.br/: (6, 'Could not resolve host: myheritage.br')
+Fetch error: http://www.myheritage.br/ => https://www.myheritage.br/: (6, 'Could not resolve host: www.myheritage.br')
+Fetch error: http://myheritage.com.il/ => https://myheritage.com.il/: (6, 'Could not resolve host: myheritage.com.il')
+Fetch error: http://www.myheritage.com.il/ => https://www.myheritage.com.il/: (6, 'Could not resolve host: www.myheritage.com.il')
+Fetch error: http://helpcenter.myheritage.com/ => https://helpcenter.myheritage.com/: (51, "SSL: no alternative certificate subject name matches target host name 'helpcenter.myheritage.com'")
+Fetch error: http://blog.myheritage.br/ => https://blog.myheritage.br/: (6, 'Could not resolve host: blog.myheritage.br')
+Fetch error: http://helpcenter.myheritage.br/ => https://helpcenter.myheritage.br/: (6, 'Could not resolve host: helpcenter.myheritage.br')
+Fetch error: http://blog.myheritage.co/ => https://blog.myheritage.co/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://helpcenter.myheritage.co/ => https://helpcenter.myheritage.co/: (28, 'Connection timed out after 20000 milliseconds')
+Fetch error: http://blog.myheritage.il/ => https://blog.myheritage.il/: (6, 'Could not resolve host: blog.myheritage.il')
+Fetch error: http://helpcenter.myheritage.il/ => https://helpcenter.myheritage.il/: (6, 'Could not resolve host: helpcenter.myheritage.il')
+Fetch error: http://myheritage.br/ => https://myheritage.br/: (6, 'Could not resolve host: myheritage.br')
+Fetch error: http://myheritage.com.il/ => https://myheritage.com.il/: (6, 'Could not resolve host: myheritage.com.il')
+
+    Nonfunctional domains:
+        - blog.myheritage.*          -> stupid error 29 by incapsula
+        - helpcenter.myheritage.*    -> wrong cert (valid for nanorep.com)
+	
+	Mixed content:
+		- iframes on myheritage.* *
+	
+	* secured by us
+
+    Other MyHeritage rulesets:
+	    - Mhcache.com
+	    - Myheritageimages.com
+-->
+<ruleset name="MyHeritage" platform="mixedcontent" default_off='failed ruleset test'>
+    <!-- .com -->
+    <target host="myheritage.com" />
+    <target host="*.myheritage.com" />
+
+    <test url="http://myheritage.com/" />
+    <test url="http://www.myheritage.com/" />
+    <test url="http://lastnames.myheritage.com/" />
+    <test url="http://secure.myheritage.com/" />
+
+    <!-- .no -->
+    <target host="myheritage.no" />
+    <target host="*.myheritage.no" />
+
+    <test url="http://myheritage.no/" />
+    <test url="http://www.myheritage.no/" />
+
+    <!-- .nl -->
+    <target host="myheritage.nl" />
+    <target host="*.myheritage.nl" />
+
+    <test url="http://myheritage.nl/" />
+    <test url="http://www.myheritage.nl/" />
+
+    <!-- .de -->
+    <target host="myheritage.de" />
+    <target host="*.myheritage.de" />
+
+    <test url="http://myheritage.de/" />
+    <test url="http://www.myheritage.de/" />
+
+    <!-- .dk -->
+    <target host="myheritage.dk" />
+    <target host="*.myheritage.dk" />
+
+    <test url="http://myheritage.dk/" />
+    <test url="http://www.myheritage.dk/" />
+
+    <!-- .se -->
+    <target host="myheritage.se" />
+    <target host="*.myheritage.se" />
+
+    <test url="http://myheritage.se/" />
+    <test url="http://www.myheritage.se/" />
+
+    <!-- .fr -->
+    <target host="myheritage.fr" />
+    <target host="*.myheritage.fr" />
+
+    <test url="http://myheritage.fr/" />
+    <test url="http://www.myheritage.fr/" />
+
+    <!-- .fi -->
+    <target host="myheritage.fi" />
+    <target host="*.myheritage.fi" />
+
+    <test url="http://myheritage.fi/" />
+    <test url="http://www.myheritage.fi/" />
+
+    <!-- .br -->
+    <target host="myheritage.br" />
+    <target host="*.myheritage.br" />
+
+    <test url="http://myheritage.br/" />
+    <test url="http://www.myheritage.br/" />
+
+    <!-- .com.br -->
+    <target host="myheritage.com.br" />
+    <target host="*.myheritage.com.br" />
+
+    <test url="http://myheritage.com.br/" />
+    <test url="http://www.myheritage.com.br/" />
+
+    <!-- .com.il -->
+    <target host="myheritage.com.il" />
+    <target host="*.myheritage.com.il" />
+
+    <test url="http://myheritage.com.il/" />
+    <test url="http://www.myheritage.com.il/" />
+
+    <!-- .es -->
+    <target host="myheritage.es" />
+    <target host="*.myheritage.es" />
+
+    <test url="http://myheritage.es/" />
+    <test url="http://www.myheritage.es/" />
+
+    <!-- .pl -->
+    <target host="myheritage.pl" />
+    <target host="*.myheritage.pl" />
+
+    <test url="http://myheritage.pl/" />
+    <test url="http://www.myheritage.pl/" />
+
+    <!-- https://regex101.com/r/fT8rK6/6 -->
+    <exclusion pattern="^http://(blog|helpcenter)\.myheritage\.(com\.br|co\.il|no|nl|de|dk|se|fr|fi|es|pl)" />
+	
+    <test url="http://blog.myheritage.com/" />
+    <test url="http://helpcenter.myheritage.com/" />
+    <test url="http://blog.myheritage.br/" />
+    <test url="http://helpcenter.myheritage.br/" />
+    <test url="http://blog.myheritage.co/" />
+    <test url="http://helpcenter.myheritage.co/" />
+    <test url="http://blog.myheritage.il/" />
+    <test url="http://helpcenter.myheritage.il/" />
+    <test url="http://blog.myheritage.no/" />
+    <test url="http://helpcenter.myheritage.no/" />
+    <test url="http://blog.myheritage.nl/" />
+    <test url="http://helpcenter.myheritage.nl/" />
+    <test url="http://blog.myheritage.de/" />
+    <test url="http://helpcenter.myheritage.de/" />
+    <test url="http://blog.myheritage.dk/" />
+    <test url="http://helpcenter.myheritage.dk/" />
+    <test url="http://blog.myheritage.se/" />
+    <test url="http://helpcenter.myheritage.se/" />
+    <test url="http://blog.myheritage.fr/" />
+    <test url="http://helpcenter.myheritage.fr/" />
+    <test url="http://blog.myheritage.fi/" />
+    <test url="http://helpcenter.myheritage.fi/" />
+    <test url="http://blog.myheritage.es/" />
+    <test url="http://helpcenter.myheritage.es/" />
+    <test url="http://blog.myheritage.pl/" />
+    <test url="http://helpcenter.myheritage.pl/" />
+
+    <!-- https://regex101.com/r/iN4bF4/6 -->
+    <securecookie host="^(?!blog|helpcenter)(\w*\.)?myheritage\.(com\.br|co\.il|com|no|nl|de|dk|se|fr|fi|es|pl)" name=".+" />
+
+    <rule from="^http:"
+            to="https:" />
+</ruleset>

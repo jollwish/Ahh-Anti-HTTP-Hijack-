@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://tankafetast.com/ => https://tankafetast.com/: (35, 'Unknown SSL protocol error in connection to tankafetast.com:443 ')
+Fetch error: http://www.tankafetast.com/ => https://www.tankafetast.com/: (35, 'Unknown SSL protocol error in connection to www.tankafetast.com:443 ')
+
+	Insecure cookies are set for these domains:
+
+		- .tankafetast.com
+
+-->
+<ruleset name="TankaFetast.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="tankafetast.com" />
+	<target host="www.tankafetast.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.tankafetast\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^(?:w*\.)?tankafetast\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

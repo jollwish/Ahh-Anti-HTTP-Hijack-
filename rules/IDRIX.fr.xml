@@ -1,0 +1,30 @@
+<!--
+	2017/06/11: STS includeSubDomains header.
+
+	No working url known:
+		cloud.idrix.fr
+		amcrypto.org.idrix.fr
+		www.amcrypto.org.idrix.fr
+
+	Mixed content:
+		idrassi.idrix.fr
+		www.idrassi.idrix.fr
+
+	Invalid certificate:
+		prod.idrix.fr
+
+-->
+<ruleset name="IDRIX.fr">
+
+	<target host="idrix.fr" />
+	<target host="www.idrix.fr" />
+	<target host="ext.idrix.fr" />
+	<target host="idrix.info.idrix.fr" />
+	<target host="www.idrix.info.idrix.fr" />
+	<target host="office.idrix.fr" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

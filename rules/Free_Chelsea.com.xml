@@ -1,0 +1,26 @@
+<!--
+	For other Fight for the Future coverage, see Fight-for-the-Future.xml.
+
+
+	Insecure cookies are set for these domains:
+
+		- .freechelsea.com
+
+	Refused:
+		freechelsea.com
+
+-->
+<ruleset name="Free Chelsea.com">
+
+	<target host="freechelsea.com" />
+	<target host="www.freechelsea.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://freechelsea\.com/"
+		to="https://www.freechelsea.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

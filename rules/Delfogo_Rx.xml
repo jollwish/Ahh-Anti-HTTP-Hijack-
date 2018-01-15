@@ -1,0 +1,16 @@
+<!--
+	Cert only matches ^delfogo.com
+
+-->
+<ruleset name="Delfogo Rx">
+
+	<target host="delfogo.com" />
+	<target host="www.delfogo.com" />
+
+
+	<securecookie host="^delfogo\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,32 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- consult.eastsussex.gov.uk
+		- mylimehouse.eastsussex.gov.uk
+		- petitions.eastsussex.gov.uk
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- learningzone.eastsussex.gov.uk
+
+		Different content:
+		- spreturns.eastsussex.gov.uk
+-->
+<ruleset name="East Sussex.gov.uk">
+	<target host="eastsussex.gov.uk" />
+	<target host="www.eastsussex.gov.uk" />
+	<target host="admissions.eastsussex.gov.uk" />
+	<target host="apps.eastsussex.gov.uk" />
+	<target host="consultation.eastsussex.gov.uk" />
+	<target host="czone.eastsussex.gov.uk" />
+	<target host="democracy.eastsussex.gov.uk" />
+	<target host="e-library.eastsussex.gov.uk" />
+	<target host="new.eastsussex.gov.uk" />
+	<target host="news.eastsussex.gov.uk" />
+	<target host="payments.eastsussex.gov.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

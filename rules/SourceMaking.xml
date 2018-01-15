@@ -1,0 +1,13 @@
+<ruleset name="SourceMaking">
+
+	<target host="sourcemaking.com" />
+	<target host="www.sourcemaking.com" />
+
+
+	<securecookie host="^\.sourcemaking\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

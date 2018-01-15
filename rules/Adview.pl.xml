@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adview.pl/ => https://adview.pl/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.adview.pl/ => https://adview.pl/: (60, 'SSL certificate problem: certificate has expired')
+
+	www.adview.pl: Dropped
+
+
+	Insecure cookies are set for these domains:
+
+		- .adview.pl
+
+-->
+<ruleset name="adview.pl" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="adview.pl" />
+	<target host="ad.adview.pl" />
+	<target host="bi.adview.pl" />
+
+	<!--	Complications:
+				-->
+	<target host="www.adview.pl" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.adview\.pl$" name="^AdViewPIBann$" /-->
+
+	<securecookie host="^\." name="^AdViewPIBann$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://www\.adview\.pl/"
+		to="https://adview.pl/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

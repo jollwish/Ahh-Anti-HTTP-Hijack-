@@ -1,0 +1,8 @@
+<ruleset name="nimzone.com" default_off="mismatched">
+
+	<target host="server1.nimzone.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

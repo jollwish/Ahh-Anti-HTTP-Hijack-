@@ -1,0 +1,12 @@
+<ruleset name="Vesica" platform="mixedcontent">
+
+	<target host="vesica.ws" />
+	<target host="www.vesica.ws" />
+
+
+	<securecookie host="^vesica\.ws$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

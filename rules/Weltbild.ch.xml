@@ -1,0 +1,8 @@
+<ruleset name="Weltbild.ch">
+	<target host="weltbild.ch" />
+	<target host="www.weltbild.ch" />
+
+	<securecookie host="^(?:.*\.)?weltbild\.ch$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

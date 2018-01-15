@@ -1,0 +1,6 @@
+<ruleset name="LawBlog.de">
+  <target host="www.lawblog.de" />
+  <target host="lawblog.de" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

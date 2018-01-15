@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.redcoon.pt/ => https://www.redcoon.pt/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://redcoon.pt/ => https://www.redcoon.pt/: (60, 'SSL certificate problem: certificate has expired')
+
+	^redcoon.pt: Expired, mismatched
+
+
+	Mixed content:
+
+		- Images from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="Redcoon.pt" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.redcoon.pt" />
+
+	<!--	Complications:
+				-->
+	<target host="redcoon.pt" />
+
+
+	<rule from="^http://redcoon\.pt/"
+		to="https://www.redcoon.pt/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

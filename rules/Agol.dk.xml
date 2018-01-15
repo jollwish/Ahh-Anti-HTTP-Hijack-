@@ -1,0 +1,14 @@
+<!--
+	Different content http/https:
+		gombert.agol.dk
+
+-->
+<ruleset name="Agol.dk">
+
+	<target host="agol.dk" />
+	<target host="www.agol.dk" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

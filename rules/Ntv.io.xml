@@ -1,0 +1,23 @@
+
+<!--
+	Ads.
+
+	For other Nativo coverage, see:
+		+ Nativo.net.xml
+
+	Fully covered subdomains:
+
+		s.ntv.io
+
+	Invalid Certificate:
+
+		a.ntv.io
+-->
+
+<ruleset name="ntv.io (partial)" >
+	<target host="s.ntv.io" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

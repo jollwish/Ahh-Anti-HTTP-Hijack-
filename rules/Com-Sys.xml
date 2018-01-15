@@ -1,0 +1,13 @@
+<ruleset name="Com-Sys">
+
+	<target host="com-sys.de" />
+	<target host="www.com-sys.de" />
+
+
+	<securecookie host="^com-sys\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.baylibre.com/ => https://www.baylibre.com/: (51, "SSL: no alternative certificate subject name matches target host name 'www.baylibre.com'")
+
+	Insecure cookies are set for these hosts:
+
+		- baylibre.com
+		- www.baylibre.com
+
+
+	Mixed content:
+
+		- Images on ^ from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="BayLibre.com" default_off='failed ruleset test'>
+
+	<target host="baylibre.com" />
+	<target host="www.baylibre.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?baylibre\.com$" name="^(PHPSESSID|mediaplan|mediaplanBAK)$" /-->
+
+	<securecookie host="^(?:www\.)?baylibre\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

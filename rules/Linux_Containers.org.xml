@@ -1,0 +1,10 @@
+<ruleset name="Linux Containers.org">
+	<target host="linuxcontainers.org" />
+	<target host="cgmanager.linuxcontainers.org" />
+	<target host="images.linuxcontainers.org" />
+	<target host="jenkins.linuxcontainers.org" />
+	<target host="lists.linuxcontainers.org" />
+	<target host="www.linuxcontainers.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

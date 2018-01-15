@@ -1,0 +1,8 @@
+<ruleset name="dorar.net">
+	<target host="dorar.net" />
+	<target host="www.dorar.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,34 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://gambleid.com/ => https://www.gambleid.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Problematic subdomains:
+
+		- ^	(no https)
+
+-->
+<ruleset name="GambleID" default_off='failed ruleset test'>
+
+	<target host="gambleid.com" />
+	<target host="*.gambleid.com" />
+
+
+	<!--	Observed cookie subdomains:
+
+			- admin
+			- developer
+			- enterprise
+			- myaccount
+			- www
+					-->
+	<securecookie host=".+\.gambleid\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?gambleid\.com/"
+		to="https://www.gambleid.com/" />
+
+	<rule from="^http://(admin|developer|enterprise|myaccount)\.gambleid\.com/"
+		to="https://$1.gambleid.com/" />
+
+</ruleset>

@@ -1,0 +1,36 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://acme.legiscan.com/ => https://acme.legiscan.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	Fully covered hosts in *legiscan.com:
+
+		- (www.)?
+		- acme
+
+
+	Insecure cookies are set for these domains:
+
+		- .legiscan.com
+
+-->
+<ruleset name="LegiScan.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="legiscan.com" />
+	<target host="acme.legiscan.com" />
+	<target host="www.legiscan.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.legiscan\.com$" name="^SESS[\da-f]{32}$" /-->
+
+	<securecookie host="^\.legiscan\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

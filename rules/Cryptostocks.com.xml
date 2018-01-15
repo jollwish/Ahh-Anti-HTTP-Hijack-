@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://cryptostocks.com/ => https://cryptostocks.com/: Too many redirects while fetching 'https://cryptostocks.com/'
+Fetch error: http://www.cryptostocks.com/ => https://www.cryptostocks.com/: Too many redirects while fetching 'https://www.cryptostocks.com/'
+
+	Insecure cookies are set for these domains:
+
+		- .cryptostocks.com
+
+-->
+<ruleset name="Cryptostocks.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cryptostocks.com" />
+	<target host="www.cryptostocks.com" />
+
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.cryptostocks\.com$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host="^\.cryptostocks\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

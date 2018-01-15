@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://nerdsnook.com/ => https://nerdsnook.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.nerdsnook.com/ => https://www.nerdsnook.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Insecure cookies are set for these domains:
+
+		- .nerdsnook.com
+
+-->
+<ruleset name="Nerds Nook.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="nerdsnook.com" />
+	<target host="www.nerdsnook.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.nerdsnook\.com$" name="^[\da-f]{32}$" /-->
+
+	<securecookie host="^\.nerdsnook\.com$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

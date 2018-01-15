@@ -1,0 +1,16 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+			 - ns.6xq.net
+
+-->
+<ruleset name="6xq.net">
+	<target host="6xq.net" />
+	<target host="www.6xq.net" />
+	<target host="luna.6xq.net" />
+		<test url="http://luna.6xq.net/luna.png" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

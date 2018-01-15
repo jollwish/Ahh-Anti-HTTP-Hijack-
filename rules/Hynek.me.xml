@@ -1,0 +1,23 @@
+<!--
+	^ox.cx: Dropped
+
+-->
+<ruleset name="Hynek.me">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="stats.ox.cx" />
+	<target host="www.ox.cx" />
+
+	<!--	Complications:
+				-->
+	<target host="ox.cx" />
+
+
+	<rule from="^http://ox\.cx/"
+		to="https://www.ox.cx/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

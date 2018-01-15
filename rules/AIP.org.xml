@@ -1,0 +1,54 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://scitation.aip.org/css/v/5.2.1.5/aip/publisher_branding.css => https://scitation.aip.org/css/v/5.2.1.5/aip/publisher_branding.css: (51, "SSL: no alternative certificate subject name matches target host name 'scitation.aip.org'")
+Fetch error: http://scitation.aip.org/favicon.ico => https://scitation.aip.org/favicon.ico: (51, "SSL: no alternative certificate subject name matches target host name 'scitation.aip.org'")
+Fetch error: http://scitation.aip.org/images/aip/aip_logo_transparent.gif => https://scitation.aip.org/images/aip/aip_logo_transparent.gif: (51, "SSL: no alternative certificate subject name matches target host name 'scitation.aip.org'")
+
+	^aip.org: Mismatched
+
+-->
+<ruleset name="AIP.org (partial)" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="publishing.aip.org" />
+	<target host="scitation.aip.org" />
+	<target host="www.aip.org" />
+
+	<!--	Complications:
+				-->
+	<target host="aip.org" />
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://scitation\.aip\.org/$" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://scitation\.aip\.org/+(?!css/|favicon\.ico|images/)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://scitation.aip.org/aip/physicstoday/info/follow/" />
+			<test url="http://scitation.aip.org/contact" />
+			<test url="http://scitation.aip.org/content/avs" />
+			<test url="http://scitation.aip.org/help/librarians" />
+
+			<!--	ve:
+					-->
+			<test url="http://scitation.aip.org/css/v/5.2.1.5/aip/publisher_branding.css" />
+			<test url="http://scitation.aip.org/favicon.ico" />
+			<test url="http://scitation.aip.org/images/aip/aip_logo_transparent.gif" />
+
+
+	<securecookie host="^(?!scitation\.)\w" name=".+" />
+
+
+	<rule from="^http://aip\.org/"
+		to="https://www.aip.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

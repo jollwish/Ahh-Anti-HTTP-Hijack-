@@ -1,0 +1,19 @@
+<!--
+	Invalid certificate:
+		www.orange.jobs
+
+-->
+<ruleset name="Orange.Jobs">
+
+	<target host="orange.jobs" />
+	<target host="www.orange.jobs" />
+	<target host="jobsmap.orange.jobs" />
+	<target host="recruiter.orange.jobs" />
+
+	<rule from="^http://www\.orange\.jobs/"
+		to="https://orange.jobs/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

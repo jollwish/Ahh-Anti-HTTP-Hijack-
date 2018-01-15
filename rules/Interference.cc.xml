@@ -1,0 +1,13 @@
+<!--
+	NB: politically sensitive => backport?
+
+-->
+<ruleset name="Interference.cc">
+
+	<target host="interference.cc" />
+	<target host="www.interference.cc" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

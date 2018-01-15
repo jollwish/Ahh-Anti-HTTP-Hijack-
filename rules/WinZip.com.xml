@@ -1,0 +1,70 @@
+<!--
+	Remark: www redirects to plaintext with JavaScript, 
+		e.g. https://www.winzip.com/win/en/
+
+	Non-functional hosts
+		Couldn't connect to server:
+			 - activate.winzip.com
+			 - api.winzip.com
+			 - free.winzip.com
+			 - mac.winzip.com
+			 - msg.winzip.com
+			 - systemtools.winzip.com
+			 - tools.winzip.com
+			 - utilities.winzip.com
+
+		Timeout was reached:
+			 - dl.winzip.com
+			 - download-origin.winzip.com
+			 - ftp.winzip.com
+			 - internet01.winzip.com
+			 - kb.winzip.com
+			 - 1.outbound1.mail.winzip.com
+			 - 1.outbound2.mail.winzip.com
+			 - man-smtprelay.winzip.com
+			 - openvpn.winzip.com
+			 - secure.winzip.com
+			 - wzmail3.winzip.com
+			 - wzvoip.winzip.com
+			 - wzweb.winzip.com
+
+		SSL peer certificate was not OK:
+			 - download.winzip.com
+			 - download1.winzip.com
+			 - download2.winzip.com
+			 - download4.winzip.com
+			 - help.winzip.com
+			 - http2.winzip.com
+			 - image.winzip.com
+			 - imagewz.winzip.com
+			 - inst.winzip.com
+			 - install.winzip.com
+			 - mail.winzip.com
+			 - refresh-origin.winzip.com
+			 - subscribe.winzip.com
+			 - tray.winzip.com
+			 - update.winzip.com
+			 - updatedu.winzip.com
+			 - updatero.winzip.com
+			 - updatess.winzip.com
+			 - web-origin.winzip.com
+			 - www2.winzip.com
+			 - www3.winzip.com
+			 - www4.winzip.com
+			 - www6.winzip.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - shopm.winzip.com
+			 - shopm226.winzip.com
+
+		5xx server error:
+			 - updaterv.winzip.com
+-->
+<ruleset name="WinZip.com (partial)" default_off="other">
+	<target host="winzip.com" />
+	<target host="www.winzip.com" />
+	<target host="shop.winzip.com" />
+	<target host="store.winzip.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

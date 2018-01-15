@@ -1,0 +1,27 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://oppelt.com/ => https://oppelt.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://piwik.oppelt.com/ => https://piwik.oppelt.com/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.oppelt.com/ => https://www.oppelt.com/: (60, 'SSL certificate problem: certificate has expired')
+
+	Mixed content:
+
+		- Web bug on (www.) from piwik *
+
+	* Secured by us
+
+-->
+<ruleset name="Oppelt.com" default_off='failed ruleset test'>
+
+	<target host="oppelt.com" />
+	<target host="piwik.oppelt.com" />
+	<target host="www.oppelt.com" />
+
+
+	<securecookie host="^piwik\.oppelt\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

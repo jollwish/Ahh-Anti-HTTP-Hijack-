@@ -1,0 +1,6 @@
+<ruleset name="urlaubspiraten">
+  <target host="urlaubspiraten.de" />
+  <target host="www.urlaubspiraten.de" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+
+-->
+<ruleset name="California Legislative Information">
+
+	<target host="leginfo.legislature.ca.gov" />
+
+
+	<securecookie host="^leginfo\.legislature\.ca\.gov$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

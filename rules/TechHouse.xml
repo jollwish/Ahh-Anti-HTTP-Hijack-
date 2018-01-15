@@ -1,0 +1,8 @@
+<ruleset name="TechHouse">
+  <target host="techhouse.org" />
+  <target host="www.techhouse.org" />
+
+  <securecookie host="^(?:.+\.)?techhouse\.org$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="iiBuy.com.au">
+
+	<target host="iibuy.com.au" />
+	<target host="www.iibuy.com.au" />
+
+
+	<securecookie host="^\.?www\.iibuy\.com\.au$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

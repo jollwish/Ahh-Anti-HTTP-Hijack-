@@ -1,0 +1,12 @@
+<!--
+	For other Argeweb coverage, see Argeweb.nl.xml.
+
+-->
+<ruleset name="Argeweb hosting.nl">
+
+	<target host="webmail.argewebhosting.nl" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

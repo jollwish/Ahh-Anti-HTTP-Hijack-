@@ -1,0 +1,27 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+			 - lmqpov.habets.se
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - www.habets.se
+			 - proxy-us.habets.se
+
+		4xx client error:
+			 - cw.habets.se (require authentication)
+-->
+<ruleset name="Habets.se">
+	<target host="habets.se" />
+	<target host="www.habets.se" />
+	<target host="blog.habets.se" />
+	<target host="blog-dev.habets.se" />
+	<target host="cdn.habets.se" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.habets\.se/"
+			to="https://habets.se/" />
+
+	<rule from="^http:" 
+			to="https:" />
+</ruleset>

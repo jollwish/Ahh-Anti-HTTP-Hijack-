@@ -1,0 +1,42 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://groupon.com.br/ (200) => https://groupon.com.br/ (403)
+Non-2xx HTTP code: http://www.groupon.com.br/ (200) => https://www.groupon.com.br/ (403)
+
+	For other Groupon coverage, see Groupon.com.xml.
+
+
+	Fully covered hosts in *groupon.com.br:
+
+		- (www.)?
+		- uat
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .groupon.com.br
+		- www.groupon.com.br
+
+-->
+<ruleset name="Groupon.com.br" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="groupon.com.br" />
+	<target host="uat.groupon.com.br" />
+	<target host="www.groupon.com.br" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.groupon\.com\.br$" name="^(CID|b|division|p0|s)" /-->
+	<!--securecookie host="^www\.groupon\.com\.br$" name="^(homepage\.sid|pageId|user_sessions\.sid)$" /-->
+
+	<securecookie host="^(?:www)?\.groupon\.com\.br$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,6 @@
+<ruleset name="Drwho.virtadpt.net">
+	<target host="drwho.virtadpt.net" />
+	<target host="www.drwho.virtadpt.net" />
+
+	<rule from="^http:" to="https:"/>
+</ruleset>

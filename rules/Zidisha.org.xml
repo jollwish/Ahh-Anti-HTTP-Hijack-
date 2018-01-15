@@ -1,0 +1,17 @@
+<!--
+	Invalid certificate:
+		mpesa.zidisha.org
+
+-->
+<ruleset name="Zidisha.org">
+
+	<target host="zidisha.org" />
+	<target host="www.zidisha.org" />
+	<target host="forum.zidisha.org" />
+	<target host="p2p-microlending-blog.zidisha.org" />
+	<target host="www.p2p-microlending-blog.zidisha.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,11 @@
+<ruleset name="Pacnet (partial)">
+
+	<target host="wm4.pacific.net.au" />
+
+
+	<securecookie host="^wm4\.pacific\.net\.au$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://fcns.eu/ => https://fcns.eu/: (7, 'Failed to connect to fcns.eu port 443: Connection refused')
+
+	www: dropped
+
+
+	Mixed content:
+
+		- css from $self ¹
+
+		- Images, from
+
+			-  $self ²
+			-  upload.wikimedia.org ²
+
+	¹ Secured by us, minimal effect
+	² Secured by us
+
+-->
+<ruleset name="Frontier Network and Computing Systems" default_off='failed ruleset test'>
+
+	<target host="fcns.eu"/>
+	<target host="*.fcns.eu"/>
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^fcns\.eu$" name="^(PHPSESSID|wordpress_test_cookie)$" /-->
+
+	<securecookie host="^fcns\.eu$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?fcns\.eu/"
+		to="https://fcns.eu/"/>
+
+</ruleset>

@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://www.noo.org.uk/ => https://www.noo.org.uk/: (51, "SSL: no alternative certificate subject name matches target host name 'www.noo.org.uk'")
+Fetch error: http://noo.org.uk/ => https://www.noo.org.uk/: (51, "SSL: no alternative certificate subject name matches target host name 'www.noo.org.uk'")
+
+	^noo.org.uk: Mismatched
+
+-->
+<ruleset name="NOO.org.uk" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="www.noo.org.uk" />
+
+	<!--	Complications:
+				-->
+	<target host="noo.org.uk" />
+
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http://noo\.org\.uk/"
+		to="https://www.noo.org.uk/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

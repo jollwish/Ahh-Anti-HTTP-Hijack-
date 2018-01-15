@@ -1,0 +1,30 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://epochstats.com/ => https://epochstats.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+Fetch error: http://www.epochstats.com/ => https://www.epochstats.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other Epoch coverage, see Epoch.com.xml.
+
+
+	Fully covered hosts in *epochstats.com:
+
+		- (www.)?
+		- hits
+		- sales
+
+-->
+<ruleset name="EpochStats.com" default_off='failed ruleset test'>
+
+	<!--	Direct rewrites:
+				-->
+	<target host="epochstats.com" />
+	<target host="hits.epochstats.com" />
+	<target host="sales.epochstats.com" />
+	<target host="www.epochstats.com" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

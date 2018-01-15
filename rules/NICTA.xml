@@ -1,0 +1,31 @@
+<!--
+	For problematic rules, see NICTA.com.au-problematic.xml.
+
+
+	Problematic subdomains:
+
+		- (www.)ertos *
+
+	* Expired 2013-04-11
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- owa
+		- ssrg
+		- webmail
+
+-->
+<ruleset name="NICTA (partial)">
+
+	<target host="nicta.com.au" />
+	<target host="owa.nicta.com.au" />
+	<target host="ssrg.nicta.com.au" />
+	<target host="webmail.nicta.com.au" />
+	<target host="www.nicta.com.au" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

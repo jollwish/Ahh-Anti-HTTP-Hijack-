@@ -1,0 +1,63 @@
+<!--
+	For rules causing false/broken MCB, see TradePub.com-falsemixed.xml.
+
+
+	CDN buckets:
+
+		- netline.cachefly.net	← img
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .tradepub.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+
+	Mixed content:
+
+		- css, on:
+
+			- betanews from $self ˢ
+			- betanews from betanews.com
+			- nl-marketing from www.netline.com ²
+
+		- Images, on:
+
+			- betanews, nl-marketing from img.tradepub.com ˢ
+			- nl-marketing from www.netline.com ³
+
+		- Bugs, on:
+
+			- on www from netline-d.openx.net
+			- on www from u.openx.net ˢ
+
+	ˢ Secured by us, see https://www.paulirish.com/2010/the-protocol-relative-url/
+	² Unsecurable, minimal effect
+	³ Unsecurable
+
+-->
+<ruleset name="TradePub.com (partial)">
+
+	<target host="tradepub.com" />
+	<target host="cts.tradepub.com" />
+	<target host="img.tradepub.com" />
+	<target host="nl-marketing.tradepub.com" />
+	<target host="www.tradepub.com" />
+
+		<test url="http://img.tradepub.com/images/search_icon.png" />
+
+		<!--	Sets cookies without Secure:
+							-->
+		<!--test url="http://www.tradepub.com/free-offer/hr-magazine/hrmg?sr=hm&amp;_t=hm:" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.tradepub\.com$" name="^(Apache|_t|tpid)$" /-->
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

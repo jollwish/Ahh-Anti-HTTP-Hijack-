@@ -1,0 +1,19 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)?
+		- docs
+		- release
+
+-->
+<ruleset name="SublimeGit.net">
+
+	<target host="sublimegit.net" />
+	<target host="docs.sublimegit.net" />
+	<target host="release.sublimegit.net" />
+	<target host="www.sublimegit.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

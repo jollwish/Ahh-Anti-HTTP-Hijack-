@@ -1,0 +1,41 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://springerzahnmedizin.de/ => https://springerzahnmedizin.de/: (7, 'Failed to connect to springerzahnmedizin.de port 443: Connection refused')
+Fetch error: http://fortbildung.springerzahnmedizin.de/ => https://fortbildung.springerzahnmedizin.de/: (51, "SSL: no alternative certificate subject name matches target host name 'fortbildung.springerzahnmedizin.de'")
+Fetch error: http://www.springerzahnmedizin.de/ => https://www.springerzahnmedizin.de/: (51, "SSL: no alternative certificate subject name matches target host name 'www.springerzahnmedizin.de'")
+
+	For other Springer coverage, see Springer.xml.
+
+
+	Fully covered hosts in *springerzahnmedizin.de:
+
+		- (www.)?
+		- fortbildung
+
+
+	Insecure cookies are set for these hosts:
+
+		- springerzahnmedizin.de
+		- fortbildung.springerzahnmedizin.de
+		- www.springerzahnmedizin.de
+
+-->
+<ruleset name="Springer Zahnmedizin.de" default_off='failed ruleset test'>
+
+	<target host="springerzahnmedizin.de"/>
+	<target host="fortbildung.springerzahnmedizin.de" />
+	<target host="www.springerzahnmedizin.de"/>
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(fortbildung\.|www\.)?springerzahnmedizin\.de$" name="Apache$" /-->
+
+	<securecookie host="^(?:fortbildung\.|www\.)?springerzahnmedizin\.de$" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>
