@@ -83,7 +83,9 @@ def pipe_recv(peer, remote):
         peer.sendall(buffer)
 
 def make_HTTPS_request(http_req):
-    # logger.info(http_req)
+    if http_req[:3] != b'GET':
+        return None
+    logger.info(http_req)
     req = http_req.decode('utf-8')
     req, headers = req.split('\r\n', 1)
     verb, uri = req.split(' ')[:2]
