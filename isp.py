@@ -80,6 +80,7 @@ class Insertor(Modifier):
         if data[TCP].flags == TCP_ACK | TCP_PSH and Modifier.is_http_request(bytes(data[TCP].payload)):
             self.monitored = True
         logger.info("summary = %s, seq = %s, ack = %s", data.summary(), data.seq - sess['ack_'], data.ack - sess['seq_'])
+        # logger.info('send %s', bytes(data[TCP].payload))
         if data[TCP].ack >= self.threshold + len(data[TCP].payload):
             if ENABLE:
                 data[TCP].ack -= self.offset
@@ -196,16 +197,17 @@ def callback(pkt):
     else:
         pkt.accept()
 
-def callback2(pkt):
-    pkt.accept()
 
 def main():
+    os.system('iptables -F')
+    os.system('iptables -X')
+
     Qnum = 1
     rules = [
-        f'iptables -I INPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
-        f'iptables -I OUTPUT -j NFQUEUE --queue-num {Qnum} --queue-bypass',
-        f'iptables -I FORWARD -j NFQUEUE --queue-num {Qnum} --queue-bypass',
-        f'iptables -I OUTPUT -p tcp --tcp-flags RST RST -j DROP',
+        f'iptables -I INPUT -j NFQUEUE ! -s 127.0.0.1 ! -d 127.0.0.1 --queue-num {Qnum} --queue-bypass',
+        f'iptables -I OUTPUT -j NFQUEUE ! -s 127.0.0.1 ! -d 127.0.0.1 --queue-num {Qnum} --queue-bypass',
+        # f'iptables -I FORWARD -j NFQUEUE --queue-num {Qnum} --queue-bypass',
+        # f'iptables -I OUTPUT -p tcp --tcp-flags RST RST -j DROP',
     ]
     for rule in rules:
         logger.info(f'setting rule: {rule}')
@@ -220,8 +222,6 @@ def main():
     except KeyboardInterrupt:
         pass
     q.unbind()
-    os.system('iptables -F')
-    os.system('iptables -X')
 
 if __name__ == "__main__":
     main()

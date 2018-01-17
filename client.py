@@ -75,17 +75,19 @@ def ready_recv(sock):
 
 def pipe_recv(peer, remote):
     #logger.info('start recv')
+    total = 0
     while 1:
         buffer = ready_recv(remote)
         if not buffer:
             break
-        logger.info('received %d bytes', len(buffer))
+        total += len(buffer)
+        logger.info('received %d bytes, total received = %s', len(buffer), total)
         peer.sendall(buffer)
 
 def make_HTTPS_request(http_req):
     if http_req[:3] != b'GET':
         return None
-    logger.info(http_req)
+    # logger.info(http_req)
     req = http_req.decode('utf-8')
     req, headers = req.split('\r\n', 1)
     verb, uri = req.split(' ')[:2]
@@ -113,7 +115,7 @@ def pipe_send(peer, remote, buffer):
         buffer = ready_recv(peer)
         if not buffer:
             break
-        logger.info('sending %d bytes' % len(buffer))
+        logger.info('sending %d bytes', len(buffer))
         remote.sendall(buffer)
     
 
